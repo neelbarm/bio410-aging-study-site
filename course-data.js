@@ -368,6 +368,33 @@ window.COURSE = [
      {type:"mcq", q:"Step 2 of the class evidence framework asks you to:", opts:["Buy the supplement and test it","Identify 2–3 systemic/cellular/molecular hallmarks involved in the disease","Ignore the mechanism","Only read the headline"], a:1,
       exp:"Step 2 = identify the biological mechanisms (2–3 hallmarks) involved; step 1 is disease overview, step 3 is evaluating the claim."}
     ]
+   },
+   {
+    id:"L1X", title:"🔥 Challenge set — harder exam-style practice",
+    sub:"Extra reasoning/application questions beyond the per-topic quizzes — the kind that separate a B from an A.",
+    slides:[
+     {h:"🔥 Challenge set", imgs:[], html:`<div class="callout key">These are <b>harder, application-level</b> questions that combine ideas, interpret experiments, and do quick calculations — closer to the toughest exam items. Misses go to your wrong-answer bank. <b>Aim to ace these.</b></div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"A company advertises that mice given antioxidant compound X lived 20% longer, and urges humans to buy it. What is the SINGLE strongest reason for scientific caution?", opts:["The study used too many mice","Mouse results frequently fail to translate to humans, and no controlled human trial is cited","Antioxidants are illegal","20% is not a large number"], a:1,
+      exp:"'Mice lie and monkeys exaggerate' — preclinical success often fails in humans. Without a controlled human trial (and given the seller's conflict of interest), the claim is weak for humans."},
+     {type:"mcq", q:"Chronic-disease risk roughly doubles every ~8 years of age. If a condition carries ~1% risk at age 50, the approximate risk at age 74 is:", opts:["~3%","~8%","~2%","~24%"], a:1,
+      exp:"74−50 = 24 years ≈ 3 doublings (×2×2×2 = ×8). 1% × 8 ≈ 8%."},
+     {type:"tf", q:"Hormesis predicts a linear dose–response: the more stress applied, the more benefit gained.", a:false,
+      exp:"False — hormesis is biphasic: mild/intermittent stress is beneficial, but high stress is damaging. The curve is not linear."},
+     {type:"short", q:"Explain how 'lifespan' and 'healthspan/longevity' can diverge. Give one concrete example.", model:"Lifespan = total years alive; healthspan/longevity = years lived in good, functional health. They diverge when an intervention keeps an organism alive longer but in poor condition, or improves health without extending maximum lifespan. Example: activating mitophagy in aged mice improved tissue function (healthspan) without increasing lifespan; conversely, a person can live to 90 but spend the last 15 years with chronic disease.", pts:["Lifespan = total years; healthspan = healthy/functional years","They can diverge in either direction","Concrete example (e.g., mitophagy → healthspan not lifespan)"]},
+     {type:"mcq", q:"Which is a CELLULAR-level hallmark (not molecular)?", opts:["Telomere shortening","Epigenetic alterations","Cellular senescence","Loss of proteostasis"], a:2,
+      exp:"Cellular senescence, stem-cell exhaustion, and altered intercellular communication are the 3 cellular hallmarks. The others are molecular."},
+     {type:"mcq", q:"Deregulated nutrient sensing (IGF/insulin, AMPK, mTOR) is categorized as which level of hallmark?", opts:["Molecular","Cellular","Systemic","Not a hallmark"], a:2,
+      exp:"Deregulated nutrient sensing is the single SYSTEMIC hallmark (6 molecular + 3 cellular + 1 systemic = 10)."},
+     {type:"mcq", q:"Which is the STRONGEST evidence for a longevity claim?", opts:["A compelling personal testimonial","A press release from the supplement maker","A peer-reviewed review summarizing multiple randomized controlled human trials","An influencer with millions of followers"], a:2,
+      exp:"Strong evidence = controlled human studies synthesized in peer review. Testimonials, press releases, and popularity are weak."},
+     {type:"mcq", q:"Why are senescent cells harmful to neighboring tissue even though they no longer divide?", opts:["They secrete the pro-inflammatory SASP","They consume all the oxygen","They divide uncontrollably","They lengthen neighbors' telomeres"], a:0,
+      exp:"Senescent cells persist and secrete the SASP — pro-inflammatory factors driving 'inflammaging' and tissue dysfunction."},
+     {type:"short", q:"A friend takes high-dose vitamin E daily 'to slow aging.' Walk through the evidence-vs-hype questions you'd ask.", model:"Ask: (1) Human or just animal/cell data? Best human evidence (meta-analyses) shows antioxidant supplements give no benefit and sometimes increase mortality. (2) Correlation or causation? (3) Who's selling it / conflict of interest? (4) Mechanistically, blunting all ROS removes hormetic signaling, so it can backfire. Conclusion: not supported; potentially harmful.", pts:["Demand human (not just animal) data","Correlation vs causation","Conflict of interest / who profits","Mechanism: antioxidants blunt protective ROS/hormesis; trials show no benefit or harm"]},
+     {type:"mcq", q:"DAF-2 mutant worms live ~150% longer, and DAF-2 is conserved in humans. What is the MOST defensible conclusion?", opts:["Mutating the human insulin receptor will safely extend human lifespan","The pathway is conserved and worth studying in humans, but worm lifespan gains don't prove a human effect","Humans should take insulin to live longer","The result is irrelevant to humans"], a:1,
+      exp:"Conservation makes the pathway relevant and worth studying, but a worm result is not proof of a safe human effect — translation is not guaranteed."}
+    ]
    }
   ]
  },
@@ -698,6 +725,33 @@ window.COURSE = [
       model:"Whether the evidence is from humans (not just mice/cell culture), the sample size and whether it was a controlled trial, whether real clinical outcomes (not just a biomarker) improved, and whether the seller funded the study (conflict of interest).",
       pts:["Human vs animal/cell evidence","Sample size / controlled trial","Clinical outcome vs biomarker","Conflict of interest"]}
     ]
+   },
+   {
+    id:"L2X", title:"🔥 Challenge set — harder exam-style practice",
+    sub:"Extra reasoning/application questions on DNA damage, repair-pathway choice, and the NAD⁺ connection.",
+    slides:[
+     {h:"🔥 Challenge set", imgs:[], html:`<div class="callout key">Harder, application-level questions — pick the right repair pathway for the scenario, reason about mutation outcomes, and separate direct from indirect evidence. <b>Aim to ace these.</b></div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"A replication fork reaches a damaged base. If the cell REPLICATES before the lesion is repaired, the most likely outcome is:", opts:["Wild-type sequence is restored","A permanent, heritable mutation is fixed into the daughter strand","The cell instantly dies","Telomeres lengthen"], a:1,
+      exp:"Repair-before-replication restores wild type; replication-before-repair locks in a permanent mutation passed to daughter cells."},
+     {type:"mcq", q:"8-oxodG (oxidized guanine) mispairs with adenine. After replication this typically produces which change?", opts:["G–C → T–A transversion","A–T → G–C","No change","Loss of a chromosome arm"], a:0,
+      exp:"8-oxodG pairs with A, so the original G–C becomes T–A — a transversion."},
+     {type:"mcq", q:"UV light creates bulky thymine dimers. Which repair pathway removes them?", opts:["Base excision repair (BER)","Nucleotide excision repair (NER)","Mismatch repair (MMR)","Non-homologous end joining (NHEJ)"], a:1,
+      exp:"NER removes bulky, helix-distorting lesions like UV thymine dimers. BER handles small/oxidative lesions; MMR fixes replication mismatches."},
+     {type:"mcq", q:"A double-strand break occurs in G1 (no sister chromatid present). Which repair is used, and what's the trade-off?", opts:["HR — error-free","NHEJ — fast but error-prone (no template)","MMR — uses the mismatch","BER — removes a base"], a:1,
+      exp:"Without a sister-chromatid template, the cell uses NHEJ: it directly ligates ends — fast but error-prone. HR (template-based, accurate) needs S/G2."},
+     {type:"short", q:"Despite ~tens of thousands of DNA lesions per cell per day, children rarely get cancer. Explain the two main protections.", model:"(1) Efficient DNA repair pathways (BER, NER, MMR, NHEJ, HR) fix most lesions before replication. (2) The p53 checkpoint halts the cell cycle for repair, or triggers apoptosis if damage is unrepairable, eliminating dangerous cells. Cancer cells often mutate p53 to escape this.", pts:["Efficient DNA repair fixes most lesions","p53 checkpoint: arrest→repair or apoptosis","Damaged/unrepairable cells removed before becoming cancer"]},
+     {type:"mcq", q:"In the proposed PARP/NAD⁺ aging cycle, chronic DNA damage leads to:", opts:["↑PARP activity → ↑NAD⁺ consumption → ↓cellular function","↓PARP → ↑NAD⁺ → improved function","Telomere lengthening","More introns"], a:0,
+      exp:"Chronic damage over-activates PARP1, which consumes NAD⁺; depleting the NAD⁺ pool impairs sirtuins and other functions (causality still unproven)."},
+     {type:"mcq", q:"Two healthy 70-year-olds have very different mutation burdens. The best explanation is:", opts:["Pure chance only","Inherited DNA-repair alleles (genetic) PLUS environmental exposures (smoking, UV, pollution)","Their telomerase levels are identical","Diet has no effect"], a:1,
+      exp:"Mutation load reflects nature + nurture: inherited repair-enzyme efficiency and lifetime environmental damage exposure."},
+     {type:"tf", q:"Measuring the level of a repair protein is DIRECT evidence that DNA was actually repaired.", a:false,
+      exp:"False — protein levels are INDIRECT. Direct evidence measures the DNA itself (fewer lesions/mutations); repair-protein abundance doesn't prove the DNA got fixed."},
+     {type:"mcq", q:"Only ~2% of the human genome codes for protein. A key consequence for mutation is:", opts:["Every mutation is lethal","Many mutations fall in non-coding regions and are tolerated","DNA repair is unnecessary","Mutations only occur in the 2%"], a:1,
+      exp:"With ~98% non-coding, many mutations land where they have little/no protein consequence and are tolerated — though regulatory regions still matter."},
+     {type:"short", q:"NAD⁺ supplements are marketed for 'DNA repair and anti-aging.' What's the rationale, and what evidence would convince you?", model:"Rationale: PARPs and sirtuins consume NAD⁺ for DNA repair and stress responses; NAD⁺ declines with age, so boosting it might restore repair capacity. Convincing evidence would be randomized controlled HUMAN trials showing reduced DNA damage or improved healthspan/longevity outcomes (not just raised NAD⁺ levels or mouse data), from sources without conflicts of interest.", pts:["PARPs/sirtuins need NAD⁺; NAD⁺ falls with age","Hypothesis: restore repair capacity","Need human RCTs showing real outcomes, not just biomarker/mouse data","Watch for conflict of interest / hype"]}
+    ]
    }
   ]
  },
@@ -940,6 +994,33 @@ window.COURSE = [
      {type:"mcq", q:"EdU incorporation is used in these assays to measure:", opts:["Cell death","Cells entering S-phase / DNA synthesis (proliferation)","SASP secretion","Telomere length"], a:1,
       exp:"EdU is incorporated into newly synthesized DNA, so increased EdU = cells re-entering the cell cycle and proliferating."}
     ]
+   },
+   {
+    id:"L3X", title:"🔥 Challenge set — harder exam-style practice",
+    sub:"Extra reasoning/application questions on telomeres, the DDR, and senescence biology.",
+    slides:[
+     {h:"🔥 Challenge set", imgs:[], html:`<div class="callout key">Harder, application-level questions — interpret screens, distinguish senescent vs quiescent, and reason about why senescence is a double-edged sword. <b>Aim to ace these.</b></div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"The end-replication problem arises because:", opts:["DNA polymerase cannot fully replicate the very end of the lagging strand","Telomerase destroys chromosome ends","Histones block replication","RNA cannot be made"], a:0,
+      exp:"DNA polymerase can't complete the lagging-strand end, so ~50–100 bp are lost each division → progressive telomere shortening."},
+     {type:"mcq", q:"A critically short telomere triggers senescence because the cell interprets it as:", opts:["A signal to divide faster","DNA damage, activating the DDR (ATM/ATR → p53 → p21)","A nutrient signal","An epigenetic mark"], a:1,
+      exp:"An uncapped/short telomere looks like a double-strand break → DNA-damage response → p53/p21 → senescent arrest."},
+     {type:"mcq", q:"What distinguishes a SENESCENT cell from a QUIESCENT cell?", opts:["Quiescent cells secrete SASP; senescent cells don't","Senescent = permanently arrested + secretes SASP; quiescent = reversibly resting, can re-enter the cycle","They are identical","Senescent cells divide faster"], a:1,
+      exp:"Senescent = irreversible arrest with SASP. Quiescent = reversible rest; can resume dividing when signaled."},
+     {type:"mcq", q:"In the DDR, which CDK inhibitor is induced BY p53, and which acts independently of p53?", opts:["p21 is p53-induced; p16 is p53-independent","p16 is p53-induced; p21 is independent","Both are p53-induced","Neither involves p53"], a:0,
+      exp:"p21 is a direct p53 transcriptional target; p16 enforces senescent arrest independently of p53. Both inhibit cyclin–CDK."},
+     {type:"tf", q:"Because short telomeres cause senescence, keeping telomeres long forever would be a risk-free anti-aging strategy.", a:false,
+      exp:"False — unlimited telomere maintenance (like telomerase-high cancer cells) removes a key anti-cancer brake, raising cancer risk. Senescence is protective."},
+     {type:"short", q:"Explain the 'antagonistic pleiotropy' of cellular senescence — why it helps early in life but harms later.", model:"Early: oncogene-induced senescence stops damaged/pre-cancerous cells from dividing, suppressing cancer — beneficial. Late: senescent cells accumulate as clearance declines, and their SASP drives chronic inflammation ('inflammaging'), impairs regeneration, and promotes age-related disease — harmful. The mechanism is selected for its early benefit despite the late cost.", pts:["Early benefit: suppresses cancer (oncogene-induced senescence)","Late harm: accumulation + SASP/inflammaging, impaired regeneration","Antagonistic pleiotropy = early benefit, late cost"]},
+     {type:"mcq", q:"A senolytic and a senomorphic differ how?", opts:["Senolytics kill senescent cells; senomorphics suppress the SASP without killing them","They are the same","Senomorphics kill cells; senolytics don't","Both lengthen telomeres"], a:0,
+      exp:"Senolytics (e.g., dasatinib, quercetin, fisetin) eliminate senescent cells; senomorphics suppress the harmful SASP without killing them."},
+     {type:"mcq", q:"In a multi-well SA-β-gal screen, a candidate drug reduces the number of blue cells vs control. The drug is most likely a:", opts:["Senescence inducer","Senolytic (clears senescent cells)","Telomerase activator","Mutagen"], a:1,
+      exp:"Fewer SA-β-gal⁺ (blue) cells = fewer senescent cells = the drug cleared them → senolytic. More blue = a senescence inducer."},
+     {type:"tf", q:"γH2AX foci mark sites of DNA breaks, increase with age, and serve as an indirect biomarker of damage/senescence.", a:true,
+      exp:"True — phospho-γH2AX marks double-strand breaks; foci rise with age and are part of the senescence biomarker panel (indirect)."},
+     {type:"short", q:"Why might a therapy that clears ALL senescent cells be dangerous? Reference their protective role.", model:"Senescence is protective: oncogene-induced senescence arrests would-be cancer cells, and senescent cells transiently aid wound healing/tissue repair. Indiscriminately killing all of them could remove anti-cancer protection and impair normal repair. Targeted, partial clearance (or SASP suppression) is safer than total elimination.", pts:["Senescence suppresses cancer (oncogene-induced arrest)","Roles in wound healing/repair","Total clearance risks cancer / impaired repair","Targeted/partial approach safer"]}
+    ]
    }
   ]
  },
@@ -1145,6 +1226,33 @@ window.COURSE = [
       exp:"False — epigenetic marks are dynamic and reversible. Enzymes (demethylases, HATs, HDACs) add or remove them in response to cellular signals."},
      {type:"mcq", q:"The 'garbage in, garbage out' principle for AI-based epigenetic clocks means:", opts:["Only low-quality DNA can be methylated","The tool's accuracy depends entirely on the quality and diversity of the training database","All older cells secrete waste products","Epigenetic changes always degrade with age"], a:1,
       exp:"A poor training database produces a poor predictive model. Quality, large, diverse data is the foundation of any reliable AI biomarker tool."}
+    ]
+   },
+   {
+    id:"L4X", title:"🔥 Challenge set — harder exam-style practice",
+    sub:"Extra reasoning/application questions on chromatin marks, genetic vs epigenetic, and the epigenetic clock.",
+    slides:[
+     {h:"🔥 Challenge set", imgs:[], html:`<div class="callout key">Harder, application-level questions — predict the effect of an enzyme inhibitor, separate genetic from epigenetic, and apply evidence-vs-hype to clock companies. <b>Aim to ace these.</b></div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Methylation of CpG islands in a gene's promoter generally causes:", opts:["Activation via HAT recruitment","Repression — methyl-CpG recruits MeCP and compacts chromatin","Telomere lengthening","A change in DNA sequence"], a:1,
+      exp:"Promoter CpG methylation represses transcription: MeCP binds methylated CpG and promotes a closed, silenced chromatin state. No sequence change occurs."},
+     {type:"mcq", q:"A drug inhibits HDACs (histone deacetylases). The expected effect on chromatin/transcription is:", opts:["More acetylation → open chromatin → increased transcription","Less acetylation → closed chromatin → silencing","DNA strand breaks","Telomere shortening"], a:0,
+      exp:"HDACs remove acetyl groups (closing chromatin). Inhibiting them keeps acetylation high → open euchromatin → more transcription."},
+     {type:"mcq", q:"The KEY practical difference between a genetic and an epigenetic change is that epigenetic changes are:", opts:["Permanent and irreversible","Potentially reversible (marks can be added/removed) without altering DNA sequence","Always harmful","Only found in cancer"], a:1,
+      exp:"Genetic = sequence change (irreversible without mutation/editing). Epigenetic = reversible marks (methyl/acetyl) on unchanged DNA — drugs/environment can reset them."},
+     {type:"mcq", q:"An epigenetic clock predicts biological age from methylation patterns. A crucial caveat for the exam is that the clock:", opts:["Directly measures molecular damage","Detects methylation that CORRELATES with age — it may be correlative, not causal","Edits the genome","Measures telomere length"], a:1,
+      exp:"Clocks are predictive models built on age-correlated methylation. Whether those changes CAUSE aging or merely correlate is still open."},
+     {type:"tf", q:"CopyKat (a cloned cat with a coat pattern different from its genetically identical donor) shows that identical DNA can yield different phenotypes via the epigenome.", a:true,
+      exp:"True — same genome, different epigenome → different phenotype. A classic demonstration that epigenetics ≠ genetics."},
+     {type:"short", q:"Why must an epigenetic-clock AI be trained on diverse data, generally starting around age 20?", model:"Diverse training data (varied ancestry, environments) lets the model's age–methylation patterns generalize across populations instead of overfitting one group. Training starts ~age 20 because childhood/development introduces large methylation changes (noise) unrelated to aging. 'Garbage in, garbage out': biased or poor-quality input yields biased predictions.", pts:["Diversity → generalizes, avoids overfitting one group","Start ~20 to avoid developmental noise","Garbage in/garbage out — biased data → biased clock"]},
+     {type:"mcq", q:"Which of these is NOT an epigenetic phenomenon?", opts:["Agouti mouse coat color changed by a maternal methyl-rich diet","Glucocorticoid-receptor methylation after childhood stress","A BRCA1 sequence mutation causing cancer risk","Histone acetylation opening chromatin"], a:2,
+      exp:"A BRCA1 sequence mutation is GENETIC (a DNA change). The others are epigenetic (marks/expression changes without sequence change)."},
+     {type:"mcq", q:"A company emails: 'Your epigenetic age is 10 years above your real age — buy our supplement to reverse it.' The best scientific objection is:", opts:["Epigenetic clocks don't exist","Conflict of interest + the clock is correlative, and there's no proven causal supplement fix","Methylation can't be measured","Age can't be estimated at all"], a:1,
+      exp:"The seller has a conflict of interest; the clock detects correlation, not a modifiable cause, and no supplement is proven to 'reverse' it. Classic evidence-vs-hype."},
+     {type:"tf", q:"Epigenetic regulation is only a disease process and plays no role in normal biology.", a:false,
+      exp:"False — epigenetics is essential for normal development and cell differentiation (one genome → many cell types). It's not solely a disease phenomenon."},
+     {type:"short", q:"Using the 'hardware vs software' analogy, explain how one genome produces many cell types.", model:"The DNA sequence is the hardware (identical in every cell); the epigenome — DNA methylation and histone modifications — is the software that determines which genes run. Different epigenetic programs switch different gene sets on/off, so a neuron and a liver cell share one genome but express different proteins and behave differently. The software can change without rewriting the hardware.", pts:["DNA = hardware (same in all cells)","Epigenome = software (which genes are expressed)","Different epigenetic programs → different cell types from one genome"]}
     ]
    }
   ]
@@ -1376,6 +1484,33 @@ window.COURSE = [
       exp:"She worked on Parkin personally — PARKIN mutations cause early-onset Parkinson's. The same Parkin protein also mediates mitophagy (connecting L5 and L6 topics)."},
      {type:"tf", q:"AlphaFold is an AI tool that predicts 3D protein structures and is used to find PROTAC binding sites on E3 ligases and target proteins.", a:true,
       exp:"True — AlphaFold (Nobel Prize ~2024) predicts protein structures; scientists use it to identify optimal binding pockets for PROTAC molecule design."}
+    ]
+   },
+   {
+    id:"L5X", title:"🔥 Challenge set — harder exam-style practice",
+    sub:"Extra reasoning/application questions on chaperones, the ubiquitin–proteasome system, and PROTACs.",
+    slides:[
+     {h:"🔥 Challenge set", imgs:[], html:`<div class="callout key">Harder, application-level questions — reason about chaperone ATP cycles, E1/E2/E3 specificity, ubiquitin codes, and PROTAC logic. <b>Aim to ace these.</b></div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"In the Hsp70 cycle, which nucleotide state binds substrate tightly, and what drives release?", opts:["ATP-bound = high affinity; ADP drives release","ADP-bound = high affinity (closed); ATP binding + NEFs drive release/cycling","Hsp70 needs no ATP","It binds DNA, not protein"], a:1,
+      exp:"ADP-bound Hsp70 is closed/high-affinity; ATP binding (with Hsp40 and nucleotide-exchange factors) opens it for release and repeated refolding attempts."},
+     {type:"mcq", q:"A drug blocks ATP binding to HSP90 (without affecting transcription). Cells show loss of signaling and degradation of client proteins. Best explanation:", opts:["HSP90 makes ATP","HSP90's ATP-driven cycle matures/stabilizes clients; without it, clients misfold and are degraded","HSP90 is a telomerase","Clients are now over-stabilized"], a:1,
+      exp:"HSP90 uses an ATP cycle to mature client signaling proteins. Block ATP → clients can't fold/stabilize → they're degraded → signaling lost."},
+     {type:"mcq", q:"There are 1–2 E1s, dozens of E2s, and hundreds of E3s. The large number of E3 ligases primarily provides:", opts:["Energy","Substrate SPECIFICITY (which protein gets tagged)","Faster ATP synthesis","Membrane transport"], a:1,
+      exp:"E3 ligases recognize specific targets (degrons), so their large number is the source of which proteins get ubiquitinated — i.e., specificity."},
+     {type:"mcq", q:"A protein receives a single ubiquitin vs a Lys48-linked poly-ubiquitin chain. The respective fates are:", opts:["Both → immediate degradation","Mono = regulatory signal (e.g., localization); poly(K48) = proteasomal degradation","Mono = degradation; poly = activation","Neither does anything"], a:1,
+      exp:"Mono-ubiquitin is a regulatory signal (localization, histone function, repair); Lys48 poly-ubiquitin flags the protein for the proteasome."},
+     {type:"mcq", q:"A PROTAC lowers a target protein's level even though its gene is still fully transcribed. This proves the mechanism is:", opts:["Gene silencing","Targeted DEGRADATION (PROTAC bridges target to an E3 ligase → ubiquitination → proteasome)","Increased translation","Methylation"], a:1,
+      exp:"PROTACs are chimeras linking the target to an E3 ligase, forcing ubiquitination and proteasomal degradation — protein drops despite ongoing transcription (degradation, not silencing)."},
+     {type:"short", q:"Explain the 'vicious cycle' by which loss of proteostasis accelerates with age.", model:"Damaged/misfolded proteins accumulate and overwhelm chaperones and the proteasome. The aggregates themselves damage and sequester chaperones and UPS components, reducing capacity further, which lets more proteins misfold and aggregate — a positive-feedback spiral. Aging adds more damaged proteins and declining proteostasis capacity, so the cycle worsens over time.", pts:["Misfolded proteins overwhelm chaperones + proteasome","Aggregates damage/sequester the machinery that clears them","Positive feedback → accelerating decline","Worsens with age as capacity drops"]},
+     {type:"tf", q:"The main job of chaperones is to traffic already-folded proteins to their correct cellular location.", a:false,
+      exp:"False — chaperones prevent aggregation and assist (re)folding to native shape. Trafficking folded proteins is a different function handled by signal sequences/transport systems."},
+     {type:"mcq", q:"Parkin is an E3 ubiquitin ligase. A loss-of-function PARKIN mutation is associated with:", opts:["Longer lifespan","Early-onset Parkinson's disease (defective tagging of damaged mitochondria for mitophagy)","Cancer immunity","Telomere lengthening"], a:1,
+      exp:"Parkin (E3 ligase) tags damaged mitochondria; loss-of-function impairs mitophagy → damaged mitochondria accumulate in neurons → early-onset Parkinson's. (Links L5 and L6.)"},
+     {type:"mcq", q:"Large protein aggregates that the proteasome can't handle are cleared mainly by:", opts:["The UPS alone","Macroautophagy","Telomerase","DNA repair"], a:1,
+      exp:"The UPS degrades individual ubiquitin-tagged proteins; large aggregates and whole organelles are cleared by macroautophagy."},
+     {type:"short", q:"Describe how a PROTAC is designed and why it's called an 'event-driven' (catalytic) drug.", model:"A PROTAC is a two-headed (chimeric) molecule: one end binds the target protein, the other binds an E3 ubiquitin ligase, joined by a linker. By bringing them together it forces ubiquitination of the target, which the proteasome then degrades. It's 'event-driven/catalytic' because the PROTAC is released after the target is degraded and can act repeatedly on more target molecules — unlike an inhibitor that must continuously occupy the target.", pts:["Chimera: target-binding end + E3-binding end + linker","Forces ubiquitination → proteasomal degradation","Catalytic: released and reused after each degradation","Lowers protein level despite ongoing transcription"]}
     ]
    }
   ]
@@ -1669,6 +1804,33 @@ window.COURSE = [
      {type:"mcq", q:"A scientist inhibits both mitophagy and the heat shock response in aging cells. Which combined outcome would most likely occur?", opts:["Improved proteostasis and mitochondrial function","Increased protein synthesis and lifespan extension","Reduced need for autophagy","Accumulation of damaged proteins and dysfunctional mitochondria leading to accelerated cellular decline"], a:3,
       exp:"Blocking both quality-control systems simultaneously removes two compensatory defenses: damaged mito accumulate (no mitophagy) AND misfolded proteins aggregate (no chaperone response) — a compounding failure that accelerates decline."}
     ]
+   },
+   {
+    id:"L6X", title:"🔥 Challenge set — harder exam-style practice",
+    sub:"Extra reasoning/application questions on the ROS paradox, mitophagy, mito dynamics, and endosymbiosis.",
+    slides:[
+     {h:"🔥 Challenge set", imgs:[], html:`<div class="callout key">Harder, application-level questions — reason through the ROS paradox, order the PINK1/Parkin cascade, and predict outcomes of blocking mitophagy. <b>Aim to ace these.</b></div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Why did 50+ years of antioxidant-supplement experiments fail to extend lifespan (and sometimes raise disease risk)?", opts:["Antioxidants were too weak","ROS are required signaling molecules; eliminating them removes protective (hormetic) responses","Animals refused the supplements","ROS don't exist in mitochondria"], a:1,
+      exp:"ROS act as signals (NF-κB, HIF-1α, MAPKs) that trigger protective adaptations. Blanket antioxidants blunt these, so they don't help and can harm — the ROS paradox."},
+     {type:"mcq", q:"Order the PINK1/Parkin mitophagy steps correctly:", opts:["Parkin phosphorylates PINK1 → fusion → fission","PINK1 accumulates on damaged mito → phosphorylates/recruits Parkin → poly-ubiquitin → phagosome → lysosome","Lysosome → PINK1 → healthy mito tagged","mTOR → Parkin → telomere"], a:1,
+      exp:"PINK1 builds up on damaged mitochondria, recruits/activates Parkin (E3 ligase), which adds poly-ubiquitin; an autophagosome forms and fuses with a lysosome → mitophagy."},
+     {type:"mcq", q:"In mitochondrial dynamics, fission and fusion serve which complementary roles?", opts:["Fission dilutes damage; fusion isolates it","Fusion mixes/dilutes contents to buffer damage; fission separates damaged regions for mitophagy","Both only make ATP","Both shorten mtDNA"], a:1,
+      exp:"Fusion merges mitochondria, diluting localized damage; fission splits off damaged segments so they can be tagged and removed by mitophagy."},
+     {type:"mcq", q:"mtDNA has a higher mutation rate than nuclear DNA mainly because it:", opts:["Has more introns","Sits next to the ROS-producing ETC and is less protected (no histones, limited repair)","Is linear","Is never replicated"], a:1,
+      exp:"Circular mtDNA lies near the electron-transport chain (ROS source), lacks histone protection, and has more limited repair — so it mutates faster."},
+     {type:"tf", q:"Since mitophagy clears damaged mitochondria, more mitophagy is always better for health.", a:false,
+      exp:"False — excessive mitophagy destroys mitochondria that heart/muscle cells need for ATP, causing fatigue, muscle loss, and dysfunction. The professor warned against mitophagy-supplement hype."},
+     {type:"short", q:"A mutation blocks mitophagy specifically, but general (macro)autophagy still works. Predict the aging-relevant outcome and explain why general autophagy can't compensate.", model:"Damaged mitochondria accumulate because mitophagy is the SELECTIVE pathway that recognizes them (via PINK1/Parkin ubiquitin tagging). General autophagy lacks that selective targeting, so it won't specifically remove damaged mitochondria. The buildup leaks excess ROS → oxidative stress, lowers ATP, and accelerates cellular decline.", pts:["Damaged mitochondria accumulate","General autophagy lacks PINK1/Parkin selective targeting","Result: ↑ROS/oxidative stress, ↓ATP, faster decline"]},
+     {type:"mcq", q:"Which pairing correctly describes autophagy regulation by energy sensors?", opts:["AMPK inhibits autophagy; mTOR activates it","AMPK (low energy) activates autophagy; mTOR (abundance) inhibits it","Both inhibit it","Both activate it"], a:1,
+      exp:"AMPK senses low energy and turns ON autophagy; mTOR senses abundance and turns it OFF."},
+     {type:"mcq", q:"Which feature is the BEST evidence that mitochondria descended from endosymbiotic bacteria?", opts:["They make ATP","They have their own circular DNA, bacteria-like ribosomes, and intron-free genes","They are oval-shaped","They contain water"], a:1,
+      exp:"Circular DNA, prokaryote-type ribosomes (sensitive to some antibiotics), own polymerases, and intron-free genes all point to a bacterial (endosymbiotic) origin."},
+     {type:"short", q:"Explain mitohormesis: why exercise-induced ROS can be beneficial while high-dose antioxidants taken around exercise may not be.", model:"Exercise transiently raises ROS, which act as signals activating repair and adaptive pathways (e.g., HIF-1α, NF-κB, MAPKs, mitochondrial biogenesis) — a hormetic benefit. High-dose antioxidants taken around exercise quench these ROS signals, blunting the adaptive response and the benefit. The dose matters: a little ROS is protective, too much is damaging.", pts:["Exercise ROS = adaptive signal → repair/biogenesis","Hormesis: mild stress beneficial","High-dose antioxidants quench the signal, blunting benefit","Dose-dependent (little good, too much bad)"]},
+     {type:"mcq", q:"Horizontal (cell-to-cell) mitochondrial transfer can occur via all of these EXCEPT:", opts:["Tunneling nanotubes","Extracellular vesicles","Cell-surface carbohydrate receptors capturing free mitochondria","DNA methylation"], a:3,
+      exp:"Mitochondria move between cells via tunneling nanotubes, EVs, and surface carbohydrate-receptor capture. DNA methylation is an epigenetic mark, not a transfer route."}
+    ]
    }
   ]
  },
@@ -1923,6 +2085,33 @@ window.COURSE = [
       exp:"False — the MACE reduction appears BEFORE meaningful weight loss, so weight loss alone can't explain it; the mechanism remains unknown (real-world-data surprise)."},
      {type:"mcq", q:"Applying the course's evidence-vs-hype lens to a longevity claim, which questions should you ask?", opts:["Only whether it sounds scientific","Shown in humans or just model organisms? Correlation or causation? Who profits?","Whether an influencer recommends it","Whether it is expensive"], a:1,
       exp:"The recurring framework: demand human (not just animal) data, distinguish correlation from causation, and check for conflicts of interest."}
+    ]
+   },
+   {
+    id:"L7X", title:"🔥 Challenge set — harder exam-style practice",
+    sub:"Extra reasoning/application questions on the IIS/AMPK/mTOR axis, diabetes mechanism, and the drug interventions.",
+    slides:[
+     {h:"🔥 Challenge set", imgs:[], html:`<div class="callout key">Harder, application-level questions — trace signaling cascades, reason about daf-2/daf-16 logic, and separate evidence from hype on rapamycin/metformin/GLP-1. <b>Aim to ace these.</b></div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"A daf-2 single mutant lives 2.3× longer, but a daf-2; daf-16 double mutant lives a normal lifespan. The logical conclusion is:", opts:["daf-16 is irrelevant","daf-2's longevity REQUIRES daf-16 (FOXO) acting downstream; the receptor normally inhibits FOXO","daf-2 and daf-16 are unrelated","Caloric restriction caused it"], a:1,
+      exp:"Removing daf-16 abolishes the benefit → daf-16 (FOXO) is the required downstream effector. The active insulin receptor normally inhibits FOXO; losing it frees FOXO → longevity."},
+     {type:"mcq", q:"In type 2 diabetes, defective insulin signaling to GLUT4 most directly impairs:", opts:["Insulin production","Glucose uptake into cells","Glucagon release","DNA repair"], a:1,
+      exp:"GLUT4 is the glucose transporter brought to the membrane by insulin signaling; if signaling fails, glucose can't enter — glucose uptake is directly impaired."},
+     {type:"mcq", q:"To bias a cell toward longevity, you would:", opts:["Activate insulin/IGF-1 signaling and mTOR","Suppress insulin/IGF-1 signaling and mTOR; activate AMPK","Activate all three pathways","Suppress AMPK only"], a:1,
+      exp:"Suppress IIS and mTOR (both anabolic, both block autophagy) and activate AMPK (energy sensor that inhibits mTOR and promotes autophagy)."},
+     {type:"mcq", q:"Trace how a high-sugar meal ends up SUPPRESSING autophagy:", opts:["Sugar directly destroys lysosomes","Insulin → IRS → PI3K → AKT → mTOR; mTOR inhibits ULK and therefore autophagy","Glucagon activates AMPK","Sugar activates FOXO"], a:1,
+      exp:"High glucose → insulin → the IRS/PI3K/AKT/mTOR cascade. mTOR inhibits ULK, shutting down autophagy — so feeding blocks the cell's clean-up."},
+     {type:"tf", q:"The cardiovascular benefit of GLP-1 agonists is fully explained by the weight loss they cause.", a:false,
+      exp:"False — MACE reduction appears BEFORE meaningful weight loss, so weight loss alone can't explain it; additional (not fully understood) mechanisms are involved."},
+     {type:"short", q:"Biologically, why is intervening 'before prediabetes' likely to have the greatest impact?", model:"Before prediabetes, insulin receptors are still sensitive and β-cells are healthy, so lifestyle/AMPK-activating interventions can keep glucose homeostasis on its set point and prevent the years of high sugar that desensitize receptors. Once prediabetes/diabetes develops, receptor desensitization and tissue/vascular damage have accumulated and are harder to reverse — prevention beats damage control. (Caveat: lifestyle change is the hardest intervention to sustain.)", pts:["Receptors still sensitive / β-cells healthy early","Prevents cumulative high-sugar desensitization & vascular damage","Later damage is harder to reverse → prevention > damage control","(Lifestyle change is hardest to sustain)"]},
+     {type:"mcq", q:"What is the only well-supported HUMAN benefit of rapamycin demonstrated so far?", opts:["It reverses aging","Improved immune function in older adults (e.g., better flu-vaccine response)","It cures type 1 diabetes","It lengthens telomeres"], a:1,
+      exp:"The solid human evidence (Mannick 2014) is enhanced immune function in older people. Broader anti-aging claims remain unproven despite widespread off-label use."},
+     {type:"mcq", q:"Metformin's relevant mechanisms for longevity research include:", opts:["Activating mTOR and raising blood glucose","Activating AMPK / inhibiting mTOR and reducing hepatic glucose production","Lengthening telomeres directly","Replacing insulin"], a:1,
+      exp:"Metformin activates AMPK / inhibits mTOR and lowers liver glucose output; decades of safe diabetic use make it a low-risk longevity candidate."},
+     {type:"short", q:"GLP-1 agonists act on multiple tissues. Name three target tissues and the effect in each that helps lower blood sugar or weight.", model:"Brain (hypothalamus): ↓appetite/↑satiety → less food intake. Pancreas: ↑insulin secretion → lowers blood glucose. Stomach/gut: ↓gastric emptying/motility → prolonged fullness and slower glucose absorption. (Also liver: ↓fat content; fat tissue: ↑lipolysis.) These combine to reduce weight and blood sugar.", pts:["Brain → ↓appetite/↑satiety","Pancreas → ↑insulin secretion","Stomach/gut → slowed gastric emptying","(Liver ↓fat / fat-tissue lipolysis also accepted)"]},
+     {type:"mcq", q:"Which statement correctly contrasts type 1 and type 2 diabetes at the mechanism level?", opts:["Both are autoimmune","Type 1 = autoimmune β-cell loss (too little insulin); type 2 = insulin resistance (cells stop responding)","Type 2 is autoimmune; type 1 is metabolic","Both are caused by GLUT4 overactivity"], a:1,
+      exp:"Type 1 = autoimmune destruction of β-cells → insufficient insulin. Type 2 = metabolic insulin resistance → receptors/signaling fail despite insulin being present."}
     ]
    }
   ]
