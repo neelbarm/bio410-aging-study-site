@@ -397,6 +397,17 @@ window.COURSE = [
     ]
    },
    {
+    id:"L1D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended 'think & explain' prompts printed on her slides — her short-answer exam style. Write a full answer, then check the model.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">These are the discussion prompts printed on the lecture slides. The exam has short-answer questions like these — write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"Why are older adults more vulnerable to some diseases, and how can you tell whether a claim about aging and disease is actually supported by evidence?", model:"Aging accumulates molecular and cellular damage (the hallmarks) that erodes resilience, so risk of chronic disease roughly doubles about every 8 years. To judge a claim, ask: human data or just animal/cell? correlation or causation? sample size? conflict of interest? does the headline exaggerate? are uncertainties acknowledged? Strong evidence = a review citing multiple controlled HUMAN studies; weak = anecdote/testimonial/press release.", pts:["Aging accumulates hallmark damage → less resilience → risk ~doubles every 8 yrs","Human vs animal/cell data; correlation vs causation","Sample size, conflict of interest, headline exaggeration","Strong = controlled human studies; weak = anecdote"]},
+     {type:"short", q:"Evaluate a claim (the in-class activity): take a claim like 'this supplement reverses aging' and walk through the evidence-quality criteria to decide if it's justified.", model:"First frame the disease/mechanism (identify 2–3 hallmarks involved). Then evaluate the claim: What study type — human, mouse, or cell culture? Is it correlation or causation? Sample size? Any conflict of interest (who profits)? Does the headline exaggerate? Are important uncertainties acknowledged? A claim is justified only if backed by controlled human evidence without major conflicts; otherwise it's weak/hype.", pts:["Frame disease + 2–3 hallmark mechanisms","Study type (human/mouse/cell); correlation vs causation","Sample size; conflict of interest; exaggeration; uncertainties","Justified only with controlled human data"]}
+    ]
+   },
+   {
     id:"L1S", title:"🖼️ Slide-reading — exam-format questions",
     sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
     slides:[
@@ -793,6 +804,19 @@ window.COURSE = [
     ]
    },
    {
+    id:"L2D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended 'think & explain' prompts printed on her slides — her short-answer exam style. Write a full answer, then check the model.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">These are the discussion prompts printed on the lecture slides. The exam has short-answer questions like these — write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"Why do our genomes become increasingly unstable with age?", model:"Lifelong DNA lesions accumulate while repair capacity declines, so damage outpaces repair over time. This produces the four features of genomic instability: mutation accumulation, chromosomal abnormalities, telomere dysfunction, and mitochondrial DNA damage — all associated with aging phenotypes.", pts:["Lesions accumulate + repair declines with age","Damage outpaces repair","4 features: mutations, chromosomal abnormalities, telomere dysfunction, mtDNA damage"]},
+     {type:"short", q:"Your DNA is damaged tens of thousands of times per day, yet we don't all develop cancer or die of genomic instability in childhood. Why not?", model:"Efficient DNA repair (BER, NER, MMR, NHEJ, HR) fixes most lesions before replication, and the p53 checkpoint arrests the cycle for repair or triggers apoptosis if damage is unrepairable — eliminating would-be cancer cells. Cancer/instability emerge over decades as damage accumulates and these defenses (e.g., p53) themselves become mutated.", pts:["Efficient repair fixes most lesions before replication","p53 checkpoint: arrest→repair or apoptosis removes dangerous cells","Defenses erode/mutate over decades → later disease"]},
+     {type:"short", q:"Two people have the same chronological age (70), but one is healthy and the other has multiple age-related diseases. Could differences in DNA-repair capacity help explain this?", model:"Yes. Repair capacity reflects nature + nurture: inherited differences in repair-enzyme efficiency (genetic alleles) plus lifetime environmental exposure (UV, smoking, pollution). Better repair → fewer accumulated mutations → healthier aging; poorer repair or heavier exposure → more damage and disease.", pts:["Inherited repair-enzyme efficiency (genetic)","Plus environmental exposure (UV/smoking/pollution)","Better repair → fewer mutations → healthier aging"]},
+     {type:"short", q:"Many anti-aging supplements claim to 'boost DNA repair.' What evidence would convince you the claim is scientifically valid?", model:"Randomized controlled HUMAN trials showing a real outcome — fewer DNA lesions/mutations (a DIRECT measure of the DNA itself) or improved healthspan/longevity — not merely raised repair-protein levels (indirect, doesn't prove DNA was fixed) or mouse/cell-culture data. And from sources without conflicts of interest.", pts:["Human RCTs, not just mouse/cell data","Direct DNA measures (fewer lesions), not indirect protein levels","No conflict of interest / real health outcomes"]}
+    ]
+   },
+   {
     id:"L2S", title:"🖼️ Slide-reading — exam-format questions",
     sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
     slides:[
@@ -1118,6 +1142,18 @@ window.COURSE = [
     ]
    },
    {
+    id:"L3D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended 'think & explain' prompts printed on her slides — her short-answer exam style. Write a full answer, then check the model.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">These are the discussion prompts printed on the lecture slides. The exam has short-answer questions like these — write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"What led to the large historical increase in human life expectancy?", model:"Mostly public-health and medical advances — sanitation, clean water, vaccines, antibiotics, and reduced infant/childhood mortality — which raised AVERAGE lifespan without changing maximum lifespan. Key distinction: lifespan (years lived) vs healthspan/longevity (healthy, functional years).", pts:["Public-health/medical advances (sanitation, vaccines, antibiotics)","Reduced infant/childhood mortality → higher average lifespan","Average lifespan up, maximum lifespan ~unchanged; lifespan vs healthspan"]},
+     {type:"short", q:"What allows centenarians to achieve healthy aging?", model:"A combination of favorable genetics (efficient DNA repair, longer telomeres, protective longevity alleles) and lifestyle/environment. Comparing centenarians' alleles reveals candidate longevity genes. They tend to compress disease into very late life — an extended healthspan, not just a long lifespan.", pts:["Favorable genetics (repair, longer telomeres, longevity alleles)","Plus lifestyle/environment","Compressed disease / extended healthspan"]},
+     {type:"short", q:"For a lab assay that measures DNA damage or senescence (e.g., COMET, γH2AX immunofluorescence, FISH, LC-MS, SA-β-gal): what is actually being measured, what information does it provide, and what would an aged sample look like?", model:"State the measurement, the readout, and the aged expectation. Examples: COMET = single-cell DNA strand breaks → longer 'comet tail' = more damage; aged sample = longer tails. γH2AX IF = double-strand-break foci → more foci = more damage; aged = more foci. SA-β-gal = senescent cells stain blue → aged tissue = more blue cells. FISH = telomere signals → aged = shorter/fewer telomere signals and fusions.", pts:["Name what is measured (breaks, foci, senescent cells, telomeres)","What info it gives (amount/type of damage or senescence)","Aged sample expectation (more tail/foci/blue, shorter telomeres)"]}
+    ]
+   },
+   {
     id:"L3S", title:"🖼️ Slide-reading — exam-format questions",
     sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
     slides:[
@@ -1414,6 +1450,17 @@ window.COURSE = [
       exp:"Every cell shares one genome; different cell types differ in their EPIGENOME, which sets which genes are expressed."},
      {type:"mcq", q:"Epigenetics is the study of:", opts:["Inheritance of organellar genes (mitochondrial, chloroplast genes)","DNA methylation patterns","Inheritance of traits coded by the DNA sequence","Inheritance of traits NOT coded by the DNA sequence"], a:3,
       exp:"Epigenetics = heritable changes in traits/expression NOT encoded in the DNA sequence. ('DNA methylation patterns' is only one mechanism — too narrow.)"}
+    ]
+   },
+   {
+    id:"L4D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended 'think & explain' prompts printed on her slides — her short-answer exam style. Write a full answer, then check the model.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">These are the discussion prompts printed on the lecture slides. The exam has short-answer questions like these — write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"Which biomarker we discussed could function as a biological clock, and how could it be used to predict aging?", model:"DNA-methylation patterns — the basis of an epigenetic clock. Train a machine-learning model on methylation profiles from many people of known chronological ages; it learns which methylation sites correlate with age, then predicts a new person's biological age from their methylation profile. (Diverse training data help it generalize.)", pts:["DNA methylation = epigenetic clock","ML model trained on methylation from many known ages","Predicts biological age from a new methylation profile"]},
+     {type:"short", q:"Is epigenetic aging causal or correlative, and is it modifiable?", model:"Epigenetic clocks are PREDICTIVE MODELS — they detect methylation patterns that CORRELATE with biological aging, not direct measures of damage, so whether the methylation changes actually CAUSE aging is still an open question. Epigenetic marks are in principle reversible/modifiable (by environment, drugs), but it is not established that resetting them reverses aging.", pts:["Clocks detect correlation, not proven causation","They are predictive models, not direct damage measures","Marks are modifiable in principle; reversing aging not proven"]}
     ]
    },
    {
@@ -1718,6 +1765,17 @@ window.COURSE = [
       exp:"The defining event: PROTAC bridges target + E3 ligase → ubiquitination → proteasomal degradation."},
      {type:"mcq", q:"How does the Hsp70 ATPase cycle become increasingly relevant in aging-related proteotoxic stress?", opts:["It becomes irrelevant with age because chaperones stop working once mitochondrial ATP declines","ATP hydrolysis by Hsp70 directly repairs oxidative modifications on amino-acid side chains, reversing all damage","ATP binding makes Hsp70 clamp substrates permanently, which matters more with age","ATP hydrolysis and nucleotide exchange drive cycles of high-/low-affinity binding, allowing repeated refolding attempts on the more frequently damaged proteins of aged cells"], a:3,
       exp:"Hsp70 cycles between high- and low-affinity states (ATP/ADP + NEFs) to make repeated refolding attempts — increasingly important as aged cells accumulate more damaged proteins."}
+    ]
+   },
+   {
+    id:"L5D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended 'think & explain' prompts printed on her slides — her short-answer exam style. Write a full answer, then check the model.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">These are the discussion prompts printed on the lecture slides. The exam has short-answer questions like these — write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"Why does cell division depend on protein 'death' (regulated protein degradation)?", model:"The cell cycle is driven by the timed DESTRUCTION of key regulators. Cyclins and CDK inhibitors must be ubiquitinated and degraded by the proteasome at precise moments to allow orderly progression through the cycle. This ubiquitin tagging is tightly regulated — when it goes awry, cells divide uncontrollably and some cancers can result.", pts:["Cell cycle driven by timed degradation of regulators","Cyclins/CDK inhibitors ubiquitinated → proteasome at the right time","Dysregulated tagging → uncontrolled division → cancer"]},
+     {type:"short", q:"How does a cell point out which proteins are 'doomed' for degradation?", model:"Through the E1→E2→E3 ubiquitin cascade: E1 activates ubiquitin (ATP), E2 conjugates it, and an E3 ligase attaches a poly-ubiquitin chain to a lysine on the specific target. E3 ligases (hundreds of them) provide the SPECIFICITY by recognizing degrons. A Lys48-linked poly-ubiquitin chain routes the protein to the proteasome; a single/mono-ubiquitin is a regulatory signal, not a degradation tag.", pts:["E1→E2→E3 cascade adds poly-ubiquitin to a target lysine","E3 ligases give specificity (recognize degrons)","K48 poly-ubiquitin = proteasome; mono-ubiquitin = regulatory"]}
     ]
    },
    {
@@ -2054,6 +2112,22 @@ window.COURSE = [
      {type:"short", q:"Explain mitohormesis: why exercise-induced ROS can be beneficial while high-dose antioxidants taken around exercise may not be.", model:"Exercise transiently raises ROS, which act as signals activating repair and adaptive pathways (e.g., HIF-1α, NF-κB, MAPKs, mitochondrial biogenesis) — a hormetic benefit. High-dose antioxidants taken around exercise quench these ROS signals, blunting the adaptive response and the benefit. The dose matters: a little ROS is protective, too much is damaging.", pts:["Exercise ROS = adaptive signal → repair/biogenesis","Hormesis: mild stress beneficial","High-dose antioxidants quench the signal, blunting benefit","Dose-dependent (little good, too much bad)"]},
      {type:"mcq", q:"Horizontal (cell-to-cell) mitochondrial transfer can occur via all of these EXCEPT:", opts:["Tunneling nanotubes","Extracellular vesicles","Cell-surface carbohydrate receptors capturing free mitochondria","DNA methylation"], a:3,
       exp:"Mitochondria move between cells via tunneling nanotubes, EVs, and surface carbohydrate-receptor capture. DNA methylation is an epigenetic mark, not a transfer route."}
+    ]
+   },
+   {
+    id:"L6D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended 'think & explain' prompts printed on her slides — her short-answer exam style — plus her one printed MCQ. Write a full answer, then check the model.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">These are the discussion prompts printed on the lecture slides (the exam has short-answer questions like these), plus the one printed multiple-choice question. Write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"A drug increases autophagy in neurons. Predict one BENEFIT and one RISK in an aging brain.", model:"Benefit: more autophagy clears damaged proteins/aggregates and dysfunctional mitochondria, lowering proteotoxic stress and neurodegeneration risk (Parkinson's/Alzheimer's-type pathology). Risk: excessive autophagy can over-degrade needed components (functional mitochondria, synaptic proteins), starving energy-hungry neurons and impairing function. The dose/context matters — more is not always better (hormesis).", pts:["Benefit: clears aggregates/damaged mitochondria → less neurodegeneration","Risk: excessive autophagy destroys needed components → neuronal dysfunction","Dose/context dependent (hormesis)"]},
+     {type:"short", q:"Where is the boundary between BENEFICIAL and HARMFUL stress at the molecular level, and what biomarkers would tell you whether the response is adaptive or damaging?", model:"Beneficial (hormetic) stress is mild/transient and activates adaptive pathways (AMPK, autophagy, antioxidant enzymes like SOD/GPx, heat-shock proteins) without net damage; harmful stress exceeds repair capacity and causes oxidative damage. Adaptive biomarkers: ↑autophagy flux, ↑SOD/GPx, ↑HSPs, improved function. Damage biomarkers: oxidative adducts (8-oxodG, lipid peroxidation, protein carbonyls), persistent γH2AX, and inflammatory/senescence markers.", pts:["Beneficial = mild/transient → activates AMPK/autophagy/antioxidants/HSPs","Harmful = exceeds repair capacity → oxidative damage","Adaptive markers (↑autophagy, SOD/GPx, HSPs) vs damage markers (8-oxodG, γH2AX, inflammation)"]},
+     {type:"short", q:"Mitophagy is often promoted as beneficial for longevity. When could INCREASED mitophagy accelerate disease progression or aging?", model:"In high-energy-demand tissues (heart, skeletal muscle, neurons), excessive mitophagy destroys mitochondria the cells need for ATP → fatigue, muscle loss, and cardiac/neuronal dysfunction. Removing too many mitochondria (including functional ones) is harmful, so 'more mitophagy' is not automatically good — the professor warned against mitophagy-supplement hype.", pts:["Heart/muscle/neurons need mitochondria for ATP","Excess mitophagy destroys functional mitochondria → fatigue/muscle loss/dysfunction","More is not always better"]},
+     {type:"short", q:"Exercise increases ROS (which can activate autophagy and adaptive responses), and high-dose antioxidants may blunt exercise benefits. Should reducing oxidative stress always be considered beneficial?", model:"No. ROS are signaling molecules; the exercise-induced ROS bump triggers hormetic adaptations (autophagy, mitochondrial biogenesis, upregulated antioxidant defenses). Blanket high-dose antioxidants quench these signals and can blunt the benefits of exercise — some ROS is necessary. Whether reducing oxidative stress helps or harms depends on dose and context.", pts:["ROS are signals, not just damage","Exercise ROS drives hormetic adaptation (autophagy, biogenesis)","High-dose antioxidants blunt the benefit — context/dose dependent"]},
+     {type:"short", q:"Two people follow the same intervention protocol; one shows improved metabolic health and longevity markers, the other develops fatigue and muscle loss. Why might the same intervention produce opposite outcomes?", model:"Individual variation determines where the same 'dose' of stress lands on the hormetic dose–response curve. Genetics, baseline health, age, and the effective dose differ between people, so an intervention that is mildly stressful and adaptive (hormetic) for one person can be excessive and damaging for another. This is why personalized medicine and biomarker tracking matter.", pts:["Same stress lands differently on each person's dose–response curve","Genetics, baseline health, age, effective dose vary","Hormetic for one, excessive/damaging for another → personalized response"]},
+     {type:"mcq", q:"In a follow-up experiment, blocking mitophagy eliminated most benefits of mitochondrial transfer. You observe: ATP production improved, cells received transferred mitochondria, senescence markers did NOT improve, and blocking mitophagy removed most benefits. Which conclusion is BEST supported?", opts:["Mitochondrial transfer alone fully reverses aging","Mitophagy may be necessary for transferred mitochondria to improve long-term cellular health","Hormesis prevents aging entirely","Aging is caused only by low ATP production"], a:1,
+      exp:"Because blocking mitophagy removed the benefit, mitophagy is likely required for transferred mitochondria to help — a measured conclusion, not 'transfer reverses aging.' (Her printed slide MCQ.)"}
     ]
    },
    {
