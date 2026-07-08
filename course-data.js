@@ -1079,6 +1079,45 @@ window.COURSE = [
     ]
    },
    {
+    id:"L3Q", title:"📝 Practice quiz (from class) — Telomeres & Senescence",
+    sub:"The 15-question practice quiz Prof. Kemeny gave, with answers keyed.",
+    slides:[
+     {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">These are the exact questions from the class <b>Telomeres &amp; Senescence</b> practice quiz. High-value — she often reuses this style. Answer, then check.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"What is most likely to result from reduced or very little active telomerase activity?", opts:["Telomere lengthens in germ cells","Cells maintain normal functioning","Cells may become cancerous","Cells age and begin to lose function"], a:3,
+      exp:"Little telomerase → telomeres keep shortening each division → cells hit the DDR/senescence and lose function (aging)."},
+     {type:"mcq", q:"A scientist treats cells with a compound believed to REDUCE senescence. Which combination of results would provide the strongest support?", opts:["Increased γH2AX, increased micronuclei, increased p53","Increased p16, increased SA-β-gal staining, decreased proliferation","Decreased p21, decreased SA-β-gal staining, increased EdU incorporation","Increased telomere dysfunction and increased cell cycle arrest"], a:2,
+      exp:"Less senescence = markers DOWN (↓p21, ↓SA-β-gal) and proliferation UP (↑EdU = cells entering S-phase). The other options show MORE senescence."},
+     {type:"mcq", q:"Which cells don't regularly express the telomerase gene?", opts:["Heart muscle cells","Cancer cells","Stem cells","Germ cells"], a:0,
+      exp:"Most somatic cells (e.g., heart muscle) lack telomerase; it's active in germ cells, stem cells, and most cancers."},
+     {type:"mcq", q:"A population of fibroblasts accumulates persistent DNA damage and enters senescence. Which pathway most directly mediates this?", opts:["Activation of p53 followed by induction of caspases","Increased expression of histones to package damaged DNA","Activation of p53 followed by induction of p21","Activation of telomerase and increased cyclin activity"], a:2,
+      exp:"Senescence: p53 → p21 → cell-cycle ARREST. (p53 → caspases would be APOPTOSIS — same sensor, different outcome.)"},
+     {type:"mcq", q:"Why can telomere shortening contribute to cellular senescence?", opts:["Short telomeres increase ATP production","Short telomeres prevent oxidative stress","Short telomeres stimulate uncontrolled proliferation","Critically short telomeres are recognized as DNA damage"], a:3,
+      exp:"An uncapped, critically short telomere looks like a double-strand break → triggers the DDR → senescence."},
+     {type:"mcq", q:"What is the role of telomerase in replicating the ends of linear chromosomes?", opts:["It adds numerous GC pairs, which resist hydrolysis and maintain chromosome integrity","It causes specific double-strand DNA breaks that result in blunt ends on both strands","It catalyzes the lengthening of telomeres, compensating for the shortening that could occur during replication","It adds a 5′ cap structure to the chromosome ends that resists degradation by nucleases"], a:2,
+      exp:"Telomerase extends telomeres, offsetting the ~50–100 bp lost each division from the end-replication problem."},
+     {type:"mcq", q:"Why might cellular senescence be beneficial early in life but harmful later?", opts:["Senescence increases telomere length over time","Senescence promotes infections early in life","Senescence suppresses cancer but may impair tissue regeneration with age","Senescence permanently increases stem cell numbers"], a:2,
+      exp:"Antagonistic pleiotropy: early it blocks would-be cancer cells; late, accumulation + SASP drives inflammaging and impairs regeneration."},
+     {type:"mcq", q:"What are telomeres?", opts:["Molecular tags that switch genes on and off","Repetitive DNA sequences at the ends of chromosomes","The proteins that trigger immune responses","Specialized cells that remove old DNA"], a:1,
+      exp:"Telomeres are repetitive DNA (TTAGGG) caps at chromosome ends that protect them and shorten with division."},
+     {type:"mcq", q:"A cancer cell line inappropriately expresses telomerase. Which treatment would best prevent it from dividing indefinitely?", opts:["A drug that allows telomerase to be expressed but at lower levels","A drug that repairs the mutation within the telomerase coding region","A drug that increases telomerase expression","A drug that blocks the promoter of the telomerase gene"], a:3,
+      exp:"Block the promoter → shut OFF telomerase → telomeres shorten each division → the cancer cell can no longer divide indefinitely. Lowering/repairing/increasing it wouldn't stop immortalization."},
+     {type:"mcq", q:"What explains the effect of telomerase on cellular aging?", opts:["Telomerase speeds up the rate of cell proliferation","Telomerase can eliminate telomere shortening and slows aging","Telomerase shortens telomeres, which delays cellular aging","Telomerase would have no effect on cellular aging"], a:1,
+      exp:"By rebuilding telomeres, telomerase offsets replicative shortening, delaying the DDR/senescence that drives cellular aging."},
+     {type:"mcq", q:"Cells from older individuals show increased γH2AX staining vs younger individuals. Most likely interpretation?", opts:["Increased DNA damage signaling","Increased mitochondrial ATP production","Increased chromosome replication","Increased telomerase activity"], a:0,
+      exp:"γH2AX marks double-strand breaks; more staining = more DNA-damage signaling, which rises with age."},
+     {type:"mcq", q:"Why does telomere length shorten over time?", opts:["In each cell division, a small part of the telomere is uncopied and lost","Telomeres are damaged by ultraviolet light","Telomeres shrink solely due to inflammation","DNA methylation erases telomeric sequences"], a:0,
+      exp:"The end-replication problem: DNA polymerase can't fully copy the lagging-strand end, so ~50–100 bp are lost each division."},
+     {type:"mcq", q:"What is the primary role of p16 in cellular senescence?", opts:["Repairing double-strand DNA breaks","Activating telomerase expression","Inhibiting cyclin-CDK and preventing cell cycle progression","Degrading damaged proteins"], a:2,
+      exp:"p16 is a CDK inhibitor: it blocks cyclin–CDK activity to enforce the senescent cell-cycle arrest (independently of p53)."},
+     {type:"mcq", q:"Which characteristic best distinguishes a senescent cell from a quiescent cell?", opts:["Senescent cells cannot remain metabolically active","Senescent cells contain no DNA damage","Senescent cells divide more slowly than quiescent cells","Senescent cells are permanently arrested and often secrete inflammatory factors"], a:3,
+      exp:"Senescent = permanent arrest + SASP (inflammatory secretion). Quiescent = reversibly resting and can re-enter the cycle."},
+     {type:"mcq", q:"What is the proposed goal of senolytic therapies?", opts:["Increase mutation rates to improve adaptation","Accelerate cell cycle progression","Eliminate senescent cells from tissues","Convert senescent cells into stem cells"], a:2,
+      exp:"Senolytics selectively kill/clear senescent cells (reducing their number and SASP burden); senomorphics instead suppress the SASP."}
+    ]
+   },
+   {
     id:"L3S", title:"🖼️ Slide-reading — exam-format questions",
     sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
     slides:[
