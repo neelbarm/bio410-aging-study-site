@@ -395,6 +395,23 @@ window.COURSE = [
      {type:"mcq", q:"DAF-2 mutant worms live ~150% longer, and DAF-2 is conserved in humans. What is the MOST defensible conclusion?", opts:["Mutating the human insulin receptor will safely extend human lifespan","The pathway is conserved and worth studying in humans, but worm lifespan gains don't prove a human effect","Humans should take insulin to live longer","The result is irrelevant to humans"], a:1,
       exp:"Conservation makes the pathway relevant and worth studying, but a worm result is not proof of a safe human effect — translation is not guaranteed."}
     ]
+   },
+   {
+    id:"L1S", title:"🖼️ Slide-reading — exam-format questions",
+    sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
+    slides:[
+     {h:"🖼️ Slide-reading", imgs:[], html:`<div class="callout tip">These show a lecture <b>slide</b> and ask what you should conclude from it — exactly how Prof. Kemeny asks on the exam. Study the figure, then answer. Tap any image to enlarge.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Based on this slide, how does the risk of chronic disease change with age?", img:"slides/L1/slide-04.jpg", opts:["It stays constant","It roughly doubles about every 8 years","It halves every decade","It only rises after age 65"], a:1,
+      exp:"The slide's key point: chronic-disease risk roughly doubles every ~8 years — aging is the master risk factor."},
+     {type:"mcq", q:"This figure groups the ten hallmarks of aging. What is the correct split?", img:"slides/L1/slide-21.jpg", opts:["5 molecular + 5 cellular","6 molecular + 3 cellular + 1 systemic","3 molecular + 3 cellular + 4 systemic","10 molecular"], a:1,
+      exp:"6 molecular + 3 cellular + 1 systemic (deregulated nutrient sensing) = 10."},
+     {type:"mcq", q:"This slide depicts cellular senescence. What do senescent cells secrete that harms neighboring tissue?", img:"slides/L1/slide-12.jpg", opts:["Telomerase","The SASP (pro-inflammatory secretory phenotype)","Insulin","Antioxidants"], a:1,
+      exp:"Senescent cells persist and secrete the SASP → inflammaging and tissue dysfunction."},
+     {type:"mcq", q:"This graph relates stress dose to ROS/lifespan. Which concept does it illustrate?", img:"slides/L1/slide-08.jpg", opts:["Hormesis — mild stress is beneficial, excess is harmful","Linear benefit from removing all stress","Telomere shortening","DNA methylation"], a:0,
+      exp:"A biphasic dose–response = hormesis: a little stress (ROS/exercise) is protective; too much is damaging."}
+    ]
    }
   ]
  },
@@ -752,6 +769,23 @@ window.COURSE = [
       exp:"With ~98% non-coding, many mutations land where they have little/no protein consequence and are tolerated — though regulatory regions still matter."},
      {type:"short", q:"NAD⁺ supplements are marketed for 'DNA repair and anti-aging.' What's the rationale, and what evidence would convince you?", model:"Rationale: PARPs and sirtuins consume NAD⁺ for DNA repair and stress responses; NAD⁺ declines with age, so boosting it might restore repair capacity. Convincing evidence would be randomized controlled HUMAN trials showing reduced DNA damage or improved healthspan/longevity outcomes (not just raised NAD⁺ levels or mouse data), from sources without conflicts of interest.", pts:["PARPs/sirtuins need NAD⁺; NAD⁺ falls with age","Hypothesis: restore repair capacity","Need human RCTs showing real outcomes, not just biomarker/mouse data","Watch for conflict of interest / hype"]}
     ]
+   },
+   {
+    id:"L2S", title:"🖼️ Slide-reading — exam-format questions",
+    sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
+    slides:[
+     {h:"🖼️ Slide-reading", imgs:[], html:`<div class="callout tip">These show a lecture <b>slide</b> and ask what you should conclude from it — exactly how Prof. Kemeny asks on the exam. Study the figure, then answer. Tap any image to enlarge.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Per this slide, what happens if DNA replication occurs BEFORE the lesion is repaired?", img:"slides/L2/slide-09.jpg", opts:["Wild-type sequence is restored","A permanent, heritable mutation is fixed in","Nothing changes","The telomere lengthens"], a:1,
+      exp:"Replication-before-repair locks in a permanent mutation; repair-before-replication restores wild type."},
+     {type:"mcq", q:"This slide summarizes the DNA repair pathways. Which repairs a double-strand break using a sister-chromatid TEMPLATE (accurate)?", img:"slides/L2/slide-18.jpg", opts:["NHEJ","Homologous recombination (HR)","BER","Proofreading"], a:1,
+      exp:"HR uses a template (accurate; needs S/G2). NHEJ has no template and is error-prone."},
+     {type:"mcq", q:"This proposed 'aging cycle' links DNA damage to decline through the depletion of which molecule?", img:"slides/L2/slide-24.jpg", opts:["ATP","NAD⁺ (consumed by PARP over-activation)","Glucose","Ubiquitin"], a:1,
+      exp:"Chronic damage over-activates PARP1, depleting NAD⁺ (needed by sirtuins) → decline. Causality still unproven."},
+     {type:"mcq", q:"The oxidative lesion featured here (8-oxo-dG) mispairs with which base, causing a mutation?", img:"slides/L2/slide-12.jpg", opts:["Cytosine","Thymine","Adenine","Uracil"], a:2,
+      exp:"8-oxo-dG pairs with adenine → the original G–C becomes T–A."}
+    ]
    }
   ]
  },
@@ -1021,6 +1055,23 @@ window.COURSE = [
       exp:"True — phospho-γH2AX marks double-strand breaks; foci rise with age and are part of the senescence biomarker panel (indirect)."},
      {type:"short", q:"Why might a therapy that clears ALL senescent cells be dangerous? Reference their protective role.", model:"Senescence is protective: oncogene-induced senescence arrests would-be cancer cells, and senescent cells transiently aid wound healing/tissue repair. Indiscriminately killing all of them could remove anti-cancer protection and impair normal repair. Targeted, partial clearance (or SASP suppression) is safer than total elimination.", pts:["Senescence suppresses cancer (oncogene-induced arrest)","Roles in wound healing/repair","Total clearance risks cancer / impaired repair","Targeted/partial approach safer"]}
     ]
+   },
+   {
+    id:"L3S", title:"🖼️ Slide-reading — exam-format questions",
+    sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
+    slides:[
+     {h:"🖼️ Slide-reading", imgs:[], html:`<div class="callout tip">These show a lecture <b>slide</b> and ask what you should conclude from it — exactly how Prof. Kemeny asks on the exam. Study the figure, then answer. Tap any image to enlarge.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"This electron-microscope image shows a telomere folded into what protective structure?", img:"slides/L3/slide-06.jpg", opts:["A t-loop","A nucleosome","A replication fork","A comet tail"], a:0,
+      exp:"The 3′ overhang tucks into the duplex, forming a t-loop that caps and hides the chromosome end."},
+     {type:"mcq", q:"In this DNA-damage-response pathway, p53 induces which inhibitor to arrest the cell cycle?", img:"slides/L3/slide-11.jpg", opts:["p21","Telomerase","DNMT","Drp1"], a:0,
+      exp:"DDR: ATM/ATR → CHK → p53 → p21 → arrest. (p16 enforces arrest independently of p53.)"},
+     {type:"mcq", q:"This slide shows what happens to critically short telomeres. What is it?", img:"slides/L3/slide-08.jpg", opts:["They lengthen spontaneously","They fuse end-to-end, causing chromosomal instability","They become nucleosomes","They convert into RNA"], a:1,
+      exp:"Below the crisis threshold, short telomeres fuse end-to-end → genomic instability."},
+     {type:"mcq", q:"Based on this slide, an uncapped/critically short telomere is dangerous because the cell interprets it as:", img:"slides/L3/slide-09.jpg", opts:["A nutrient signal","DNA damage (triggering the DDR → senescence)","An epigenetic mark","A viral infection"], a:1,
+      exp:"An uncapped telomere looks like a double-strand break → DDR → senescence."}
+    ]
    }
   ]
  },
@@ -1253,6 +1304,23 @@ window.COURSE = [
      {type:"tf", q:"Epigenetic regulation is only a disease process and plays no role in normal biology.", a:false,
       exp:"False — epigenetics is essential for normal development and cell differentiation (one genome → many cell types). It's not solely a disease phenomenon."},
      {type:"short", q:"Using the 'hardware vs software' analogy, explain how one genome produces many cell types.", model:"The DNA sequence is the hardware (identical in every cell); the epigenome — DNA methylation and histone modifications — is the software that determines which genes run. Different epigenetic programs switch different gene sets on/off, so a neuron and a liver cell share one genome but express different proteins and behave differently. The software can change without rewriting the hardware.", pts:["DNA = hardware (same in all cells)","Epigenome = software (which genes are expressed)","Different epigenetic programs → different cell types from one genome"]}
+    ]
+   },
+   {
+    id:"L4S", title:"🖼️ Slide-reading — exam-format questions",
+    sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
+    slides:[
+     {h:"🖼️ Slide-reading", imgs:[], html:`<div class="callout tip">These show a lecture <b>slide</b> and ask what you should conclude from it — exactly how Prof. Kemeny asks on the exam. Study the figure, then answer. Tap any image to enlarge.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Per this slide, methylation of a promoter CpG island does what to the gene?", img:"slides/L4/slide-06.jpg", opts:["Activates it","Silences it (MeCP binds, chromatin closes)","Mutates its sequence","Lengthens it"], a:1,
+      exp:"Promoter CpG methylation recruits MeCP and represses/silences the gene — with no change to the DNA sequence."},
+     {type:"mcq", q:"On this epigenetic-clock plot, a person whose points sit ABOVE the diagonal line is experiencing:", img:"slides/L4/slide-16.jpg", opts:["Decelerated aging","Accelerated aging (epigenetic age > chronological age)","No aging at all","Telomere lengthening"], a:1,
+      exp:"Above the line = epigenetic age exceeds chronological age = age acceleration; below = decelerated."},
+     {type:"mcq", q:"Per this genetic-vs-epigenetic slide, which type of change is REVERSIBLE?", img:"slides/L4/slide-12.jpg", opts:["A genetic (sequence) change","An epigenetic (mark) change","Both are permanent","Neither"], a:1,
+      exp:"Epigenetic marks can be added/removed (reversible); genetic sequence changes are not."},
+     {type:"mcq", q:"The enzyme (DNMT) shown here adds a methyl group to which base within CpG sites?", img:"slides/L4/slide-05.jpg", opts:["Adenine","Guanine","Cytosine","Thymine"], a:2,
+      exp:"DNMTs methylate cytosine within 5′-CpG-3′ dinucleotides."}
     ]
    }
   ]
@@ -1511,6 +1579,23 @@ window.COURSE = [
      {type:"mcq", q:"Large protein aggregates that the proteasome can't handle are cleared mainly by:", opts:["The UPS alone","Macroautophagy","Telomerase","DNA repair"], a:1,
       exp:"The UPS degrades individual ubiquitin-tagged proteins; large aggregates and whole organelles are cleared by macroautophagy."},
      {type:"short", q:"Describe how a PROTAC is designed and why it's called an 'event-driven' (catalytic) drug.", model:"A PROTAC is a two-headed (chimeric) molecule: one end binds the target protein, the other binds an E3 ubiquitin ligase, joined by a linker. By bringing them together it forces ubiquitination of the target, which the proteasome then degrades. It's 'event-driven/catalytic' because the PROTAC is released after the target is degraded and can act repeatedly on more target molecules — unlike an inhibitor that must continuously occupy the target.", pts:["Chimera: target-binding end + E3-binding end + linker","Forces ubiquitination → proteasomal degradation","Catalytic: released and reused after each degradation","Lowers protein level despite ongoing transcription"]}
+    ]
+   },
+   {
+    id:"L5S", title:"🖼️ Slide-reading — exam-format questions",
+    sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
+    slides:[
+     {h:"🖼️ Slide-reading", imgs:[], html:`<div class="callout tip">These show a lecture <b>slide</b> and ask what you should conclude from it — exactly how Prof. Kemeny asks on the exam. Study the figure, then answer. Tap any image to enlarge.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"In this ubiquitin cascade, which enzyme provides the SPECIFICITY for which protein gets tagged?", img:"slides/L5/slide-23.jpg", opts:["E1 (activating)","E2 (conjugating)","E3 (ligase — there are hundreds)","The proteasome"], a:2,
+      exp:"E3 ligases (hundreds) recognize specific targets (degrons), so they determine which protein is ubiquitinated."},
+     {type:"mcq", q:"This molecule (a PROTAC) lowers a target protein's level by:", img:"slides/L5/slide-27.jpg", opts:["Silencing its gene","Bridging the target to an E3 ligase so it's ubiquitinated and degraded","Blocking transcription","Methylating its DNA"], a:1,
+      exp:"A PROTAC links the target to an E3 ligase → ubiquitination → proteasomal degradation. Protein drops although the gene is still transcribed."},
+     {type:"mcq", q:"The polyubiquitin chain shown here marks the protein for:", img:"slides/L5/slide-20.jpg", opts:["Export from the cell","Degradation by the proteasome","Folding by a chaperone","Import into the nucleus"], a:1,
+      exp:"A K48-linked polyubiquitin chain flags the protein for destruction by the proteasome."},
+     {type:"mcq", q:"In this Hsp70 cycle, ATP binding shifts Hsp70 into which state?", img:"slides/L5/slide-12.jpg", opts:["Closed / high-affinity (grips substrate)","Open / low-affinity (releases substrate)","It degrades the substrate","It methylates the substrate"], a:1,
+      exp:"ATP-bound Hsp70 = open/low-affinity (release); ADP-bound = closed/high-affinity (grip). Cycling drives repeated refolding."}
     ]
    }
   ]
@@ -1831,6 +1916,23 @@ window.COURSE = [
      {type:"mcq", q:"Horizontal (cell-to-cell) mitochondrial transfer can occur via all of these EXCEPT:", opts:["Tunneling nanotubes","Extracellular vesicles","Cell-surface carbohydrate receptors capturing free mitochondria","DNA methylation"], a:3,
       exp:"Mitochondria move between cells via tunneling nanotubes, EVs, and surface carbohydrate-receptor capture. DNA methylation is an epigenetic mark, not a transfer route."}
     ]
+   },
+   {
+    id:"L6S", title:"🖼️ Slide-reading — exam-format questions",
+    sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style.",
+    slides:[
+     {h:"🖼️ Slide-reading", imgs:[], html:`<div class="callout tip">These show a lecture <b>slide</b> and ask what you should conclude from it — exactly how Prof. Kemeny asks on the exam. Study the figure, then answer. Tap any image to enlarge.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"In this pathway, PINK1 accumulates on a damaged mitochondrion and then recruits/activates:", img:"slides/L6/slide-24.jpg", opts:["Telomerase","Parkin (an E3 ubiquitin ligase)","DNMT","Insulin"], a:1,
+      exp:"PINK1 → recruits/phosphorylates Parkin (E3) → poly-ubiquitin → autophagosome → lysosome = mitophagy."},
+     {type:"mcq", q:"In this fission/fusion diagram, which process ISOLATES a damaged segment so it can be removed by mitophagy?", img:"slides/L6/slide-21.jpg", opts:["Fusion","Fission","Translation","Glycolysis"], a:1,
+      exp:"Fission splits off the damaged portion (isolates it); fusion merges and dilutes damage."},
+     {type:"mcq", q:"The inner-membrane folds shown here — which house the electron-transport chain — are called:", img:"slides/L6/slide-11.jpg", opts:["Cristae","Matrix","Ribosomes","Nucleoli"], a:0,
+      exp:"Cristae = inner-membrane folds holding the ETC; the matrix is the innermost compartment."},
+     {type:"mcq", q:"This slide highlights a 'good' role of ROS. What is it?", img:"slides/L6/slide-17.jpg", opts:["ROS only damages DNA","ROS acts as a signaling molecule that activates survival pathways","ROS lengthens telomeres","ROS makes ATP directly"], a:1,
+      exp:"At low levels ROS signals (NF-κB, HIF-1α, MAPKs) — which is why blanket antioxidant supplements can backfire."}
+    ]
    }
   ]
  },
@@ -2112,6 +2214,27 @@ window.COURSE = [
      {type:"short", q:"GLP-1 agonists act on multiple tissues. Name three target tissues and the effect in each that helps lower blood sugar or weight.", model:"Brain (hypothalamus): ↓appetite/↑satiety → less food intake. Pancreas: ↑insulin secretion → lowers blood glucose. Stomach/gut: ↓gastric emptying/motility → prolonged fullness and slower glucose absorption. (Also liver: ↓fat content; fat tissue: ↑lipolysis.) These combine to reduce weight and blood sugar.", pts:["Brain → ↓appetite/↑satiety","Pancreas → ↑insulin secretion","Stomach/gut → slowed gastric emptying","(Liver ↓fat / fat-tissue lipolysis also accepted)"]},
      {type:"mcq", q:"Which statement correctly contrasts type 1 and type 2 diabetes at the mechanism level?", opts:["Both are autoimmune","Type 1 = autoimmune β-cell loss (too little insulin); type 2 = insulin resistance (cells stop responding)","Type 2 is autoimmune; type 1 is metabolic","Both are caused by GLUT4 overactivity"], a:1,
       exp:"Type 1 = autoimmune destruction of β-cells → insufficient insulin. Type 2 = metabolic insulin resistance → receptors/signaling fail despite insulin being present."}
+    ]
+   },
+   {
+    id:"L7S", title:"🖼️ Slide-reading — exam-format questions",
+    sub:"'Here's the slide — what does it tell you?' Practice the professor's exact question style (incl. her GLUT-4 question).",
+    slides:[
+     {h:"🖼️ Slide-reading", imgs:[], html:`<div class="callout tip">These show a lecture <b>slide</b> and ask what you should conclude from it — exactly how Prof. Kemeny asks on the exam. Study the figure, then answer. Tap any image to enlarge.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Which component is directly affected by the defect in signaling to GLUT-4 in type 2 diabetes?", img:"slides/L7/slide-15.jpg", opts:["Glucose uptake","Insulin production","Glucose production","Receptor sensitivity"], a:0,
+      exp:"GLUT4 imports glucose; if insulin signaling to it fails, glucose can't enter the cell — glucose uptake is directly impaired. (This is her exact in-class answer.)"},
+     {type:"mcq", q:"In this glucose-homeostasis loop, when blood sugar is HIGH, the pancreatic β-cells release:", img:"slides/L7/slide-14.jpg", opts:["Glucagon","Insulin","Rapamycin","Cortisol"], a:1,
+      exp:"High sugar → β-cells release insulin → cells take up glucose and the liver stores glycogen → sugar falls. (α-cells release glucagon when sugar is low.)"},
+     {type:"mcq", q:"In this survival curve, the daf-2 mutant (filled squares) compared with wild type lives:", img:"slides/L7/slide-08.jpg", opts:["About the same","About 2.3× longer","Half as long","It dies immediately"], a:1,
+      exp:"The daf-2 (insulin/IGF-1 receptor) mutant lives ~2.3× longer with the healthspan of a young worm (Kenyon 1993)."},
+     {type:"mcq", q:"This slide adds a daf-16 mutation. What happens to the lifespan benefit in the daf-2; daf-16 double mutant?", img:"slides/L7/slide-09.jpg", opts:["It doubles again","It is LOST — lifespan returns to normal","It becomes infinite","Only healthspan improves"], a:1,
+      exp:"The benefit disappears → daf-16 (FOXO) is REQUIRED downstream. The active receptor normally inhibits FOXO; losing it frees FOXO to extend life."},
+     {type:"mcq", q:"In this insulin/IGF-1 (IIS) pathway, mTOR inhibits ULK. Therefore ACTIVATING this pathway will:", img:"slides/L7/slide-19.jpg", opts:["Increase autophagy","Suppress autophagy","Lengthen telomeres","Stop insulin secretion"], a:1,
+      exp:"Insulin → PI3K → AKT → mTOR ⊣ ULK, so autophagy is suppressed. (Eating sugar blocks the cell's clean-up.)"},
+     {type:"mcq", q:"Per this slide, which enzyme is the cell's energy sensor that INHIBITS mTOR (favoring longevity)?", img:"slides/L7/slide-20.jpg", opts:["AMPK","GLUT4","Telomerase","DNMT"], a:0,
+      exp:"AMPK senses low energy, inhibits mTOR, and promotes autophagy — so for longevity you want to ACTIVATE AMPK."}
     ]
    }
   ]
