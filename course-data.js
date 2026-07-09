@@ -1449,7 +1449,9 @@ window.COURSE = [
      {type:"mcq", q:"What is true about two different cell types in the body?", opts:["They have essentially the same epigenome, but different genomes","They have essentially the same genomes and epigenomes","They have different genomes and epigenomes","They have essentially the same genome, but different epigenomes"], a:3,
       exp:"Every cell shares one genome; different cell types differ in their EPIGENOME, which sets which genes are expressed."},
      {type:"mcq", q:"Epigenetics is the study of:", opts:["Inheritance of organellar genes (mitochondrial, chloroplast genes)","DNA methylation patterns","Inheritance of traits coded by the DNA sequence","Inheritance of traits NOT coded by the DNA sequence"], a:3,
-      exp:"Epigenetics = heritable changes in traits/expression NOT encoded in the DNA sequence. ('DNA methylation patterns' is only one mechanism — too narrow.)"}
+      exp:"Epigenetics = heritable changes in traits/expression NOT encoded in the DNA sequence. ('DNA methylation patterns' is only one mechanism — too narrow.)"},
+     {type:"mcq", q:"(Printed slide MCQ) Heavily methylated DNA is associated with _____.", opts:["Activation of transcription","Splicing exons out of mRNA","Repression of transcription","Both a and b","Both a and c","Both b and c"], a:2,
+      exp:"Heavy DNA methylation (especially at promoter CpG islands) is associated with REPRESSION of transcription — MeCP binds methylated CpG and closes the chromatin. (Her slide's circled answer: c.)"}
     ]
    },
    {
