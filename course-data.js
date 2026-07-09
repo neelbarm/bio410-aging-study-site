@@ -2115,6 +2115,43 @@ window.COURSE = [
     ]
    },
    {
+    id:"L6Q", title:"📝 Practice quiz (from class) — Mitochondria",
+    sub:"The class Mitochondria practice quiz (14 Q), answers keyed. Heavy on experiment interpretation — causation, hormesis, PINK1/Parkin, and healthspan vs lifespan.",
+    slides:[
+     {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">The exact Mitochondria practice-quiz questions. Core ideas: ROS is a needed signal; PINK1 detects → Parkin labels; fission isolates / fusion dilutes; a knockout can't 'eliminate damage' or 'improve' anything; healthspan and lifespan can decouple.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Two groups of cells get heat shock. One makes heat-shock proteins (HSPs); the other cannot activate HSP expression. Which outcome is most likely?", opts:["Heat-shock proteins would accelerate apoptosis in both groups","The HSP-deficient cells would produce more ATP","The HSP-deficient cells would show increased protein misfolding and reduced survival","Both groups respond similarly because heat shock affects DNA"], a:2,
+      exp:"HSPs (chaperones) refold heat-denatured proteins; without them, proteins misfold/aggregate and cells die. HSPs are pro-survival, not pro-apoptotic."},
+     {type:"mcq", q:"Young cells given a LOW dose of oxidative stress show improved survival after a later HIGH-dose challenge. Which concept is best illustrated?", opts:["Replicative senescence","Adaptive homeostasis","Hormesis","Proteostasis collapse"], a:2,
+      exp:"Low-dose stress → protection against a later high dose = hormesis (biphasic; mild stress is protective)."},
+     {type:"mcq", q:"Mice engineered to make VERY LOW mitochondrial ROS show impaired stress responses, reduced mitochondrial quality control, and poorer metabolic health. Best conclusion?", opts:["Mitochondrial ROS can function as signaling molecules required to activate protective cellular responses","Antioxidants increase ATP production and extend lifespan","Reactive oxygen species are harmful and should be eliminated completely","Mitochondria produce ROS only when cells are damaged"], a:0,
+      exp:"Removing ROS made things worse → ROS is a required signaling molecule (the ROS paradox)."},
+     {type:"mcq", q:"Aged recipient cells co-cultured with healthy donor cells recover (better membrane potential, fewer senescence markers). Blocking TNTs partly reduces recovery; blocking EVs partly reduces it; blocking BOTH nearly eliminates it. Best conclusion?", opts:["TNTs and EVs may function as partially redundant pathways that together mediate horizontal mitochondrial transfer","EVs are the only relevant mechanism because they affect more cells","TNTs and EVs independently generate new mitochondria in recipients","Recovery must occur through increased mtDNA replication rather than transfer"], a:0,
+      exp:"Each pathway alone only partly reduces recovery, but blocking both nearly abolishes it → two partially redundant transfer routes."},
+     {type:"mcq", q:"A mutation prevents mitophagy while general autophagy still works. Most likely aging-related outcome?", opts:["Accumulation of dysfunctional mitochondria and increased oxidative stress","Faster DNA replication","Increased mitochondrial biogenesis","Elimination of reactive oxygen species"], a:0,
+      exp:"Mitophagy selectively clears damaged mitochondria; block it → they accumulate → ROS/oxidative stress. General autophagy can't compensate (lacks PINK1/Parkin targeting)."},
+     {type:"mcq", q:"Mice lacking an essential autophagy gene in neurons develop protein aggregates and neurodegeneration as they age. Best conclusion?", opts:["Autophagy contributes to maintaining cellular proteostasis during aging","Aging occurs independently of intracellular quality-control mechanisms","Autophagy is responsible for synthesis of damaged proteins","Autophagy is responsible for repair of DNA mutations"], a:0,
+      exp:"Removing autophagy → aggregates + neurodegeneration → autophagy maintains proteostasis in aging neurons."},
+     {type:"mcq", q:"Cells have a mutation preventing PARKIN recruitment to mitochondria, while PINK1 still works. Most likely outcome?", opts:["Damaged mitochondria accumulate because PINK1 detects damage but PARKIN can't label them for degradation","Healthy mitochondria are degraded faster because PARKIN inhibits mitophagy","Mitophagy continues normally because PINK1 directly degrades damaged mitochondria","ATP production increases because damaged mitochondria remain available for energy"], a:0,
+      exp:"PINK1 accumulates and signals, but without PARKIN adding the ubiquitin tag, damaged mitochondria are never flagged → they accumulate."},
+     {type:"mcq", q:"Why might mitochondrial health serve as a useful biomarker of aging?", opts:["Mitochondrial function integrates metabolism, oxidative stress, and quality control","Mitochondria accumulate all age-related mutations equally","Mitochondrial number remains constant across lifespan","Mitochondria directly measure chronological time"], a:0,
+      exp:"Mito health reflects many converging processes (ATP, ROS signaling, dynamics, mitophagy) → a broad readout of cellular aging."},
+     {type:"mcq", q:"Match mitochondrial dynamics to their effects — which pairing is correct?", opts:["Fission separates dysfunctional regions for mitophagy; fusion dilutes localized damage by mixing contents","Fusion separates dysfunctional regions; fission dilutes damage","Both fission and fusion only make ATP","Fission and fusion both shorten mtDNA"], a:0,
+      exp:"Fission isolates a damaged segment so it can be removed by mitophagy; fusion merges mitochondria and dilutes localized damage."},
+     {type:"mcq", q:"In an experiment testing hormesis, which result would MOST strongly support a hormetic response?", opts:["Moderate heat exposure improves long-term stress resistance, while high heat exposure reduces survival","All intensities of stress have similar effects","Increasing stress reduces cellular function","Following exposure to stress, cells stop dividing"], a:0,
+      exp:"Hormesis is biphasic: moderate stress is beneficial, high stress is harmful."},
+     {type:"mcq", q:"Which observation would provide the STRONGEST evidence that mitochondrial dysfunction is a CAUSE, not just a consequence, of aging?", opts:["Inducing mitochondrial damage in young animals accelerates age-related phenotypes","Older individuals contain fewer healthy mitochondria","Aging tissues contain more oxidized molecules","ATP production decreases with age"], a:0,
+      exp:"Only the interventional experiment (damage mito in YOUNG animals → faster aging) shows causation; the rest are correlations in already-aged tissue."},
+     {type:"mcq", q:"A scientist inhibits BOTH mitophagy and the heat-shock response in aging cells. Most likely combined outcome?", opts:["Accumulation of damaged proteins and dysfunctional mitochondria leading to accelerated cellular decline","Increased protein synthesis and lifespan extension","Reduced need for autophagy","Improved proteostasis and mitochondrial function"], a:0,
+      exp:"Blocking both quality-control systems removes two compensatory defenses → misfolded proteins AND damaged mitochondria accumulate → compounding decline."},
+     {type:"mcq", q:"Transferring mitochondria from young donors into aged recipients temporarily improves ATP, but aging markers stay unchanged. Most justified interpretation?", opts:["Mitochondria may not fully determine biological age","Aging is caused by mitochondrial dysfunction","ATP production directly determines chronological age","Mitochondria have no role in aging"], a:0,
+      exp:"ATP improved but aging markers didn't → mitochondria are a contributor, not the sole determinant of biological age."},
+     {type:"mcq", q:"Activating mitophagy in aged mice improves tissue function, but lifespan does not increase. Best explanation?", opts:["Improving one hallmark of aging may enhance healthspan without fully extending lifespan","Mitophagy decreases mitochondrial quality","Lifespan and healthspan always change together","Mitophagy has a significant effect only in embryonic development"], a:0,
+      exp:"Tissue function (healthspan) improved but maximum lifespan didn't → healthspan and lifespan can decouple; aging is multifactorial."}
+    ]
+   },
+   {
     id:"L6D", title:"🎤 In-class slide questions (short answer)",
     sub:"The open-ended 'think & explain' prompts printed on her slides — her short-answer exam style — plus her one printed MCQ. Write a full answer, then check the model.",
     slides:[
