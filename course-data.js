@@ -8,7 +8,7 @@ window.META = {
   course: "BIO 41000 — Cell & Molecular Biology of Aging",
   courseCode: "BIO 41000 · Cell Senescence",
   brandTitle: "Biology of Aging",
-  examLabel: "Exam 1 (Meetings 1–7)",
+  examLabel: "Exam 1 (L1–L7) · Exam 2 (L9–L12)",
   examDate: "Mon June 29",
   logo: "🧬",
   storeKey: "bio41000_aging_exam1_v3",
@@ -2522,6 +2522,650 @@ window.COURSE = [
       exp:"Insulin → PI3K → AKT → mTOR ⊣ ULK, so autophagy is suppressed. (Eating sugar blocks the cell's clean-up.)"},
      {type:"mcq", q:"Per this slide, which enzyme is the cell's energy sensor that INHIBITS mTOR (favoring longevity)?", img:"slides/L7/slide-20.jpg", opts:["AMPK","GLUT4","Telomerase","DNMT"], a:0,
       exp:"AMPK senses low energy, inhibits mTOR, and promotes autophagy — so for longevity you want to ACTIVATE AMPK."}
+    ]
+   }
+  ]
+ },
+
+ /* ============================ LECTURE 9 ============================ */
+ {
+  id:"L9", icon:"💀", short:"L9 · Cell Death",
+  title:"Lecture 9 — Cell Death: Apoptosis, Necrosis & the Bcl-2 Family",
+  blurb:"Programmed cell death vs. necrosis, the caspase cascade, the intrinsic (mitochondrial) pathway with Bax/Bak and cytochrome c, survival factors and Akt, and why both too much and too little apoptosis cause disease.",
+  objectives:[
+    "Distinguish apoptosis (programmed, clean, non-inflammatory) from necrosis (uncontrolled, lytic, inflammatory)",
+    "Explain the developmental and aging roles of apoptosis (digit sculpting, tadpole tail, removing damaged cells)",
+    "Describe the caspase cascade and how the intrinsic pathway releases cytochrome c to form the apoptosome",
+    "Predict the effect of manipulating Bcl-2 family members (Bcl-2 vs Bax/Bak) on apoptosis",
+    "Explain how survival factors (e.g., NGF) and the PI3K–Akt pathway suppress apoptosis, and what happens on withdrawal",
+    "Reason about how apoptosis can be induced therapeutically in cancer cells"
+  ],
+  topics:[
+   {
+    id:"L9T1", title:"Apoptosis vs. necrosis — and why cells are told to die",
+    sub:"Two ways to die, and the essential jobs of programmed cell death (slides 5–8).",
+    slides:[
+     {h:"Two very different kinds of cell death", imgs:[
+        {src:"slides/L9/slide-07.jpg", cap:"L9 · Slide 7 — Necrosis vs. apoptosis"},
+        {src:"slides/L9/slide-08.jpg", cap:"L9 · Slide 8 — Major steps of apoptosis"}
+      ], html:`
+       <table class="dt">
+        <tr><th>Apoptosis (programmed)</th><th>Necrosis (uncontrolled)</th></tr>
+        <tr><td>Deliberate, regulated "cell suicide". Cell <b>shrinks</b>, chromatin condenses, DNA is cut up, and the cell breaks into neat membrane-bound fragments that neighbours engulf. <b>No inflammation.</b></td><td>Injury-driven. Cell <b>swells and bursts</b>, spilling its contents into the tissue — which releases DAMPs and <b>triggers inflammation</b>.</td></tr>
+       </table>
+       <div class="callout key">This is the tidy-vs-messy distinction: apoptosis is <b>clean and silent</b>; necrosis is <b>messy and inflammatory</b>. That link — necrosis → DAMPs → inflammation — connects straight to inflammaging (L12).</div>`},
+     {h:"Apoptosis sculpts the body and clears damaged cells", imgs:[
+        {src:"slides/L9/slide-05.jpg", cap:"L9 · Slide 5 — Apoptosis sculpts the mouse paw (digits)"},
+        {src:"slides/L9/slide-06.jpg", cap:"L9 · Slide 6 — A tadpole's tail cells are induced to die"}
+      ], html:`
+       <p class="lead">Apoptosis is <span class="kw">normal and essential</span>, not just a disease process. It evolved early in animal evolution and is required for development and maintenance of <i>all</i> animals.</p>
+       <ul>
+        <li><b>Sculpting:</b> cells between the developing digits die, carving fingers/toes out of a paddle.</li>
+        <li><b>Remodelling:</b> a tadpole's tail cells are induced to die as it becomes a frog.</li>
+        <li><b>Quality control:</b> cells with irreparable DNA damage or excessive protein misfolding kill themselves rather than become dangerous.</li>
+        <li><b>Matching numbers:</b> developing neurons compete for survival factors so neuron number matches the targets they innervate.</li>
+       </ul>
+       <div class="callout tip">Aging tie-in: apoptosis is <b>beneficial</b> because it removes damaged/pre-cancerous cells — but <b>too much</b> apoptosis causes tissue loss (neurodegeneration), and <b>too little</b> lets damaged cells survive (cancer). Balance again.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Which best distinguishes apoptosis from necrosis?", opts:["Apoptosis is uncontrolled and inflammatory; necrosis is regulated","Apoptosis is regulated and non-inflammatory (cell shrinks, is engulfed); necrosis is uncontrolled and inflammatory (cell swells and bursts)","Both are identical processes","Necrosis only occurs during development"], a:1,
+      exp:"Apoptosis = deliberate, tidy, no inflammation. Necrosis = injury-driven lysis that spills contents and triggers inflammation."},
+     {type:"mcq", q:"The death of cells between developing digits in a mouse paw is an example of:", opts:["Necrosis from injury","Apoptosis sculpting a structure during development","Senescence","Autophagy of the whole limb"], a:1,
+      exp:"Programmed apoptosis removes the interdigital cells, carving out separate digits — a classic developmental example."},
+     {type:"tf", q:"Apoptosis is only a disease process and plays no role in normal biology.", a:false,
+      exp:"False — apoptosis is essential for normal development (digits, tadpole tail) and for ongoing tissue maintenance."},
+     {type:"mcq", q:"Why is necrosis, but not apoptosis, associated with inflammation?", opts:["Necrotic cells burst and spill their contents (DAMPs) into the tissue","Apoptotic cells release more cytokines","Necrosis happens only in the immune system","Apoptotic cells are never cleared"], a:0,
+      exp:"Necrosis lyses the cell, releasing damage-associated molecular patterns that alert the immune system. Apoptotic cells are packaged and quietly engulfed."},
+     {type:"mcq", q:"Which internal signals can trigger a cell to undergo apoptosis?", opts:["Irreparable DNA damage or excessive protein misfolding","Adequate nutrients","Normal telomere length","Successful mitosis"], a:0,
+      exp:"The intrinsic pathway responds to internal stress — irreparable DNA damage or overwhelming protein misfolding."}
+    ]
+   },
+   {
+    id:"L9T2", title:"The intrinsic pathway — caspases, Bcl-2 family & cytochrome c",
+    sub:"The proteolytic cascade and the mitochondrial decision point (slides 11–14).",
+    slides:[
+     {h:"Caspases: the proteolytic suicide cascade", imgs:[
+        {src:"slides/L9/slide-11.jpg", cap:"L9 · Slide 11 — DNA damage: arrest in G1 or die (intrinsic pathway)"},
+        {src:"slides/L9/slide-13.jpg", cap:"L9 · Slide 13 — Apoptosis is mediated by an intracellular proteolytic cascade"}
+      ], html:`
+       <p class="lead">Apoptosis is executed by a cascade of "suicide" proteins. The main proteases are <span class="kw">caspases</span> — in humans about <b>15 caspases</b> can carry out apoptosis through several pathways.</p>
+       <ul>
+        <li>Caspases activate <b>proteases and nucleases</b> that cut up the cell's proteins and DNA.</li>
+        <li>They exist as inactive <b>procaspases</b> and are activated by cleavage — an amplifying cascade.</li>
+        <li><b>p53</b> links damage to fate: DNA damage can <b>arrest the cell cycle in G1</b> for repair, or send the cell to <b>die</b> if the damage is irreparable.</li>
+       </ul>`},
+     {h:"Bax/Bak, cytochrome c and the apoptosome", imgs:[
+        {src:"slides/L9/slide-14.jpg", cap:"L9 · Slide 14 — Bax and Bak release cytochrome c from mitochondria"}
+      ], html:`
+       <p class="lead">The <span class="kw">Bcl-2 family</span> controls the mitochondrial decision point:</p>
+       <ul>
+        <li><b>Bax and Bak (pro-apoptotic)</b> insert into the <b>outer mitochondrial membrane</b> and permeabilize it → <b>cytochrome c</b> is released into the cytosol.</li>
+        <li>Cytosolic cytochrome c drives assembly of the <b>apoptosome</b> → activates <b>procaspase-9</b> → the caspase cascade → death.</li>
+        <li><b>Bcl-2 (anti-apoptotic)</b> blocks Bax/Bak and keeps cytochrome c inside — it is a <b>survival</b> protein.</li>
+       </ul>
+       <div class="callout key">Reason with the order of events: anything that stops Bax/Bak → <b>no cytochrome c release → no apoptosis</b>. But adding cytochrome c <i>directly to the cytosol</i> bypasses Bax/Bak entirely — so even Bax/Bak-mutant cells will still die.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"The main proteases that execute apoptosis are:", opts:["Caspases","Cathepsins only","Telomerases","Polymerases"], a:0,
+      exp:"Caspases (about 15 in humans) are the proteases of apoptosis; they activate nucleases and cut cellular proteins."},
+     {type:"mcq", q:"Bax and Bak promote apoptosis by:", opts:["Blocking caspase activation","Permeabilizing the outer mitochondrial membrane so cytochrome c is released","Repairing DNA","Preventing apoptosome assembly"], a:1,
+      exp:"Bax/Bak permeabilize the outer mitochondrial membrane → cytochrome c escapes → apoptosome → procaspase-9 → caspase cascade."},
+     {type:"mcq", q:"Mutations that prevent Bax and Bak from interacting with the outer mitochondrial membrane would have which effect?", opts:["Preventing the release of cytochrome c and INHIBITING apoptosis","Triggering cytochrome c release and promoting apoptosis","Preventing cytochrome c release but still promoting apoptosome assembly","Triggering activation of procaspase-9"], a:0,
+      exp:"No Bax/Bak at the membrane → no permeabilization → cytochrome c stays in the mitochondrion → apoptosis is blocked. (Her printed slide answer: A.)"},
+     {type:"mcq", q:"Cytochrome c is injected directly into the cytosol of (i) normal cells and (ii) cells where Bak and Bax are inactivated. What happens?", opts:["Only the normal cells die","Only the mutant cells die","Neither dies","BOTH cell types undergo apoptosis"], a:3,
+      exp:"Injecting cytochrome c acts DOWNSTREAM of Bax/Bak, bypassing the need for them — so both normal and Bax/Bak-mutant cells undergo apoptosis. (Her printed slide answer: E.)"},
+     {type:"mcq", q:"Bcl-2 (as opposed to Bax/Bak) is best described as:", opts:["Pro-apoptotic — it releases cytochrome c","Anti-apoptotic — it blocks Bax/Bak and promotes survival","A caspase","A DNA repair enzyme"], a:1,
+      exp:"Bcl-2 is the anti-apoptotic (survival) member; Bax and Bak are the pro-apoptotic members that permeabilize the mitochondrion."},
+     {type:"mcq", q:"Which pairing correctly reflects p53's role after DNA damage?", opts:["p53 always causes immediate necrosis","p53 can arrest the cycle in G1 for repair, or trigger apoptosis if damage is irreparable","p53 activates telomerase","p53 blocks all caspases"], a:1,
+      exp:"p53 is the decision point: pause and repair, or kill the cell. Losing p53 lets damaged cells survive and divide → cancer."}
+    ]
+   },
+   {
+    id:"L9T3", title:"Survival factors, Akt & the extrinsic pathway",
+    sub:"Cells must be told to stay alive — and how that is exploited in cancer therapy (slides 15–21).",
+    slides:[
+     {h:"Survival factors suppress apoptosis", imgs:[
+        {src:"slides/L9/slide-16.jpg", cap:"L9 · Slide 16 — Survival factors act by regulating Bcl-2 family members"},
+        {src:"slides/L9/slide-18.jpg", cap:"L9 · Slide 18 — Activation of Akt promotes cell survival"}
+      ], html:`
+       <p class="lead">Many animal cells need continuous <span class="kw">survival factors</span> or they kill themselves by default. Removing the factor <b>causes</b> apoptosis.</p>
+       <ul>
+        <li>Survival factor binds its receptor → <b>PI3-kinase → Akt</b> pathway.</li>
+        <li>Akt <b>phosphorylates BAD</b> (Bcl-2-associated agonist of cell death); phosphorylated BAD lets go of the anti-apoptotic Bcl-2 proteins → <b>survival</b>.</li>
+        <li><b>NGF (nerve growth factor)</b> is the classic example: block NGF with antibodies and developing neurons die in huge numbers → NGF is a <b>survival factor</b>.</li>
+       </ul>
+       <div class="callout tip">This is how neuron number is matched to target size: neurons compete for a limited supply of survival factor, and those that lose die.</div>`},
+     {h:"Extrinsic pathway & inducing apoptosis in cancer", imgs:[
+        {src:"slides/L9/slide-20.jpg", cap:"L9 · Slide 20 — Apoptosis induced by death signals or withdrawal of survival factor"}
+      ], html:`
+       <p class="lead">The <span class="kw-2">extrinsic pathway</span> is triggered by <b>death-signal proteins from other cells</b> binding death receptors on the target cell — as opposed to the intrinsic pathway's internal damage signals.</p>
+       <div class="callout key"><b>Therapeutic logic:</b> many cancers survive by blocking apoptosis. So you can kill them by <b>tipping the Bcl-2 balance toward death</b> — <b>inhibiting Bcl-2</b> (removing the brake) or <b>activating Bax</b> (pressing the accelerator). Note: inhibiting <b>p53</b> would be counter-productive, since p53 promotes apoptosis.</div>
+       <p><b>Paclitaxel</b> (ovarian/breast cancer) kills cells two ways: it <b>stabilizes microtubules</b>, blocking spindle disassembly so chromosomes can't separate properly, AND it <b>binds and decreases Bcl-2 activity</b>, promoting apoptosis.</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Injecting newborn mice with antibodies that inactivate NGF caused massive nerve-cell death. What do these results suggest?", opts:["NGF is a survival factor for developing neurons","NGF signaling is sufficient for neuron survival","NGF cannot protect neurons from apoptosis","NGF is a mitogen promoting neuron proliferation"], a:0,
+      exp:"Removing NGF → neurons die → NGF is REQUIRED for their survival (a survival factor). Note it shows necessity, not sufficiency. (Her printed slide answer: A.)"},
+     {type:"mcq", q:"How does Akt promote cell survival?", opts:["It phosphorylates BAD, which releases anti-apoptotic Bcl-2 proteins","It activates caspase-9 directly","It releases cytochrome c","It degrades Bcl-2"], a:0,
+      exp:"Survival factor → PI3K → Akt → phosphorylates BAD → BAD lets go of Bcl-2 → Bcl-2 blocks apoptosis → the cell survives."},
+     {type:"mcq", q:"Which approaches are reasonable for inducing apoptosis in cancer cells?", opts:["Inhibiting Bcl-2 AND activating Bax","Inhibiting p53 and inhibiting Bax","Activating Bcl-2 only","Inhibiting the G1 cyclin-dependent kinase only"], a:0,
+      exp:"Tip the balance toward death: remove the brake (inhibit anti-apoptotic Bcl-2) and press the accelerator (activate pro-apoptotic Bax). Inhibiting p53 would BLOCK apoptosis. (Her printed answers: A and C.)"},
+     {type:"mcq", q:"Paclitaxel stabilizes microtubules and also decreases Bcl-2 activity. The two ways it kills cancer cells are:", opts:["It promotes apoptosis, AND it inhibits proper polar-spindle formation, blocking sister-chromatid separation","It disrupts the nucleus and inhibits cytokinesis","It only inhibits cytokinesis","It repairs DNA and activates p53"], a:0,
+      exp:"Two mechanisms: (1) less Bcl-2 → apoptosis promoted; (2) over-stabilized microtubules → the spindle can't function → sister chromatids can't separate. (Her printed answers: A and C.)"},
+     {type:"tf", q:"Withdrawal of a required survival factor can itself cause a cell to undergo apoptosis.", a:true,
+      exp:"True — many cells die by default unless continuously told to live; removing the survival factor triggers the death program."},
+     {type:"mcq", q:"The EXTRINSIC apoptotic pathway is triggered by:", opts:["Irreparable DNA damage inside the cell","Death-signal proteins from OTHER cells binding death receptors","Loss of mitochondria","Telomere shortening"], a:1,
+      exp:"Extrinsic = signals from outside (other cells) via death receptors. Intrinsic = internal damage signals through mitochondria."}
+    ]
+   },
+   {
+    id:"L9D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended prompts printed on her Cell Death slides — her short-answer exam style.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">The discussion prompts printed on the lecture slides. Write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"Why is apoptosis considered beneficial during aging, even though it results in the death of cells?", model:"Because it selectively removes cells that have become dangerous or useless — those with irreparable DNA damage, heavy protein misfolding, or pre-cancerous mutations. Killing these cells prevents them from dividing into tumors or poisoning the tissue, and makes room for healthy replacements. Losing a few cells deliberately is far cheaper than letting damaged ones persist.", pts:["Removes irreparably damaged / pre-cancerous cells","Prevents tumor formation and tissue dysfunction","Clean, non-inflammatory removal; allows replacement"]},
+     {type:"short", q:"How can BOTH excessive apoptosis and insufficient apoptosis contribute to age-related diseases?", model:"Too MUCH apoptosis destroys cells the body can't replace — especially post-mitotic cells — causing tissue atrophy and degeneration (neurodegeneration such as Parkinson's/Alzheimer's, muscle loss, immune decline). Too LITTLE apoptosis lets damaged, mutated cells survive and keep dividing, which permits cancer and lets dysfunctional cells accumulate. It's another dose/balance problem: the right amount protects, either extreme causes disease.", pts:["Excessive → loss of irreplaceable cells → degeneration (neurodegeneration, atrophy)","Insufficient → damaged/mutant cells survive → cancer","Balance principle: both extremes are pathological"]},
+     {type:"short", q:"A knockout mouse cannot make caspase-9. What defects would you predict in the brains of knockout embryos?", model:"Caspase-9 is the initiator caspase of the intrinsic (mitochondrial) pathway, so developmental apoptosis fails. Neurons that should have been culled survive, producing brain overgrowth and malformation — an enlarged, disorganized brain with excess neurons and ectopic cell masses (in the real experiments, exencephaly and malformed forebrain). It shows apoptosis is required to sculpt normal brain structure.", pts:["Caspase-9 = initiator of intrinsic pathway → apoptosis fails","Excess neurons survive (no culling)","Brain overgrowth/malformation, disorganized structure"]},
+     {type:"short", q:"Staurosporine (STS) induces apoptosis. Why does DNA from STS-treated cells appear as a smear on an electrophoresis gel?", model:"Apoptosis activates nucleases that chop the cell's chromosomal DNA into many fragments. Instead of one intact high-molecular-weight band (as in untreated cells), the sample now contains DNA pieces of many different sizes, which migrate across a wide range of the gel and appear as a smear. (Strictly internucleosomal cleavage gives the classic 'ladder'; more extensive/heterogeneous degradation smears it.)", pts:["Apoptotic nucleases fragment the DNA","Many fragment sizes instead of one intact band","Untreated control = single high-MW band; treated = smear/ladder"]},
+     {type:"short", q:"Dr. B. wants to increase the size of rats. Based on apoptosis biology, what approach should he pursue?", model:"Reduce developmental apoptosis so more cells survive. Options: increase survival-factor signaling (more growth/survival factor, more PI3K–Akt activity), overexpress anti-apoptotic Bcl-2, or inactivate pro-apoptotic Bax/Bak or caspases. Fewer cells culled during development → more cells retained → larger animal. Caveat: blocking apoptosis also raises cancer risk, since damaged cells would survive too.", pts:["Inhibit apoptosis so more cells survive development","E.g., ↑survival factors/Akt, overexpress Bcl-2, or knock out Bax/Bak/caspases","Trade-off: blocking apoptosis increases cancer risk"]}
+    ]
+   }
+  ]
+ },
+
+ /* ============================ LECTURE 10 ============================ */
+ {
+  id:"L10", icon:"🦀", short:"L10 · Cancer",
+  title:"Lecture 10 — Cancer: Checkpoints, Driver Mutations & Why It's an Aging Disease",
+  blurb:"Cell-cycle checkpoints and what happens when they fail, the changes cancer cells accumulate (genomic instability, immortality, evading death), and driver mutations — oncogenes (RAS, HER2) vs tumor suppressors (p53).",
+  objectives:[
+    "Explain the cell-cycle control system and what happens when checkpoints are disabled or unmet",
+    "Explain why cancer is largely a disease of old age and which cells are most vulnerable",
+    "Describe how defective DNA repair produces genomic instability and accelerates mutation accumulation",
+    "List the changes cancer cells accumulate (uncontrolled division, immortality, metastasis, angiogenesis, immune evasion)",
+    "Distinguish proto-oncogenes/oncogenes (gain of function, accelerator) from tumor suppressors (loss of function, brake)",
+    "Explain why tumor-suppressor genes make poor druggable targets, using RAS/HER2 as contrast"
+  ],
+  topics:[
+   {
+    id:"L10T1", title:"Cell-cycle checkpoints — and what happens when they fail",
+    sub:"The control system, p53, and why old cells are vulnerable (slides 6–10).",
+    slides:[
+     {h:"The cell-cycle control system", imgs:[
+        {src:"slides/L10/slide-06.jpg", cap:"L10 · Slide 6 — G1, G2 and M checkpoints"},
+        {src:"slides/L10/slide-08.jpg", cap:"L10 · Slide 8 — Failing the checkpoint: apoptosis"}
+      ], html:`
+       <p class="lead">We grow by cell division, but <span class="warn">we don't want cell division happening all the time</span>. The cell-cycle control system uses <span class="kw">checkpoints</span> — <b>G1</b>, <b>G2</b> and <b>M</b> — to verify conditions before proceeding.</p>
+       <ul>
+        <li>If requirements are <b>not met</b>, the cell <b>arrests</b> to fix the problem — or is sent to <b>apoptosis</b> (via <b>p53</b>) if it can't be fixed.</li>
+        <li>If checkpoints are <b>disabled</b>, damaged cells divide anyway → mutations accumulate → <b>cancer</b>.</li>
+       </ul>
+       <div class="callout key">Cancer vs. apoptosis is the fork in the road: a damaged cell should die; a cancer cell is one that escaped that decision (very often by losing <b>p53</b>).</div>`},
+     {h:"Why cancer is a disease of old age", imgs:[
+        {src:"slides/L10/slide-10.jpg", cap:"L10 · Slide 10 — Lifetime cancer risk (e.g., thyroid ≈ 1 in 100)"}
+      ], html:`
+       <p class="lead">Cancer requires an <span class="kw">accumulation of mutations</span> in one cell over time — so risk rises steeply with age.</p>
+       <ul>
+        <li>The transformation starts in <b>one cell</b>; all tumour cells are descendants of that original cell (at least early on) — it's <b>clonal</b>.</li>
+        <li><b>Mutagens</b> increase the likelihood.</li>
+        <li><b>Stem cells are the most vulnerable</b> normal cell type — because most fully differentiated cells are short-lived and so are unlikely to survive long enough to accumulate the needed mutations.</li>
+        <li>Risk is expressed as lifetime probability: e.g., a 10⁻² lifetime risk = <b>~1% over an 80-year lifespan</b> (about 1 in 100 for thyroid cancer).</li>
+       </ul>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"What could happen if a cell's checkpoints are disabled?", opts:["The cell divides despite damage, accumulating mutations → cancer","The cell always dies immediately","DNA repair becomes perfect","Telomeres lengthen"], a:0,
+      exp:"Checkpoints verify conditions before division. Disable them and damaged cells proceed through the cycle, accumulating mutations."},
+     {type:"mcq", q:"If a cell does NOT meet the requirements of a checkpoint, what are the two possible outcomes?", opts:["It arrests to repair, or undergoes apoptosis if unrepairable","It always divides anyway","It becomes a stem cell","It fuses with a neighbour"], a:0,
+      exp:"Arrest → repair, or p53-driven apoptosis when the damage can't be fixed."},
+     {type:"mcq", q:"Which normal cell type is most vulnerable to becoming a cancer cell, and why?", opts:["Stem cells — they are long-lived and keep dividing, so they can accumulate the required mutations","Mature red blood cells — they have no nucleus","Post-mitotic neurons — they never divide","Skin cells shed daily"], a:0,
+      exp:"Most fully differentiated cells are short-lived, so they're unlikely to survive long enough to accumulate mutations. Long-lived, dividing stem cells can."},
+     {type:"tf", q:"A tumour typically begins from a single transformed cell, and early on all tumour cells are its descendants.", a:true,
+      exp:"True — the initial cancerous transformation happens in one cell; the tumour is clonal (at least at early stages), later diversifying into subclones."},
+     {type:"mcq", q:"A lifetime risk of 10⁻² for thyroid cancer means approximately:", opts:["A 1% risk over an 80-year lifespan (about 1 in 100)","A 10% risk","A 0.001% risk","Certainty by age 80"], a:0,
+      exp:"10⁻² = 1% lifetime (80-year) risk ≈ 1 in 100."}
+    ]
+   },
+   {
+    id:"L10T2", title:"What cancer cells become — instability, immortality, evasion",
+    sub:"Genomic instability, telomerase, and the changes cancer cells accumulate (slides 13–20).",
+    slides:[
+     {h:"Genomic instability and a higher mutation rate", imgs:[
+        {src:"slides/L10/slide-14.jpg", cap:"L10 · Slide 14 — Many cancer cells have major chromosomal abnormalities"},
+        {src:"slides/L10/slide-17.jpg", cap:"L10 · Slide 17 — Cancer cells mutate faster than normal cells"}
+      ], html:`
+       <p class="lead">Mistakes in DNA replication and repair produce <span class="kw">genomic instability</span> — cancer karyotypes often show major chromosomal abnormalities.</p>
+       <div class="callout key">Crucially, the <b>enzymatic systems that repair DNA are often defective in cancer</b>. That's why <b>mutations in DNA-repair genes accelerate the accumulation of further mutations</b> — breaking the repair machinery makes every future error stick. (This is her printed slide question.)</div>`},
+     {h:"Immortality and evading the normal controls", imgs:[
+        {src:"slides/L10/slide-18.jpg", cap:"L10 · Slide 18 — Cancer cells acquire immortality via telomerase"},
+        {src:"slides/L10/slide-19.jpg", cap:"L10 · Slide 19 — Three ways cancer cells evade growth controls"},
+        {src:"slides/L10/slide-20.jpg", cap:"L10 · Slide 20 — Changes cancer cells accumulate"}
+      ], html:`
+       <p class="lead"><b>Immortality:</b> normal cells divide ~20–50 times then stop; cancer cells divide indefinitely because they <span class="kw">express telomerase</span>, maintaining their chromosome ends (straight back to L3).</p>
+       <p><b>Three ways they evade growth control:</b></p>
+       <ol>
+        <li>Produce their own cell-division signals (<b>autocrine stimulation</b>)</li>
+        <li>Lose <b>contact inhibition</b></li>
+        <li><b>Avoid programmed cell death</b> (apoptosis — L9)</li>
+       </ol>
+       <p><b>Further changes accumulated:</b> uncontrolled division; loss of anchorage and acquisition of mobility → <b>metastasis</b>; growing blood vessels into the tumour → <b>angiogenesis</b>; and <b>immune evasion</b>.</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Mutations in which kind of gene would speed up the accumulation of additional mutations?", opts:["Cytoskeletal protein genes","Metabolism genes","DNA-repair genes","Transcription factor genes"], a:2,
+      exp:"Break the repair machinery and every subsequent error goes unfixed → genomic instability accelerates. (Her printed slide answer: c.)"},
+     {type:"mcq", q:"How do cancer cells achieve immortality?", opts:["By expressing telomerase to maintain telomere length","By deleting all their mitochondria","By stopping DNA replication","By increasing apoptosis"], a:0,
+      exp:"Normal cells divide ~20–50 times and stop; cancer cells re-express telomerase, keeping telomeres long so they can divide indefinitely."},
+     {type:"mcq", q:"Which is NOT one of the three ways cancer cells evade normal growth controls?", opts:["Autocrine stimulation (making their own division signals)","Losing contact inhibition","Avoiding programmed cell death","Increasing their dependence on external survival factors"], a:3,
+      exp:"Cancer cells become LESS dependent on external signals — they make their own (autocrine), ignore contact inhibition, and dodge apoptosis."},
+     {type:"mcq", q:"Growing new blood vessels into a tumour is called:", opts:["Metastasis","Angiogenesis","Apoptosis","Autophagy"], a:1,
+      exp:"Angiogenesis supplies the tumour with oxygen/nutrients. Metastasis is the spread of cells to distant sites."},
+     {type:"tf", q:"DNA-repair enzyme systems are often defective in cancer cells.", a:true,
+      exp:"True — defective repair is a common feature and a major source of the genomic instability that drives tumour evolution."},
+     {type:"mcq", q:"Loss of anchorage and acquisition of mobility by tumour cells enables:", opts:["Angiogenesis","Metastasis (spread to distant sites)","Contact inhibition","Senescence"], a:1,
+      exp:"Detaching and becoming mobile is what allows cells to leave the primary tumour and colonize other tissues — metastasis."}
+    ]
+   },
+   {
+    id:"L10T3", title:"Driver mutations — oncogenes vs. tumor suppressors",
+    sub:"Accelerators and brakes: RAS, HER2/Herceptin, p53 and druggability (slides 22–27, 31–32).",
+    slides:[
+     {h:"Accelerators and brakes", imgs:[
+        {src:"slides/L10/slide-22.jpg", cap:"L10 · Slide 22 — Driver mutations: proto-oncogenes & tumor-suppressor genes"},
+        {src:"slides/L10/slide-27.jpg", cap:"L10 · Slide 27 — Inactivating tumor suppressor genes"}
+      ], html:`
+       <p class="lead">The genes mutated in cancer normally act as <span class="kw">accelerators or brakes</span> for cell division.</p>
+       <table class="dt">
+        <tr><th>Proto-oncogene → oncogene</th><th>Tumor suppressor</th></tr>
+        <tr><td>The <b>accelerator</b>. Cancer mutations cause <b>GAIN of function</b> — the protein becomes hyperactive/constitutively on. One mutated copy is often enough.</td><td>The <b>brake</b> (e.g., <b>p53</b>). Cancer mutations cause <b>LOSS of function</b> — the brake stops working. Typically both copies must be lost.</td></tr>
+       </table>`},
+     {h:"RAS, HER2 — and why tumor suppressors are hard to drug", imgs:[
+        {src:"slides/L10/slide-23.jpg", cap:"L10 · Slide 23 — RAS: normal (GDP, inactive) vs oncogenic (constitutively GTP-bound)"},
+        {src:"slides/L10/slide-25.jpg", cap:"L10 · Slide 25 — HER2 overexpression via gene amplification (FISH)"},
+        {src:"slides/L10/slide-26.jpg", cap:"L10 · Slide 26 — Herceptin, an antibody targeting HER2"}
+      ], html:`
+       <ul>
+        <li><b>RAS:</b> normal RAS is <b>inactive when bound to GDP</b> and is switched on by growth-factor signalling. <b>Oncogenic RAS is constitutively active — stuck with GTP bound</b>, signalling "divide" nonstop.</li>
+        <li><b>HER2:</b> overexpressed through <b>gene amplification</b> — FISH shows normal cells with 2 HER2 spots and tumour cells with many. <b>Herceptin</b> is an antibody that binds HER2 — a targeted therapy.</li>
+       </ul>
+       <div class="callout key"><b>Why tumor suppressors make poor drug targets:</b> cancer-causing mutations in them cause <b>LOSS of function</b>. Drugs are good at <b>blocking</b> an overactive protein (an oncogene) but you cannot "inhibit" a protein that is already gone — restoring a missing function is far harder. (Her printed slide answer: A.)</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"What is one reason tumor-suppressor genes make poor druggable targets?", opts:["Cancer-causing mutations in tumor suppressors result in LOSS of function","Mutant tumor suppressors have greater activity, which is hard to inhibit","Tumor suppressors are not expressed in humans","They are located only in mitochondria"], a:0,
+      exp:"You can block an overactive protein, but you can't inhibit a function that's already lost — restoring it is much harder. (Her printed slide answer: A.)"},
+     {type:"mcq", q:"How does oncogenic RAS differ from normal RAS?", opts:["Oncogenic RAS is constitutively active (stuck GTP-bound); normal RAS is inactive when GDP-bound until growth factors activate it","Oncogenic RAS is permanently GDP-bound","Normal RAS is always active","They are identical"], a:0,
+      exp:"Normal RAS cycles: GDP = off, activated by growth-factor signalling. Oncogenic RAS stays GTP-bound = accelerator stuck on."},
+     {type:"mcq", q:"HER2 overexpression in tumours is caused by:", opts:["Gene amplification (many extra copies of the HER2 gene)","Deletion of the HER2 gene","Telomere shortening","Loss of p53 only"], a:0,
+      exp:"FISH shows 2 HER2 signals in normal cells but many in tumour cells — amplification. Herceptin is the antibody therapy that targets it."},
+     {type:"mcq", q:"A proto-oncogene becomes an oncogene through:", opts:["A gain-of-function mutation making the protein hyperactive","A loss-of-function mutation","Deletion of both copies","Methylation of telomeres"], a:0,
+      exp:"Oncogenes = accelerators stuck ON (gain of function). Tumor suppressors = brakes that are lost (loss of function)."},
+     {type:"mcq", q:"p53 is best classified as:", opts:["A proto-oncogene","A tumor suppressor whose loss removes the damage checkpoint","A telomerase subunit","A growth factor"], a:1,
+      exp:"p53 is the classic tumor suppressor: it arrests damaged cells or triggers apoptosis. Losing it lets damaged cells keep dividing."},
+     {type:"tf", q:"Because oncogenes are hyperactive, they are generally easier to drug than tumor suppressors.", a:true,
+      exp:"True — inhibiting an overactive protein (e.g., HER2 with Herceptin) is tractable; restoring a lost tumor-suppressor function is much harder."}
+    ]
+   },
+   {
+    id:"L10D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended prompts printed on her Cancer slides — her short-answer exam style.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">The discussion prompts printed on the lecture slides. Write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"What could happen if the cell's checkpoints are disabled?", model:"Checkpoints normally verify that conditions are right before the cell proceeds — DNA intact, replication complete, chromosomes properly attached. Disabled, a cell with damaged or incompletely replicated DNA divides anyway, passing errors to daughter cells. Mutations accumulate each cycle, genomic instability grows, and cells that should have arrested or died keep proliferating — the road to cancer.", pts:["Damaged/unreplicated DNA passes to daughter cells","Mutations accumulate; genomic instability","Cells that should arrest or die keep dividing → cancer"]},
+     {type:"short", q:"What type of normal cell is most vulnerable to becoming a cancer cell, and why?", model:"Stem cells. Cancer requires a single cell to accumulate several mutations, which takes time and repeated divisions. Most fully differentiated cells are short-lived and are shed or replaced before they can collect enough mutations, whereas stem cells are long-lived and keep dividing throughout life — so they can carry and compound mutations over decades.", pts:["Stem cells","Cancer needs multiple mutations accumulated in ONE cell over time","Differentiated cells are short-lived; stem cells are long-lived and keep dividing"]},
+     {type:"short", q:"Explain the difference between an oncogene and a tumor-suppressor gene, and why that difference matters for therapy.", model:"A proto-oncogene is an accelerator of cell division; a gain-of-function mutation makes it an oncogene that is constitutively active (e.g., RAS stuck GTP-bound, HER2 amplified). A tumor suppressor is a brake (e.g., p53); cancer mutations cause loss of function, usually requiring both copies to be lost. Therapeutically this matters because drugs are good at BLOCKING an overactive protein (Herceptin against HER2) but cannot easily restore a protein that is missing — which is why tumor suppressors are poor druggable targets.", pts:["Oncogene = accelerator, gain of function, constitutively active","Tumor suppressor = brake, loss of function","Drugs can inhibit overactive proteins but can't restore lost ones"]},
+     {type:"short", q:"What happens if a cell doesn't meet the requirements of the checkpoints?", model:"It doesn't proceed. The control system halts the cycle so the problem can be repaired — for example, arrest in G1 while DNA damage is fixed. If the damage is too severe to repair, p53 drives the cell into apoptosis instead, removing it permanently. Cancer arises when a cell escapes BOTH outcomes and divides anyway.", pts:["Cycle arrests to allow repair","If unrepairable → p53-driven apoptosis","Escaping both → cancer"]}
+    ]
+   }
+  ]
+ },
+
+ /* ============================ LECTURE 11 ============================ */
+ {
+  id:"L11", icon:"🌱", short:"L11 · Stem Cells",
+  title:"Lecture 11 — Stem Cells, Reprogramming & Regenerative Medicine",
+  blurb:"Pluripotent vs tissue-specific stem cells, the stem-cell niche and stem-cell exhaustion with age, iPSCs and the Yamanaka reprogramming factors, and what it takes for a stem-cell therapy to reach the clinic.",
+  objectives:[
+    "Define a stem cell by its two properties: self-renewal and potency",
+    "Distinguish pluripotent (embryonic, iPSC) from tissue-specific (adult/somatic) stem cells and give examples",
+    "Explain the stem-cell niche and how stem-cell exhaustion contributes to aging",
+    "Explain how a few transcription factors reprogram a fibroblast into an iPSC, and how the genes are delivered",
+    "Compare the caveats of embryonic, adult, and induced pluripotent stem cells for therapy",
+    "Evaluate which stem-cell therapies are FDA-approved vs experimental, and the safety risks"
+  ],
+  topics:[
+   {
+    id:"L11T1", title:"What a stem cell is — pluripotent vs tissue-specific",
+    sub:"The two defining properties, the two main kinds, and the cancer parallel (slides 4–9).",
+    slides:[
+     {h:"The two kinds of stem cells", imgs:[
+        {src:"slides/L11/slide-04.jpg", cap:"L11 · Slide 4 — Pluripotent stem cells from the blastocyst inner cell mass"},
+        {src:"slides/L11/slide-07.jpg", cap:"L11 · Slide 7 — The two main kinds of stem cells"}
+      ], html:`
+       <p class="lead">A stem cell is defined by two properties: <span class="kw">self-renewal</span> (it can make copies of itself) and <span class="kw">potency</span> (it can become other cell types).</p>
+       <table class="dt">
+        <tr><th>Pluripotent stem cells</th><th>Tissue-specific stem cells</th></tr>
+        <tr><td>Embryonic stem cells (ESCs) and induced pluripotent stem cells (iPSCs). Can become <b>any</b> kind of tissue in the body. ESCs for research come from <b>leftover embryos donated by patients at fertility clinics</b>.</td><td>Also called <b>somatic</b> or <b>adult</b> stem cells. Found in all people, in tissues throughout the body; they replace cells <b>as they wear out and die</b> — but only within their own lineage.</td></tr>
+       </table>`},
+     {h:"Examples, and what stem cells share with cancer", imgs:[
+        {src:"slides/L11/slide-09.jpg", cap:"L11 · Slide 9 — Examples of tissue-specific stem cells"},
+        {src:"slides/L11/slide-06.jpg", cap:"L11 · Slide 6 — What is common to cancer cells and stem cells?"}
+      ], html:`
+       <p><b>Tissue-specific examples:</b> <span class="kw-2">hematopoietic</span> (bone marrow → all blood cells), <span class="kw-2">mesenchymal</span> (bone, cartilage, fat, tendon), <span class="kw-2">neural</span> (neurons + glia), <span class="kw-2">epidermal</span> (skin and hair follicles).</p>
+       <div class="callout key"><b>Stem cells and cancer cells share five features:</b> (1) ability to divide indefinitely, (2) self-renewal, (3) a relatively undifferentiated state, (4) potential for differentiation/plasticity, (5) genetic flexibility — surviving despite genetic changes. This is exactly why stem-cell therapies carry a <b>tumour risk</b>.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"A stem cell is defined by which two properties?", opts:["Self-renewal and potency (ability to become other cell types)","Being large and having two nuclei","Being unable to divide","Producing antibodies"], a:0,
+      exp:"Self-renewal (makes copies of itself) + potency (can differentiate into other cell types). Potency is what separates it from any dividing cell."},
+     {type:"mcq", q:"Tissue-specific stem cells are ALSO known as:", opts:["Embryonic stem cells","Somatic or adult stem cells","Induced pluripotent stem cells","Cancer stem cells only"], a:1,
+      exp:"Tissue-specific = somatic = adult stem cells. They reside in tissues and replace cells as they wear out."},
+     {type:"mcq", q:"Hematopoietic stem cells in the bone marrow give rise to:", opts:["All kinds of blood cells (red and white)","Bone and cartilage only","Neurons and glia","Skin and hair follicles"], a:0,
+      exp:"Hematopoietic = blood-forming. Mesenchymal → bone/cartilage/fat/tendon; neural → neurons/glia; epidermal → skin/hair follicles."},
+     {type:"mcq", q:"Which is a feature that stem cells and cancer cells SHARE?", opts:["Ability to divide indefinitely and self-renew","Both are always benign","Both lack DNA","Both are fully differentiated"], a:0,
+      exp:"They share indefinite division, self-renewal, an undifferentiated state, differentiation potential, and genetic flexibility — which is why stem-cell therapy carries tumour risk."},
+     {type:"tf", q:"Embryonic stem cells used in research come from leftover embryos donated by patients at fertility clinics.", a:true,
+      exp:"True — that is the stated source in lecture, an important ethical/practical point."},
+     {type:"mcq", q:"How do pluripotent stem cells differ from tissue-specific adult stem cells?", opts:["Pluripotent cells can become ANY cell type; tissue-specific cells are limited to their own lineage","Pluripotent cells cannot divide","Tissue-specific cells can become any cell type","There is no difference"], a:0,
+      exp:"Pluripotent = any cell type in the body. Tissue-specific = restricted to the cell types of their tissue."}
+    ]
+   },
+   {
+    id:"L11T2", title:"The niche & stem-cell exhaustion with age",
+    sub:"Where stem cells live, and how their decline drives aging (slides 10–14).",
+    slides:[
+     {h:"The stem-cell niche", imgs:[
+        {src:"slides/L11/slide-10.jpg", cap:"L11 · Slide 10 — Components and functions of stem-cell niches"}
+      ], html:`
+       <p class="lead">Stem cells live in a <span class="kw">niche</span> — "a complex and dynamic structure that transmits and receives signals through cellular and acellular mediators." The niche tells the stem cell whether to stay dormant, divide, or differentiate.</p>
+       <p>So stem-cell function depends not just on the cell but on its <b>environment</b> — an aged niche can impair an otherwise healthy stem cell.</p>`},
+     {h:"Stem-cell exhaustion — a cellular hallmark of aging", imgs:[
+        {src:"slides/L11/slide-11.jpg", cap:"L11 · Slide 11 — Quiescent → activated → renew, and what is lost with aging"},
+        {src:"slides/L11/slide-14.jpg", cap:"L11 · Slide 14 — Lysosome activation clears aggregates and enhances quiescent stem cells"}
+      ], html:`
+       <p class="lead">Tissue-specific stem cells normally cycle between a <b>dormant/quiescent</b> state (reduced protein synthesis) and an <b>activated</b> state where they divide to renew the pool and produce differentiated cells. Some cells can even <b>de-differentiate</b> to replenish the pool.</p>
+       <div class="callout warn">With aging, stem cells are <b>lost</b> or become <b>more quiescent</b>, and their numbers/function <b>decrease</b> → <b>failed maintenance and regeneration of tissues</b>. That is the hallmark <b>stem-cell exhaustion</b>.</div>
+       <p>Quality control matters here too: <b>lysosome activation clears protein aggregates</b> and enhances the function of quiescent stem cells — linking proteostasis (L5) to stem-cell aging.</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"The stem-cell 'niche' is best described as:", opts:["A single signalling molecule","The dynamic local environment that sends and receives signals controlling stem-cell behaviour","The nucleus of the stem cell","A type of cancer"], a:1,
+      exp:"The niche is the surrounding structure (cellular + acellular) whose signals decide whether a stem cell stays dormant, divides, or differentiates."},
+     {type:"mcq", q:"Stem-cell exhaustion contributes to aging because:", opts:["Stem cells are lost or become more quiescent → failed tissue maintenance and regeneration","Stem cells divide too fast and repair everything","Stem cells become pluripotent with age","Niches disappear at birth"], a:0,
+      exp:"Fewer/less-active stem cells means tissues can't be renewed as they wear out — the cellular hallmark 'stem-cell exhaustion'."},
+     {type:"mcq", q:"In the normal stem-cell cycle, the dormant state is characterized by:", opts:["Reduced protein synthesis (quiescence)","Rapid division","Complete differentiation","Apoptosis"], a:0,
+      exp:"Quiescent/dormant stem cells have reduced protein synthesis; activation switches them to divide and renew the pool."},
+     {type:"tf", q:"An aged niche can impair the function of a stem cell even if the stem cell itself is relatively healthy.", a:true,
+      exp:"True — stem-cell behaviour is directed by niche signals, so the environment matters as much as the cell."},
+     {type:"mcq", q:"Activating lysosomes in quiescent stem cells improves their function because it:", opts:["Clears protein aggregates (proteostasis quality control)","Adds telomeres","Increases mutation rate","Blocks all autophagy"], a:0,
+      exp:"Lysosomal clearance of aggregates restores proteostasis in quiescent stem cells — linking L5 proteostasis to stem-cell aging."}
+    ]
+   },
+   {
+    id:"L11T3", title:"iPSCs, reprogramming & getting to the clinic",
+    sub:"Yamanaka factors, delivery, comparison of cell types, and therapy caveats (slides 15–24).",
+    slides:[
+     {h:"Reprogramming a fibroblast into an iPSC", imgs:[
+        {src:"slides/L11/slide-16.jpg", cap:"L11 · Slide 16 — How would scientists introduce the genes into cells?"},
+        {src:"slides/L11/slide-17.jpg", cap:"L11 · Slide 17 — Tissue-specific vs embryonic vs induced pluripotent stem cells"}
+      ], html:`
+       <p class="lead">A handful of genes (the <span class="kw">Yamanaka factors</span>) can turn an ordinary adult fibroblast into an <span class="kw">induced pluripotent stem cell (iPSC)</span>.</p>
+       <div class="callout key">Why so few genes are enough: <b>they code for transcription factors</b>, and a transcription factor changes the expression of <b>many other genes</b> at once — so a few master regulators can rewire the cell's entire identity.</div>
+       <p><b>Delivery:</b> the genes were introduced using <b>viral vectors</b> that insert them into the differentiated cell's nucleus.</p>
+       <p><b>Key advantage of iPSCs:</b> they are derived from a patient's <b>own mature body cells, not an embryo</b> — avoiding both the embryo-source issue and immune rejection.</p>`},
+     {h:"Caveats and what a clinical therapy needs", imgs:[
+        {src:"slides/L11/slide-15.jpg", cap:"L11 · Slide 15 — Adult stem cells: low abundance, difficult to isolate"},
+        {src:"slides/L11/slide-24.jpg", cap:"L11 · Slide 24 — What to consider for cell therapy in the clinic"},
+        {src:"slides/L11/slide-23.jpg", cap:"L11 · Slide 23 — Age reversal assessed by DNA-methylation age"}
+      ], html:`
+       <table class="dt">
+        <tr><th>Cell type</th><th>Main caveat</th></tr>
+        <tr><td><b>Embryonic (ESC)</b></td><td><b>Immune rejection</b> — donor-derived, so without immunosuppressants the patient's immune system attacks the transplanted cells.</td></tr>
+        <tr><td><b>Adult / tissue-specific</b></td><td><b>Low abundance and hard to isolate</b>; harvesting some types could cause considerable tissue/organ damage (e.g., heart or brain). Also limited potency and limited growth in culture.</td></tr>
+        <tr><td><b>iPSC</b></td><td>The <b>reprogramming</b> process introduces genetic modifications, so long-term <b>safety is uncertain</b>.</td></tr>
+       </table>
+       <div class="callout warn"><b>Safety risks for any cell therapy:</b> <b>tumour development</b> (pluripotent cells can form teratomas), <b>immunogenicity</b>, <b>contamination</b> (a living-cell product can't be terminally sterilized), and <b>lack of batch homogeneity</b>.</div>
+       <div class="callout tip"><b>Evidence vs hype:</b> the only well-established FDA-approved stem-cell therapies are <b>hematopoietic transplants for blood disorders</b>. Treatments advertised for Alzheimer's, Parkinson's, macular degeneration, osteoarthritis, sarcopenia or heart repair are <b>experimental</b>.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"How can only a few genes transform a fibroblast into an induced pluripotent cell?", opts:["These genes code for transcription factors that change the expression of many other genes","They are the main oncogenes","Fibroblasts are already almost pluripotent","They delete the fibroblast genome"], a:0,
+      exp:"Transcription factors are master regulators — a few of them can flip the expression of hundreds of downstream genes and reset cell identity. (Her printed slide answer.)"},
+     {type:"mcq", q:"How were the reprogramming genes introduced into differentiated cells?", opts:["Viral vectors that inserted the genes into the nucleus","Proteins injected into the cytoplasm only","By heating the cells","They were not introduced; they arose spontaneously"], a:0,
+      exp:"Viral vectors delivered the genes into the differentiated cells' nucleus — the classic reprogramming method."},
+     {type:"mcq", q:"The key advantage of iPSCs over embryonic stem cells is that iPSCs are:", opts:["Derived from mature bodily cells rather than an embryo (patient-matched, avoiding rejection)","Unable to differentiate","Larger cells","Not pluripotent"], a:0,
+      exp:"iPSCs are reprogrammed from the patient's own adult cells — avoiding the embryo source and immune rejection. Both types are pluripotent."},
+     {type:"mcq", q:"The main caveat of using EMBRYONIC stem cells as therapy is:", opts:["Immune rejection without immunosuppressant drugs","They cannot divide","They are too abundant","Reprogramming mutations"], a:0,
+      exp:"ESCs are donor-derived → the immune system sees them as foreign. ('Reprogramming mutations' is the iPSC caveat; 'low abundance/hard to isolate' is the adult stem-cell caveat.)"},
+     {type:"mcq", q:"Which stem-cell therapies are actually FDA-approved?", opts:["Therapies for certain blood disorders (hematopoietic/bone-marrow transplants)","Alzheimer's and Parkinson's therapies","Osteoarthritis injections","Cardiomyocyte replacement after heart attack"], a:0,
+      exp:"Only blood-disorder (hematopoietic) transplants are established/approved; the rest are experimental — a classic evidence-vs-hype point."},
+     {type:"tf", q:"Tumour development is a genuine safety risk of pluripotent stem-cell therapies.", a:true,
+      exp:"True — pluripotent cells can form teratomas. Along with immunogenicity, contamination, and batch inconsistency, it's a core safety concern."}
+    ]
+   },
+   {
+    id:"L11Q", title:"📝 Practice quiz (from class) — Stem Cells",
+    sub:"The class stem-cell homework quiz (12 Q), answers keyed.",
+    slides:[
+     {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">The exact stem-cell homework-quiz questions. Core themes: potency defines a stem cell; tissue-specific = adult = somatic; iPSCs come from mature cells via transcription factors; only blood-disorder therapies are FDA-approved.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"A stem cell is:", opts:["A cell in your intestines that can become any kind of tissue in your body","A cell that can become many or all cell types of the body","Any kind of cell that can divide","A kind of cell that can make copies of itself"], a:1,
+      exp:"Potency — becoming many/all cell types — is the defining feature. Self-renewal alone isn't enough (many cells divide)."},
+     {type:"mcq", q:"Using stem cells to replace damaged bodily tissue is called:", opts:["Cloning","Gene therapy","Regenerative medicine","Genetic engineering"], a:2,
+      exp:"Regenerative medicine = replacing/repairing damaged tissue. The others alter genes rather than replace tissue."},
+     {type:"tf", q:"Tissue-specific stem cells are found in your own body right now, are also called adult/somatic stem cells, and replace tissue as it wears out.", a:true,
+      exp:"True — all of these describe tissue-specific stem cells (the quiz's multi-select answer was ALL options)."},
+     {type:"mcq", q:"How are pluripotent stem cells different from tissue-specific adult stem cells?", opts:["Pluripotent stem cells can become any kind of cell type in the body","Pluripotent stem cells cannot be used in treatments for adults","Pluripotent stem cells can only become a few kinds of cells","Pluripotent stem cells are not available for use with humans"], a:0,
+      exp:"Pluripotent = any cell type; adult/tissue-specific are limited to their lineage ('only a few kinds' describes the adult ones)."},
+     {type:"mcq", q:"How are tissue-specific stem cells used to treat leukemia?", opts:["Peripheral blood stem cells are removed, purified and returned; and bone marrow stem cells are replaced by healthy donor cells","They are mutated so they grow uncontrollably","They are converted into neurons","They are used to make antibodies only"], a:0,
+      exp:"Both peripheral blood stem-cell transplant and donor bone-marrow replacement are used. 'Mutated to grow uncontrollably' describes leukemia itself, not a treatment."},
+     {type:"mcq", q:"How are induced pluripotent stem cells different from embryonic stem cells?", opts:["Embryonic stem cells are pluripotent","Embryonic stem cells are derived from mature bodily cells","Induced pluripotent stem cells are derived from mature bodily cells, not from an embryo","Induced pluripotent stem cells are pluripotent"], a:2,
+      exp:"iPSCs are reprogrammed from mature adult cells; ESCs come from an embryo. Both being pluripotent is not a difference."},
+     {type:"tf", q:"Pluripotent stem cells are preferred over tissue-specific cells for research because tissue-specific cells become only limited tissue types, are less efficient for growing tissues to test drugs, and grow only for limited periods in the lab.", a:true,
+      exp:"True — all three limitations applied (the quiz's multi-select answer was ALL options)."},
+     {type:"mcq", q:"When using embryonic stem cells as therapy, one caveat is that:", opts:["Without immunosuppressant drugs, the patient's immune system will recognize the transplanted cells as foreign and attack them","The reprogramming process introduces genetic modifications","The cells are present in low abundance and are difficult to isolate","They cannot differentiate"], a:0,
+      exp:"ESCs are donor-derived → immune rejection. Option 2 is the iPSC caveat; option 3 is the adult stem-cell caveat."},
+     {type:"mcq", q:"How can only a few genes transform a fibroblast to an induced pluripotent cell?", opts:["Fibroblasts are naturally almost fully differentiated to a pluripotent cell","These genes code for transcription factors that affect the expression of many other genes","These are the main few oncogenes","They physically fuse cells together"], a:1,
+      exp:"The Yamanaka factors are transcription factors — master regulators that switch hundreds of genes and reset cell identity."},
+     {type:"mcq", q:"How could scientists introduce 3 genes into differentiated cells?", opts:["They used mRNA inserted into the cytoplasm","They used viral vectors that inserted the genes into the nucleus","They used proteins inserted into the cytoplasm","They used electricity only"], a:1,
+      exp:"Viral vectors carried the genes into the differentiated cells' nucleus."},
+     {type:"mcq", q:"Which stem-cell therapies are approved by the FDA?", opts:["Alzheimer's and Parkinson's","Certain blood disorders","Osteoarthritis and muscle sarcopenia","Cardiomyocytes after myocardial infarction"], a:1,
+      exp:"Only hematopoietic (blood-forming) stem-cell transplants for blood disorders are established/approved. The rest are experimental."},
+     {type:"tf", q:"Tumour development, immunogenicity, contamination and lack of batch homogeneity are all safety risks for clinical stem-cell therapies.", a:true,
+      exp:"True — all four are recognized risks (the quiz's multi-select answer covered these)."}
+    ]
+   },
+   {
+    id:"L11D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended prompts printed on her Stem Cell slides.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">The discussion prompts printed on the lecture slides. Write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"What is common to cancer cells and stem cells?", model:"Five shared features: (1) both can divide indefinitely, unlike normal cells that have a division limit; (2) both self-renew, making copies of themselves; (3) both are relatively undifferentiated compared with specialized body cells; (4) both have differentiation potential/plasticity — stem cells become different cell types, and cancer cells can change to adapt to their environment; (5) both show genetic flexibility, surviving and thriving despite genetic changes. This overlap is precisely why stem-cell therapies carry a tumour risk.", pts:["Indefinite division + self-renewal","Undifferentiated state + differentiation potential/plasticity","Genetic flexibility — survive despite genetic changes","Explains the tumour risk of stem-cell therapy"]},
+     {type:"short", q:"Which mechanisms lead to stem-cell exhaustion with aging?", model:"Stem cells are progressively lost or driven into deeper quiescence, so both their number and their activity fall. Accumulated damage (DNA damage, protein aggregates, mitochondrial dysfunction) impairs the cells themselves, while an aged niche sends poorer signals. The result is failed maintenance and regeneration of tissues — wounds heal slowly, blood and immune cells aren't replenished, muscle and skin thin. Restoring proteostasis (e.g., lysosomal clearance of aggregates) can improve quiescent stem-cell function.", pts:["Stem cells lost or become more quiescent → fewer/less active","Intrinsic damage (DNA, aggregates, mitochondria) + aged niche signals","Result: failed tissue maintenance/regeneration","Clearing aggregates (lysosome activation) can help"]},
+     {type:"short", q:"How would scientists introduce the reprogramming genes into cells, and why do so few genes suffice?", model:"Delivery was by viral vectors, which insert the genes into the differentiated cell's nucleus (other approaches include mRNA or protein delivery). So few genes suffice because they encode transcription factors — master regulators that bind DNA and change the expression of many other genes at once, so a small set can reset the entire gene-expression program and restore pluripotency.", pts:["Viral vectors deliver genes into the nucleus","Genes encode transcription factors","TFs regulate many downstream genes → whole identity reset"]},
+     {type:"short", q:"Stem-cell therapy review panel: for a proposed therapy, what would you ask about how it's administered, its effectiveness, and its major risks?", model:"Administration: what cell type and source (autologous iPSC vs donor ESC vs adult), how are cells produced/purified, dose, route, and is immunosuppression required? Effectiveness: what is the evidence — human randomized trials or only animal/cell data? What outcome is measured, over what duration, and is it a real clinical benefit rather than a surrogate marker? Risks: tumour/teratoma formation, immunogenicity/rejection, contamination (living products can't be terminally sterilized), batch-to-batch inconsistency, and damage from harvesting. Also: who funds it, and is the claim outrunning the evidence?", pts:["Administration: cell source/type, purity, dose, route, immunosuppression","Effectiveness: human trial data, real outcomes not surrogates","Risks: tumour, immunogenicity, contamination, batch variability","Evidence-vs-hype: funding/conflict of interest"]}
+    ]
+   }
+  ]
+ },
+
+ /* ============================ LECTURE 12 ============================ */
+ {
+  id:"L12", icon:"🔥", short:"L12 · Inflammaging",
+  title:"Lecture 12 — Inflammation & Inflammaging",
+  blurb:"Why inflammation evolved, how chronic sterile 'inflammaging' differs from acute inflammation, the SASP as its engine, immunosenescence, the microglia/complement link to Alzheimer's, and evidence that immune senescence drives systemic aging.",
+  objectives:[
+    "Explain why inflammation is conserved and how acute inflammation normally resolves",
+    "Define inflammaging (chronic, sterile, low-grade) and identify its sources (DAMPs, senescent cells, impaired clearance)",
+    "Describe the SASP and how senescent cells drive inflammation in surrounding and distant tissues",
+    "Distinguish innate from adaptive immunity and describe immunosenescence",
+    "Explain the microglia–complement synaptic-pruning link to normal development and to Alzheimer's",
+    "Interpret the ERCC1/T-cell experiments as evidence that immune senescence drives systemic aging"
+  ],
+  topics:[
+   {
+    id:"L12T1", title:"Why inflammation exists — and what inflammaging is",
+    sub:"Acute vs chronic sterile inflammation and where it comes from (slides 3–5).",
+    slides:[
+     {h:"Normal inflammation resolves; inflammaging does not", imgs:[
+        {src:"slides/L12/slide-04.jpg", cap:"L12 · Slide 4 — Injury → inflammation → repair → inflammation stops"},
+        {src:"slides/L12/slide-05.jpg", cap:"L12 · Slide 5 — Inflammaging: chronic, sterile, low-grade"}
+      ], html:`
+       <p class="lead">Inflammation is <span class="kw">strongly conserved in evolution</span> because it provides a rapid response to infection and tissue injury — improving survival and reproductive fitness.</p>
+       <p>The normal cycle is self-limiting: <b>injury → inflammation → repair → inflammation stops.</b> The question the lecture asks is: <span class="warn">what happens if the inflammation never stops?</span></p>
+       <div class="callout key"><b>Inflammaging</b> = <b>chronic, sterile, low-grade inflammation that develops during aging.</b> <b>Sterile means no infection</b> — it persists in the absence of any pathogen, driven instead by endogenous signals (<b>DAMPs</b>) released from damaged tissue.</div>
+       <p><b>Why it increases with age:</b> more <b>DAMPs</b> produced, <b>accumulation of senescent cells</b>, and <b>impaired removal of cellular debris</b>.</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Why has inflammation been strongly conserved throughout evolution?", opts:["It provides a rapid response to infection and tissue injury, improving survival and reproductive fitness","It protects exclusively from viral infections","It evolved mainly to eliminate senescent cells","It primarily evolved to increase lifespan"], a:0,
+      exp:"Inflammation is protective early — fast defence against pathogens and injury, which improves fitness. Its late-life cost is a side effect."},
+     {type:"mcq", q:"How is chronic sterile inflammation ('inflammaging') different from acute inflammation after infection?", opts:["It persists despite the ABSENCE of pathogens, driven by endogenous signals from damaged tissue","Acute inflammation involves only adaptive immunity","Chronic inflammation is always caused by hidden bacteria","Acute inflammation is characterized by high antibody levels"], a:0,
+      exp:"'Sterile' = no pathogen. Inflammaging is driven by internal danger signals (DAMPs) and does not resolve, unlike acute inflammation."},
+     {type:"mcq", q:"Why does inflammation increase with age?", opts:["Increased DAMPs, accumulation of senescent cells, and impaired removal of cellular debris","Decreased cytokine production and improved mitochondrial function","Complete loss of adaptive immunity and more red blood cells","Increased stem-cell proliferation and less oxidative stress"], a:0,
+      exp:"Three drivers: more damage signals, more senescent cells pumping out SASP, and worse clearance of debris."},
+     {type:"mcq", q:"Why hasn't natural selection eliminated genes that cause chronic inflammation later in life?", opts:["Chronic inflammation is beneficial at every stage","It increases fertility in old age","Selection acts most strongly on traits that improve reproductive success early in life, even if harmful after reproduction","Inflammation only exists in modern humans"], a:2,
+      exp:"Antagonistic pleiotropy / declining force of selection — the same logic as senescence and disposable soma."},
+     {type:"tf", q:"'Sterile' inflammation means the inflammation is caused by bacteria that escaped detection.", a:false,
+      exp:"False — sterile means NO infection at all. It's driven by the body's own damage signals (DAMPs)."}
+    ]
+   },
+   {
+    id:"L12T2", title:"Senescent cells & the SASP — the engine of inflammaging",
+    sub:"What senescent cells secrete, and the bright/dark sides (slides 6–9, 19).",
+    slides:[
+     {h:"Senescent cells are alive — and they keep talking", imgs:[
+        {src:"slides/L12/slide-07.jpg", cap:"L12 · Slide 7 — Senescent cells continuously release SASP factors"},
+        {src:"slides/L12/slide-08.jpg", cap:"L12 · Slide 8 — Bright and dark sides of cellular senescence"}
+      ], html:`
+       <p class="lead"><span class="warn">Senescent cells are alive!</span> They don't divide and they don't die — they persist and <b>continuously release</b> the <span class="kw">SASP</span> (senescence-associated secretory phenotype):</p>
+       <p class="formula">IL-6 · IL-1β · TNF-α · MCP-1 · MMPs (matrix metalloproteinases) · chemokines · growth factors</p>
+       <div class="callout key"><b>Bright side:</b> senescence permanently removes damaged cells from the cell cycle, <b>limiting cancer risk</b>, and the SASP helps recruit immune cells for wound healing. <b>Dark side:</b> persistent senescent cells drive <b>chronic inflammation and tissue dysfunction</b> — inflammaging. Same programme, opposite consequences depending on timing.</div>
+       <p>Senescent cells are detected with <b>SA-β-galactosidase</b> staining (Dimri, 1995).</p>`},
+     {h:"Two immune systems, and immunosenescence", imgs:[
+        {src:"slides/L12/slide-09.jpg", cap:"L12 · Slide 9 — The human immune system: innate (general) and adaptive (specialized)"}
+      ], html:`
+       <table class="dt">
+        <tr><th>Innate immunity</th><th>Adaptive immunity</th></tr>
+        <tr><td><b>General/non-specific</b>, fast. Recognizes broad danger signals and removes pathogens or cellular debris. <b>No memory.</b> (Microglia belong here.)</td><td><b>Specialized</b>, slower. Antigen-specific receptors, antibodies, and <b>immune memory</b>. Resides in the lymphatic system.</td></tr>
+       </table>
+       <div class="callout warn"><b>Immunosenescence</b> = aging of the immune system. Its hallmark change is a <b>reduced diversity of unique T-cell receptors</b> (fewer naïve T cells as the thymus involutes) → worse responses to new pathogens and <b>poor vaccine responses</b>. Clearance of senescent cells also declines — so senescent cells accumulate, feeding inflammaging.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Why does the accumulation of senescent cells become detrimental during aging?", opts:["Persistent senescent cells secrete inflammatory factors (SASP) that promote tissue dysfunction and chronic inflammation","Senescent cells completely suppress the immune system","Senescent cells die immediately after entering senescence","Senescent cells divide uncontrollably and form tumours"], a:0,
+      exp:"They persist (they don't die) and don't divide (they're arrested) — the harm is the SASP they keep secreting."},
+     {type:"mcq", q:"Which factors are part of the SASP?", opts:["IL-6, IL-1β, TNF-α, MCP-1, MMPs and chemokines","Only antibodies","Telomerase and DNMT","Insulin and glucagon"], a:0,
+      exp:"The SASP is a cocktail of pro-inflammatory cytokines, chemokines, matrix metalloproteinases and growth factors."},
+     {type:"mcq", q:"Which change is characteristic of immune aging (immunosenescence)?", opts:["Increased ability to eliminate senescent cells","Reduced diversity of unique T-cell receptors","Increased production of progenitor T cells throughout life","Complete disappearance of B cells"], a:1,
+      exp:"A narrowing T-cell receptor repertoire (thymic involution, fewer naïve T cells) → poor responses to new pathogens and vaccines."},
+     {type:"mcq", q:"What is a beneficial role of cellular senescence?", opts:["Senescent cells continuously divide to replace damaged tissue","Senescent cells produce more ATP","Senescence prevents immune cells from recognizing tumours","Senescence permanently removes damaged cells from the cell cycle, limiting cancer risk"], a:3,
+      exp:"The bright side: arresting damaged cells stops them becoming tumours (and the SASP transiently aids wound healing)."},
+     {type:"mcq", q:"Microglia are considered part of the INNATE immune system because they:", opts:["Differentiate into antibody-producing plasma cells","Rapidly recognize general danger signals and remove pathogens or cellular debris","Generate immune memory following infection","Produce antigen-specific antibodies after vaccination"], a:1,
+      exp:"Innate = fast, general/non-specific, no memory. The other options all describe adaptive immunity."},
+     {type:"tf", q:"Senescent cells are metabolically active and alive — they simply cannot divide.", a:true,
+      exp:"True — and that's the problem: being alive, they keep secreting the SASP indefinitely."}
+    ]
+   },
+   {
+    id:"L12T3", title:"Immune senescence drives systemic aging (+ microglia & bats)",
+    sub:"The ERCC1/T-cell experiments, synaptic pruning, and why bats live so long (slides 2, 14–21).",
+    slides:[
+     {h:"Damage the immune system → the whole body ages", imgs:[
+        {src:"slides/L12/slide-14.jpg", cap:"L12 · Slide 14 — ERCC1 (DNA repair) knocked out in hematopoietic cells"},
+        {src:"slides/L12/slide-18.jpg", cap:"L12 · Slide 18 — Inflammaging induces senescence in distal tissues"}
+      ], html:`
+       <p class="lead">A landmark set of experiments (Yousefzadeh 2021; Desdín-Micó 2020):</p>
+       <ol>
+        <li>Knock out the DNA-repair gene <b>ERCC1</b> (or mitochondrial <b>Tfam</b>) <b>only in immune cells</b>.</li>
+        <li>Senescence markers such as <b>p21</b> rise not just in immune cells but in <b>multiple non-immune tissues</b>.</li>
+        <li>The mechanism: <b>senescent immune cells secrete inflammatory factors (SASP) that induce senescence in distant tissues</b>.</li>
+        <li>To prove causation, remove the senescent immune cells with a <b>senolytic</b> — you should see <b>reduced p21 in non-immune tissues and lower inflammatory cytokines</b>.</li>
+       </ol>
+       <div class="callout key">This is the strongest form of causal evidence: <b>induce</b> the damage in one compartment and aging spreads; <b>remove</b> the culprit cells and it reverses. "Inflammaging? Blame T cells."</div>`},
+     {h:"Microglia, complement & why bats are exceptional", imgs:[
+        {src:"slides/L12/slide-02.jpg", cap:"L12 · Slide 2 — Mechanisms shaping bat longevity and virus resistance"},
+        {src:"slides/L12/slide-21.jpg", cap:"L12 · Slide 21 — Can we reduce inflammaging?"}
+      ], html:`
+       <p class="lead"><b>Immune molecules do normal brain work.</b> Researchers suspected this when <b>synapses were found tagged with complement proteins</b> normally used in innate immune responses. During development, <b>microglia recognize complement-tagged synapses and prune excess connections</b> to refine circuits.</p>
+       <div class="callout warn">In <b>Alzheimer's</b>, this developmental programme appears to <b>reactivate inappropriately</b>: <b>excessive microglial pruning removes functional synapses</b>, contributing to cognitive decline. Another "good early, harmful late" story.</div>
+       <p class="lead"><b>Bats</b> live far longer than expected for their body size despite carrying many viruses. Current evidence: they have <b>evolved mechanisms that dampen excessive inflammatory responses while keeping effective antiviral defences</b> — they <i>tolerate</i> viruses rather than block them. The high metabolic demands of <b>flight</b> likely favoured enhanced <b>DNA repair, antioxidant defences and tighter control of inflammation</b>, which incidentally slows aging.</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Researchers knocked out ERCC1 only in hematopoietic cells. Which conclusion is best supported?", opts:["Loss of ERCC1 protects mice from senescence","DNA repair deficiency decreases inflammatory signalling","DNA damage in immune cells increases markers of senescence in BOTH immune and non-immune tissues","DNA damage affects only T cells"], a:2,
+      exp:"The knockout was restricted to immune cells, yet senescence markers rose throughout the body — the effect spreads."},
+     {type:"mcq", q:"The mutation was only in hematopoietic cells, yet p21 rose in non-immune tissues. Best mechanism?", opts:["Mature T cells differentiated into liver and kidney cells","Senescent immune cells produce inflammatory factors that promote senescence in distant tissues","The mutation spontaneously spread to every tissue","DNA repair proteins travel through the blood to every organ"], a:1,
+      exp:"SASP acting systemically — senescent immune cells spread senescence to distant tissues via secreted inflammatory factors."},
+     {type:"mcq", q:"Which outcome after senolytic treatment would best support 'immune senescence drives systemic aging'?", opts:["Increased TNF and IL-6 in T cells","Reduced p21 in multiple non-immune tissues with lower inflammatory cytokines","Restoration of ERCC1 expression","Increased p21 in non-immune tissues"], a:1,
+      exp:"Remove the senescent immune cells and the distant damage should REVERSE — p21 down, cytokines down. Removing the cause undoes the effect = causal evidence."},
+     {type:"mcq", q:"Why did researchers begin to suspect the immune system plays a role in normal brain development?", opts:["Astrocytes began producing red blood cells","Neurons were found to express antibodies","Synapses were found tagged with complement proteins normally associated with innate immunity","The brain was discovered to contain lymph nodes"], a:2,
+      exp:"Complement (an innate immune 'eat me' tag) was found marking synapses — the clue that immune molecules do normal neural work."},
+     {type:"mcq", q:"During normal brain development, microglia contribute to circuit maturation primarily by:", opts:["Producing new synapses","Preventing neurons from communicating","Recognizing complement-tagged synapses and selectively removing excess connections","Stimulating neurons to divide"], a:2,
+      exp:"Microglia prune complement-tagged, excess/weak synapses to refine circuits."},
+     {type:"mcq", q:"Why might reactivation of developmental synaptic pruning contribute to Alzheimer's disease?", opts:["Alzheimer's results from excessive formation of new synapses","Complement proteins directly repair damaged neurons","Excessive microglial pruning may remove FUNCTIONAL synapses, contributing to cognitive decline","Microglia permanently stop functioning"], a:2,
+      exp:"A developmental programme switched back on at the wrong time starts eating healthy synapses → synapse loss → cognitive decline."},
+     {type:"mcq", q:"Bats live much longer than expected for their body size despite carrying many viruses. Best explanation?", opts:["Viruses cannot infect bat cells because bats lack viral receptors","Bats prevent infection through exceptionally strong antibody responses","Bats have evolved mechanisms that reduce excessive inflammatory responses while maintaining effective antiviral defences","Bat cells do not produce cytokines"], a:2,
+      exp:"Bats TOLERATE viruses by dampening inflammation while keeping antiviral defence — it's usually the inflammation, not the virus, that causes damage."},
+     {type:"mcq", q:"Which hypothesis best explains how bat adaptations for FLIGHT may contribute to longevity?", opts:["Flying animals avoid oxidative stress","The high metabolic demands of flight favoured enhanced DNA repair, antioxidant defences and tighter control of inflammation","Flight reduces mitochondrial activity","Flight suppresses the immune system"], a:1,
+      exp:"Flight massively raises metabolic rate and ROS, so bats had to evolve better damage control — which incidentally slows aging."}
+    ]
+   },
+   {
+    id:"L12Q", title:"📝 Practice quiz (from class) — Inflammaging",
+    sub:"The class inflammaging homework quiz (19 Q), answers keyed.",
+    slides:[
+     {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">The exact inflammaging homework-quiz questions. Big theme: senescent immune cells → SASP → spreads senescence systemically; senolytic reversal = causal evidence.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Why has inflammation been strongly conserved throughout evolution?", opts:["It provides a rapid response to infection and tissue injury, improving survival and reproductive fitness","It protects organisms exclusively from viral infections","It evolved mainly to eliminate senescent cells during aging","It primarily evolved to increase lifespan by slowing cellular aging"], a:0,
+      exp:"Protective early: fast defence against pathogens/injury improves fitness."},
+     {type:"mcq", q:"How is chronic sterile inflammation ('inflammaging') different from acute inflammation following infection?", opts:["Chronic sterile inflammation persists despite the absence of pathogens and is driven by endogenous signals released from damaged tissues","Acute inflammation involves only adaptive immunity","Chronic inflammation is always caused by bacteria that escape detection","Acute inflammation is characterized by high levels of antibodies"], a:0,
+      exp:"Sterile = no pathogen; driven by DAMPs from damaged tissue and it does not resolve."},
+     {type:"mcq", q:"Why does inflammation increase with age?", opts:["Complete loss of adaptive immunity and increased red blood cell production","Increased production of DAMPs, accumulation of senescent cells, and impaired removal of cellular debris","Decreased cytokine production and improved mitochondrial function","Increased stem cell proliferation and decreased oxidative stress"], a:1,
+      exp:"The three drivers of inflammaging."},
+     {type:"mcq", q:"Why has natural selection not eliminated genes that contribute to chronic inflammation later in life?", opts:["Chronic inflammation is beneficial at every stage of life","Chronic inflammation increases fertility in old age","Natural selection acts most strongly on traits that improve reproductive success early in life, even if they become harmful after reproduction","Inflammation develops only in modern humans"], a:2,
+      exp:"Antagonistic pleiotropy / declining force of selection after reproduction."},
+     {type:"mcq", q:"What is a beneficial role of cellular senescence?", opts:["Senescent cells continuously divide to replace damaged tissues","Senescent cells produce more ATP than healthy cells","Senescence prevents immune cells from recognizing tumors","Senescence permanently removes damaged cells from the cell cycle, limiting the risk of cancer"], a:3,
+      exp:"Arresting damaged cells prevents them becoming tumours — the bright side of the double-edged sword."},
+     {type:"mcq", q:"Why can the accumulation of senescent cells become detrimental during aging?", opts:["Persistent senescent cells secrete inflammatory factors (SASP) that promote tissue dysfunction and chronic inflammation","Senescent cells completely suppress the immune system","Senescent cells die immediately after entering senescence","Senescent cells divide uncontrollably and form tumors"], a:0,
+      exp:"They persist and keep secreting SASP. Traps: they don't die immediately, and they don't divide."},
+     {type:"mcq", q:"Which change is characteristic of immune aging (immunosenescence)?", opts:["Increased ability to eliminate senescent cells","Reduced diversity of unique T-cell receptors","Increased production of progenitor T cells throughout life","Complete disappearance of B cells"], a:1,
+      exp:"A narrowing T-cell repertoire → poor responses to new pathogens and vaccines."},
+     {type:"mcq", q:"Bats live much longer than expected for their body size despite carrying numerous viruses. Which explanation best reflects current evidence?", opts:["Viruses cannot infect bat cells because bats lack viral receptors","Bats prevent viral infection through exceptionally strong antibody responses","Bats have evolved mechanisms that reduce excessive inflammatory responses while maintaining effective antiviral defenses","Bat cells do not produce cytokines"], a:2,
+      exp:"Tolerance, not blockade — dampened inflammation with intact antiviral defence."},
+     {type:"mcq", q:"Which hypothesis best explains how bat adaptations for flight may also contribute to exceptional longevity?", opts:["Flying animals avoid oxidative stress","The high metabolic demands of flight favored evolution of enhanced DNA repair, antioxidant defenses, and tighter control of inflammation","Flight reduces mitochondrial activity, decreasing ATP production","Flight suppresses the immune system"], a:1,
+      exp:"Flight raises metabolic rate and ROS → selection for better damage control → incidentally slows aging."},
+     {type:"mcq", q:"An 80-year-old has elevated IL-6 and TNF-α, accumulates senescent cells, and responds poorly to vaccination. Which explanation best integrates these?", opts:["Senescent cells contribute to chronic inflammation through the SASP, while aging of the immune system reduces adaptive immune function — inflammaging and immunosenescence occurring simultaneously","Increased inflammation enhances production of progenitor T cells, improving vaccine responses","Chronic inflammation eliminates senescent cells more efficiently with age","Vaccination failure is unrelated to aging of the immune system"], a:0,
+      exp:"Both processes at once: SASP-driven inflammaging plus immunosenescence, and they reinforce each other."},
+     {type:"mcq", q:"How does the immune system contribute to age-related disease?", opts:["It only functions during infections and has no role in chronic conditions","It triggers the release of inflammatory molecules, which can contribute to tissue damage and chronic diseases","It helps cells repair themselves and prevents inflammation","It blocks all immune responses, reducing the risk of disease"], a:1,
+      exp:"Chronic inflammatory signalling damages tissue and drives chronic disease."},
+     {type:"mcq", q:"Which are potential molecular targets for therapies in non-alcoholic fatty liver disease (NAFLD)?", opts:["Enzymes involved in fat synthesis in the liver","Inflammatory signaling pathways that promote liver injury","Fibrosis-related pathways that lead to scar tissue formation","All of the above"], a:3,
+      exp:"NAFLD is targeted at all three levels: steatosis (fat synthesis), inflammation, and fibrosis."},
+     {type:"mcq", q:"Why did researchers begin to suspect that the immune system might play a role in normal brain development?", opts:["Astrocytes began producing red blood cells","Neurons were found to express antibodies","Synapses were found to be tagged with complement proteins that are normally associated with innate immune responses","The brain was discovered to contain lymph nodes"], a:2,
+      exp:"Complement tagging of synapses was the clue that innate immune molecules do normal developmental work."},
+     {type:"mcq", q:"Why might reactivation of developmental synaptic pruning mechanisms contribute to Alzheimer's disease?", opts:["Alzheimer's disease results from excessive formation of new synapses","Complement proteins directly repair damaged neurons","Excessive microglial pruning may remove functional synapses, contributing to cognitive decline","Microglia permanently stop functioning in Alzheimer's disease"], a:2,
+      exp:"A developmental programme reactivated at the wrong time eats healthy synapses → cognitive decline."},
+     {type:"mcq", q:"During normal brain development, microglia contribute to neural circuit maturation primarily by:", opts:["Producing new synapses between neurons","Preventing neurons from communicating with one another","Recognizing complement-tagged synapses and selectively removing excess connections","Stimulating neurons to divide"], a:2,
+      exp:"Complement-tagged excess synapses are pruned by microglia to refine circuits."},
+     {type:"mcq", q:"Microglia are considered part of the innate immune system because they:", opts:["Differentiate into antibody-producing plasma cells","Rapidly recognize general danger signals and remove pathogens or cellular debris","Generate immune memory following infection","Produce antigen-specific antibodies after vaccination"], a:1,
+      exp:"Innate = fast, general, no memory. The other three describe adaptive immunity."},
+     {type:"mcq", q:"Researchers selectively knocked out the DNA repair gene ERCC1 in hematopoietic cells. Which conclusion is best supported?", opts:["Loss of ERCC1 protects mice from cellular senescence","DNA repair deficiency decreases inflammatory signaling throughout the body","DNA damage in immune cells increases markers of senescence in both immune and non-immune tissues","DNA damage affects only T cells and has no effect on other tissues"], a:2,
+      exp:"Damage confined to immune cells raised senescence markers body-wide."},
+     {type:"mcq", q:"The ERCC1 mutation was introduced only into hematopoietic cells, yet increased p21 was observed in multiple non-immune tissues. Which mechanism best explains this?", opts:["Mature T cells differentiated into liver and kidney cells","Senescent immune cells produce inflammatory factors that promote senescence in distant tissues","The mutation spontaneously spread into every tissue of the body","DNA repair proteins normally travel through the bloodstream into every organ"], a:1,
+      exp:"Systemic SASP — secreted factors spread senescence from immune cells to distant tissues."},
+     {type:"mcq", q:"Treating ERCC1-knockout mice with a drug that selectively eliminates senescent immune cells — which outcome best supports the hypothesis that immune senescence drives systemic aging?", opts:["Increased expression of TNF and IL-6 in T cells","Reduced p21 expression in multiple non-immune tissues accompanied by lower inflammatory cytokine levels","Restoration of ERCC1 expression","Increased p21 expression in non-immune tissues"], a:1,
+      exp:"Removing the senescent immune cells reverses the distant damage — the causal test."}
+    ]
+   },
+   {
+    id:"L12D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended prompts printed on her Inflammation slides.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">The discussion prompts printed on the lecture slides. Write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"Why do we have inflammation, and what happens if the inflammation never stops?", model:"Inflammation is the body's rapid response to infection and tissue injury: it recruits immune cells, clears pathogens and debris, and enables repair. The normal cycle is self-limiting — injury → inflammation → repair → inflammation stops. If it never resolves, the same molecules that were protective become destructive: chronic cytokine exposure damages healthy tissue, drives fibrosis, impairs regeneration, and promotes chronic diseases (cardiovascular disease, diabetes, neurodegeneration). That unresolved, low-grade, sterile state is inflammaging.", pts:["Rapid defence against infection/injury; enables repair","Normal cycle is self-limiting and resolves","Unresolved → tissue damage, impaired repair, chronic disease","= inflammaging (chronic, sterile, low-grade)"]},
+     {type:"short", q:"Why does the immune system become chronically activated even when there is no infection? Where does inflammaging come from?", model:"Because aging tissues generate their own danger signals. Damaged and dying cells release DAMPs (endogenous molecules such as leaked mitochondrial DNA and nuclear debris) that innate receptors read as 'danger', even with no pathogen present. Senescent cells accumulate and continuously secrete the SASP (IL-6, IL-1β, TNF-α, MMPs, chemokines). At the same time clearance declines — debris and senescent cells are removed less efficiently. The result is a self-sustaining, sterile, low-grade inflammatory state.", pts:["DAMPs from damaged/dying cells trigger innate receptors without infection","Senescent cells accumulate and secrete SASP continuously","Impaired clearance of debris and senescent cells","Self-sustaining sterile low-grade inflammation"]},
+     {type:"short", q:"Senescent cells are alive and continuously release IL-6, IL-1β, TNF-α, MMPs, chemokines and growth factors. Why would cells do this?", model:"Because the SASP is useful in the short term. A cell that arrests because of damage uses these signals to call in immune cells to clear it and to recruit repair — the SASP supports wound healing, tissue remodelling (MMPs), and immune-mediated removal of damaged or pre-cancerous cells. It's an alarm signal saying 'I'm damaged, come clean me up.' The problem is chronic: when clearance fails with age and senescent cells persist, that temporary alarm becomes permanent inflammation that damages the surrounding tissue.", pts:["SASP recruits immune cells to clear the senescent cell","Supports wound healing and tissue remodelling","Beneficial acutely; harmful when persistent (failed clearance with age)"]},
+     {type:"short", q:"Can we reduce inflammaging? What approaches would you consider, and how would you judge whether they work?", model:"Plausible approaches: senolytics to remove senescent cells (removing the SASP source), senomorphics to suppress the SASP without killing cells, anti-inflammatory/cytokine-targeted drugs, and lifestyle interventions that lower the damage burden (exercise, caloric restriction — which act partly through AMPK/autophagy and hormesis). To judge them, demand human data with real outcomes — reduced inflammatory markers (IL-6, TNF-α) AND improved function/disease incidence, not just a biomarker shift — from controlled trials without conflicts of interest. Caution: broadly blocking inflammation also blunts protective immunity, so the goal is rebalancing, not eliminating.", pts:["Senolytics (remove senescent cells) / senomorphics (suppress SASP)","Lifestyle: exercise, caloric restriction (autophagy, hormesis)","Judge with controlled HUMAN trials and real outcomes, not just markers","Caution: don't eliminate inflammation entirely — it's protective"]}
     ]
    }
   ]
