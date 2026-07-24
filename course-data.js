@@ -2658,6 +2658,25 @@ window.COURSE = [
     ]
    },
    {
+    id:"L9Q", title:"📝 Practice quiz (from class) — Cell Death",
+    sub:"The multiple-choice questions printed on her Cell Death slides (Q4–Q8), with the answers she revealed.",
+    slides:[
+     {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">These are the <b>exact printed MCQs</b> from the lecture slides, keyed to the answers she bolded on the reveal slides. Core reasoning: trace the order of events (Bax/Bak → cytochrome c → apoptosome → caspase-9) and ask what a manipulation does UPSTREAM vs DOWNSTREAM.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Soon after NGF was discovered, investigators injected newborn mice with antibodies that inactivated it. Compared to controls, these mice showed massive nerve-cell death — up to 99% of neurons gone in certain parts of the nervous system. What do these results suggest?", opts:["NGF is a survival factor for developing neurons","NGF signaling is sufficient for survival of developing neurons","NGF cannot protect developing neurons from death by apoptosis","NGF is a mitogen that promotes the proliferation of developing neurons","NGF triggers apoptosis in developing neurons"], a:0,
+      exp:"Removing NGF → neurons die → NGF is REQUIRED for their survival (a survival factor). Note it shows necessity, not sufficiency — 'sufficient' would need the opposite experiment (adding NGF and showing survival with nothing else). Her answer: A."},
+     {type:"mcq", q:"Mutations that prevent Bcl-2 family proteins Bax and Bak from interacting with the outer mitochondrial membrane would have which effect?", opts:["Preventing the release of cytochrome c and inhibiting apoptosis","Triggering the release of cytochrome c and promoting apoptosis","Triggering the release of cytochrome c and promoting assembly of the apoptosome","Preventing the release of cytochrome c and promoting assembly of the apoptosome","Preventing the release of cytochrome c and triggering activation of procaspase-9"], a:0,
+      exp:"Bax/Bak permeabilize the outer mitochondrial membrane. Block them → no permeabilization → cytochrome c stays inside → no apoptosome, no caspase-9, apoptosis INHIBITED. Options D and E are self-contradictory. Her answer: A."},
+     {type:"mcq", q:"Investigators inject cytochrome c into the cytosol of two cell types: normal cells, and cells in which Bak and Bax have been inactivated by mutation. How would these cells be predicted to respond?", opts:["The normal cells will undergo apoptosis and the mutant cells will continue to grow","The mutant cells will undergo apoptosis and the normal cells will continue to grow","Neither cell type will undergo apoptosis, so both will continue to grow","The normal cells will undergo apoptosis and the mutant cells will die by necrosis","Both cell types will undergo apoptosis"], a:4,
+      exp:"Bax/Bak act UPSTREAM — their job is to release cytochrome c. Injecting cytochrome c directly into the cytosol BYPASSES that step, so it no longer matters whether Bax/Bak work. Both cell types die by apoptosis. Her answer: E."},
+     {type:"mcq", q:"One approach to killing cancer cells is to induce apoptosis. Which are reasonable approaches researchers can take? (choose one or more)", opts:["Inhibiting the Bcl-2 protein AND activating the Bax protein","Inhibiting the G1 cyclin-dependent kinase protein","Inhibiting the p53 protein","Activating Bcl-2 and inhibiting Bax"], a:0,
+      exp:"Tip the Bcl-2-family balance toward death: remove the brake (inhibit anti-apoptotic Bcl-2) and press the accelerator (activate pro-apoptotic Bax). Inhibiting p53 would BLOCK apoptosis; inhibiting a G1 CDK affects cycle progression, not apoptosis. Her answers: A and C."},
+     {type:"mcq", q:"Paclitaxel stabilizes microtubules (blocking disassembly) and also binds and decreases the activity of Bcl-2. What are the TWO ways paclitaxel can result in the death of cancer cells? (choose one or more)", opts:["It promotes apoptosis of the cancer cell AND inhibits proper formation of the polar spindle, blocking sister-chromatid separation","It disrupts the structure and integrity of the nucleus, leading to cell death","It inhibits cytokinesis, leading to multinucleate cells","It repairs DNA and activates p53"], a:0,
+      exp:"Two mechanisms, one per stated property: (1) less Bcl-2 activity → apoptosis promoted; (2) over-stabilized microtubules → the spindle can't function → sister chromatids can't separate. Her answers: A and C."}
+    ]
+   },
+   {
     id:"L9D", title:"🎤 In-class slide questions (short answer)",
     sub:"The open-ended prompts printed on her Cell Death slides — her short-answer exam style.",
     slides:[
@@ -2802,6 +2821,19 @@ window.COURSE = [
       exp:"p53 is the classic tumor suppressor: it arrests damaged cells or triggers apoptosis. Losing it lets damaged cells keep dividing."},
      {type:"tf", q:"Because oncogenes are hyperactive, they are generally easier to drug than tumor suppressors.", a:true,
       exp:"True — inhibiting an overactive protein (e.g., HER2 with Herceptin) is tractable; restoring a lost tumor-suppressor function is much harder."}
+    ]
+   },
+   {
+    id:"L10Q", title:"📝 Practice quiz (from class) — Cancer",
+    sub:"The multiple-choice questions printed on her Cancer slides, with the answers she revealed.",
+    slides:[
+     {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">The <b>exact printed MCQs</b> from the Cancer lecture slides, keyed to her revealed answers. Core reasoning: break the repair machinery and every future error sticks; and you can inhibit an overactive protein but you can't inhibit one that's already missing.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Mutations in which kinds of genes would speed up the rate of accumulation of additional mutations?", opts:["Cytoskeletal protein genes","Metabolism genes","DNA-repair genes","Transcription factor genes","None of the above"], a:2,
+      exp:"DNA-repair genes are the proofreaders. Break them and every subsequent replication error or lesion goes unfixed, so mutations compound — genomic instability accelerates. This is why repair enzymes are so often defective in cancer. Her answer: c."},
+     {type:"mcq", q:"What is one reason why tumor-suppressor genes make poor druggable targets?", opts:["Cancer-causing mutations in tumor-suppressor genes result in loss of function","Mutant alleles of tumor-suppressor genes generally result in greater activity of the protein, which makes inhibiting the proteins more difficult","Most drugs cannot distinguish the normal and mutant forms of the tumor suppressor proteins","Drugs that can target tumor-suppressor proteins are difficult to deliver to cancer cells"], a:0,
+      exp:"Tumor suppressors are brakes that get LOST. Drugs are good at blocking/inhibiting an overactive protein (an oncogene like HER2 → Herceptin), but you cannot inhibit a function that is already absent — restoring it is far harder. Her answer: A."}
     ]
    },
    {
