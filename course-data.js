@@ -2698,6 +2698,61 @@ window.COURSE = [
     ]
    },
    {
+    id:"L9T4", title:"⭐ Named players: caspases, death receptors, p53 & MOMP",
+    sub:"The specific vocabulary the quizzes test — caspase-8/9/3, Fas/FasL, p53 turnover, MOMP, and the full ordered cascade.",
+    slides:[
+     {h:"Know the caspases by name and job", imgs:[
+        {src:"slides/L9/slide-19.jpg", cap:"L9 · Slide 19 — Both pathways converge on executioner caspase-3"}
+      ], html:`
+       <table class="dt">
+        <tr><th>Caspase</th><th>Role</th></tr>
+        <tr><td><b>Caspase-8</b></td><td><b>Initiator</b> of the <b>EXTRINSIC</b> pathway (activated at the death receptor)</td></tr>
+        <tr><td><b>Caspase-9</b></td><td><b>Initiator</b> of the <b>INTRINSIC</b> pathway (activated in the apoptosome)</td></tr>
+        <tr><td><b>Caspase-3</b></td><td><b>EXECUTIONER</b> — where <b>both pathways converge</b>; does the actual demolition</td></tr>
+       </table>
+       <div class="callout key">Memory hook: <b>8 = outside</b> (extrinsic), <b>9 = inside</b> (intrinsic, mitochondria), <b>3 = the finisher</b> that both arms activate.</div>`},
+     {h:"Death receptors: how one cell orders another to die", imgs:[
+        {src:"slides/L9/slide-21.jpg", cap:"L9 · Slide 21 — Signals from other cells activate the extrinsic death program"}
+      ], html:`
+       <p class="lead">A <span class="kw">cytotoxic T lymphocyte</span> kills a virus-infected or cancerous cell by displaying <span class="kw-2">Fas ligand (FasL)</span> on its surface.</p>
+       <ol>
+        <li><b>FasL</b> (on the killer cell surface) binds <b>Fas / CD95</b> — a <b>death receptor</b> on the target cell surface.</li>
+        <li>Receptor clustering recruits and activates <b>initiator procaspase-8</b> inside the target cell.</li>
+        <li>Caspase-8 activates <b>executioner caspase-3</b> → apoptosis.</li>
+       </ol>
+       <div class="callout warn"><b>Exam logic:</b> a protein on the <b>surface</b> of one cell can only interact with something on the <b>surface</b> of the other — i.e., a <b>death receptor</b>. It cannot directly touch procaspase-3, caspases, Bcl-2 or cytochrome c, which are all <b>intracellular</b>.</div>`},
+     {h:"p53 turnover and MOMP", imgs:[], html:`
+       <h4>Why p53 is constantly made AND destroyed</h4>
+       <p>Under normal conditions p53 is continuously synthesized and continuously degraded (via MDM2), giving it a <b>very short half-life</b> and keeping resting levels low.</p>
+       <div class="callout key">The point: <b>degradation is the brake, not production.</b> When stress or DNA damage is detected, that degradation stops — so p53 levels can <b>rise rapidly, within minutes</b>, without waiting for new transcription and translation. It's a pre-loaded trigger. (It also prevents accidental apoptosis when nothing is wrong.)</div>
+       <h4>MOMP — the point of no return</h4>
+       <p><span class="kw">MOMP = Mitochondrial Outer Membrane Permeabilization.</span> It's the formal name for what activated <b>BAX and BAK</b> do to the outer mitochondrial membrane, and it is the step that <b>releases cytochrome c</b>. Once MOMP happens, the cell is generally committed to die.</p>
+       <p class="formula">Survival factor withdrawn → AKT ↓ → BAD dephosphorylated (active) → BAD inhibits Bcl-2 → BAX/BAK activated → MOMP → cytochrome c released → apoptosome → caspase-9 → caspase-3 → APOPTOSIS</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"A protein on the surface of cytotoxic lymphocytes can elicit self-destruct mechanisms in target cells by interacting with:", opts:["IGF receptors","Insulin receptors","Death receptors","Bcl-2","Procaspase 3"], a:2,
+      exp:"FasL on the killer cell's SURFACE binds a DEATH RECEPTOR (Fas/CD95) on the target cell's surface. Bcl-2, procaspase-3 and the caspases are all INTRACELLULAR — a surface protein cannot interact with them directly."},
+     {type:"mcq", q:"Cytotoxic T cells eliminate virus-infected cells by expressing Fas ligand (FasL). What is the primary function of FasL?", opts:["It directly activates executioner caspases within the target cell","It releases cytochrome c from the target cell's mitochondria","It binds the Fas (CD95) receptor on the target cell, initiating the EXTRINSIC apoptosis pathway","It activates p53 to repair damaged DNA"], a:2,
+      exp:"FasL → Fas/CD95 death receptor → procaspase-8 → caspase-3. It works through the receptor, not by reaching inside the cell."},
+     {type:"mcq", q:"Why do cells continuously synthesize AND degrade p53 under normal conditions?", opts:["To promote continuous apoptosis","To allow a rapid increase in p53 levels when cellular stress is detected","To prevent p53 from entering the nucleus","To conserve cellular energy and resources"], a:1,
+      exp:"Constant turnover keeps p53 low but pre-loaded. On damage, degradation halts and levels spike within minutes — far faster than making the protein from scratch."},
+     {type:"mcq", q:"Both the intrinsic and extrinsic apoptosis pathways ultimately converge by activating:", opts:["p53","Cytochrome c","Caspase-9","Caspase-3","Caspase-8"], a:3,
+      exp:"Caspase-8 initiates the extrinsic arm, caspase-9 the intrinsic arm, and BOTH activate executioner CASPASE-3."},
+     {type:"mcq", q:"Which is NOT true about cytochrome c in apoptosis?", opts:["It stimulates Ca²⁺ release from the endoplasmic reticulum","It associates with Apaf-1 to form an apoptosome","It is released from mitochondria","It activates mTOR"], a:3,
+      exp:"Cytochrome c is released from mitochondria, binds Apaf-1 to build the apoptosome, and can trigger ER Ca²⁺ release (via IP₃ receptors). It has NOTHING to do with mTOR — that's the nutrient-sensing pathway."},
+     {type:"mcq", q:"Put the events in order when survival factors are ABSENT: (1) BAD inhibits Bcl-2, (2) AKT activity decreases, (3) MOMP induced, (4) BAD dephosphorylated/active, (5) BAX and BAK activated, (6) cytochrome c released, (7) caspase-9, (8) caspase-3, (9) apoptosis.", opts:["2 → 4 → 1 → 5 → 3 → 6 → 7 → 8 → 9","4 → 2 → 5 → 1 → 3 → 6 → 8 → 7 → 9","2 → 1 → 4 → 3 → 5 → 6 → 7 → 8 → 9","5 → 3 → 6 → 2 → 4 → 1 → 7 → 8 → 9"], a:0,
+      exp:"AKT falls → BAD is dephosphorylated (active) → BAD inhibits Bcl-2 → BAX/BAK activated → MOMP → cytochrome c released → caspase-9 (apoptosome) → caspase-3 → apoptosis."},
+     {type:"mcq", q:"What does MOMP stand for, and which proteins carry it out?", opts:["Mitochondrial Outer Membrane Permeabilization — carried out by BAX and BAK","Mitochondrial Oxidative Metabolic Pathway — carried out by Bcl-2","Membrane Organelle Maintenance Protein — carried out by caspase-3","Mitochondrial Onset of Membrane Protection — carried out by AKT"], a:0,
+      exp:"MOMP = Mitochondrial Outer Membrane Permeabilization, executed by activated BAX/BAK. It releases cytochrome c and is generally the point of no return."},
+     {type:"mcq", q:"Each of the following involves apoptosis EXCEPT:", opts:["Generating a cancerous tumor","Decreasing neurons during brain development","Removing white blood cells at the end of their life span","Removing webbing between digits during development","Destroying pathogen-infected cells"], a:0,
+      exp:"Cancer arises by EVADING apoptosis, not by using it. All the others are apoptosis performing normal development, turnover or immune defence."},
+     {type:"tf", q:"Caspase-8 is the initiator caspase of the extrinsic pathway and caspase-9 of the intrinsic pathway.", a:true,
+      exp:"True — 8 = outside (death receptor), 9 = inside (apoptosome/mitochondria), and both converge on executioner caspase-3."},
+     {type:"mcq", q:"AKT promotes survival. What happens to BAD when AKT activity DROPS (survival factor withdrawn)?", opts:["BAD is dephosphorylated and becomes ACTIVE, inhibiting Bcl-2","BAD is phosphorylated and becomes inactive","BAD is degraded immediately","BAD activates AKT again"], a:0,
+      exp:"AKT normally phosphorylates BAD to keep it inactive (releasing Bcl-2 to block apoptosis). No AKT → BAD is dephosphorylated → active BAD sequesters Bcl-2 → BAX/BAK are unleashed."}
+    ]
+   },
+   {
     id:"L9Q", title:"📝 Practice quiz (from class) — Cell Death",
     sub:"The multiple-choice questions printed on her Cell Death slides (Q4–Q8), with the answers she revealed.",
     slides:[
