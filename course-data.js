@@ -3203,6 +3203,333 @@ window.COURSE = [
   ]
  },
 
+ /* ============================ LECTURE 13 ============================ */
+ {
+  id:"L13", icon:"🧠", short:"L13 · Neurodegeneration",
+  title:"Lecture 13 — Neurodegeneration: Alzheimer's, Parkinson's & the Aging Brain",
+  blurb:"How neurons work and why the aging brain is vulnerable, the cortex and its lobes, animal/cell models, diagnostics (MRI, amyloid PET, plasma p-tau217), anti-Aβ and anti-Tau antibodies, and the hallmarks of aging applied to the brain.",
+  objectives:[
+    "Describe how neurons communicate (electrical long-distance, chemical short-distance) and name the parts of a neuron",
+    "Name the four lobes of the cerebral cortex and their functions",
+    "Explain why post-mitotic neurons are especially vulnerable to accumulated damage",
+    "Compare model systems (fruit fly, cells in a dish, MRI in humans) and what each can measure",
+    "Explain the diagnostic tools for Alzheimer's — MRI, amyloid PET (SUVR), plasma p-tau217 — and why early detection matters",
+    "Distinguish disease-modifying from symptomatic therapy, and explain why anti-amyloid trials have disappointed",
+    "Map the hallmarks of aging onto the brain (genomic instability, proteostasis, mitochondria, glial senescence, neuroinflammation)"
+  ],
+  topics:[
+   {
+    id:"L13T1", title:"The neuron and the aging brain",
+    sub:"How neurons signal, the cortex and its lobes, plasticity, and why neurons are vulnerable (slides 3–24).",
+    slides:[
+     {h:"How neurons communicate", imgs:[
+        {src:"slides/L13/slide-06.jpg", cap:"L13 · Slide 6 — How a neuron transmits information"},
+        {src:"slides/L13/slide-08.jpg", cap:"L13 · Slide 8 — Synapse, dendrites, axon"}
+      ], html:`
+       <p class="lead">The brain has around <span class="kw">86–100 billion neurons</span>, and they use <b>two kinds of signal</b>:</p>
+       <ul>
+        <li><span class="kw-2">Electrical signals</span> — <b>long-distance</b>, travelling down the axon</li>
+        <li><span class="kw-2">Chemical signals</span> — <b>short-distance</b>, neurotransmitters crossing the synapse</li>
+       </ul>
+       <p>Structure: <b>dendrites</b> receive input → the <b>cell body</b> integrates → the <b>axon</b> carries the signal → <b>axon terminals</b> release neurotransmitter onto the next cell's dendrites/cell body at the <b>synapse</b>. Neurons form vast interconnected networks, and the brain works as an <b>integrated network</b>.</p>
+       <div class="callout tip"><b>Neuronal plasticity</b> — the ability of connections to change with experience and genetics — shapes the brain throughout life. A defect in neural plasticity may underlie <b>autism spectrum disorder</b>.</div>`},
+     {h:"The cerebral cortex and why the aging brain is vulnerable", imgs:[
+        {src:"slides/L13/slide-15.jpg", cap:"L13 · Slide 15 — The four lobes of the cerebral cortex"},
+        {src:"slides/L13/slide-03.jpg", cap:"L13 · Slide 3 — 78 million projected with Alzheimer's by 2030"}
+      ], html:`
+       <p class="lead">The cerebral cortex has <span class="kw">four lobes</span>:</p>
+       <table class="dt">
+        <tr><th>Lobe</th><th>Function</th></tr>
+        <tr><td><b>Frontal</b></td><td>Consolidating information, decision making, motor functions</td></tr>
+        <tr><td><b>Parietal</b></td><td>Sensory integration; where you are in space</td></tr>
+        <tr><td><b>Occipital</b></td><td>Vision</td></tr>
+        <tr><td><b>Temporal</b></td><td>Auditory processing, olfactory, memory, emotions</td></tr>
+       </table>
+       <p><b>Alzheimer's</b> hits the <b>cortex → learning and memory</b>. Scale of the problem: ~55 million people have Alzheimer's today, projected to reach <b>78 million by 2030</b>.</p>
+       <div class="callout key">Why the aging brain is uniquely vulnerable: neurons are <b>post-mitotic</b> — they <b>cannot simply divide away mutations</b> or dilute damage. Whatever accumulates, stays. Combine that with their very high energy demand and long axons, and damage compounds over decades.</div>
+       <p class="muted">Contrast with <b>stroke</b>: clotting, loss of blood flow, or bleeding into the brain — can occur anywhere and affect any associated function; fast treatment can offset severe or lasting damage.</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Neurons use which two types of signals to communicate?", opts:["Electrical for long-distance and chemical for short-distance","Chemical for long-distance and electrical for short-distance","Only electrical signals","Only hormonal signals"], a:0,
+      exp:"Electrical signals travel long distances down the axon; chemical signals (neurotransmitters) act short-range across the synapse."},
+     {type:"mcq", q:"How many lobes are in the cerebral cortex?", opts:["Two","Three","Four","Six"], a:2,
+      exp:"Four: frontal, parietal, occipital, temporal. (Her slide answer: four.)"},
+     {type:"mcq", q:"Which lobe handles auditory processing, olfaction, memory and emotions?", opts:["Frontal","Parietal","Occipital","Temporal"], a:3,
+      exp:"Temporal lobe. Frontal = decision making/motor; parietal = sensory integration/spatial; occipital = vision."},
+     {type:"mcq", q:"Why are neurons especially vulnerable to accumulated damage during aging?", opts:["They are post-mitotic — they cannot divide away mutations or dilute damage","They divide faster than any other cell","They have no mitochondria","They lack DNA repair entirely"], a:0,
+      exp:"Post-mitotic cells can't replace themselves or dilute damage by division, so lesions, aggregates and dysfunctional mitochondria accumulate over decades."},
+     {type:"mcq", q:"In Alzheimer's disease, which brain region's neurons are first to degenerate and die?", opts:["Spinal cord","Brainstem","Hippocampus","Midbrain"], a:2,
+      exp:"The hippocampus (memory encoding) is hit first — which is why early AD presents as memory loss. Midbrain/substantia nigra is Parkinson's."},
+     {type:"tf", q:"A defect in neuronal plasticity may underlie autism spectrum disorder.", a:true,
+      exp:"True — plasticity (experience- and genetics-shaped change in connections) is implicated; her slide makes this point directly."}
+    ]
+   },
+   {
+    id:"L13T2", title:"Models & diagnostics — from fruit flies to amyloid PET",
+    sub:"Animal/cell models and the tools for detecting disease early (slides 25–31, 36).",
+    slides:[
+     {h:"Model systems in neuroscience", imgs:[
+        {src:"slides/L13/slide-26.jpg", cap:"L13 · Slide 26 — Using fruit flies to study the brain"},
+        {src:"slides/L13/slide-28.jpg", cap:"L13 · Slide 28 — Models of cells in a dish (adding nerve growth factor)"}
+      ], html:`
+       <table class="dt">
+        <tr><th>Fruit fly</th><th>Human</th></tr>
+        <tr><td>~100,000 neurons · 14,000 genes</td><td>~100 billion neurons · 24,000 genes</td></tr>
+       </table>
+       <p>Despite the gap, the fly shares <b>75% similarity with human disease genes</b> and <b>50% similarity with all human genes</b> — which is why it's such a powerful genetic model. <b>Cells in a dish</b> allow controlled manipulation (e.g., adding nerve growth factor), and <b>MRI</b> lets you look at living human brains.</p>`},
+     {h:"Diagnostics: MRI, amyloid PET and plasma p-tau217", imgs:[
+        {src:"slides/L13/slide-30.jpg", cap:"L13 · Slide 30 — Hippocampi on MRI"},
+        {src:"slides/L13/slide-31.jpg", cap:"L13 · Slide 31 — Clinical utility of amyloid PET imaging (SUVR)"},
+        {src:"slides/L13/slide-36.jpg", cap:"L13 · Slide 36 — Cognitive change by amyloid PET and plasma p-tau217"}
+      ], html:`
+       <ul>
+        <li><span class="kw-2">MRI</span> — <b>structure</b>: shrinkage of the hippocampi.</li>
+        <li><span class="kw-2">Amyloid PET</span> — a radiotracer binds amyloid; the readout is the <b>SUVR (standardized uptake value ratio)</b> = how much tracer is detected. Lets you see pathology <b>in a living brain</b>.</li>
+        <li><span class="kw-2">Plasma p-tau217</span> — a <b>blood biomarker</b>: far less invasive than PET or CSF, and it tracks cognitive change in people who are still <b>cognitively unimpaired</b> (ages 65–85, PACC = Preclinical Alzheimer Cognitive Composite).</li>
+       </ul>
+       <div class="callout key"><b>Why diagnostics are the key to therapy:</b> they detect <b>early biomarkers</b> so trials can recruit patients <b>while they still have enough neurons to rescue</b>, and they let you <b>confirm a drug is actually engaging its target</b> (imaging the therapeutic binding amyloid/Tau). Diagnostics <b>measure</b> — they don't treat.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Why are fruit flies useful models for studying the human brain?", opts:["They have the same number of neurons as humans","They share ~75% similarity with human disease genes (and ~50% with all human genes) in a far simpler nervous system","Their brains are larger than human brains","They cannot be genetically manipulated"], a:1,
+      exp:"~100,000 neurons and 14,000 genes make them tractable, yet ~75% of human disease genes have fly counterparts."},
+     {type:"mcq", q:"In amyloid PET imaging, the SUVR (standardized uptake value ratio) measures:", opts:["How much of the radiotracer is detected (i.e., amyloid burden)","The electrical activity of neurons","Hippocampal volume","Blood oxygen level"], a:0,
+      exp:"SUVR quantifies tracer uptake — a measure of how much amyloid is present in the living brain."},
+     {type:"mcq", q:"Match the technique to what it measures: electrical activity, brain structure, glucose metabolism.", opts:["EEG / MRI / PET respectively","MRI / EEG / PET","PET / MRI / EEG","EEG / PET / MRI"], a:0,
+      exp:"EEG = millisecond electrical activity; MRI = structure/anatomy; PET = metabolic (radiolabeled glucose uptake)."},
+     {type:"mcq", q:"Why do diagnostics play a key role in the search for Alzheimer's therapy?", opts:["They detect early biomarkers so trials can recruit patients while enough neurons remain to rescue, and they let you verify the drug binds amyloid/Tau","They make the blood-brain barrier permeable","They directly prevent amyloid toxicity at synapses","They replace lost neurons"], a:0,
+      exp:"Diagnostics enable EARLY recruitment and confirm target engagement. They measure — they don't treat (those are the distractors)."},
+     {type:"mcq", q:"What is the main advantage of a plasma biomarker like p-tau217 over amyloid PET?", opts:["It is a simple blood test — far less invasive and more scalable, and it can track change before cognitive symptoms appear","It is the only way to see brain structure","It treats the disease","It measures electrical activity"], a:0,
+      exp:"A blood test is cheap, non-invasive and scalable for screening — a major practical advance over PET/CSF."}
+    ]
+   },
+   {
+    id:"L13T3", title:"Therapies & the hallmarks of aging in the brain",
+    sub:"Anti-Aβ and anti-Tau antibodies, disease-modifying vs symptomatic, and hallmark mapping (slides 32–38).",
+    slides:[
+     {h:"Antibody therapies — and the disease-modifying goal", imgs:[
+        {src:"slides/L13/slide-32.jpg", cap:"L13 · Slide 32 — Anti-Aβ monoclonal antibody therapies"},
+        {src:"slides/L13/slide-33.jpg", cap:"L13 · Slide 33 — Anti-Tau therapy: neurofibrillary tangles and microtubules"},
+        {src:"slides/L13/slide-35.jpg", cap:"L13 · Slide 35 — Slowing disease rather than only treating symptoms"}
+      ], html:`
+       <p class="lead">Two aggregate targets in Alzheimer's: <span class="kw">amyloid-β plaques</span> (extracellular) and <span class="kw">Tau neurofibrillary tangles</span> (intracellular; Tau normally stabilizes microtubules). Multiple <b>monoclonal antibodies</b> have been developed against each — several anti-Aβ programmes were <b>discontinued</b> (Eisai+Biogen, Biogen), while others continue (Eli Lilly, Roche/Genentech trontinemab).</p>
+       <div class="callout key"><b>Definition to know cold: "disease-modifying" means the therapy treats the ROOT of the disease — slowing or halting the underlying process. "Symptomatic" treatment only manages symptoms</b> (levodopa in Parkinson's; cholinesterase inhibitors in AD). The current strategy aims at <b>slowing disease rather than only treating symptoms</b>.</div>
+       <div class="callout warn">Why anti-amyloid trials have disappointed: even when the antibody <b>successfully clears aggregates</b>, patients often don't improve — because <b>too many neurons had already degenerated before treatment began</b>. Target engaged, but too late. Hence the push toward early biomarkers and prevention trials in the cognitively unimpaired.</div>`},
+     {h:"The hallmarks of aging, applied to the brain", imgs:[
+        {src:"slides/L13/slide-37.jpg", cap:"L13 · Slide 37 — Hallmarks of aging in neurodegeneration"},
+        {src:"slides/L13/slide-38.jpg", cap:"L13 · Slide 38 — DNA damage → epigenetic alterations → mitochondrial dysfunction → ROS"}
+      ], html:`
+       <p class="lead">This lecture is the whole course applied to one organ:</p>
+       <ul>
+        <li><b>Genomic instability</b> — DNA damage accumulation, <b>ERCC1</b>, repair defects; and crucially <b>neurons cannot divide away mutations</b>.</li>
+        <li><b>Loss of proteostasis</b> — proteasome, autophagy, mitophagy failing → <b>protein aggregates</b> → Alzheimer's and Parkinson's.</li>
+        <li><b>Mitochondrial dysfunction</b> — high neuronal energy demand, ROS, ATP decline, impaired axonal transport.</li>
+        <li><b>Cellular senescence</b> — especially <b>glial senescence</b> and its SASP, harming neighbouring neurons.</li>
+        <li><b>Altered intercellular communication</b> — neuroinflammation via microglia and astrocytes; chronic inflammatory signalling.</li>
+        <li><b>Stem cell exhaustion</b> — reduced capacity to replace lost cells.</li>
+       </ul>
+       <div class="callout tip">Her cascade slide: <b>DNA damage → epigenetic alterations → mitochondrial dysfunction → ROS →</b> further damage. That's a loop, not a line — which is why neurodegeneration accelerates once it starts.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"What does 'disease-modifying' therapy mean?", opts:["It treats the root/underlying disease process, slowing or halting it","It only manages symptoms","It is always an antibody","It cures the disease completely"], a:0,
+      exp:"Disease-modifying = alters the underlying process. Drugs that only manage symptoms (levodopa) are SYMPTOMATIC. This exact distinction was her quiz feedback."},
+     {type:"mcq", q:"A monoclonal antibody against α-synuclein reduces aggregates but does not improve motor symptoms. Most likely explanation?", opts:["Parkinson's is caused by amyloid-β plaques","Monoclonal antibodies increase α-synuclein production","Dopamine is mostly produced by glial cells","Many dopaminergic neurons had already degenerated before treatment began, limiting functional recovery"], a:3,
+      exp:"Target engaged (aggregates cleared) but too late — you can't restore function to neurons that are already dead."},
+     {type:"mcq", q:"Tau normally functions to:", opts:["Stabilize microtubules (it forms neurofibrillary tangles when pathological)","Form extracellular plaques","Produce dopamine","Transport oxygen"], a:0,
+      exp:"Tau is a microtubule-stabilizing protein; in AD it becomes hyperphosphorylated and forms intracellular neurofibrillary tangles."},
+     {type:"mcq", q:"Which hallmark is emphasized as especially relevant in the brain via GLIAL cells?", opts:["Telomere shortening in neurons","Cellular senescence — glial senescence and its SASP harming neighbouring neurons","Loss of telomerase in astrocytes","Increased stem-cell proliferation"], a:1,
+      exp:"Glial senescence and the SASP damage nearby neurons — connecting senescence (L3) and neuroinflammation (L12) to neurodegeneration."},
+     {type:"mcq", q:"Why does 'neurons cannot simply divide away mutations' matter for genomic instability in the brain?", opts:["Post-mitotic neurons can't dilute or replace damaged DNA by division, so damage accumulates permanently","Neurons divide constantly, spreading mutations","Neurons have no DNA","Mutations are repaired perfectly in neurons"], a:0,
+      exp:"Dividing cells can dilute damage or be replaced; post-mitotic neurons must live with whatever accumulates, for decades."},
+     {type:"tf", q:"In the aging brain, mitochondrial dysfunction matters partly because neurons have a very high energy demand and long axons requiring axonal transport.", a:true,
+      exp:"True — high ATP demand plus long-distance transport makes neurons acutely sensitive to mitochondrial failure and ROS."}
+    ]
+   },
+   {
+    id:"L13Q", title:"📝 Practice quiz (from class) — Neurodegeneration",
+    sub:"The class neurodegeneration homework quiz (10 Q), answers keyed — including the disease-modifying definition she corrected.",
+    slides:[
+     {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">The exact neurodegeneration homework-quiz questions. Recurring theme: therapies fail on <b>timing</b> — symptoms appear only after most neurons are dead. Watch the absolutes ("eliminate ALL α-synuclein", "outside of brain cells").</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"How can mutations in the genes PINK1 or Parkin contribute to Parkinson's disease?", opts:["They block the production of α-synuclein, resulting in loss of normal synaptic function","They impair the ubiquitin-mediated removal of damaged mitochondria, leading to accumulation of dysfunctional mitochondria and increased neuronal damage","They prevent dopamine synthesis by directly inhibiting tyrosine hydroxylase","They increase degradation of healthy mitochondria, causing ATP levels to become excessively high"], a:1,
+      exp:"PINK1 detects damaged mitochondria → Parkin (E3 ligase) tags them with ubiquitin → mitophagy removes them. Break either and damaged mitochondria accumulate in dopaminergic neurons."},
+     {type:"tf", q:"Diagnostics help the search for AD therapy by detecting early biomarkers (so trials recruit patients while enough neurons remain to rescue) and by letting researchers visualize therapeutics binding amyloid and Tau aggregates.", a:true,
+      exp:"True — both were correct on the quiz. Diagnostics MEASURE; they do not make the BBB permeable or prevent amyloid toxicity."},
+     {type:"mcq", q:"A clinical trial transplants stem cell-derived dopaminergic neurons into Parkinson's patients. Which outcome would provide the STRONGEST evidence the treatment is working?", opts:["The treatment eliminates α-synuclein from the brain","The transplanted stem cells remain undifferentiated in the brain for many years","MRI shows the transplanted cells divide rapidly after transplantation","The transplanted neurons survive, produce dopamine, integrate into existing neural circuits, and improve motor symptoms"], a:3,
+      exp:"You need the full chain: survival → function (dopamine) → integration → clinical benefit. Cells staying undifferentiated or dividing rapidly are failure/tumour-risk signs."},
+     {type:"mcq", q:"How is an α-synuclein vaccine expected to slow the progression of Parkinson's disease?", opts:["By inducing an immune response that reduces the accumulation and spread of toxic α-synuclein aggregates in the brain","By eliminating all α-synuclein protein from healthy neurons","By stimulating the brain to produce new dopaminergic neurons without stem cells","By increasing the release of dopamine from muscles"], a:0,
+      exp:"Antibodies clear aggregates and limit prion-like cell-to-cell spread. Trap: α-synuclein is a NORMAL synaptic protein — you don't want to eliminate all of it."},
+     {type:"mcq", q:"Match the technique to what it measures (electrical activity / brain structure / glucose metabolism):", opts:["EEG / MRI / PET","MRI / PET / EEG","PET / EEG / MRI","EEG / PET / MRI"], a:0,
+      exp:"EEG = electrical activity (millisecond timing); MRI = brain structure; PET = glucose metabolism."},
+     {type:"mcq", q:"A monoclonal antibody against α-synuclein reduces aggregates but does not improve motor symptoms in a trial. Most likely explanation?", opts:["Parkinson's disease is caused by amyloid-β plaques","Monoclonal antibodies increase the production of α-synuclein in healthy neurons","Dopamine is mostly produced by glial cells","Many dopaminergic neurons had already degenerated before treatment began, limiting the potential for functional recovery"], a:3,
+      exp:"Classic 'target engaged, no clinical benefit' — the drug worked mechanistically but arrived after too much neuron loss."},
+     {type:"tf", q:"Reasons a cure for Parkinson's is still elusive include that motor symptoms appear many years after neurodegeneration began, and that the etiology of the disease is not yet known.", a:true,
+      exp:"True — both were correct. NOTE: 'disease-modifying agents treat symptoms' is FALSE (her feedback: disease-modifying agents treat the ROOT, not symptoms), and α-synuclein aggregates are INTRACELLULAR, not outside brain cells."},
+     {type:"mcq", q:"In Alzheimer's disease, neurons in which region of the CNS are first to degenerate and die?", opts:["Spinal cord","Brainstem","Hippocampus","Midbrain"], a:2,
+      exp:"Hippocampus — the memory region, which is why early AD presents as memory loss."},
+     {type:"mcq", q:"Researchers use an AAV to deliver the GDNF gene into the brains of Parkinson's patients. What is the intended effect?", opts:["To stimulate glia cells to produce more dopamine","To replace dead neurons with newly formed stem cells","To promote the survival and function of dopaminergic neurons","To eliminate α-synuclein from the brain"], a:2,
+      exp:"GDNF is a neurotrophic (survival) factor — same concept as NGF in L9. It keeps the REMAINING dopaminergic neurons alive and functioning; it doesn't replace dead ones."},
+     {type:"mcq", q:"The accumulation of toxic substances involved in aging:", opts:["is due to incorrect food intake","is mainly due to a change in the shape of proteins","is due to a decrease of the number of stem cells","is a consequence of Alzheimer disease"], a:1,
+      exp:"Protein misfolding → aggregation (amyloid-β, tau, α-synuclein) overwhelming proteostasis. It's a CAUSE of AD, not a consequence."}
+    ]
+   },
+   {
+    id:"L13D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended prompts printed on her Neurodegeneration slides.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">The discussion prompts printed on the lecture slides. Write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"Why does the aging brain become vulnerable to neurodegenerative diseases?", model:"Because neurons are post-mitotic and irreplaceable, so every hallmark of aging compounds in them. DNA damage accumulates and cannot be diluted by division (repair defects, ERCC1). Proteostasis fails — proteasome, autophagy and mitophagy decline — so aggregates (amyloid-β, tau, α-synuclein) build up. Neurons have huge energy demands and long axons, so mitochondrial dysfunction causes ATP decline, excess ROS and failed axonal transport. Glial cells become senescent and their SASP, together with microglial and astrocytic neuroinflammation, damages surrounding neurons. Stem-cell exhaustion means lost cells aren't replaced. Damage feeds back on itself: DNA damage → epigenetic change → mitochondrial dysfunction → ROS → more damage.", pts:["Neurons are post-mitotic — can't divide away mutations or be replaced","Genomic instability + failed proteostasis → aggregates","Mitochondrial dysfunction: high energy demand, ROS, axonal transport","Glial senescence/SASP + neuroinflammation (microglia, astrocytes)","Self-reinforcing loop, stem-cell exhaustion"]},
+     {type:"short", q:"How does a neuron transmit information?", model:"With two kinds of signal. Electrical signals carry information long distances: the neuron depolarizes and an action potential travels down the axon (myelination speeds this). At the axon terminal the electrical signal is converted into a chemical one: neurotransmitter is released into the synapse and diffuses the short distance to the next cell, binding receptors on its dendrites or cell body and producing an excitatory or inhibitory response. Dendrites receive, the cell body integrates, the axon transmits, and the terminals communicate — repeated across ~86–100 billion neurons in an integrated network.", pts:["Electrical signals = long-distance (action potential down the axon)","Chemical signals = short-distance (neurotransmitter across the synapse)","Dendrites receive → cell body integrates → axon transmits → terminals release","Excitatory or inhibitory effect on the target neuron"]},
+     {type:"short", q:"Why is early diagnosis so important for Alzheimer's therapy, given the results of anti-amyloid antibody trials?", model:"Because the drugs can succeed mechanically and still fail clinically. Antibodies do clear amyloid, but by the time cognitive symptoms appear, neurodegeneration has been running for years and too many neurons are already lost to recover function — clearing plaques cannot bring dead neurons back. Early biomarkers (amyloid PET, plasma p-tau217) identify people while they are still cognitively unimpaired, so trials can recruit patients who still have enough neurons to rescue, and imaging can confirm the drug is engaging its target. The shift is from treating late symptoms to intervening early enough to preserve neurons.", pts:["Aggregate clearance ≠ clinical benefit if neurons are already lost","Symptoms appear years after degeneration begins","Early biomarkers (amyloid PET, plasma p-tau217) enable early recruitment","Also confirms target engagement; shift toward prevention trials"]}
+    ]
+   }
+  ]
+ },
+
+ /* ============================ LECTURE 14 ============================ */
+ {
+  id:"L14", icon:"🔬", short:"L14 · Biomarkers",
+  title:"Lecture 14 — Biomarkers of Aging & Measuring Healthspan",
+  blurb:"How we measure healthspan: the shingles-vaccine natural experiment, GrimAge and epigenetic clocks, biomarker sources, RNA-seq and miRNAs, wearables, and detecting apoptosis vs necrosis with Annexin V/PI and flow cytometry.",
+  objectives:[
+    "Explain why a natural experiment (the Welsh shingles-vaccine rollout) can provide causal rather than correlational evidence",
+    "Explain why biomarkers are needed to measure healthspan in a clinical trial",
+    "Describe GrimAge — what it is built on and what it predicts",
+    "List the sources of biomarkers and what RNA-seq measures (qualitative vs quantitative)",
+    "Explain how miRNAs regulate gene expression and why targeting one miRNA may beat targeting one protein",
+    "Interpret Annexin V / propidium iodide staining to distinguish live, early apoptotic, late apoptotic and necrotic cells",
+    "Design an apoptosis experiment with appropriate positive and negative controls"
+  ],
+  topics:[
+   {
+    id:"L14T1", title:"Why biomarkers — and the shingles-vaccine natural experiment",
+    sub:"Causal vs correlational evidence, and measuring healthspan (slides 1–4).",
+    slides:[
+     {h:"A natural experiment that gives causal evidence", imgs:[
+        {src:"slides/L14/slide-01.jpg", cap:"L14 · Slide 1 — Wales: zoster vaccine eligibility by exact date of birth"},
+        {src:"slides/L14/slide-02.jpg", cap:"L14 · Slide 2 — Shingles vaccination reduces dementia risk by 20%"}
+      ], html:`
+       <p class="lead">In Wales, eligibility for the <span class="kw">zoster (shingles) vaccine</span> was determined by an individual's <b>exact date of birth</b>. People born just before and just after the cutoff were essentially identical — but one group could get the vaccine and the other could not.</p>
+       <div class="callout key">That arbitrary cutoff <b>accidentally mimicked the conditions of a clinical trial</b> (quasi-randomization). Using electronic health records of <b>296,324 adults</b>, shingles vaccination was associated with a <b>20% reduction in dementia risk</b> — and because the assignment was effectively random, this is <b>causal rather than merely correlational evidence</b>.</div>
+       <p>Compare this with the tadalafil example from L10, where propensity matching still only supports "associated with lower mortality," <b>not</b> "causes lower mortality." The design determines what you're allowed to conclude.</p>`},
+     {h:"Measuring healthspan needs biomarkers", imgs:[
+        {src:"slides/L14/slide-04.jpg", cap:"L14 · Slide 4 — Living healthier for longer: how do we measure healthspan?"}
+      ], html:`
+       <p class="lead">"The field of longevity is not just about living longer — it's about <span class="kw">living healthier for longer</span>." But how do you measure healthspan in a clinical trial? You can't wait 40 years to see who dies.</p>
+       <div class="callout tip"><b>The answer: biomarkers.</b> A biomarker is a measurable surrogate that reflects biological state now and predicts outcomes later — letting a trial read out in months instead of decades.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Why does the Welsh shingles-vaccine study provide CAUSAL rather than merely correlational evidence?", opts:["Because eligibility was set by exact date of birth, an arbitrary cutoff that accidentally mimicked randomization in a clinical trial","Because it had a very large sample size","Because vaccines are always beneficial","Because the researchers used propensity matching"], a:0,
+      exp:"A quasi-random cutoff makes the two groups comparable in everything except vaccine access — that's what licenses a causal claim, not sample size alone."},
+     {type:"mcq", q:"The shingles vaccine was associated with what change in dementia risk?", opts:["A 20% reduction","A 20% increase","No change","A 50% reduction"], a:0,
+      exp:"~20% reduction in dementia risk, from electronic health records of 296,324 adults."},
+     {type:"mcq", q:"Why are biomarkers necessary for testing longevity interventions in clinical trials?", opts:["They let you measure healthspan/biological state now and predict outcomes, instead of waiting decades for mortality data","They cure age-related disease","They replace the need for controls","They eliminate the need for human subjects"], a:0,
+      exp:"You can't run a 40-year trial. Biomarkers are measurable surrogates that read out quickly and predict later outcomes."},
+     {type:"tf", q:"A study showing that a drug is 'associated with lower mortality after adjusting for measured confounders' proves the drug CAUSES lower mortality.", a:false,
+      exp:"False — adjusting for MEASURED confounders leaves unmeasured ones. That design supports association only; the natural-experiment design is what supports causation."}
+    ]
+   },
+   {
+    id:"L14T2", title:"The biomarker toolkit — GrimAge, RNA-seq, miRNAs & wearables",
+    sub:"What we can measure and where it comes from (slides 5–12).",
+    slides:[
+     {h:"GrimAge and the sources of biomarkers", imgs:[
+        {src:"slides/L14/slide-05.jpg", cap:"L14 · Slide 5 — GrimAge: an epigenetic clock"},
+        {src:"slides/L14/slide-07.jpg", cap:"L14 · Slide 7 — Sources of biomarkers"}
+      ], html:`
+       <p class="lead"><span class="kw">GrimAge</span> is an <b>epigenetic clock</b> built on DNA-methylation patterns corresponding to <b>7 plasma proteins plus smoking exposure</b>.</p>
+       <div class="callout key">Subtle but important: GrimAge <b>does NOT directly measure the plasma proteins</b>. It uses <b>DNA-methylation patterns that predict the circulating levels</b> of those proteins — a prediction of a prediction.</div>
+       <p><b>GrimAge predicts:</b> all-cause mortality · cardiovascular disease risk · cancer incidence · physical function · risk of frailty · risk of cognitive decline — and it <b>predicts better than chronological age alone</b>.</p>
+       <p><b>Sources of biomarkers:</b> blood plasma/serum · CSF · saliva · urine · skin tissue · brain tissue · exosomes. (Accessibility matters — a blood or saliva test scales in a way a brain biopsy never will.)</p>`},
+     {h:"RNA-seq, miRNAs and wearable data", imgs:[
+        {src:"slides/L14/slide-08.jpg", cap:"L14 · Slide 8 — Studying the transcriptome: RNA sequencing"},
+        {src:"slides/L14/slide-10.jpg", cap:"L14 · Slide 10 — Small RNAs regulate mRNA stability and translation"},
+        {src:"slides/L14/slide-12.jpg", cap:"L14 · Slide 12 — Wearables: step count and REM sleep vs cholesterol improvement"}
+      ], html:`
+       <p><b>RNA-seq</b> studies the transcriptome two ways: <span class="kw-2">qualitative</span> — identifying genes and isoforms — and <span class="kw-2">quantitative</span> — estimating gene expression levels. A key application is <b>disease diagnosis</b>.</p>
+       <p><b>micro-RNAs (miRNAs)</b> are specialized small RNAs, <b>21–30 nucleotides</b> long, that prevent expression of specific genes by <b>complementary base pairing</b>, acting through <span class="kw-2">RISC</span> (RNA-induced silencing complex). Recognition uses the <b>seed sequence, typically nucleotides 2–8</b>. About <b>1000 human miRNA genes regulate roughly half of all human genes</b> — including the longevity pathways <b>mTOR, insulin/IGF-1 and AMPK</b>.</p>
+       <div class="callout tip"><b>Wearables as biomarkers:</b> step count and REM sleep percentage over a year differed between people whose total cholesterol improved and those whose didn't — continuous, real-world data as a health readout.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"GrimAge is best described as:", opts:["An epigenetic clock based on DNA-methylation patterns corresponding to 7 plasma proteins plus smoking exposure","A direct measurement of 7 plasma proteins","A measure of telomere length","A brain-imaging score"], a:0,
+      exp:"It uses methylation patterns that PREDICT circulating levels of those proteins — it does not measure the proteins themselves."},
+     {type:"mcq", q:"Which does GrimAge NOT predict?", opts:["All-cause mortality","Cardiovascular disease and cancer risk","Frailty and cognitive decline risk","A person's exact date of death"], a:3,
+      exp:"It predicts risks and functional outcomes (mortality risk, CVD, cancer, physical function, frailty, cognitive decline) better than chronological age — not an exact date."},
+     {type:"mcq", q:"RNA-seq provides which two kinds of analysis?", opts:["Qualitative (identifying genes and isoforms) and quantitative (estimating expression levels)","Only protein sequencing","Only DNA methylation","Structural imaging"], a:0,
+      exp:"Qualitative = what transcripts are present (genes/isoforms); quantitative = how much of each. A key application is disease diagnosis."},
+     {type:"mcq", q:"miRNAs silence genes by:", opts:["Complementary base pairing with target mRNAs via RISC, using a seed sequence (~nucleotides 2–8)","Cutting DNA directly","Methylating promoters","Degrading ribosomes"], a:0,
+      exp:"miRNAs (21–30 nt) load into RISC and base-pair with target mRNAs — the seed region (nt 2–8) drives recognition — reducing mRNA stability and translation."},
+     {type:"mcq", q:"Roughly what fraction of human genes is regulated by miRNAs?", opts:["About half, by ~1000 human miRNA genes","About 1%","All of them","None"], a:0,
+      exp:"~1000 human miRNA genes regulate the expression of about half of all human genes, including mTOR, insulin/IGF-1 and AMPK pathways."},
+     {type:"tf", q:"Wearable data such as step count and REM sleep percentage can serve as biomarkers linked to health outcomes like cholesterol improvement.", a:true,
+      exp:"True — continuous real-world data distinguished cholesterol improvers from non-improvers over a year."}
+    ]
+   },
+   {
+    id:"L14T3", title:"Detecting apoptosis — Annexin V / PI and flow cytometry",
+    sub:"The four-quadrant assay, flow cytometry parameters, and experimental controls (slides 14–20).",
+    slides:[
+     {h:"The Annexin V / PI four-quadrant assay", imgs:[
+        {src:"slides/L14/slide-14.jpg", cap:"L14 · Slide 14 — Markers for detection of apoptosis"},
+        {src:"slides/L14/slide-15.jpg", cap:"L14 · Slide 15 — Live, early apoptotic, late apoptotic and necrotic cells"}
+      ], html:`
+       <p class="lead">Two stains distinguish four states. <b>Annexin V</b> binds phosphatidylserine, which flips to the <b>outside</b> of the membrane early in apoptosis. <b>Propidium iodide (PI)</b> can only enter when the <b>membrane has lost integrity</b>.</p>
+       <table class="dt">
+        <tr><th>Annexin V</th><th>PI</th><th>Cell state</th></tr>
+        <tr><td>−</td><td>−</td><td><b>Live</b></td></tr>
+        <tr><td>+</td><td>−</td><td><b>Early apoptotic</b> (PS flipped, membrane still intact)</td></tr>
+        <tr><td>+</td><td>+</td><td><b>Late apoptotic</b> (PS flipped AND membrane compromised)</td></tr>
+        <tr><td>−</td><td>+</td><td><b>Necrotic</b> (membrane ruptured without the apoptotic PS flip)</td></tr>
+       </table>
+       <div class="callout key">Reason it out rather than memorizing: <b>Annexin V = "has apoptosis started?"</b> and <b>PI = "is the membrane broken?"</b> Apoptosis flips PS first and breaks the membrane only late; necrosis breaks the membrane without the orderly PS flip.</div>`},
+     {h:"Flow cytometry and experimental design", imgs:[
+        {src:"slides/L14/slide-16.jpg", cap:"L14 · Slide 16 — Flow cytometry"},
+        {src:"slides/L14/slide-18.jpg", cap:"L14 · Slide 18 — Jurkat cells treated with camptothecin"},
+        {src:"slides/L14/slide-20.jpg", cap:"L14 · Slide 20 — What would you use as a positive and negative control?"}
+      ], html:`
+       <p><b>Flow cytometry</b> reads thousands of cells one at a time. Two scatter parameters:</p>
+       <ul>
+        <li><span class="kw-2">Forward scatter (FSC)</span> = <b>cell size</b></li>
+        <li><span class="kw-2">Side scatter (SSC)</span> = <b>internal granularity</b> (e.g., number of organelles)</li>
+       </ul>
+       <p><b>The experiments shown:</b> <b>Jurkat cells</b> (from acute human T-cell leukemia) untreated vs treated with <b>camptothecin</b> (a topoisomerase I inhibitor) to induce apoptosis. In <b>Saos-2</b> osteosarcoma cells, apoptosis was induced by room temperature (20°C) for 4–7 days, while <b>necrosis</b> was induced by a <b>55°C water bath for 90 minutes</b> — deliberately different insults to produce the two death modes.</p>
+       <div class="callout tip"><b>Controls:</b> the <b>positive control</b> is cells treated with a known apoptosis inducer (e.g., camptothecin or staurosporine) — it proves the assay can detect apoptosis. The <b>negative control</b> is untreated/vehicle-only cells — it establishes the baseline of spontaneous death.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"A cell stains Annexin V POSITIVE and PI NEGATIVE. What is it?", opts:["Live","Early apoptotic","Late apoptotic","Necrotic"], a:1,
+      exp:"PS has flipped to the outer membrane (Annexin V+) but the membrane is still intact (PI−) = early apoptotic."},
+     {type:"mcq", q:"A cell stains Annexin V NEGATIVE and PI POSITIVE. What is it?", opts:["Live","Early apoptotic","Late apoptotic","Necrotic"], a:3,
+      exp:"Membrane ruptured (PI enters) without the orderly apoptotic PS flip = necrotic."},
+     {type:"mcq", q:"Which staining pattern identifies LIVE cells?", opts:["Annexin V− PI−","Annexin V+ PI−","Annexin V+ PI+","Annexin V− PI+"], a:0,
+      exp:"Live cells exclude both: no PS on the surface and an intact membrane keeping PI out."},
+     {type:"mcq", q:"In flow cytometry, forward scatter and side scatter measure respectively:", opts:["Cell size and internal granularity (e.g., organelle content)","DNA content and RNA content","Membrane potential and pH","Protein and lipid content"], a:0,
+      exp:"FSC ∝ cell size; SSC ∝ internal complexity/granularity."},
+     {type:"mcq", q:"When designing an experiment to measure apoptosis in cancer cells, what is an appropriate POSITIVE control?", opts:["Cells treated with a known apoptosis inducer such as camptothecin or staurosporine","Untreated cells","Cells with no stain added","Dead cells from a 55°C water bath"], a:0,
+      exp:"A positive control must reliably produce the effect, proving the assay can detect apoptosis. (A 55°C bath induces NECROSIS — that would be a necrosis control, not apoptosis.)"},
+     {type:"mcq", q:"What is the appropriate NEGATIVE control for that experiment?", opts:["Untreated (or vehicle-only) cells, establishing baseline spontaneous death","Cells treated with camptothecin","Cells heated to 55°C","Cells from a different species"], a:0,
+      exp:"Untreated/vehicle cells show the background level of apoptosis, so you can attribute any increase to the treatment."},
+     {type:"tf", q:"Camptothecin, a topoisomerase I inhibitor, was used to induce apoptosis in Jurkat cells.", a:true,
+      exp:"True — Jurkat (acute human T-cell leukemia) cells treated with 5 µM camptothecin, analyzed by flow cytometry against untreated controls."}
+    ]
+   },
+   {
+    id:"L14D", title:"🎤 In-class slide questions (short answer)",
+    sub:"The open-ended prompts printed on her Biomarkers slides.",
+    slides:[
+     {h:"🎤 In-class slide questions", imgs:[], html:`<div class="callout tip">The discussion prompts printed on the lecture slides. Write a full, reasoned answer, then compare to the model.</div>`}
+    ],
+    quiz:[
+     {type:"short", q:"If the shingles vaccine truly reduces the risk of dementia, what biological mechanisms could explain this effect?", model:"Several plausible mechanisms, all rooted in the course. (1) Preventing viral reactivation: varicella-zoster reactivation causes neuroinflammation and vascular damage, so blocking it protects neurons. (2) Reducing chronic inflammation/inflammaging: fewer reactivation episodes means less chronic cytokine exposure and less microglial activation, and neuroinflammation is a driver of neurodegeneration. (3) Reduced viral contribution to amyloid pathology — amyloid-β has antimicrobial properties, so repeated infection may drive plaque deposition. (4) General immune 'training'/off-target immune benefits that improve immune surveillance in an immunosenescent host. The common thread: less chronic inflammation and less infection-driven damage to the aging brain.", pts:["Prevents VZV reactivation → less neuroinflammation/vascular damage","Lowers chronic inflammation (inflammaging) and microglial activation","Possible reduced infection-driven amyloid pathology","Broader immune benefits in an immunosenescent host"]},
+     {type:"short", q:"Many longevity pathways (mTOR, insulin/IGF-1, AMPK) are regulated by miRNAs. What advantages might miRNAs provide over targeting a single protein in these pathways?", model:"A single miRNA base-pairs with many different mRNAs, so it can tune an entire pathway or several pathways at once rather than one node. That matters because these networks are redundant and cross-talking — blocking one protein is often compensated for by another branch, whereas coordinated multi-target regulation is harder to bypass. miRNAs act upstream at the level of mRNA stability and translation, so they reduce protein production rather than just inhibiting existing protein, and their effects are dose-tunable and reversible. The trade-off is specificity: hitting many targets also means more potential off-target effects.", pts:["One miRNA targets many mRNAs → regulates a whole pathway/network","Avoids compensation/redundancy that defeats single-protein inhibitors","Acts on mRNA stability/translation (upstream), tunable and reversible","Trade-off: broad targeting risks off-target effects"]},
+     {type:"short", q:"When designing an experiment to measure apoptosis in cancer cells, what would you use as a positive control and what as a negative control?", model:"Positive control: cells treated with a known, reliable apoptosis inducer — for example camptothecin (a topoisomerase I inhibitor) or staurosporine. This proves the assay and staining actually detect apoptosis, so a negative result in your test condition is meaningful. Negative control: untreated cells, or vehicle-only (the solvent, e.g., DMSO, without drug), which establishes the baseline rate of spontaneous apoptosis and shows the vehicle itself isn't killing cells. Ideally you would also include single-stain and unstained samples to set the flow-cytometry gates, and a necrosis control (e.g., heat treatment) to confirm you can distinguish apoptosis from necrosis.", pts:["Positive: known apoptosis inducer (camptothecin/staurosporine) — validates the assay","Negative: untreated or vehicle-only — baseline spontaneous death","Vehicle control shows the solvent isn't toxic","Bonus: unstained/single-stain for gating; necrosis control to distinguish death modes"]},
+     {type:"short", q:"Given a flow-cytometry plot of Annexin V vs PI, how would you decide whether cells are dying by apoptosis or necrosis?", model:"Read the quadrants. Annexin V binds phosphatidylserine that flips to the cell surface early in apoptosis; PI only enters cells whose membrane integrity is lost. Live cells are Annexin V− PI−. Early apoptotic cells are Annexin V+ PI− (PS exposed, membrane still intact) — this population is the signature of apoptosis. Late apoptotic cells are Annexin V+ PI+. Necrotic cells are Annexin V− PI+ — the membrane ruptured without the orderly PS flip. So a treatment causing apoptosis produces a rise in the Annexin V+ PI− population first, shifting over time to double-positive; a necrotic insult drives cells straight into the Annexin V− PI+ quadrant.", pts:["Annexin V = PS flip (apoptosis started); PI = membrane broken","Live −/− · early apoptotic +/− · late apoptotic +/+ · necrotic −/+","Apoptosis: appears first as Annexin V+ PI−, later double-positive","Necrosis: PI+ without the Annexin V+ intermediate"]}
+    ]
+   }
+  ]
+ },
+
 
  /* ============================ FACTS ON AGING (quiz handout) ============================ */
  {
