@@ -3286,6 +3286,63 @@ window.COURSE = [
     ]
    },
    {
+    id:"L11M", title:"⚠️ Commonly missed — caveats, definitions & multi-select traps",
+    sub:"Drill the exact items that cost points on the class quiz: which caveat belongs to which cell type, the four -therapy- definitions, and how to handle her select-ALL questions.",
+    slides:[
+     {h:"One caveat per cell type — don't mix them up", imgs:[], html:`
+      <p class="lead">Each stem-cell type has its <b>own</b> signature drawback. The quiz swaps them between answer choices, so learn them as a matched set:</p>
+      <table class="dt">
+       <tr><th>Cell type</th><th>Its caveat</th><th>Why</th></tr>
+       <tr><td><b>Embryonic (ESC)</b></td><td><b>IMMUNE REJECTION</b> — needs immunosuppressants</td><td>Donor-derived, so the patient's immune system sees foreign cells</td></tr>
+       <tr><td><b>Adult / tissue-specific</b></td><td><b>LOW ABUNDANCE, hard to isolate</b>; harvesting can badly damage organs (heart, brain)</td><td>They're rare and buried in living tissue</td></tr>
+       <tr><td><b>iPSC</b></td><td><b>REPROGRAMMING introduces genetic modifications</b> → long-term safety uncertain</td><td>Viral vectors insert genes into the genome</td></tr>
+      </table>
+      <div class="callout warn"><b>The classic trap:</b> a question asks about <b>embryonic</b> stem cells and offers the <b>adult</b> caveat ("low abundance, difficult to isolate") as a tempting distractor. Check <i>which cell type</i> the stem is asking about before you read the options.</div>`},
+     {h:"Four 'therapy' words that get confused", imgs:[], html:`
+      <table class="dt">
+       <tr><th>Term</th><th>What it means</th></tr>
+       <tr><td><b>Regenerative medicine</b></td><td><b>Using stem cells to REPLACE damaged tissue</b> ← this is the stem-cell one</td></tr>
+       <tr><td><b>Gene therapy</b></td><td>Fixing/replacing a faulty <b>gene</b> to treat disease</td></tr>
+       <tr><td><b>Genetic engineering</b></td><td>Deliberately <b>altering an organism's DNA</b></td></tr>
+       <tr><td><b>Cloning</b></td><td>Making a <b>genetically identical copy</b> of a cell or organism</td></tr>
+      </table>
+      <div class="callout key">Quick test: does the answer involve <b>replacing tissue</b> (regenerative medicine) or <b>changing DNA</b> (the other three)?</div>`},
+     {h:"How to attack her SELECT-ALL questions", imgs:[], html:`
+      <div class="callout key"><b>The two shapes of her multi-selects:</b>
+      <br><br><b>① "Which are TRUE of X?"</b> (e.g., tissue-specific stem cells; why pluripotent are preferred; safety risks) → these are <b>definitional</b>, and the answer is usually <b>ALL of them</b>. Under-checking is the common error.
+      <br><br><b>② "Which are FDA-APPROVED / proven?"</b> → this is an <b>evidence-vs-hype</b> question, and the answer is usually <b>far fewer</b> than you'd expect. Over-checking is the common error.</div>
+      <p>Before answering, decide which shape it is. Then evaluate <b>each option independently</b> as true/false rather than picking the ones that "feel" right — partial credit means every wrong box costs you.</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"When using EMBRYONIC stem cells as therapy, one caveat to consider is that:", opts:["The cells are present in low abundance and are difficult to isolate; isolation could cause considerable tissue or organ damage, as in the heart or brain","Without drugs that suppress the immune system, a patient's immune system will recognize transplanted cells as foreign and attack them","The reprogramming process introduces genetic modifications, so the safety of using these cells in patients is uncertain","Embryonic stem cells cannot differentiate into other cell types"], a:1,
+      exp:"ESCs are DONOR-derived → immune rejection is their caveat. Option 1 is the ADULT stem-cell caveat and option 3 is the iPSC caveat — both are planted as distractors."},
+     {type:"mcq", q:"Which caveat belongs specifically to ADULT / tissue-specific stem cells?", opts:["Immune rejection by the patient","Low abundance and difficulty of isolation, with harvest potentially damaging organs like the heart or brain","Reprogramming introduces genetic modifications","They can form teratomas because they are pluripotent"], a:1,
+      exp:"Adult stem cells are rare and embedded in functioning tissue, so obtaining enough of them is the practical barrier."},
+     {type:"mcq", q:"Which caveat belongs specifically to iPSCs?", opts:["Immune rejection, since they come from a donor embryo","Low abundance and difficulty of isolation","The reprogramming process introduces genetic modifications, so long-term safety is uncertain","They cannot become other cell types"], a:2,
+      exp:"iPSCs avoid the embryo issue and (if autologous) rejection — but the reprogramming itself modifies the genome, which is the open safety question."},
+     {type:"mcq", q:"Using stem cells to replace damaged bodily tissue is called:", opts:["Cloning","Gene therapy","Genetic engineering","Regenerative medicine"], a:3,
+      exp:"Regenerative medicine = REPLACING tissue. Gene therapy, genetic engineering and cloning all involve manipulating DNA, not replacing tissue."},
+     {type:"mcq", q:"Which pairing of term and definition is CORRECT?", opts:["Gene therapy = making a genetically identical copy of an organism","Cloning = fixing a faulty gene to treat disease","Regenerative medicine = using stem cells to replace damaged tissue","Genetic engineering = transplanting stem cells into a patient"], a:2,
+      exp:"Cloning = identical copy; gene therapy = fixing a faulty gene; genetic engineering = deliberately altering DNA; regenerative medicine = replacing tissue."},
+     {type:"mcq", q:"How could scientists introduce the reprogramming genes into differentiated cells?", opts:["They used mRNA inserted into the cytoplasm of the differentiated cells","They used proteins that were inserted into the cytoplasm of the differentiated cells","They used viral vectors that inserted the genes into the differentiated cells' NUCLEUS","They used electricity to fuse two cells together"], a:2,
+      exp:"Genes must reach the NUCLEUS to be transcribed. Viral vectors deliver and insert them there — proteins sitting in the cytoplasm could not produce ongoing gene expression."},
+     {type:"mcq", q:"Why must the reprogramming genes reach the NUCLEUS rather than just the cytoplasm?", opts:["Transcription happens in the nucleus, so genes must be there to be expressed at all","The cytoplasm destroys all DNA instantly","Ribosomes are in the nucleus","The nucleus is larger"], a:0,
+      exp:"DNA → RNA transcription occurs in the nucleus. A gene sitting in the cytoplasm would never be transcribed into the mRNA needed to make the transcription factors."},
+     {type:"mcq", q:"Select the FDA-approved stem-cell therapy from this list:", opts:["Alzheimer's disease","Parkinson's disease","Certain blood disorders","Age-related macular degeneration"], a:2,
+      exp:"ONLY hematopoietic (blood-forming) stem-cell transplants for blood disorders are established/FDA-approved. Alzheimer's, Parkinson's, macular degeneration, osteoarthritis, sarcopenia and cardiac repair are all EXPERIMENTAL — the classic over-checking trap."},
+     {type:"tf", q:"Age-related macular degeneration, osteoarthritis, muscle sarcopenia and cardiomyocyte replacement after myocardial infarction are all FDA-approved stem-cell therapies.", a:false,
+      exp:"False — all of these are experimental/clinical-trial stage. Clinics advertising them are exactly the evidence-vs-hype problem she warns about."},
+     {type:"tf", q:"Tissue-specific stem cells are found in your own body right now, are also known as adult stem cells, are somatic stem cells, AND are used to replace tissue as it wears out.", a:true,
+      exp:"True — ALL of these describe tissue-specific stem cells. On 'which are true of X' multi-selects, under-checking is the usual error."},
+     {type:"tf", q:"Pluripotent cells are preferred for research because tissue-specific cells become only limited kinds of tissue, are less efficient for growing tissues to test pharmaceuticals, AND grow only for limited periods in the lab.", a:true,
+      exp:"True — all three limitations apply. Note the third one (limited growth in culture) is the one most often forgotten."},
+     {type:"tf", q:"Tumour development, immunogenicity, contamination, and lack of batch homogeneity are ALL safety risks for clinical stem-cell therapies.", a:true,
+      exp:"True — all four. Immunogenicity is the one most often left unchecked, but donor-derived cells can absolutely provoke an immune response."},
+     {type:"mcq", q:"A select-ALL question asks 'Which of these are FDA-approved?' versus one asking 'Which of these are true of tissue-specific stem cells?' How should your approach differ?", opts:["Approval questions test evidence-vs-hype so expect FEW correct; 'which are true of X' questions are definitional so expect MOST or ALL to be correct","Both should be answered by checking everything","Both should be answered by checking one box","Approval questions always have more correct answers"], a:0,
+      exp:"Identify the question's shape first. Approval/proven = be skeptical, check few. Definitional = be inclusive, check all that genuinely apply. Then evaluate each option independently."}
+    ]
+   },
+   {
     id:"L11D", title:"🎤 In-class slide questions (short answer)",
     sub:"The open-ended prompts printed on her Stem Cell slides.",
     slides:[
