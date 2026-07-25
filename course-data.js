@@ -3199,6 +3199,60 @@ window.COURSE = [
     ]
    },
    {
+    id:"L11X", title:"⭐ THE EXPERIMENT: OSK partial reprogramming in old mice (Macip 2024)",
+    sub:"The daf-2-style experiment for this lecture — read all four graphs: survival, remaining lifespan, frailty, and methylation age.",
+    slides:[
+     {h:"The design — inducible OSK delivered to 124-week-old mice", imgs:[
+        {src:"slides/L11/slide-20.jpg", cap:"L11 · Slide 20 — Gene therapy for aging: AAV9-delivered, doxycycline-inducible OSK"}
+      ], html:`
+       <p class="lead">This is the experiment to know cold. Researchers asked: <b>can partial reprogramming rejuvenate an already-old animal?</b></p>
+       <ul>
+        <li><b>OSK = Oct4, Sox2, Klf4</b> — the Yamanaka factors <b>minus c-Myc</b>. c-Myc is a potent <b>oncogene</b>, so it is deliberately left out for safety.</li>
+        <li>Delivered by <b>AAV9</b> (adeno-associated virus) via <b>retro-orbital IV injection</b> into <b>124-week-old</b> (already elderly) mice.</li>
+        <li><b>Inducible switch:</b> <b>rtTa</b> (reverse tetracycline transactivator) binds DNA <b>only when doxycycline is present</b>, activating the <b>TRE</b> (Tetracycline Response Element) that drives the OSK cassette.</li>
+        <li><b>Doxycycline given in alternating weekly cycles</b> (on/off) — this is <b>partial/cyclic</b> reprogramming.</li>
+       </ul>
+       <div class="callout key"><b>Why cyclic and not continuous?</b> Continuous reprogramming would erase cell identity entirely — cells would de-differentiate and form <b>teratomas</b>. Pulsing the factors rejuvenates the epigenome <b>without</b> wiping out what the cell is. The on/off switch is the whole safety design.</div>`},
+     {h:"Reading the four graphs", imgs:[
+        {src:"slides/L11/slide-21.jpg", cap:"L11 · Slide 21 — Survival curve: TRE-OSK vs Control-Dox vs historical"},
+        {src:"slides/L11/slide-22.jpg", cap:"L11 · Slide 22 — Remaining lifespan after injection, and frailty index"},
+        {src:"slides/L11/slide-23.jpg", cap:"L11 · Slide 23 — Age reversal measured by DNA-methylation age acceleration"}
+      ], html:`
+       <table class="dt">
+        <tr><th>Graph</th><th>What it measures</th><th>Result</th></tr>
+        <tr><td><b>Survival curve</b></td><td>% alive vs weeks of age; red arrow = AAV injection at 124 wks</td><td>TRE-OSK (n=20) shifted <b>right</b> of Control-Dox (n=20) and Jax historical (n=33). <b>Median 132.86 → 142.5 weeks</b>, P = 0.005</td></tr>
+        <tr><td><b>Remaining lifespan</b></td><td>Weeks lived <i>after</i> the 124-week injection</td><td><b>~12 → ~21 weeks</b> — nearly doubled remaining life (**)</td></tr>
+        <tr><td><b>Frailty index</b></td><td><b>28 variables</b> — physical, physiological, innate reflex, sensory/motor tests, body temperature, overall condition</td><td><b>~7.5 → ~6.0. LOWER frailty = healthier</b> (**) — this is the <b>healthspan</b> readout</td></tr>
+        <tr><td><b>Methylation age acceleration</b></td><td>Clock age minus chronological age, in <b>liver and heart</b></td><td>TRE-OSK <b>more negative</b> in both organs (*) — biologically <b>younger</b> than their chronological age</td></tr>
+       </table>
+       <div class="callout key"><b>Why three different readouts matter:</b> lifespan (survival), <b>healthspan</b> (frailty), and <b>biological age</b> (methylation clock) are independent measures. Improving all three together is far stronger evidence than any one alone — it argues the animals were genuinely rejuvenated, not just kept alive longer in poor condition.</div>
+       <p><b>The controls:</b> <b>Control-Dox</b> mice received doxycycline but carried no functional OSK cassette — this controls for the drug itself and the injection. <b>Jax historical</b> is an external reference showing the control mice aged normally for the strain.</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"In the OSK reprogramming experiment, why was c-Myc omitted from the Yamanaka factors?", opts:["c-Myc is a potent oncogene, so leaving it out reduces tumour risk","c-Myc is not a transcription factor","c-Myc is too large for AAV","c-Myc is only found in humans"], a:0,
+      exp:"OSK = Oct4, Sox2, Klf4 — the classic four minus c-Myc, which is an oncogene. Safety-driven design."},
+     {type:"mcq", q:"Why was doxycycline given in alternating weekly ON/OFF cycles rather than continuously?", opts:["Continuous reprogramming would erase cell identity and cause teratomas; cyclic (partial) reprogramming rejuvenates without de-differentiating the cells","Doxycycline is toxic in large doses only","The mice would not drink it continuously","Continuous dosing is more expensive"], a:0,
+      exp:"Partial/cyclic reprogramming is the whole safety concept — pulse the factors enough to reset the epigenome, not enough to wipe out cell identity."},
+     {type:"mcq", q:"In this system, what is the role of doxycycline?", opts:["It lets rtTa bind DNA and activate the TRE promoter, switching OSK expression ON","It directly reprograms the cells","It kills senescent cells","It is the AAV vector"], a:0,
+      exp:"Doxycycline is the inducer: rtTa (reverse tetracycline transactivator) binds DNA only in its presence, turning on the TRE-driven OSK cassette."},
+     {type:"mcq", q:"The treated mice received the AAV injection at 124 weeks of age. Why does that matter for interpreting the result?", opts:["The mice were ALREADY OLD, so the experiment tests whether aging can be slowed/reversed late in life rather than merely prevented","It shows the therapy only works in embryos","It means the mice were young","It makes the result correlational"], a:0,
+      exp:"Treating already-elderly animals is a much stronger claim than preventing aging from birth — it addresses whether intervention is possible after damage has accumulated."},
+     {type:"mcq", q:"On the survival curve, the TRE-OSK line sits to the RIGHT of Control-Dox with median lifespan 132.86 → 142.5 weeks. What does 'to the right' mean?", opts:["Mice survived to greater ages — the whole survival distribution shifted later","Mice died sooner","There was no difference","The sample size was larger"], a:0,
+      exp:"On a survival curve the x-axis is age, so a rightward shift = surviving longer. Read the 50% line to compare median lifespans."},
+     {type:"mcq", q:"The frailty index FELL from ~7.5 to ~6.0 in treated mice. Why is a DECREASE the good outcome?", opts:["Frailty index scores deficits across 28 measures — fewer deficits means better health, so lower is healthier","Higher frailty always means healthier","The index measures lifespan","It is an arbitrary scale with no direction"], a:0,
+      exp:"The frailty index sums deficits across 28 physical, physiological and reflex measures. Lower = fewer deficits = better healthspan."},
+     {type:"mcq", q:"Age acceleration became MORE NEGATIVE in the liver and heart of treated mice. What does that mean?", opts:["Their methylation-clock (biological) age was further BELOW their chronological age — biologically younger","They aged faster","Their chronological age decreased","The clock stopped working"], a:0,
+      exp:"Age acceleration = clock age − chronological age. More negative = biologically younger than the calendar says."},
+     {type:"mcq", q:"Why is it important that the study reported lifespan, frailty AND methylation age together?", opts:["They are independent readouts of lifespan, healthspan and biological age — improving all three is far stronger evidence of genuine rejuvenation","Journals require three graphs","They all measure the same thing","Only the survival curve matters"], a:0,
+      exp:"One measure could be a fluke or could mean survival in poor health. Concordant improvement across independent readouts is the persuasive part."},
+     {type:"mcq", q:"What was the purpose of the 'Control-Dox' group?", opts:["They received doxycycline and the injection but no functional OSK — controlling for the drug and procedure themselves","They were untreated young mice","They received OSK without doxycycline only","They were a different species"], a:0,
+      exp:"A proper control differs in ONE variable. Control-Dox isolates the effect of OSK expression from the effects of doxycycline and the injection."},
+     {type:"mcq", q:"P = 0.005 on the survival comparison indicates:", opts:["The difference is statistically significant — unlikely to be due to chance alone","The result is meaningless","The effect size is 0.5%","The mice lived 5 times longer"], a:0,
+      exp:"P = 0.005 is the probability of seeing a difference this large by chance if there were truly none. It speaks to reliability, NOT to how big the effect is."},
+     {type:"short", q:"Describe the OSK partial-reprogramming experiment: design, controls, the four readouts, and what you can and cannot conclude.", model:"Design: AAV9 delivered a doxycycline-inducible cassette expressing OSK (Oct4, Sox2, Klf4 — Yamanaka factors minus the oncogene c-Myc) by retro-orbital IV injection into 124-week-old mice. rtTa binds DNA only with doxycycline present, activating the TRE promoter, and doxycycline was cycled weekly on/off so reprogramming was PARTIAL — enough to reset the epigenome without erasing cell identity or causing teratomas. Controls: Control-Dox mice got doxycycline and injection without functional OSK (controlling for drug and procedure), plus Jax historical data as an external reference. Readouts: (1) survival curve shifted right, median 132.86 → 142.5 weeks, P = 0.005; (2) remaining lifespan after injection roughly doubled, ~12 → ~21 weeks; (3) frailty index fell ~7.5 → ~6.0 across 28 measures, so healthspan improved; (4) DNA-methylation age acceleration became more negative in liver and heart, meaning biologically younger tissue. Conclusion: cyclic partial reprogramming extended both lifespan AND healthspan and reduced epigenetic age in old mice — strong because three independent readouts agree. Limits: this is a mouse study with modest n (20 per group), a ~7% median lifespan gain, and mice-to-human translation is not assured ('mice lie and monkeys exaggerate'); long-term tumour safety also needs more evidence.", pts:["OSK = Yamanaka minus c-Myc (oncogene) delivered by AAV9 to 124-week-old mice","Doxycycline/rtTa/TRE inducible switch; CYCLIC = partial reprogramming avoids teratoma","Controls: Control-Dox (drug + injection, no OSK) and historical reference","Four readouts: survival (median 132.86→142.5), remaining lifespan (~12→21 wk), frailty ↓ (healthspan), methylation age acceleration ↓ (biologically younger)","Strength = concordant independent readouts; limits = mouse study, modest n and effect, translation uncertain"]}
+    ]
+   },
+   {
     id:"L11Q", title:"📝 Practice quiz (from class) — Stem Cells",
     sub:"The class stem-cell homework quiz (12 Q), answers keyed.",
     slides:[
@@ -3378,6 +3432,62 @@ window.COURSE = [
       exp:"Selection favoured a fast, aggressive early-life defence; the late-life cost of chronic inflammation was invisible to selection — the same logic as senescence."},
      {type:"tf", q:"Because bats tolerate viruses by dampening inflammation, they must have weak antiviral defences.", a:false,
       exp:"False — they MAINTAIN effective antiviral defences (e.g., interferon) while limiting excessive inflammation. It is usually the inflammation, not the virus, that causes the damage."}
+    ]
+   },
+   {
+    id:"L12X", title:"⭐ THE EXPERIMENTS: ERCC1 and Tfam — proving immune aging drives body-wide aging",
+    sub:"Read the graphs: tissue-by-tissue p21, survival curves, cytokines, and the anti-TNF-α rescue.",
+    slides:[
+     {h:"Experiment 1 — ERCC1 knocked out only in blood cells (Yousefzadeh, Nature 2021)", imgs:[
+        {src:"slides/L12/slide-14.jpg", cap:"L12 · Slide 14 — ERCC1-KO(vav1): senescence markers in T cells and in non-immune tissues"},
+        {src:"slides/L12/slide-15.jpg", cap:"L12 · Slide 15 — Survival curve: ERCC1-KO vs no-mutation (n = 13, P = 0.009)"}
+      ], html:`
+       <p class="lead"><b>Design:</b> <b>ERCC1</b> (a DNA-repair protein) was knocked out using the <b>vav1</b> driver, which restricts the knockout to <b>hematopoietic (blood/immune) cells only</b>. Everything else in the mouse is genetically normal.</p>
+       <table class="dt">
+        <tr><th>Graph</th><th>What it shows</th></tr>
+        <tr><td><b>Left (CD3⁺ T cells)</b></td><td>Relative to no-mutation (blue dashed line = 1), KO T cells show <b>elevated p16, p21, Mcp1, Tnf, Il6, Il1b</b> — senescence markers AND SASP cytokines. 5-month-old mice, n = 4.</td></tr>
+        <tr><td><b>Right (non-immune tissues)</b></td><td><b>p21 is elevated in GI, aorta, pancreas, liver, kidney and lung</b> — tissues that never carried the mutation. Skin, brain, heart, VAT and quad were not significantly raised. 8–11-month-old mice, n = 5–10.</td></tr>
+        <tr><td><b>Survival curve</b></td><td>ERCC1-KO mice die substantially earlier than no-mutation controls, <b>P = 0.009</b>, n = 13.</td></tr>
+       </table>
+       <div class="callout key"><b>The logic:</b> the genetic lesion was confined to blood cells, yet senescence appeared <b>throughout the body</b> and lifespan shortened. Damage in the immune compartment alone is sufficient to age distant tissues. Note also that <b>not every tissue responded equally</b> — GI and aorta were hit hardest, skin and brain least.</div>`},
+     {h:"Experiment 2 — Tfam knockout in T cells, and the anti-TNF-α rescue (Desdín-Micó, Science 2020)", imgs:[
+        {src:"slides/L12/slide-17.jpg", cap:"L12 · Slide 17 — Tfam-KO in cytotoxic T cells: cytokines and survival"},
+        {src:"slides/L12/slide-18.jpg", cap:"L12 · Slide 18 — Senescence in DISTAL tissues, and the anti-TNF-α rescue"},
+        {src:"slides/L12/slide-19.jpg", cap:"L12 · Slide 19 — How the SA-β-gal assay works (Dimri 1995)"}
+      ], html:`
+       <p class="lead"><b>Design:</b> <b>Tfam</b> (<b>Mitochondrial Transcription Factor A</b>) was knocked out specifically in <b>cytotoxic T cells</b>, creating mitochondrial dysfunction in just that cell type.</p>
+       <ul>
+        <li><b>Cytokines:</b> young Tfam-KO mice had <b>elevated IFN-γ and TNF-α</b> in cytotoxic T cells — approaching the levels seen in <b>old wild-type</b> mice. Young animals with an old immune phenotype.</li>
+        <li><b>Survival:</b> Tfam-KO mice died far earlier than no-mutation controls (****).</li>
+        <li><b>Distal senescence:</b> <b>SA-β-gal activity rose in adipose tissue (gWAT) and kidney</b> — tissues with no mutation.</li>
+       </ul>
+       <div class="callout key"><b>⭐ The rescue experiment — this is the causal proof.</b> Treating Tfam-KO mice with <b>anti-TNF-α</b> brought kidney SA-β-gal activity back <b>down toward control levels</b>. Blocking one SASP cytokine reversed senescence in a distant organ, showing the effect is <b>mediated by secreted TNF-α</b> — not by the mutation somehow spreading.</div>
+       <p><b>How SA-β-gal works (the assay itself):</b> <b>X-gal</b> is a colourless substrate made of <b>galactose linked to an indigo monomer</b>. Senescent cells have high β-galactosidase activity, which <b>cleaves X-gal</b>, releasing galactose and letting the indigo monomers dimerize into an insoluble <b>blue dye</b>. So <b>blue = senescent</b> (shown in growing vs senescent human IMR-90 fibroblasts).</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"In the ERCC1 experiment, what does the 'vav1' driver accomplish?", opts:["It restricts the ERCC1 knockout to hematopoietic (blood/immune) cells only, leaving the rest of the mouse genetically normal","It knocks out ERCC1 in every tissue","It adds extra ERCC1","It labels cells fluorescently"], a:0,
+      exp:"Tissue-specific knockout is the entire point — it lets you ask whether damage confined to immune cells can age the whole animal."},
+     {type:"mcq", q:"On the ERCC1 graphs, the blue dashed line at 1 represents:", opts:["The no-mutation control baseline — KO values above it are elevated relative to normal","The maximum possible value","Statistical significance","The number of mice"], a:0,
+      exp:"Values are expressed relative to control, so the control sits at 1 and anything above it is an increase."},
+     {type:"mcq", q:"In ERCC1-KO T cells, p16, p21, Mcp1, Tnf, Il6 and Il1b were all elevated. What do these represent together?", opts:["Senescence markers (p16, p21) PLUS SASP inflammatory cytokines — the cells became senescent and started secreting","Only DNA repair genes","Only cell-cycle promoters","Markers of proliferation"], a:0,
+      exp:"p16 and p21 enforce senescent arrest; Mcp1, Tnf, Il6 and Il1b are SASP factors. Together: senescent cells actively broadcasting inflammation."},
+     {type:"mcq", q:"p21 rose in GI, aorta, pancreas, liver, kidney and lung — but NOT significantly in skin, brain, heart, VAT or quad. What does this uneven pattern suggest?", opts:["Tissues differ in their susceptibility to immune-driven senescence — the effect is real but not uniform","The experiment failed","All tissues respond identically","p21 is not a senescence marker"], a:0,
+      exp:"Reading a figure honestly means noting which comparisons were significant and which were not. The effect is systemic but tissue-dependent."},
+     {type:"mcq", q:"The ERCC1 survival curve shows P = 0.009 with n = 13. Which statement is most accurate?", opts:["The lifespan difference is statistically significant, though the sample size is small","The result proves nothing","n = 13 makes it the largest study of its kind","P = 0.009 means the mice lived 0.9% longer"], a:0,
+      exp:"Significant, but a small cohort — a fair critique to raise, and exactly the kind of nuance she rewards."},
+     {type:"mcq", q:"What is Tfam, and what did knocking it out in cytotoxic T cells do?", opts:["Mitochondrial Transcription Factor A — knocking it out caused mitochondrial dysfunction in those T cells, which drove premature aging","A DNA repair enzyme in the nucleus","A SASP cytokine","A senescence stain"], a:0,
+      exp:"Tfam = Mitochondrial Transcription Factor A. Its loss cripples mitochondria in cytotoxic T cells, producing an inflammatory, prematurely aged phenotype."},
+     {type:"mcq", q:"Young Tfam-KO mice had IFN-γ and TNF-α levels approaching those of OLD wild-type mice. Why is that comparison so informative?", opts:["It shows a single-cell-type mitochondrial defect can reproduce an aged immune phenotype in a young animal","It shows the mice were actually old","It proves cytokines are harmless","It shows nothing without a survival curve"], a:0,
+      exp:"Including 'old wild type' as a reference bar lets you see that the young mutants had essentially aged into an old inflammatory profile."},
+     {type:"mcq", q:"⭐ Treating Tfam-KO mice with anti-TNF-α reduced kidney SA-β-gal back toward control levels. Why is this the KEY experiment?", opts:["It shows the distant senescence is MEDIATED BY secreted TNF-α — blocking the messenger reverses the effect, establishing causation","It shows TNF-α is irrelevant","It proves the mutation spread to the kidney","It measures lifespan"], a:0,
+      exp:"Induce the damage → distant senescence appears. Block the secreted mediator → distant senescence falls. That two-way logic is what converts correlation into causation."},
+     {type:"mcq", q:"Why does the anti-TNF-α rescue rule out the idea that the Tfam mutation itself spread to the kidney?", opts:["Because blocking a SECRETED protein reversed the effect — so the signal must have been soluble, not genetic","Because kidneys cannot be mutated","Because the mice were young","Because SA-β-gal only works in T cells"], a:0,
+      exp:"An antibody against a circulating cytokine can only interrupt a soluble signalling route. If the kidney cells themselves were mutated, blocking TNF-α would not help."},
+     {type:"mcq", q:"How does the SA-β-gal assay actually produce a blue colour?", opts:["Senescent cells' β-galactosidase cleaves X-gal, releasing galactose so indigo monomers dimerize into an insoluble blue dye","The dye binds DNA directly","Senescent cells autofluoresce blue","The antibody is blue-labelled"], a:0,
+      exp:"X-gal = galactose + indigo monomer. High β-galactosidase in senescent cells cleaves it; the freed indigo dimerizes into visible blue precipitate. Blue = senescent."},
+     {type:"mcq", q:"In the Dimri IMR-90 fibroblast images, what distinguishes the senescent panel from the growing panel?", opts:["Senescent cells stain blue and appear large and flattened; growing cells are mostly unstained and spindle-shaped","Growing cells are blue","Both look identical","Senescent cells are smaller and rounder"], a:0,
+      exp:"Senescent fibroblasts are enlarged, flattened and SA-β-gal positive (blue). Proliferating cells remain slender and largely unstained."},
+     {type:"short", q:"Using the ERCC1 and Tfam experiments, build the full argument that immune-cell aging drives systemic aging. Include the design, the readouts, and the step that establishes causation.", model:"Step 1 — restrict the damage: ERCC1 (DNA repair) was knocked out only in hematopoietic cells using the vav1 driver, and separately Tfam (Mitochondrial Transcription Factor A) was knocked out only in cytotoxic T cells. In both cases the rest of the animal is genetically normal, so any body-wide effect must originate from the immune compartment. Step 2 — show the local phenotype: KO T cells upregulate senescence markers (p16, p21) and SASP cytokines (Tnf, Il6, Il1b, Mcp1); Tfam-KO T cells show IFN-γ and TNF-α approaching old wild-type levels. Step 3 — show the distant phenotype: p21 rises in non-immune tissues (GI, aorta, pancreas, liver, kidney, lung) and SA-β-gal rises in adipose and kidney, even though those tissues carry no mutation; both models also shorten lifespan (ERCC1 P = 0.009). Step 4 — establish causation: treating Tfam-KO mice with anti-TNF-α lowers kidney SA-β-gal back toward control. Because an antibody can only block a SECRETED signal, this shows the distant senescence is mediated by circulating SASP cytokines rather than by the mutation spreading. Conclusion: aged/damaged immune cells become senescent, secrete inflammatory factors, and those factors induce senescence and dysfunction throughout the body — immune senescence is a driver of systemic aging, not merely a correlate. Caveats: small cohorts (n = 13 in the survival study), tissue-dependent effects (skin and brain were not significantly affected), and mouse-to-human translation is not guaranteed.", pts:["Tissue-restricted knockouts (vav1 for ERCC1; cytotoxic T cells for Tfam) isolate the immune compartment","Local: senescence markers + SASP cytokines up in the KO immune cells","Distant: p21 and SA-β-gal up in unmutated tissues; lifespan shortened","CAUSATION: anti-TNF-α rescue lowers distant senescence — a secreted mediator, not a spreading mutation","Caveats: small n, uneven tissue effects, mouse model"]}
     ]
    },
    {
@@ -3637,6 +3747,45 @@ window.COURSE = [
     ]
    },
    {
+    id:"L13X", title:"⭐ THE EXPERIMENT: biomarkers predict cognitive decline before symptoms (Sperling 2024)",
+    sub:"Read the dose-response curves — amyloid PET and plasma p-tau217 tertiles vs cognitive trajectory.",
+    slides:[
+     {h:"Reading the PACC decline curves", imgs:[
+        {src:"slides/L13/slide-36.jpg", cap:"L13 · Slide 36 — Cognitive change by amyloid PET (A) and plasma p-tau217 (B) tertile"}
+      ], html:`
+       <p class="lead"><b>Design:</b> participants aged <b>65–85 who were COGNITIVELY UNIMPAIRED at baseline</b> were split into <b>tertiles</b> by biomarker level and followed for <b>288 weeks (~5.5 years)</b>.</p>
+       <ul>
+        <li><b>Y-axis: PACC</b> = Preclinical Alzheimer Cognitive Composite. <b>Higher = better cognition</b>; a falling line = cognitive decline.</li>
+        <li><b>Panel A</b> stratifies by <b>amyloid PET</b> in Centiloids (CL): &lt;46.1, 46.1–77.2, &gt;77.2, plus the LEARN reference group.</li>
+        <li><b>Panel B</b> stratifies by <b>plasma p-tau217</b>: &lt;0.2, 0.2–0.28, &gt;0.28 U/ml.</li>
+        <li><b>Shaded bands</b> = confidence intervals. The table underneath tracks how many participants remain at each timepoint.</li>
+       </ul>
+       <div class="callout key"><b>The pattern to name: a DOSE–RESPONSE relationship.</b> The higher the biomarker tertile, the <b>steeper the cognitive decline</b>. The lowest tertiles stay flat or even improve slightly (practice effects), the middle tertile drifts down, and the highest tertile plunges to about <b>−5.0 PACC</b>. A graded dose–response like this substantially strengthens a causal interpretation — it is much harder to explain away than a simple two-group difference.</div>
+       <p><b>Why this figure is the argument for early diagnosis:</b> every one of these people was <b>cognitively normal at the start</b>, yet the biomarkers <b>sorted them years in advance</b> into who would decline and who would not. That is exactly the window in which a therapy still has neurons left to save.</p>
+       <div class="callout tip"><b>The practical punchline:</b> Panel B (a <b>blood test</b>) separates the groups about as well as Panel A (an expensive PET scan). A scalable plasma biomarker changes who can realistically be screened.</div>
+       <div class="callout warn"><b>Read it critically too:</b> the participant table shows heavy <b>attrition</b> — from ~536 down to ~120 (and single digits in some tertiles) by week 288, so the far-right end of the curves rests on very few people. And this is <b>observational/prognostic</b>: it shows the biomarkers <b>predict</b> decline, not that amyloid or tau <b>causes</b> it.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"On the Sperling curves, what does a DOWNWARD-sloping PACC line represent?", img:"slides/L13/slide-36.jpg", opts:["Cognitive decline — PACC is a cognitive composite where higher is better","Improving cognition","Rising amyloid levels","Increasing participant numbers"], a:0,
+      exp:"PACC = Preclinical Alzheimer Cognitive Composite. Higher score = better cognition, so a falling line means the group is declining."},
+     {type:"mcq", q:"Participants in this study were, at baseline:", img:"slides/L13/slide-36.jpg", opts:["Aged 65–85 and COGNITIVELY UNIMPAIRED","Already diagnosed with dementia","Under 40","Cognitively impaired but untreated"], a:0,
+      exp:"That is the crucial design feature — everyone started cognitively normal, so the biomarkers were predicting future decline rather than describing existing disease."},
+     {type:"mcq", q:"Higher amyloid PET tertiles show progressively steeper decline. What is this pattern called, and why does it matter?", img:"slides/L13/slide-36.jpg", opts:["A dose–response relationship — a graded effect substantially strengthens a causal interpretation","A confounded association with no meaning","A ceiling effect","Regression to the mean"], a:0,
+      exp:"More biomarker → more decline, in a graded way across tertiles. Dose–response is one of the classic criteria that strengthens a causal argument."},
+     {type:"mcq", q:"Panel B shows plasma p-tau217 separating trajectories about as well as amyloid PET does in Panel A. What is the practical significance?", img:"slides/L13/slide-36.jpg", opts:["A simple, cheap, scalable BLOOD test can do the risk-stratification job of an expensive PET scan","PET imaging is useless","p-tau217 treats the disease","Blood tests measure brain structure"], a:0,
+      exp:"Scalability is the point: you can screen a population with a blood draw, but not with PET. That widens who can be identified early enough for trials."},
+     {type:"mcq", q:"How does this figure support the argument for EARLY diagnosis in Alzheimer's therapy?", img:"slides/L13/slide-36.jpg", opts:["Biomarkers identified future decliners while they were still cognitively normal — the window when enough neurons remain to rescue","It shows treatment works","It shows biomarkers are useless before symptoms","It proves amyloid is harmless"], a:0,
+      exp:"Anti-amyloid trials have failed partly because they enrol people after massive neuron loss. This shows you can find high-risk people years earlier."},
+     {type:"mcq", q:"The participant table drops from ~536 to ~120 (single digits in some tertiles) by week 288. What limitation does this introduce?", img:"slides/L13/slide-36.jpg", opts:["The far-right end of the curves is based on very few participants, so those estimates are least reliable","It proves the study is invalid","It means everyone died of Alzheimer's","It has no effect on interpretation"], a:0,
+      exp:"Attrition widens the confidence bands and makes the latest timepoints fragile. Noting who is left at each timepoint is part of reading a longitudinal figure honestly."},
+     {type:"mcq", q:"What do the shaded bands around each curve represent?", img:"slides/L13/slide-36.jpg", opts:["Confidence intervals — the uncertainty around the modelled mean","Individual participants","The range of amyloid levels","Statistical significance thresholds"], a:0,
+      exp:"Shaded ribbons show the precision of the estimate. When bands for two groups stop overlapping, the groups are clearly separated."},
+     {type:"tf", q:"Because higher amyloid predicted faster decline, this study proves amyloid CAUSES cognitive decline.", a:false,
+      exp:"False — this is observational and prognostic. Dose–response strengthens the causal case but doesn't establish it; only an intervention that removes amyloid AND improves cognition would."},
+     {type:"short", q:"Interpret the Sperling figure fully: design, what the axes and tertiles show, the pattern, why it matters clinically, and its limitations.", model:"Design: cognitively unimpaired adults aged 65–85 were stratified into tertiles by biomarker level — amyloid PET in Centiloids (Panel A) and plasma p-tau217 (Panel B) — and followed for 288 weeks. The y-axis is PACC, a cognitive composite where higher means better, so downward slope means decline; shaded bands are confidence intervals and the table below reports how many participants remain at each timepoint. Pattern: a clear dose–response — the lowest tertiles stay flat or improve slightly, the middle tertile drifts downward, and the highest tertile (>77.2 CL or >0.28 U/ml) declines steeply to about −5.0 PACC. Curves are flat early and diverge with time, meaning decline accelerates. Clinical importance: these people were cognitively NORMAL at baseline, so the biomarkers predicted future decline years in advance — that is the window in which enough neurons remain for a disease-modifying therapy to help, which is exactly why anti-amyloid antibody trials in symptomatic patients have disappointed. Panel B also shows a simple blood test performs comparably to expensive PET imaging, which makes population screening feasible. Limitations: heavy attrition (536 → ~120, with single digits in some tertiles) makes the late timepoints unreliable; and the study is observational, so it shows the biomarkers PREDICT decline, not that amyloid or tau causes it.", pts:["Cognitively unimpaired at baseline, aged 65–85, followed 288 weeks; PACC higher = better","Tertiles of amyloid PET (Centiloids) and plasma p-tau217; shaded bands = CIs","DOSE–RESPONSE: higher biomarker → steeper decline; decline accelerates over time","Clinical value: identifies future decliners early, while neurons remain; blood test ≈ PET, so scalable","Limits: attrition makes late timepoints fragile; observational = prediction, not proven causation"]}
+    ]
+   },
+   {
     id:"L13Q", title:"📝 Practice quiz (from class) — Neurodegeneration",
     sub:"The class neurodegeneration homework quiz (10 Q), answers keyed — including the disease-modifying definition she corrected.",
     slides:[
@@ -3861,6 +4010,59 @@ window.COURSE = [
      {type:"mcq", q:"'All natural, ancient wisdom, used by millions' — what's wrong with this reasoning?", opts:["These are key fallacies: appeal to nature, appeal to tradition, and appeal to popularity — none is evidence of efficacy or safety","Nothing, it is strong evidence","It is a controlled trial","It is a conspiracy claim"], a:0,
       exp:"Natural ≠ safe (arsenic is natural), old ≠ effective, and popular ≠ true. None of these speaks to whether the product works."},
      {type:"short", q:"An influencer with 2 million followers promotes an anti-aging supplement, citing one small study and their own transformation. Apply the course's tools to evaluate the claim.", model:"Run the evidence checklist: What study type — human RCT, or animal/cell/single small study? One small study is cherry-picking territory; I'd want a review of multiple controlled HUMAN trials. Is it correlation or causation, and were there controls, blinding and adequate sample size? Who profits — does the promoter sell the product (conflict of interest)? Then check the pseudoscience tells: vague claims, easy-solution promises, technobabble, anecdotes ('my transformation' = n=1 with no control), manufactured expertise (followers ≠ credentials), and whether criticism gets dismissed as conspiracy. Also ask whether real uncertainties are acknowledged and whether the headline exaggerates the finding. Conclusion: personal testimony plus one small study is weak evidence, especially from someone with a financial stake.", pts:["Demand controlled HUMAN trials / a review, not one small study or anecdote","Correlation vs causation; controls, blinding, sample size","Conflict of interest — the promoter profits","Spot the tells: anecdote, vague claims, technobabble, manufactured expertise","Are uncertainties acknowledged? Does the headline exaggerate?"]}
+    ]
+   },
+   {
+    id:"L14X", title:"⭐ THE EXPERIMENTS: reading wearable data and flow-cytometry plots",
+    sub:"Two figure types you must be able to interpret — longitudinal wearable curves and Annexin V/PI quadrants.",
+    slides:[
+     {h:"Wearable data: step count and REM sleep vs cholesterol improvement", imgs:[
+        {src:"slides/L14/slide-12.jpg", cap:"L14 · Slide 12 — Step count (A) and REM sleep % (B) over one year, cholesterol improvers vs non-improvers"}
+      ], html:`
+       <p class="lead"><b>Design:</b> people had blood tests one year apart and were split into two groups — those whose <b>total cholesterol improved (lowered)</b> and those whose did not. Their <b>wearable data over that year</b> was then compared (Schneider et al, PLOS Digital Health 2026).</p>
+       <ul>
+        <li><b>Panel A — daily step count:</b> improvers (dark line) climbed <b>above</b> the green dotted reference line over the year; non-improvers (grey) stayed around 9,000–10,000, <b>below</b> it.</li>
+        <li><b>Panel B — nightly REM sleep %:</b> improvers ran consistently <b>above</b> the reference line; non-improvers sat at or below it.</li>
+        <li><b>The green dotted line</b> is the benchmark: the mean value among users who already have <b>optimal cholesterol</b>.</li>
+       </ul>
+       <div class="callout key"><b>How to read it critically:</b> this is <b>observational</b>. It shows that people whose cholesterol improved also walked more and got more REM sleep — an <b>association</b>. It does <b>not</b> prove that walking more or sleeping better <b>caused</b> the improvement; a third factor (overall health behaviour change, medication, weight loss) could drive both. To claim causation you would need to <b>assign</b> people to an activity or sleep intervention.</div>
+       <p><b>Why wearables matter as biomarkers:</b> they give <b>continuous, real-world, longitudinal</b> data rather than a single clinic snapshot — useful for tracking healthspan between blood tests.</p>`},
+     {h:"Flow cytometry: reading the apoptosis quadrants", imgs:[
+        {src:"slides/L14/slide-17.jpg", cap:"L14 · Slide 17 — Jurkat cells, untreated"},
+        {src:"slides/L14/slide-18.jpg", cap:"L14 · Slide 18 — Jurkat cells treated with camptothecin"}
+      ], html:`
+       <p class="lead"><b>Design:</b> <b>Jurkat</b> cells (from acute human T-cell leukemia) were left untreated or treated with <b>5 µM camptothecin</b>, a <b>topoisomerase I inhibitor</b> that induces apoptosis, then stained with <b>Annexin V and PI</b> and run on a flow cytometer.</p>
+       <table class="dt">
+        <tr><th>Annexin V</th><th>PI</th><th>State</th><th>Reasoning</th></tr>
+        <tr><td>−</td><td>−</td><td><b>Live</b></td><td>No PS exposed, membrane intact</td></tr>
+        <tr><td>+</td><td>−</td><td><b>Early apoptotic</b></td><td>PS has flipped outward, membrane still sealed</td></tr>
+        <tr><td>+</td><td>+</td><td><b>Late apoptotic</b></td><td>PS flipped AND membrane now permeable</td></tr>
+        <tr><td>−</td><td>+</td><td><b>Necrotic</b></td><td>Membrane ruptured with no orderly PS flip</td></tr>
+       </table>
+       <div class="callout key"><b>Reading the comparison:</b> the untreated plot is dominated by the <b>live</b> (Annexin V−/PI−) population. After camptothecin, cells <b>shift into the Annexin V+ quadrants</b> — first early apoptotic (V+/PI−), then late apoptotic (V+/PI+) as time passes. <b>An apoptotic drug moves cells rightward first, then upward.</b> A purely necrotic insult would instead push cells straight into the V−/PI+ quadrant.</div>
+       <p><b>Scatter parameters:</b> <b>FSC (forward scatter) = cell size</b>; <b>SSC (side scatter) = internal granularity</b> (roughly, organelle content). Apoptotic cells shrink, so they drift to lower FSC.</p>
+       <p class="muted">Companion experiment: in Saos-2 osteosarcoma cells, apoptosis was induced by room temperature (20 °C) for 4–7 days, while <b>necrosis</b> was induced by a <b>55 °C water bath for 90 minutes</b> — two different insults chosen to generate the two different death modes for comparison.</p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"In the wearable study, what does the green dotted reference line represent?", img:"slides/L14/slide-12.jpg", opts:["The mean value among users who already have OPTIMAL cholesterol — a benchmark","The study average","Statistical significance","The maximum recordable value"], a:0,
+      exp:"It is a benchmark line: it lets you see whether each group is tracking above or below the level typical of people with optimal cholesterol."},
+     {type:"mcq", q:"Cholesterol improvers walked more and had higher REM sleep % than non-improvers. What can you conclude?", img:"slides/L14/slide-12.jpg", opts:["An ASSOCIATION — the study is observational, so it cannot show that steps or sleep caused the cholesterol improvement","That walking causes lower cholesterol","That REM sleep causes lower cholesterol","Nothing at all can be learned"], a:0,
+      exp:"Groups were defined by outcome and their behaviour compared retrospectively — classic observational design. A third factor (broader behaviour change, medication, weight loss) could drive both."},
+     {type:"mcq", q:"What would you need to do to claim that increasing step count CAUSES cholesterol improvement?", opts:["Randomly assign people to an increased-activity intervention vs control and measure cholesterol change","Collect more wearable data","Add more participants to the same observational design","Measure REM sleep as well"], a:0,
+      exp:"Causation requires manipulating the variable — the same principle as inducing mitochondrial damage in young animals, or the Welsh vaccine natural experiment."},
+     {type:"mcq", q:"Why are wearables attractive as aging biomarkers?", opts:["They provide continuous, real-world, longitudinal data instead of a single clinic snapshot","They are more accurate than blood tests","They prove causation","They measure DNA methylation"], a:0,
+      exp:"Continuous real-world monitoring can track healthspan between clinic visits — which is exactly the measurement problem biomarkers exist to solve."},
+     {type:"mcq", q:"After camptothecin treatment, where do Jurkat cells move on an Annexin V vs PI plot?", img:"slides/L14/slide-18.jpg", opts:["Into the Annexin V+ quadrants — first V+/PI− (early apoptotic), then V+/PI+ (late apoptotic)","Straight into the Annexin V−/PI+ necrotic quadrant","They stay in the live quadrant","They disappear from the plot"], a:0,
+      exp:"Apoptosis flips PS first (Annexin V+) while the membrane is still intact, then the membrane fails (PI+). Rightward first, then upward."},
+     {type:"mcq", q:"A treatment drives cells DIRECTLY into the Annexin V−/PI+ quadrant with no Annexin V+/PI− intermediate. What does this indicate?", opts:["Necrosis — membrane rupture without the orderly apoptotic PS flip","Classic apoptosis","Healthy proliferation","Senescence"], a:0,
+      exp:"Skipping the Annexin V+ intermediate means the membrane broke without the regulated PS externalization — the signature of necrosis."},
+     {type:"mcq", q:"Why is camptothecin an appropriate POSITIVE control for an apoptosis assay?", opts:["It is a topoisomerase I inhibitor that reliably induces apoptosis, proving the assay can detect it","It kills cells by necrosis","It preserves cells","It is a negative control"], a:0,
+      exp:"A positive control must reliably produce the phenomenon so that a negative result in your test condition is meaningful. (A 55 °C bath would be a NECROSIS control instead.)"},
+     {type:"mcq", q:"In flow cytometry, what do FSC and SSC measure, and what happens to apoptotic cells?", opts:["FSC = cell size, SSC = internal granularity; apoptotic cells shrink and so drift to lower FSC","FSC = DNA content, SSC = RNA content; apoptotic cells enlarge","Both measure fluorescence only","Neither relates to cell morphology"], a:0,
+      exp:"Forward scatter tracks size and side scatter tracks internal complexity. Cell shrinkage is a hallmark of apoptosis, visible as reduced FSC."},
+     {type:"mcq", q:"Why were Saos-2 cells given two DIFFERENT insults — 20 °C for 4–7 days versus a 55 °C water bath for 90 minutes?", opts:["To deliberately generate apoptosis and necrosis separately, so the two death modes can be compared and distinguished","Because the incubator broke","To test temperature preference","To measure metabolic rate"], a:0,
+      exp:"Mild prolonged stress produces apoptosis; severe heat produces necrosis. Generating each on purpose gives you reference populations for both quadrant patterns."},
+     {type:"short", q:"You run an apoptosis assay on cancer cells treated with a new drug and see a large Annexin V+/PI− population versus untreated controls. Explain what you conclude, what controls you need, and what would change your interpretation.", model:"A large Annexin V+/PI− population means many cells have externalized phosphatidylserine while their membranes remain intact — the signature of EARLY APOPTOSIS, so the drug appears to induce apoptosis rather than necrosis. Required controls: a negative control of untreated or vehicle-only cells to establish the baseline rate of spontaneous apoptosis and confirm the solvent is not toxic; a positive control such as camptothecin or staurosporine to prove the assay and staining can detect apoptosis at all; and unstained plus single-stain samples to set the gates correctly. What would change the interpretation: if cells instead appeared mainly in the Annexin V−/PI+ quadrant, the drug is causing necrosis, not apoptosis. If the untreated control already showed a high Annexin V+ fraction, the culture is unhealthy and the comparison is meaningless. And a time course matters — an early apoptotic population should progress into the V+/PI+ late apoptotic quadrant over time, which confirms genuine apoptotic progression rather than an artefact.", pts:["Annexin V+/PI− = early apoptosis (PS flipped, membrane intact) → drug induces apoptosis","Negative control: untreated/vehicle for baseline and solvent toxicity","Positive control: camptothecin/staurosporine validates the assay; unstained/single-stain for gating","Necrosis instead would show V−/PI+; a high baseline in controls invalidates the comparison","Time course: early (V+/PI−) should progress to late (V+/PI+)"]}
     ]
    },
    {
