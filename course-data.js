@@ -3179,7 +3179,23 @@ window.COURSE = [
      {type:"mcq", q:"Which stem-cell therapies are actually FDA-approved?", opts:["Therapies for certain blood disorders (hematopoietic/bone-marrow transplants)","Alzheimer's and Parkinson's therapies","Osteoarthritis injections","Cardiomyocyte replacement after heart attack"], a:0,
       exp:"Only blood-disorder (hematopoietic) transplants are established/approved; the rest are experimental — a classic evidence-vs-hype point."},
      {type:"tf", q:"Tumour development is a genuine safety risk of pluripotent stem-cell therapies.", a:true,
-      exp:"True — pluripotent cells can form teratomas. Along with immunogenicity, contamination, and batch inconsistency, it's a core safety concern."}
+      exp:"True — pluripotent cells can form teratomas. Along with immunogenicity, contamination, and batch inconsistency, it's a core safety concern."},
+     {type:"mcq", q:"Why can a stem-cell product NOT be terminally sterilized the way a normal drug can?", opts:["It is a LIVING cell product — sterilization would kill the cells","It is too expensive","Regulations forbid it","Cells are already sterile by nature"], a:0,
+      exp:"You cannot autoclave or irradiate living cells and still have a viable therapy — which is exactly why microbial contamination is an irreducible risk for cell products."},
+     {type:"mcq", q:"Why is lack of batch homogeneity a safety problem for cell therapy?", opts:["Inconsistent batches behave unpredictably in patients, so safety and efficacy cannot be guaranteed dose to dose","It only affects cost","It makes cells grow faster","It has no clinical relevance"], a:0,
+      exp:"Unlike a small molecule you can synthesize identically every time, living cells vary between preparations — so one batch may not behave like the next."},
+     {type:"mcq", q:"An autologous iPSC therapy (from the patient's own cells) has which advantage over a donor ESC therapy?", opts:["It avoids immune rejection, so immunosuppressants may not be needed","It is faster to produce","It has zero tumour risk","It requires no quality control"], a:0,
+      exp:"Patient-derived cells are immunologically self. Note it does NOT remove tumour risk — pluripotent cells can still form teratomas."},
+     {type:"mcq", q:"Why is harvesting some adult stem cells (e.g., neural or cardiac) especially problematic?", opts:["They are low in abundance and hard to isolate, and harvesting could badly damage the organ","They grow too fast in culture","They are pluripotent","They cannot differentiate"], a:0,
+      exp:"Low abundance plus difficult access — you cannot take a meaningful biopsy of someone's heart or brain without causing harm."},
+     {type:"mcq", q:"A stem cell divides to give one stem cell and one differentiating cell. Why does this matter?", opts:["It renews the pool WHILE producing tissue — maintaining stem-cell numbers across a lifetime","It exhausts the pool immediately","It causes cancer","It only happens in embryos"], a:0,
+      exp:"Renewing the pool while generating differentiated progeny is how tissues are maintained; failure of that balance is stem-cell exhaustion."},
+     {type:"mcq", q:"Some cells can DE-differentiate to replenish the stem-cell pool. What does that show about differentiation?", opts:["Differentiation is not a one-way street — cell identity retains plasticity because the full genome is kept","Genes are permanently deleted during differentiation","Only embryos can do this","It disproves epigenetics"], a:0,
+      exp:"De-differentiation (and iPSC reprogramming) shows differentiation is epigenetic and reversible — no genes are lost."},
+     {type:"mcq", q:"Hematopoietic, mesenchymal, neural and epidermal stem cells are all examples of:", opts:["Tissue-specific (adult/somatic) stem cells","Pluripotent embryonic stem cells","Induced pluripotent stem cells","Cancer stem cells"], a:0,
+      exp:"All four are lineage-restricted adult stem cells: blood; bone/cartilage/fat/tendon; neurons and glia; skin and hair follicles."},
+     {type:"tf", q:"iPSC therapies carry a safety concern adult stem-cell therapies do not: the reprogramming process itself introduces genetic modifications.", a:true,
+      exp:"True — that is the specific iPSC caveat, on top of the general pluripotent-cell tumour risk."}
     ]
    },
    {
@@ -3347,7 +3363,21 @@ window.COURSE = [
      {type:"mcq", q:"Bats live much longer than expected for their body size despite carrying many viruses. Best explanation?", opts:["Viruses cannot infect bat cells because bats lack viral receptors","Bats prevent infection through exceptionally strong antibody responses","Bats have evolved mechanisms that reduce excessive inflammatory responses while maintaining effective antiviral defences","Bat cells do not produce cytokines"], a:2,
       exp:"Bats TOLERATE viruses by dampening inflammation while keeping antiviral defence — it's usually the inflammation, not the virus, that causes damage."},
      {type:"mcq", q:"Which hypothesis best explains how bat adaptations for FLIGHT may contribute to longevity?", opts:["Flying animals avoid oxidative stress","The high metabolic demands of flight favoured enhanced DNA repair, antioxidant defences and tighter control of inflammation","Flight reduces mitochondrial activity","Flight suppresses the immune system"], a:1,
-      exp:"Flight massively raises metabolic rate and ROS, so bats had to evolve better damage control — which incidentally slows aging."}
+      exp:"Flight massively raises metabolic rate and ROS, so bats had to evolve better damage control — which incidentally slows aging."},
+     {type:"mcq", q:"Why is the ERCC1 experiment strong CAUSAL evidence rather than correlation?", opts:["Damage was deliberately INDUCED in one compartment of young animals, and removing the senescent cells REVERSED the distant effect","It had a large sample size","It was observational","It measured many biomarkers"], a:0,
+      exp:"Manipulate the variable and see the effect; remove the cause and see it reverse. Running the logic in BOTH directions is the strongest possible design."},
+     {type:"mcq", q:"What does it mean that senescent immune cells cause senescence in DISTANT tissues?", opts:["Senescence spreads systemically through secreted SASP factors — it is not confined to where the damage happened","Immune cells migrate and turn into liver cells","The mutation itself spreads through the body","Senescence is contagious between people"], a:0,
+      exp:"The SASP is soluble and travels in the circulation, so a damaged immune compartment can drive aging phenotypes body-wide."},
+     {type:"mcq", q:"Why does impaired CLEARANCE of senescent cells matter as much as their creation?", opts:["Senescent cells only accumulate if the immune system fails to remove them — and immunosenescence degrades exactly that ability","Clearance is irrelevant","Senescent cells clear themselves automatically","Clearance improves with age"], a:0,
+      exp:"A vicious circle: senescent cells drive inflammaging → inflammaging and immunosenescence weaken the immune system → fewer senescent cells get cleared."},
+     {type:"mcq", q:"Thymic involution contributes to immunosenescence by:", opts:["Reducing output of NEW naive T cells, narrowing the receptor repertoire available for novel pathogens","Increasing naive T-cell production","Producing more B cells","Removing all memory cells"], a:0,
+      exp:"Fewer naive T cells = a narrower repertoire, so responses to NEW pathogens and vaccines suffer even though memory to old exposures persists."},
+     {type:"mcq", q:"Complement proteins were originally known for immune defence. Their role at synapses shows:", opts:["Immune molecules perform essential NON-immune developmental jobs — tagging synapses for microglial pruning","That synapses are infected","That complement has no immune role","That neurons make antibodies"], a:0,
+      exp:"The same 'eat me' tag used against pathogens marks weak/excess synapses for removal — immune machinery repurposed for development."},
+     {type:"mcq", q:"Why is inflammation described as antagonistically pleiotropic?", opts:["It is strongly protective early in life (fighting infection and injury) but damaging when it becomes chronic later","It is harmful at all ages","It is beneficial at all ages","It has no effect on fitness"], a:0,
+      exp:"Selection favoured a fast, aggressive early-life defence; the late-life cost of chronic inflammation was invisible to selection — the same logic as senescence."},
+     {type:"tf", q:"Because bats tolerate viruses by dampening inflammation, they must have weak antiviral defences.", a:false,
+      exp:"False — they MAINTAIN effective antiviral defences (e.g., interferon) while limiting excessive inflammation. It is usually the inflammation, not the virus, that causes the damage."}
     ]
    },
    {
@@ -3542,6 +3572,16 @@ window.COURSE = [
     id:"L13T3", title:"Therapies & the hallmarks of aging in the brain",
     sub:"Anti-Aβ and anti-Tau antibodies, disease-modifying vs symptomatic, and hallmark mapping (slides 32–38).",
     slides:[
+     {h:"⭐ The two hallmarks of Alzheimer's pathology", imgs:[
+        {src:"slides/L13/slide-34.jpg", cap:"L13 · Slide 34 — Hallmarks of Alzheimer's: neuritic plaques, neurofibrillary tangles, cortical atrophy"}
+      ], html:`
+       <table class="dt">
+        <tr><th>Lesion</th><th>What it's made of</th><th>Location</th></tr>
+        <tr><td><b>Neuritic plaques</b></td><td><b>Beta-amyloid (Aβ)</b></td><td><b>EXTRACELLULAR</b> deposits — outside the neurons</td></tr>
+        <tr><td><b>Neurofibrillary tangles</b></td><td><b>Hyperphosphorylated tau</b></td><td><b>INTRACELLULAR</b> deposits — inside the neurons</td></tr>
+       </table>
+       <div class="callout key"><b>The location distinction is heavily tested.</b> Amyloid = <b>outside</b>; tau = <b>inside</b>. (And in Parkinson's, α-synuclein/Lewy bodies are also <b>intracellular</b> — a wording trap she has used.) Tau is normally a microtubule-stabilizing protein; when hyperphosphorylated it detaches and aggregates into tangles.</div>
+       <p>The third feature is the gross outcome: <b>neurodegeneration and cortical atrophy</b> — comparing a healthy brain with advanced Alzheimer's shows shrunken gyri, widened sulci and enlarged ventricles.</p>`},
      {h:"Antibody therapies — and the disease-modifying goal", imgs:[
         {src:"slides/L13/slide-32.jpg", cap:"L13 · Slide 32 — Anti-Aβ monoclonal antibody therapies"},
         {src:"slides/L13/slide-33.jpg", cap:"L13 · Slide 33 — Anti-Tau therapy: neurofibrillary tangles and microtubules"},
@@ -3577,7 +3617,23 @@ window.COURSE = [
      {type:"mcq", q:"Why does 'neurons cannot simply divide away mutations' matter for genomic instability in the brain?", opts:["Post-mitotic neurons can't dilute or replace damaged DNA by division, so damage accumulates permanently","Neurons divide constantly, spreading mutations","Neurons have no DNA","Mutations are repaired perfectly in neurons"], a:0,
       exp:"Dividing cells can dilute damage or be replaced; post-mitotic neurons must live with whatever accumulates, for decades."},
      {type:"tf", q:"In the aging brain, mitochondrial dysfunction matters partly because neurons have a very high energy demand and long axons requiring axonal transport.", a:true,
-      exp:"True — high ATP demand plus long-distance transport makes neurons acutely sensitive to mitochondrial failure and ROS."}
+      exp:"True — high ATP demand plus long-distance transport makes neurons acutely sensitive to mitochondrial failure and ROS."},
+     {type:"mcq", q:"In Alzheimer's, neuritic plaques and neurofibrillary tangles differ in composition AND location. Which is correct?", opts:["Plaques = EXTRACELLULAR beta-amyloid; tangles = INTRACELLULAR hyperphosphorylated tau","Plaques = intracellular tau; tangles = extracellular amyloid","Both are extracellular amyloid","Both are intracellular tau"], a:0,
+      exp:"Amyloid plaques sit OUTSIDE neurons; tau tangles form INSIDE them. The location distinction is a favourite exam discriminator."},
+     {type:"mcq", q:"Neurofibrillary tangles form when tau becomes:", opts:["Hyperphosphorylated, detaching from microtubules and aggregating inside the neuron","Secreted outside the cell as plaques","Attached more tightly to microtubules","Converted into amyloid"], a:0,
+      exp:"Tau normally stabilizes microtubules. Hyperphosphorylation makes it let go and self-aggregate into intracellular tangles — destabilizing transport too."},
+     {type:"mcq", q:"Comparing a healthy brain with advanced Alzheimer's on the gross specimen, you would see:", opts:["Cortical atrophy — shrunken gyri, widened sulci, enlarged ventricles","An enlarged cortex","No visible difference","More white matter only"], a:0,
+      exp:"Massive neuron loss produces visible cortical atrophy: the tissue shrinks, the grooves widen and the fluid-filled ventricles expand to fill the space."},
+     {type:"mcq", q:"Why is it significant that alpha-synuclein aggregates (Lewy bodies) in Parkinson's are INTRACELLULAR?", opts:["Antibody therapies work most easily on extracellular targets, so intracellular aggregates are harder to reach","It means they are harmless","It means they can be removed by surgery","It makes them identical to amyloid plaques"], a:0,
+      exp:"Antibodies act mainly outside cells, so intracellular aggregates are a much harder therapeutic target. Also a wording trap: a quiz option saying alpha-synuclein is OUTSIDE brain cells is false."},
+     {type:"mcq", q:"Anti-amyloid and anti-tau antibodies target different lesions. Which pairing is right?", opts:["Anti-Abeta targets extracellular plaques; anti-tau targets the tangle pathology inside neurons","Anti-Abeta targets tangles; anti-tau targets plaques","Both target the same lesion","Neither targets a real lesion"], a:0,
+      exp:"Two lesions, two antibody strategies. Several anti-Abeta programmes were discontinued; others (Eli Lilly, Roche trontinemab) continue, alongside anti-tau efforts."},
+     {type:"mcq", q:"Which sequence matches her cascade slide for the aging brain?", opts:["DNA damage -> epigenetic alterations -> mitochondrial dysfunction -> ROS -> more damage","ROS -> DNA repair -> longer lifespan","Amyloid -> telomerase -> cell division","Inflammation -> stem cell increase -> repair"], a:0,
+      exp:"It is a self-reinforcing LOOP, not a straight line — which is why neurodegeneration accelerates once it starts."},
+     {type:"mcq", q:"Glial senescence contributes to neurodegeneration mainly by:", opts:["Secreting the SASP, which inflames and damages neighbouring neurons","Dividing uncontrollably into tumours","Replacing lost neurons","Increasing myelination"], a:0,
+      exp:"Senescent glia persist and pump out inflammatory SASP factors that harm nearby neurons — linking senescence (L3) and neuroinflammation (L12) to L13."},
+     {type:"tf", q:"Because neurons are post-mitotic, stem-cell exhaustion has no relevance to the aging brain.", a:false,
+      exp:"False — reduced neural stem cell capacity is listed among the hallmarks in the brain; less replacement of lost cells compounds the damage."}
     ]
    },
    {
