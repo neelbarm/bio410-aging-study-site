@@ -2749,7 +2749,21 @@ window.COURSE = [
      {type:"tf", q:"Caspase-8 is the initiator caspase of the extrinsic pathway and caspase-9 of the intrinsic pathway.", a:true,
       exp:"True — 8 = outside (death receptor), 9 = inside (apoptosome/mitochondria), and both converge on executioner caspase-3."},
      {type:"mcq", q:"AKT promotes survival. What happens to BAD when AKT activity DROPS (survival factor withdrawn)?", opts:["BAD is dephosphorylated and becomes ACTIVE, inhibiting Bcl-2","BAD is phosphorylated and becomes inactive","BAD is degraded immediately","BAD activates AKT again"], a:0,
-      exp:"AKT normally phosphorylates BAD to keep it inactive (releasing Bcl-2 to block apoptosis). No AKT → BAD is dephosphorylated → active BAD sequesters Bcl-2 → BAX/BAK are unleashed."}
+      exp:"AKT normally phosphorylates BAD to keep it inactive (releasing Bcl-2 to block apoptosis). No AKT → BAD is dephosphorylated → active BAD sequesters Bcl-2 → BAX/BAK are unleashed."},
+     {type:"mcq", q:"How does Bcl-2 inhibit apoptosis?", opts:["It binds Bax and Bak, preventing them from forming pores in the outer mitochondrial membrane","It inhibits caspase-3","It blocks formation of the apoptosome","It degrades p53"], a:0,
+      exp:"Bcl-2 acts UPSTREAM at the mitochondrion — sequestering Bax/Bak so MOMP never occurs and cytochrome c is never released. It does not act on caspase-3, the apoptosome, or p53."},
+     {type:"mcq", q:"Which event INITIATES the extrinsic apoptosis pathway?", opts:["Release of cytochrome c from mitochondria","Binding of a death ligand (FasL) to a death receptor (Fas)","Activation of p53","DNA damage"], a:1,
+      exp:"Extrinsic = the signal comes from OUTSIDE, via a death ligand binding a death receptor. Cytochrome c release, p53 and DNA damage are all INTRINSIC-pathway events."},
+     {type:"mcq", q:"Each of the following occurs during apoptosis EXCEPT:", opts:["Flipping phosphatidylserine to the outer leaflet of the plasma membrane","Formation of apoptotic bodies","DNase fragmentation of DNA","Rupture of the cell, releasing cytoplasmic contents","Bleb formation"], a:3,
+      exp:"Cell RUPTURE with spillage of contents is NECROSIS (and it causes inflammation). Apoptosis is tidy: PS flips outward as an 'eat me' signal, the cell blebs, DNA is fragmented, and the cell packages into apoptotic bodies that get engulfed."},
+     {type:"mcq", q:"Each of the following statements about Fas (death receptor)-stimulated cell death is true EXCEPT:", opts:["Fas ligand binding with Fas receptor stimulates recruitment of adaptor proteins","Initiator caspases proteolytically cleave executioner procaspases (procaspase-3)","Recruitment to sites of receptor clustering activates initiator caspase (caspase-8) activity","A caspase cascade results in cleavage of many types of proteins in the target cell","Adaptor proteins stimulate the PI3K-Akt pathway"], a:4,
+      exp:"PI3K-Akt is the SURVIVAL (anti-apoptotic) pathway — the opposite of what Fas death signaling does. All the other statements correctly describe extrinsic apoptosis: ligand binds receptor → adaptors recruited → receptor clustering activates caspase-8 → cleaves procaspase-3 → caspase cascade."},
+     {type:"mcq", q:"All of the following PARTICIPATE in apoptosis EXCEPT:", opts:["Caspases","Bcl-2","Ubiquitin ligase","Death signals","Mitochondria"], a:2,
+      exp:"Ubiquitin ligases belong to the ubiquitin–proteasome protein-degradation system, not the apoptotic machinery. TRAP: Bcl-2 DOES participate — it's the anti-apoptotic regulator. 'Participates in' does NOT mean 'promotes'."},
+     {type:"tf", q:"Because Bcl-2 blocks apoptosis, it is not considered a participant in the apoptotic pathway.", a:false,
+      exp:"False — Bcl-2 is a central participant; it just acts as the brake. Inhibiting a process still counts as participating in its regulation. Watch for this wording trap."},
+     {type:"mcq", q:"Which set of features distinguishes apoptotic cell death morphologically?", opts:["Blebbing, phosphatidylserine flipping, DNA fragmentation, apoptotic bodies — with no rupture","Cell swelling and rupture with contents spilling out","Loss of the nucleus only","Increased cell division"], a:0,
+      exp:"Apoptosis = controlled packaging (blebs → apoptotic bodies) with PS exposed for engulfment and DNA cut up — membrane integrity is preserved until engulfment, so there's no inflammation."}
     ]
    },
    {
