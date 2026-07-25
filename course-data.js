@@ -2889,6 +2889,18 @@ window.COURSE = [
       exp:"Angiogenesis supplies the tumour with oxygen/nutrients. Metastasis is the spread of cells to distant sites."},
      {type:"tf", q:"DNA-repair enzyme systems are often defective in cancer cells.", a:true,
       exp:"True — defective repair is a common feature and a major source of the genomic instability that drives tumour evolution."},
+     {type:"mcq", q:"In a NORMAL cell a DNA-polymerase mismatch is corrected by mismatch repair. What happens to that same mismatch in a cancer cell with defective repair?", opts:["It is corrected more efficiently","It is NOT corrected, so the next round of replication fixes it permanently as a mutation","It causes immediate apoptosis","It reverses spontaneously"], a:1,
+      exp:"Uncorrected mismatch + replication = permanent mutation in one daughter duplex. This is why defective repair raises the mutation RATE and compounds over divisions."},
+     {type:"mcq", q:"On a growth curve, normal cells plateau after 20-50 divisions while cancer cells keep rising linearly. What explains the cancer line?", opts:["Telomerase expression maintains chromosome-end length so division never stops","Cancer cells divide more slowly","Normal cells lack mitochondria","Cancer cells stop replicating DNA"], a:0,
+      exp:"Normal cells hit the Hayflick limit as telomeres shorten; cancer cells re-express telomerase, maintain their telomeres and divide indefinitely (immortality)."},
+     {type:"mcq", q:"Loss of contact inhibition is visible in culture as:", opts:["A single flat monolayer","Transformed foci - cells piling up on top of one another","Complete cell death","No growth at all"], a:1,
+      exp:"Normal cells stop dividing when they touch neighbours (a monolayer). Cancer cells ignore that signal and pile into multi-layered transformed foci."},
+     {type:"mcq", q:"Autocrine stimulation means a cancer cell:", opts:["Produces its OWN growth-factor signal and responds to it, so it no longer needs external permission to divide","Requires more external growth factor than normal","Cannot receive any signals","Only divides when touched"], a:0,
+      exp:"Auto = self. The cell secretes the growth factor AND has the receptor, creating a self-sustaining division loop independent of outside signals."},
+     {type:"mcq", q:"After irradiation, a normal cell undergoes apoptosis but a cancer cell survives and keeps dividing. Which of the three evasion strategies is this?", opts:["Autocrine stimulation","Loss of contact inhibition","Avoiding programmed cell death","Angiogenesis"], a:2,
+      exp:"Surviving damage that should trigger death = evading apoptosis (very often through p53 loss). This is the third of her three evasion mechanisms."},
+     {type:"mcq", q:"Beyond the primary tumour, cancer cells acquire further changes. Which pairing is correct?", opts:["Metastasis = losing anchorage and gaining mobility; angiogenesis = growing blood vessels into the tumour; immunosuppression = avoiding the immune system","Metastasis = growing blood vessels; angiogenesis = avoiding immunity","Immunosuppression = losing anchorage","Angiogenesis = uncontrolled division only"], a:0,
+      exp:"Metastasis (spread), angiogenesis (blood supply) and immunosuppression (immune evasion) are the additional capabilities beyond uncontrolled division."},
      {type:"mcq", q:"Loss of anchorage and acquisition of mobility by tumour cells enables:", opts:["Angiogenesis","Metastasis (spread to distant sites)","Contact inhibition","Senescence"], a:1,
       exp:"Detaching and becoming mobile is what allows cells to leave the primary tumour and colonize other tissues — metastasis."}
     ]
@@ -2930,6 +2942,95 @@ window.COURSE = [
       exp:"p53 is the classic tumor suppressor: it arrests damaged cells or triggers apoptosis. Losing it lets damaged cells keep dividing."},
      {type:"tf", q:"Because oncogenes are hyperactive, they are generally easier to drug than tumor suppressors.", a:true,
       exp:"True — inhibiting an overactive protein (e.g., HER2 with Herceptin) is tractable; restoring a lost tumor-suppressor function is much harder."}
+    ]
+   },
+   {
+    id:"L10T4", title:"How proto-oncogenes become oncogenes + treatment options",
+    sub:"The five conversion mechanisms and the full treatment toolkit (slides 33, 35).",
+    slides:[
+     {h:"Five mechanisms for converting proto-oncogenes into oncogenes", imgs:[
+        {src:"slides/L10/slide-35.jpg", cap:"L10 · Slide 35 — Five mechanisms for converting proto-oncogenes into oncogenes"}
+      ], html:`
+       <p class="lead">A proto-oncogene is a normal growth gene. There are <span class="kw">five ways</span> it can be converted into a cancer-driving oncogene — and note the outcome is always <b>too much activity</b>, either a hyperactive protein or too much normal protein:</p>
+       <table class="dt">
+        <tr><th>Mechanism</th><th>Result</th></tr>
+        <tr><td><b>(a) Point mutation</b></td><td>Abnormal <b>hyperactive</b> protein (e.g., RAS locked in GTP-bound form)</td></tr>
+        <tr><td><b>(b) Gene amplification</b></td><td><b>Excess normal</b> protein — many extra gene copies (e.g., <b>HER2</b>)</td></tr>
+        <tr><td><b>(c) Chromosomal translocation</b></td><td>Either <b>excess normal</b> protein (new strong promoter) or a <b>hyperactive fusion</b> protein</td></tr>
+        <tr><td><b>(d) Local DNA rearrangements</b></td><td>Insertion, deletion, inversion or transposition → <b>abnormal hyperactive</b> proteins</td></tr>
+        <tr><td><b>(e) Insertional mutagenesis</b></td><td><b>Viral DNA</b> inserts nearby → <b>excess normal</b> protein</td></tr>
+       </table>
+       <div class="callout key">Sort them by outcome: <b>point mutation and local rearrangements make a BROKEN (hyperactive) protein</b>; <b>amplification and insertional mutagenesis make TOO MUCH of a normal protein</b>; <b>translocation can do either.</b></div>`},
+     {h:"Cancer treatment options", imgs:[
+        {src:"slides/L10/slide-33.jpg", cap:"L10 · Slide 33 — Cancer treatment options"}
+      ], html:`
+       <ul>
+        <li><b>Surgery</b> — remove the tumour</li>
+        <li><b>Chemotherapy</b> — <b>targets dividing cells</b> (which is why it also hits hair, gut lining and bone marrow — the side-effect profile follows directly from the mechanism)</li>
+        <li><b>Radiation therapy</b></li>
+        <li><b>Hormone therapy</b></li>
+        <li><b>Targeted therapy</b> — e.g., <b>HER2 and Herceptin</b>: hits a molecule the cancer specifically depends on, sparing normal cells</li>
+        <li><b>Immunotherapy</b> — recruit the patient's immune system against the tumour</li>
+        <li><b>Bone marrow transplantation</b></li>
+       </ul>
+       <div class="callout tip">Why targeted therapy is attractive: <b>chemo can't tell a cancer cell from any other dividing cell</b>, but a targeted drug exploits something unique to the tumour (amplified HER2). That's also why <b>oncogenes</b> — not tumour suppressors — make the good drug targets.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Which mechanism converts a proto-oncogene into an oncogene by producing EXCESS NORMAL protein from many extra gene copies?", opts:["Point mutation","Gene amplification","Local DNA rearrangement","Insertional mutagenesis"], a:1,
+      exp:"Gene amplification = many copies of a normal gene → excess normal protein. HER2 in breast cancer is the classic example (FISH shows many HER2 spots)."},
+     {type:"mcq", q:"A point mutation in a proto-oncogene typically produces:", opts:["An abnormal, HYPERACTIVE protein","Complete loss of the protein","A shortened chromosome","Excess normal protein"], a:0,
+      exp:"A point mutation changes the protein itself so it becomes constitutively active — e.g., RAS stuck GTP-bound. (Loss of function is the tumour-SUPPRESSOR pattern.)"},
+     {type:"mcq", q:"Insertional mutagenesis converts a proto-oncogene by:", opts:["Deleting the gene","Viral DNA inserting nearby, driving excess normal protein","Methylating the promoter","Shortening telomeres"], a:1,
+      exp:"Viral DNA integrates next to the proto-oncogene and its strong promoter drives overexpression → excess normal protein."},
+     {type:"mcq", q:"Which are the FIVE mechanisms for converting proto-oncogenes into oncogenes?", opts:["Point mutation, gene amplification, chromosomal translocation, local DNA rearrangements, insertional mutagenesis","Methylation, acetylation, phosphorylation, ubiquitination, SUMOylation","BER, NER, MMR, NHEJ, HR","Apoptosis, necrosis, senescence, autophagy, mitophagy"], a:0,
+      exp:"Those five. All produce either a hyperactive protein or too much normal protein — a GAIN of function."},
+     {type:"mcq", q:"Why does chemotherapy cause hair loss, nausea and low blood counts?", opts:["Because it targets DIVIDING cells, and hair follicles, gut lining and bone marrow all divide rapidly","Because it targets only cancer cells","Because it damages the liver specifically","Because it blocks HER2"], a:0,
+      exp:"Chemo's mechanism is killing dividing cells — it can't distinguish a tumour cell from any other fast-dividing normal tissue, so those tissues take collateral damage."},
+     {type:"mcq", q:"What makes TARGETED therapy (e.g., Herceptin) different from chemotherapy?", opts:["It exploits a molecule the cancer specifically depends on (amplified HER2), sparing normal cells","It kills all dividing cells","It is a form of surgery","It works only on tumour suppressors"], a:0,
+      exp:"Targeted therapy attacks a specific molecular feature of the tumour, so it spares normal tissue — which is exactly why hyperactive ONCOGENE products make good drug targets."}
+    ]
+   },
+   {
+    id:"L10T5", title:"⭐ Viruses and cancer — HPV, E6/E7 and vaccination",
+    sub:"How a virus causes cancer by disabling BOTH brakes, and the vaccine evidence (slides 34, 36, 37, 39).",
+    slides:[
+     {h:"HPV oncogenes E6 and E7 — disabling both brakes", imgs:[
+        {src:"slides/L10/slide-36.jpg", cap:"L10 · Slide 36 — HPV oncogenes: E7 inactivates Rb, E6 destroys p53"},
+        {src:"slides/L10/slide-34.jpg", cap:"L10 · Slide 34 — HPV subtypes in cervical cancer (HPV 16 dominant)"}
+      ], html:`
+       <p class="lead">HPV causes cancer by knocking out <b>two different tumour suppressors at once</b> using two viral proteins:</p>
+       <table class="dt">
+        <tr><th>Viral oncogene</th><th>What it does</th><th>Consequence</th></tr>
+        <tr><td><b>E7</b></td><td>Binds <b>Rb</b> and disrupts its ability to hold <b>E2F</b></td><td>E2F is released → the cell <b>proceeds past the restriction point (G1 → S)</b> and divides without permission</td></tr>
+        <tr><td><b>E6</b></td><td>Stimulates addition of <b>ubiquitin to p53 by an E3 ubiquitin ligase</b></td><td><b>p53 is degraded</b> by the proteasome → <b>apoptosis is not activated</b>, so damaged cells survive</td></tr>
+       </table>
+       <div class="callout key"><b>This is a beautiful cross-lecture link.</b> E6 doesn't mutate p53 — it hijacks the <b>ubiquitin–proteasome system from L5</b> to destroy it. Remember from L9: p53 is normally kept low by constant degradation, so forcing more degradation wipes it out entirely. Result: no cell-cycle brake (Rb gone) AND no death option (p53 gone).</div>
+       <p><b>HPV subtypes:</b> <b>HPV 16</b> causes the largest share of cervical cancers, followed by <b>HPV 18</b>, then 45, 31 and others. About <b>95% of cervical cancers</b> are attributable to a previous HPV infection.</p>`},
+     {h:"The vaccine evidence — and why age matters", imgs:[
+        {src:"slides/L10/slide-37.jpg", cap:"L10 · Slide 37 — Impact of HPV vaccines on cervical cancer (Harper et al, 2025)"},
+        {src:"slides/L10/slide-39.jpg", cap:"L10 · Slide 39 — Cervical cancer incidence by HPV vaccination status (Swedish cohort, BMJ)"}
+      ], html:`
+       <p class="lead">Cervical cancer is the <b>4th most prevalent cancer in women worldwide</b> and is <b>almost entirely vaccine-preventable</b>.</p>
+       <div class="callout key"><b>The Swedish cohort (926,362 girls and women born 1985–2001, followed 2006–2023):</b> a <b>90% reduction</b> in invasive cervical cancer among those vaccinated at a <b>young age (10–16)</b>. Vaccination at ≥17 helped, but noticeably less. Maximum impact is at <b>12–17 years old</b>.</div>
+       <p><b>Why earlier is better:</b> the vaccine is <b>preventive, not therapeutic</b> — it works by stopping infection before exposure. Vaccinate after someone has already been infected and you can't undo the E6/E7 damage already underway. Same timing principle as neurodegeneration: <b>intervene before the damage accumulates.</b></p>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"How does the HPV E7 protein promote cancer?", opts:["It binds Rb and disrupts its ability to bind E2F, so the cell proceeds past the restriction point from G1 into S","It degrades p53","It shortens telomeres","It activates apoptosis"], a:0,
+      exp:"E7 inactivates Rb → E2F is freed → the G1/S restriction point is bypassed → uncontrolled entry into S phase."},
+     {type:"mcq", q:"How does the HPV E6 protein promote cancer?", opts:["It mutates the p53 gene","It stimulates addition of ubiquitin to p53 by an E3 ubiquitin ligase, causing p53 degradation so apoptosis is not activated","It binds Rb","It amplifies HER2"], a:1,
+      exp:"E6 hijacks the ubiquitin–proteasome system (L5!) to destroy p53 protein — it does NOT mutate the gene. No p53 → no apoptosis → damaged cells survive."},
+     {type:"mcq", q:"Why is HPV so effective at causing cancer?", opts:["It disables TWO different brakes at once — Rb (via E7) and p53 (via E6)","It only affects one gene","It kills the cell immediately","It lengthens telomeres only"], a:0,
+      exp:"E7 removes the cell-cycle brake and E6 removes the death option. Losing both proliferation control AND apoptosis at once is a powerful combination."},
+     {type:"mcq", q:"Which HPV subtype causes the largest share of cervical cancers?", opts:["HPV 16","HPV 45","HPV 31","HPV 58"], a:0,
+      exp:"HPV 16 is the most prevalent, followed by HPV 18, then 45, 31 and others. ~95% of cervical cancers follow a previous HPV infection."},
+     {type:"mcq", q:"In the Swedish cohort study, how much did HPV vaccination at ages 10–16 reduce invasive cervical cancer?", opts:["About 90%","About 20%","About 45%","No reduction"], a:0,
+      exp:"~90% reduction among those vaccinated young (926,362 women, followed 2006–2023). Vaccination at ≥17 helped less — the vaccine is preventive, so timing matters."},
+     {type:"mcq", q:"Why do HPV vaccines have maximum impact when given at ages 12–17?", opts:["The vaccine is PREVENTIVE — it must be given before exposure/infection, because it cannot reverse damage already done","Younger people have stronger immune systems only","The virus is different in teenagers","It has no age dependence"], a:0,
+      exp:"Prevention beats damage control: once E6/E7 are already dismantling p53 and Rb, a vaccine can't undo it. Same 'intervene early' logic as neurodegeneration."},
+     {type:"tf", q:"E6 causes p53 loss by mutating the TP53 gene.", a:false,
+      exp:"False — E6 leaves the gene intact and instead promotes ubiquitin-mediated DEGRADATION of the p53 protein via an E3 ligase. Protein destroyed, gene untouched."},
+     {type:"mcq", q:"Cervical cancer is described as 'almost entirely vaccine preventable' yet remains the 4th most prevalent cancer in women worldwide. What does that gap reflect?", opts:["Incomplete vaccine coverage and access, not a failure of the vaccine","That the vaccine does not work","That HPV is not the cause","That screening is useless"], a:0,
+      exp:"The biology is solved; the gap is implementation — coverage, access and routine national immunization programs."}
     ]
    },
    {
@@ -3647,6 +3748,63 @@ window.COURSE = [
       exp:"Untreated/vehicle cells show the background level of apoptosis, so you can attribute any increase to the treatment."},
      {type:"tf", q:"Camptothecin, a topoisomerase I inhibitor, was used to induce apoptosis in Jurkat cells.", a:true,
       exp:"True — Jurkat (acute human T-cell leukemia) cells treated with 5 µM camptothecin, analyzed by flow cytometry against untreated controls."}
+    ]
+   },
+   {
+    id:"L14T4", title:"⭐ Spotting pseudoscience — the course finale",
+    sub:"How pseudoscience is sold, the FLICC denial techniques, and flattening the infodemic curve (slides 22, 24, 25).",
+    slides:[
+     {h:"How to sell pseudoscience — 9 tactics", imgs:[
+        {src:"slides/L14/slide-24.jpg", cap:"L14 · Slide 24 — How to sell pseudoscience in 9 easy steps"}
+      ], html:`
+       <p class="lead">She closed the course with the recognition tools. Learn these as a <b>checklist you run on any health claim</b>:</p>
+       <ol>
+        <li><b>Get them to commit</b> — "money-back guarantee", "join now"</li>
+        <li><b>Make vague claims</b> — "supports digestive balance", "adjusts energy imbalances" (unfalsifiable, so never wrong)</li>
+        <li><b>Promise easy solutions</b> — "miracle cure", "guaranteed"</li>
+        <li><b>Be confident</b> — "proven to work!" (confidence substituted for evidence)</li>
+        <li><b>Confuse with technobabble</b> — "detoxifies enzymes that cause bioenergetic imbalances at the cellular level"</li>
+        <li><b>Use anecdotes</b> — "worked for me!" (n = 1, no control)</li>
+        <li><b>Use key fallacies</b> — "all natural", "ancient wisdom", "used by millions"</li>
+        <li><b>Manufacture "expertise"</b> — a "doctor" with an irrelevant or purchased credential</li>
+        <li><b>Call criticism a conspiracy</b> — "they're suppressing the truth"</li>
+       </ol>
+       <div class="callout key">Notice what's missing from all nine: <b>controlled human data.</b> Every tactic is a substitute for evidence — emotion, jargon, authority or persecution. That's the tell.</div>`},
+     {h:"FLICC and flattening the infodemic curve", imgs:[
+        {src:"slides/L14/slide-25.jpg", cap:"L14 · Slide 25 — FLICC: the five techniques of science denial"},
+        {src:"slides/L14/slide-22.jpg", cap:"L14 · Slide 22 — Let's flatten the infodemic curve"}
+      ], html:`
+       <p class="lead"><span class="kw">FLICC</span> — the five techniques of science denial:</p>
+       <table class="dt">
+        <tr><th>Letter</th><th>Technique</th><th>Examples</th></tr>
+        <tr><td><b>F</b></td><td><b>Fake experts</b></td><td>Bulk fake experts, magnified minority, fake debate</td></tr>
+        <tr><td><b>L</b></td><td><b>Logical fallacies</b></td><td>Ad hominem, ambiguity, slippery slope, straw man, false analogy, red herring, oversimplification</td></tr>
+        <tr><td><b>I</b></td><td><b>Impossible expectations</b></td><td>Moving goalposts, demanding absolute certainty</td></tr>
+        <tr><td><b>C</b></td><td><b>Cherry picking</b></td><td>Anecdote, quote mining, slothful induction, wishful thinking</td></tr>
+        <tr><td><b>C</b></td><td><b>Conspiracy theories</b></td><td>Persecuted victim, immune to evidence, nefarious intent, overriding suspicion</td></tr>
+       </table>
+       <div class="callout tip"><b>Flattening the infodemic curve</b> — misinformation spreads like an epidemic through a network, and each person is a potential transmission point. You break the chain by: <b>not forwarding rumours</b>, <b>double-checking facts</b>, <b>getting news from trusted sources</b>, and asking <b>"how do you know that's true?"</b></div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"A supplement ad says it 'supports digestive balance and adjusts energy imbalances.' Which pseudoscience tactic is this?", opts:["Making VAGUE claims — unfalsifiable, so they can never be proven wrong","Manufacturing expertise","Calling criticism a conspiracy","Using key fallacies"], a:0,
+      exp:"Vague, unmeasurable language is deliberately unfalsifiable. A real claim specifies what changes, by how much, measured how."},
+     {type:"mcq", q:"'This product detoxifies enzymes that cause bioenergetic imbalances at the cellular level.' This is:", opts:["A precise mechanistic claim","Technobabble — scientific-sounding jargon that means nothing specific","A clinical trial result","A conspiracy claim"], a:1,
+      exp:"Technobabble borrows the SOUND of science without a testable mechanism. Ask what exactly is measured and how."},
+     {type:"mcq", q:"In the FLICC framework, what do the letters stand for?", opts:["Fake experts, Logical fallacies, Impossible expectations, Cherry picking, Conspiracy theories","Facts, Logic, Inference, Causation, Correlation","False, Limited, Incomplete, Careless, Confounded","Funding, Levels, Impact, Controls, Confidence"], a:0,
+      exp:"FLICC: Fake experts · Logical fallacies · Impossible expectations · Cherry picking · Conspiracy theories."},
+     {type:"mcq", q:"A critic points out a study's flaws, and the seller responds 'they're suppressing the truth because Big Pharma pays them.' Which FLICC technique is this?", opts:["Conspiracy theory","Impossible expectations","Cherry picking","Fake experts"], a:0,
+      exp:"Conspiracy theory — it makes the claim immune to evidence, because any contrary data becomes proof of the plot (a persecuted-victim/immune-to-evidence move)."},
+     {type:"mcq", q:"Someone dismisses 40 years of trials because 'you can't prove it's 100% safe for everyone.' Which technique?", opts:["Impossible expectations — moving the goalposts to a standard no science can meet","Fake experts","Cherry picking","Logical fallacy of ad hominem"], a:0,
+      exp:"Demanding absolute certainty is a standard no empirical science can satisfy — the goalposts move whenever evidence arrives."},
+     {type:"mcq", q:"Quoting the one study out of fifty that supports your claim, and ignoring the rest, is:", opts:["Cherry picking","Impossible expectations","Fake expertise","A logical fallacy of ambiguity"], a:0,
+      exp:"Cherry picking selects the convenient subset. That's why REVIEWS of multiple controlled trials outrank any single study."},
+     {type:"mcq", q:"'It worked for me!' as evidence a supplement is effective is which tactic?", opts:["Using anecdotes — n = 1 with no control group, no blinding, no accounting for placebo or natural recovery","A randomized controlled trial","Gene amplification","Cherry picking data from many trials"], a:0,
+      exp:"An anecdote can't separate the treatment from placebo, regression to the mean, or the illness resolving on its own. Persuasive ≠ strong."},
+     {type:"tf", q:"According to the 'flatten the infodemic curve' idea, an individual choosing not to forward an unverified rumour meaningfully reduces its spread.", a:true,
+      exp:"True — misinformation spreads through a branching network, so each person who checks facts or declines to forward breaks a whole downstream branch."},
+     {type:"mcq", q:"'All natural, ancient wisdom, used by millions' — what's wrong with this reasoning?", opts:["These are key fallacies: appeal to nature, appeal to tradition, and appeal to popularity — none is evidence of efficacy or safety","Nothing, it is strong evidence","It is a controlled trial","It is a conspiracy claim"], a:0,
+      exp:"Natural ≠ safe (arsenic is natural), old ≠ effective, and popular ≠ true. None of these speaks to whether the product works."},
+     {type:"short", q:"An influencer with 2 million followers promotes an anti-aging supplement, citing one small study and their own transformation. Apply the course's tools to evaluate the claim.", model:"Run the evidence checklist: What study type — human RCT, or animal/cell/single small study? One small study is cherry-picking territory; I'd want a review of multiple controlled HUMAN trials. Is it correlation or causation, and were there controls, blinding and adequate sample size? Who profits — does the promoter sell the product (conflict of interest)? Then check the pseudoscience tells: vague claims, easy-solution promises, technobabble, anecdotes ('my transformation' = n=1 with no control), manufactured expertise (followers ≠ credentials), and whether criticism gets dismissed as conspiracy. Also ask whether real uncertainties are acknowledged and whether the headline exaggerates the finding. Conclusion: personal testimony plus one small study is weak evidence, especially from someone with a financial stake.", pts:["Demand controlled HUMAN trials / a review, not one small study or anecdote","Correlation vs causation; controls, blinding, sample size","Conflict of interest — the promoter profits","Spot the tells: anecdote, vague claims, technobabble, manufactured expertise","Are uncertainties acknowledged? Does the headline exaggerate?"]}
     ]
    },
    {
