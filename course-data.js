@@ -2542,6 +2542,40 @@ window.COURSE = [
   ],
   topics:[
    {
+    id:"L9T0", title:"Opening: correlation vs. causation, and where cell death fits",
+    sub:"Her two scatter-plot warm-ups and the stress→cell death→lifespan diagram (slides 1–3).",
+    slides:[
+     {h:"Two graphs that look like causation but aren't", imgs:[
+        {src:"slides/L9/slide-01.jpg", cap:"L9 · Slide 1 — Life expectancy vs. number of people per television"},
+        {src:"slides/L9/slide-02.jpg", cap:"L9 · Slide 2 — Life expectancy vs. number of people per physician"}
+      ], html:`
+       <p class="lead">She opened with two scatter plots. Both show the same shape: as the number of people <b>per television</b> (or <b>per physician</b>) goes up, <b>life expectancy goes down</b>.</p>
+       <div class="callout key">Both graphs demonstrate <b>CORRELATION, not causation.</b> Buying televisions obviously doesn't extend life — both TV ownership and physician availability are <b>markers of national wealth</b>, and wealth brings sanitation, nutrition and healthcare. Wealth is the <b>confounding variable</b> driving both.</div>
+       <p>The physician graph is the sharper trap: unlike televisions, more doctors <i>plausibly</i> could cause longer life — which is exactly why you can't tell from the graph alone. <b>A correlation is equally consistent with a hidden common cause, and observational data can't separate them.</b></p>`},
+     {h:"Where cell death sits in the stress–lifespan picture", imgs:[
+        {src:"slides/L9/slide-03.jpg", cap:"L9 · Slide 3 — Effects of antioxidants and severe vs moderate stress on lifespan (she circled apoptosis/necrosis → cell death)"}
+      ], html:`
+       <p class="lead">This diagram ties L9 back to hormesis. Read it as two branches:</p>
+       <ul>
+        <li><b>Severe stress</b> → ↑↑ROS → ↓autophagy → ↓removal of misfolded proteins → ↓proteostasis efficiency → <span class="warn">↑apoptosis and ↑necrosis → ↑cell death → ↓LIFESPAN</span> <i>(the part she circled in red — that's this lecture)</i>.</li>
+        <li><b>Moderate/intermittent stress</b> (or CRM/HM mimetics) → ↑ROS → <b>↑autophagy</b> → ↑removal of misfolded proteins → ↑proteostasis efficiency → <b>↑LIFESPAN</b>.</li>
+       </ul>
+       <div class="callout tip"><b>Synthetic antioxidants</b> block the beneficial moderate-stress branch (↓ROS), which is why they can <b>shorten</b> rather than extend lifespan. CRM = caloric restriction mimetics, HM = hormesis mimetics.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"A graph shows that as the number of people per television rises, life expectancy falls. What does this demonstrate?", img:"slides/L9/slide-01.jpg", opts:["Causation — televisions extend life","Correlation only — both are markers of national wealth, which is the likely confounder","That televisions are a health intervention","Nothing at all"], a:1,
+      exp:"Classic correlation. TV ownership and life expectancy both track national wealth (sanitation, nutrition, healthcare). Wealth is the confounding variable."},
+     {type:"mcq", q:"The people-per-PHYSICIAN graph is a trickier version of the same trap. Why?", img:"slides/L9/slide-02.jpg", opts:["Because more physicians plausibly COULD cause longer life — so the correlation feels causal, but the graph still can't distinguish it from a wealth confounder","Because physicians are unrelated to health","Because the graph shows no relationship","Because it proves causation"], a:0,
+      exp:"Plausibility is not evidence. Observational data can't separate a real causal effect from a shared upstream cause (wealth) — you'd need an intervention."},
+     {type:"mcq", q:"On her stress–lifespan diagram, which branch leads to ↑apoptosis, ↑necrosis and ↓LIFESPAN?", img:"slides/L9/slide-03.jpg", opts:["Severe stress → ↑↑ROS → ↓autophagy → ↓proteostasis efficiency","Moderate/intermittent stress → ↑autophagy","Caloric restriction mimetics","Hormesis mimetics"], a:0,
+      exp:"Severe stress overwhelms the system: ROS way up, autophagy down, misfolded proteins not removed, proteostasis fails → cell death → shorter lifespan. (This is the region she circled in red.)"},
+     {type:"mcq", q:"On the same diagram, why do synthetic antioxidants appear as a BLOCK on the beneficial branch?", opts:["They suppress the moderate ROS rise that would otherwise increase autophagy and proteostasis efficiency","They increase autophagy","They directly cause necrosis","They add ATP"], a:0,
+      exp:"Moderate/intermittent stress raises ROS → more autophagy → better proteostasis → longer lifespan. Antioxidants quench that ROS signal and cancel the benefit."},
+     {type:"tf", q:"Moderate or intermittent stress and severe stress affect lifespan in opposite directions on her diagram.", a:true,
+      exp:"True — moderate/intermittent raises autophagy and proteostasis efficiency (↑lifespan); severe stress suppresses them and drives cell death (↓lifespan). Hormesis."}
+    ]
+   },
+   {
     id:"L9T1", title:"Apoptosis vs. necrosis — and why cells are told to die",
     sub:"Two ways to die, and the essential jobs of programmed cell death (slides 5–8).",
     slides:[
