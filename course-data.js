@@ -2545,7 +2545,7 @@ window.COURSE = [
     id:"L9T1", title:"Apoptosis vs. necrosis — and why cells are told to die",
     sub:"Two ways to die, and the essential jobs of programmed cell death (slides 5–8).",
     slides:[
-     {h:"Two very different kinds of cell death", imgs:[
+     {h:"Two very different kinds of cell death", imgs:[{src:"slides/L9/slide-04.jpg", cap:"L9 · Slide 4 — Apoptosis of a human white blood cell"},
         {src:"slides/L9/slide-07.jpg", cap:"L9 · Slide 7 — Necrosis vs. apoptosis"},
         {src:"slides/L9/slide-08.jpg", cap:"L9 · Slide 8 — Major steps of apoptosis"}
       ], html:`
@@ -2554,7 +2554,7 @@ window.COURSE = [
         <tr><td>Deliberate, regulated "cell suicide". Cell <b>shrinks</b>, chromatin condenses, DNA is cut up, and the cell breaks into neat membrane-bound fragments that neighbours engulf. <b>No inflammation.</b></td><td>Injury-driven. Cell <b>swells and bursts</b>, spilling its contents into the tissue — which releases DAMPs and <b>triggers inflammation</b>.</td></tr>
        </table>
        <div class="callout key">This is the tidy-vs-messy distinction: apoptosis is <b>clean and silent</b>; necrosis is <b>messy and inflammatory</b>. That link — necrosis → DAMPs → inflammation — connects straight to inflammaging (L12).</div>`},
-     {h:"Apoptosis sculpts the body and clears damaged cells", imgs:[
+     {h:"Apoptosis sculpts the body and clears damaged cells", imgs:[{src:"slides/L9/slide-09.jpg", cap:"L9 · Slide 9 — Why is apoptosis beneficial during aging?"},{src:"slides/L9/slide-10.jpg", cap:"L9 · Slide 10 — How can both excessive and insufficient apoptosis cause disease?"},
         {src:"slides/L9/slide-05.jpg", cap:"L9 · Slide 5 — Apoptosis sculpts the mouse paw (digits)"},
         {src:"slides/L9/slide-06.jpg", cap:"L9 · Slide 6 — A tadpole's tail cells are induced to die"}
       ], html:`
@@ -2584,7 +2584,7 @@ window.COURSE = [
     id:"L9T2", title:"The intrinsic pathway — caspases, Bcl-2 family & cytochrome c",
     sub:"The proteolytic cascade and the mitochondrial decision point (slides 11–14).",
     slides:[
-     {h:"Caspases: the proteolytic suicide cascade", imgs:[
+     {h:"Caspases: the proteolytic suicide cascade", imgs:[{src:"slides/L9/slide-12.jpg", cap:"L9 · Slide 12 — Apoptosis overview: caspases, triggers, and disease links"},
         {src:"slides/L9/slide-11.jpg", cap:"L9 · Slide 11 — DNA damage: arrest in G1 or die (intrinsic pathway)"},
         {src:"slides/L9/slide-13.jpg", cap:"L9 · Slide 13 — Apoptosis is mediated by an intracellular proteolytic cascade"}
       ], html:`
@@ -2625,8 +2625,10 @@ window.COURSE = [
     sub:"Cells must be told to stay alive — and how that is exploited in cancer therapy (slides 15–21).",
     slides:[
      {h:"Survival factors suppress apoptosis", imgs:[
+        {src:"slides/L9/slide-15.jpg", cap:"L9 · Slide 15 — Cell death matches nerve-cell number to target-cell number"},
         {src:"slides/L9/slide-16.jpg", cap:"L9 · Slide 16 — Survival factors act by regulating Bcl-2 family members"},
-        {src:"slides/L9/slide-18.jpg", cap:"L9 · Slide 18 — Activation of Akt promotes cell survival"}
+        {src:"slides/L9/slide-17.jpg", cap:"L9 · Slide 17 — The PI3-kinase–Akt signaling pathway"},
+        {src:"slides/L9/slide-18.jpg", cap:"L9 · Slide 18 — Phosphorylation of BAD releases active Bcl-2"}
       ], html:`
        <p class="lead">Many animal cells need continuous <span class="kw">survival factors</span> or they kill themselves by default. Removing the factor <b>causes</b> apoptosis.</p>
        <ul>
@@ -2636,8 +2638,12 @@ window.COURSE = [
        </ul>
        <div class="callout tip">This is how neuron number is matched to target size: neurons compete for a limited supply of survival factor, and those that lose die.</div>`},
      {h:"Extrinsic pathway & inducing apoptosis in cancer", imgs:[
-        {src:"slides/L9/slide-20.jpg", cap:"L9 · Slide 20 — Apoptosis induced by death signals or withdrawal of survival factor"}
+        {src:"slides/L9/slide-19.jpg", cap:"L9 · Slide 19 — Full pathway: death receptor → procaspase-8; DNA damage → p53 → Bcl-2/mitochondrion → cytochrome c → Apaf-1 apoptosome → caspase-9 → caspase-3"},
+        {src:"slides/L9/slide-20.jpg", cap:"L9 · Slide 20 — Apoptosis induced by death signals or withdrawal of survival factor"},
+        {src:"slides/L9/slide-21.jpg", cap:"L9 · Slide 21 — Signals from other cells activate the extrinsic death program"}
       ], html:`
+       <p><b>Reading the full pathway diagram (slide 19):</b> the <b>extrinsic</b> arm runs <b>death receptor → initiator procaspase-8 → executioner caspase-3</b>. The <b>intrinsic</b> arm runs <b>absence of survival factors / DNA damage → p53 → death-promoting proteins → mitochondrion (opposed by Bcl-2) → cytochrome c → Apaf-1 adaptor → apoptosome → initiator caspase-9 → executioner caspase-3</b>. Both arms converge on <b>caspase-3</b>.</p>`},
+     {h:"Inducing apoptosis therapeutically", imgs:[], html:`
        <p class="lead">The <span class="kw-2">extrinsic pathway</span> is triggered by <b>death-signal proteins from other cells</b> binding death receptors on the target cell — as opposed to the intrinsic pathway's internal damage signals.</p>
        <div class="callout key"><b>Therapeutic logic:</b> many cancers survive by blocking apoptosis. So you can kill them by <b>tipping the Bcl-2 balance toward death</b> — <b>inhibiting Bcl-2</b> (removing the brake) or <b>activating Bax</b> (pressing the accelerator). Note: inhibiting <b>p53</b> would be counter-productive, since p53 promotes apoptosis.</div>
        <p><b>Paclitaxel</b> (ovarian/breast cancer) kills cells two ways: it <b>stabilizes microtubules</b>, blocking spindle disassembly so chromosomes can't separate properly, AND it <b>binds and decreases Bcl-2 activity</b>, promoting apoptosis.</p>`}
@@ -2664,15 +2670,15 @@ window.COURSE = [
      {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">These are the <b>exact printed MCQs</b> from the lecture slides, keyed to the answers she bolded on the reveal slides. Core reasoning: trace the order of events (Bax/Bak → cytochrome c → apoptosome → caspase-9) and ask what a manipulation does UPSTREAM vs DOWNSTREAM.</div>`}
     ],
     quiz:[
-     {type:"mcq", q:"Soon after NGF was discovered, investigators injected newborn mice with antibodies that inactivated it. Compared to controls, these mice showed massive nerve-cell death — up to 99% of neurons gone in certain parts of the nervous system. What do these results suggest?", opts:["NGF is a survival factor for developing neurons","NGF signaling is sufficient for survival of developing neurons","NGF cannot protect developing neurons from death by apoptosis","NGF is a mitogen that promotes the proliferation of developing neurons","NGF triggers apoptosis in developing neurons"], a:0,
+     {type:"mcq", img:"slides/L9/slide-26.jpg", q:"Soon after NGF was discovered, investigators injected newborn mice with antibodies that inactivated it. Compared to controls, these mice showed massive nerve-cell death — up to 99% of neurons gone in certain parts of the nervous system. What do these results suggest?", opts:["NGF is a survival factor for developing neurons","NGF signaling is sufficient for survival of developing neurons","NGF cannot protect developing neurons from death by apoptosis","NGF is a mitogen that promotes the proliferation of developing neurons","NGF triggers apoptosis in developing neurons"], a:0,
       exp:"Removing NGF → neurons die → NGF is REQUIRED for their survival (a survival factor). Note it shows necessity, not sufficiency — 'sufficient' would need the opposite experiment (adding NGF and showing survival with nothing else). Her answer: A."},
-     {type:"mcq", q:"Mutations that prevent Bcl-2 family proteins Bax and Bak from interacting with the outer mitochondrial membrane would have which effect?", opts:["Preventing the release of cytochrome c and inhibiting apoptosis","Triggering the release of cytochrome c and promoting apoptosis","Triggering the release of cytochrome c and promoting assembly of the apoptosome","Preventing the release of cytochrome c and promoting assembly of the apoptosome","Preventing the release of cytochrome c and triggering activation of procaspase-9"], a:0,
+     {type:"mcq", img:"slides/L9/slide-28.jpg", q:"Mutations that prevent Bcl-2 family proteins Bax and Bak from interacting with the outer mitochondrial membrane would have which effect?", opts:["Preventing the release of cytochrome c and inhibiting apoptosis","Triggering the release of cytochrome c and promoting apoptosis","Triggering the release of cytochrome c and promoting assembly of the apoptosome","Preventing the release of cytochrome c and promoting assembly of the apoptosome","Preventing the release of cytochrome c and triggering activation of procaspase-9"], a:0,
       exp:"Bax/Bak permeabilize the outer mitochondrial membrane. Block them → no permeabilization → cytochrome c stays inside → no apoptosome, no caspase-9, apoptosis INHIBITED. Options D and E are self-contradictory. Her answer: A."},
-     {type:"mcq", q:"Investigators inject cytochrome c into the cytosol of two cell types: normal cells, and cells in which Bak and Bax have been inactivated by mutation. How would these cells be predicted to respond?", opts:["The normal cells will undergo apoptosis and the mutant cells will continue to grow","The mutant cells will undergo apoptosis and the normal cells will continue to grow","Neither cell type will undergo apoptosis, so both will continue to grow","The normal cells will undergo apoptosis and the mutant cells will die by necrosis","Both cell types will undergo apoptosis"], a:4,
+     {type:"mcq", img:"slides/L9/slide-30.jpg", q:"Investigators inject cytochrome c into the cytosol of two cell types: normal cells, and cells in which Bak and Bax have been inactivated by mutation. How would these cells be predicted to respond?", opts:["The normal cells will undergo apoptosis and the mutant cells will continue to grow","The mutant cells will undergo apoptosis and the normal cells will continue to grow","Neither cell type will undergo apoptosis, so both will continue to grow","The normal cells will undergo apoptosis and the mutant cells will die by necrosis","Both cell types will undergo apoptosis"], a:4,
       exp:"Bax/Bak act UPSTREAM — their job is to release cytochrome c. Injecting cytochrome c directly into the cytosol BYPASSES that step, so it no longer matters whether Bax/Bak work. Both cell types die by apoptosis. Her answer: E."},
-     {type:"mcq", q:"One approach to killing cancer cells is to induce apoptosis. Which are reasonable approaches researchers can take? (choose one or more)", opts:["Inhibiting the Bcl-2 protein AND activating the Bax protein","Inhibiting the G1 cyclin-dependent kinase protein","Inhibiting the p53 protein","Activating Bcl-2 and inhibiting Bax"], a:0,
+     {type:"mcq", img:"slides/L9/slide-32.jpg", q:"One approach to killing cancer cells is to induce apoptosis. Which are reasonable approaches researchers can take? (choose one or more)", opts:["Inhibiting the Bcl-2 protein AND activating the Bax protein","Inhibiting the G1 cyclin-dependent kinase protein","Inhibiting the p53 protein","Activating Bcl-2 and inhibiting Bax"], a:0,
       exp:"Tip the Bcl-2-family balance toward death: remove the brake (inhibit anti-apoptotic Bcl-2) and press the accelerator (activate pro-apoptotic Bax). Inhibiting p53 would BLOCK apoptosis; inhibiting a G1 CDK affects cycle progression, not apoptosis. Her answers: A and C."},
-     {type:"mcq", q:"Paclitaxel stabilizes microtubules (blocking disassembly) and also binds and decreases the activity of Bcl-2. What are the TWO ways paclitaxel can result in the death of cancer cells? (choose one or more)", opts:["It promotes apoptosis of the cancer cell AND inhibits proper formation of the polar spindle, blocking sister-chromatid separation","It disrupts the structure and integrity of the nucleus, leading to cell death","It inhibits cytokinesis, leading to multinucleate cells","It repairs DNA and activates p53"], a:0,
+     {type:"mcq", img:"slides/L9/slide-34.jpg", q:"Paclitaxel stabilizes microtubules (blocking disassembly) and also binds and decreases the activity of Bcl-2. What are the TWO ways paclitaxel can result in the death of cancer cells? (choose one or more)", opts:["It promotes apoptosis of the cancer cell AND inhibits proper formation of the polar spindle, blocking sister-chromatid separation","It disrupts the structure and integrity of the nucleus, leading to cell death","It inhibits cytokinesis, leading to multinucleate cells","It repairs DNA and activates p53"], a:0,
       exp:"Two mechanisms, one per stated property: (1) less Bcl-2 activity → apoptosis promoted; (2) over-stabilized microtubules → the spindle can't function → sister chromatids can't separate. Her answers: A and C."}
     ]
    },
@@ -2711,7 +2717,7 @@ window.COURSE = [
     id:"L10T1", title:"Cell-cycle checkpoints — and what happens when they fail",
     sub:"The control system, p53, and why old cells are vulnerable (slides 6–10).",
     slides:[
-     {h:"The cell-cycle control system", imgs:[
+     {h:"The cell-cycle control system", imgs:[{src:"slides/L10/slide-03.jpg", cap:"L10 · Slide 3 — We are made from organized, specialized cells"},{src:"slides/L10/slide-04.jpg", cap:"L10 · Slide 4 — A fertilized egg divides into millions of cells"},{src:"slides/L10/slide-07.jpg", cap:"L10 · Slide 7 — Failing a checkpoint: death"},{src:"slides/L10/slide-09.jpg", cap:"L10 · Slide 9 — Which normal cell is most vulnerable to becoming cancerous?"},
         {src:"slides/L10/slide-06.jpg", cap:"L10 · Slide 6 — G1, G2 and M checkpoints"},
         {src:"slides/L10/slide-08.jpg", cap:"L10 · Slide 8 — Failing the checkpoint: apoptosis"}
       ], html:`
@@ -2749,7 +2755,7 @@ window.COURSE = [
     id:"L10T2", title:"What cancer cells become — instability, immortality, evasion",
     sub:"Genomic instability, telomerase, and the changes cancer cells accumulate (slides 13–20).",
     slides:[
-     {h:"Genomic instability and a higher mutation rate", imgs:[
+     {h:"Genomic instability and a higher mutation rate", imgs:[{src:"slides/L10/slide-11.jpg", cap:"L10 · Slide 11 — Cancer: a diverse set of genetic diseases"},{src:"slides/L10/slide-12.jpg", cap:"L10 · Slide 12 — Why do cancer cells become this way? DNA damage"},{src:"slides/L10/slide-13.jpg", cap:"L10 · Slide 13 — A normal human karyotype"},
         {src:"slides/L10/slide-14.jpg", cap:"L10 · Slide 14 — Many cancer cells have major chromosomal abnormalities"},
         {src:"slides/L10/slide-17.jpg", cap:"L10 · Slide 17 — Cancer cells mutate faster than normal cells"}
       ], html:`
@@ -2788,7 +2794,7 @@ window.COURSE = [
     id:"L10T3", title:"Driver mutations — oncogenes vs. tumor suppressors",
     sub:"Accelerators and brakes: RAS, HER2/Herceptin, p53 and druggability (slides 22–27, 31–32).",
     slides:[
-     {h:"Accelerators and brakes", imgs:[
+     {h:"Accelerators and brakes", imgs:[{src:"slides/L10/slide-21.jpg", cap:"L10 · Slide 21 — Accumulation of mutations results in cancer"},{src:"slides/L10/slide-28.jpg", cap:"L10 · Slide 28 — Additional mutations create subclones and tumour diversity"},
         {src:"slides/L10/slide-22.jpg", cap:"L10 · Slide 22 — Driver mutations: proto-oncogenes & tumor-suppressor genes"},
         {src:"slides/L10/slide-27.jpg", cap:"L10 · Slide 27 — Inactivating tumor suppressor genes"}
       ], html:`
@@ -2797,7 +2803,7 @@ window.COURSE = [
         <tr><th>Proto-oncogene → oncogene</th><th>Tumor suppressor</th></tr>
         <tr><td>The <b>accelerator</b>. Cancer mutations cause <b>GAIN of function</b> — the protein becomes hyperactive/constitutively on. One mutated copy is often enough.</td><td>The <b>brake</b> (e.g., <b>p53</b>). Cancer mutations cause <b>LOSS of function</b> — the brake stops working. Typically both copies must be lost.</td></tr>
        </table>`},
-     {h:"RAS, HER2 — and why tumor suppressors are hard to drug", imgs:[
+     {h:"RAS, HER2 — and why tumor suppressors are hard to drug", imgs:[{src:"slides/L10/slide-24.jpg", cap:"L10 · Slide 24 — HER2 FISH assay"},{src:"slides/L10/slide-29.jpg", cap:"L10 · Slide 29 — Targeting therapies to individual cancers"},{src:"slides/L10/slide-34.jpg", cap:"L10 · Slide 34 — HPV subtypes in cervical cancer"},{src:"slides/L10/slide-35.jpg", cap:"L10 · Slide 35 — Five mechanisms converting proto-oncogenes to oncogenes"},{src:"slides/L10/slide-39.jpg", cap:"L10 · Slide 39 — Cervical cancer incidence by HPV vaccination status"},
         {src:"slides/L10/slide-23.jpg", cap:"L10 · Slide 23 — RAS: normal (GDP, inactive) vs oncogenic (constitutively GTP-bound)"},
         {src:"slides/L10/slide-25.jpg", cap:"L10 · Slide 25 — HER2 overexpression via gene amplification (FISH)"},
         {src:"slides/L10/slide-26.jpg", cap:"L10 · Slide 26 — Herceptin, an antibody targeting HER2"}
@@ -2830,9 +2836,9 @@ window.COURSE = [
      {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">The <b>exact printed MCQs</b> from the Cancer lecture slides, keyed to her revealed answers. Core reasoning: break the repair machinery and every future error sticks; and you can inhibit an overactive protein but you can't inhibit one that's already missing.</div>`}
     ],
     quiz:[
-     {type:"mcq", q:"Mutations in which kinds of genes would speed up the rate of accumulation of additional mutations?", opts:["Cytoskeletal protein genes","Metabolism genes","DNA-repair genes","Transcription factor genes","None of the above"], a:2,
+     {type:"mcq", img:"slides/L10/slide-15.jpg", q:"Mutations in which kinds of genes would speed up the rate of accumulation of additional mutations?", opts:["Cytoskeletal protein genes","Metabolism genes","DNA-repair genes","Transcription factor genes","None of the above"], a:2,
       exp:"DNA-repair genes are the proofreaders. Break them and every subsequent replication error or lesion goes unfixed, so mutations compound — genomic instability accelerates. This is why repair enzymes are so often defective in cancer. Her answer: c."},
-     {type:"mcq", q:"What is one reason why tumor-suppressor genes make poor druggable targets?", opts:["Cancer-causing mutations in tumor-suppressor genes result in loss of function","Mutant alleles of tumor-suppressor genes generally result in greater activity of the protein, which makes inhibiting the proteins more difficult","Most drugs cannot distinguish the normal and mutant forms of the tumor suppressor proteins","Drugs that can target tumor-suppressor proteins are difficult to deliver to cancer cells"], a:0,
+     {type:"mcq", img:"slides/L10/slide-31.jpg", q:"What is one reason why tumor-suppressor genes make poor druggable targets?", opts:["Cancer-causing mutations in tumor-suppressor genes result in loss of function","Mutant alleles of tumor-suppressor genes generally result in greater activity of the protein, which makes inhibiting the proteins more difficult","Most drugs cannot distinguish the normal and mutant forms of the tumor suppressor proteins","Drugs that can target tumor-suppressor proteins are difficult to deliver to cancer cells"], a:0,
       exp:"Tumor suppressors are brakes that get LOST. Drugs are good at blocking/inhibiting an overactive protein (an oncogene like HER2 → Herceptin), but you cannot inhibit a function that is already absent — restoring it is far harder. Her answer: A."}
     ]
    },
@@ -2870,7 +2876,7 @@ window.COURSE = [
     id:"L11T1", title:"What a stem cell is — pluripotent vs tissue-specific",
     sub:"The two defining properties, the two main kinds, and the cancer parallel (slides 4–9).",
     slides:[
-     {h:"The two kinds of stem cells", imgs:[
+     {h:"The two kinds of stem cells", imgs:[{src:"slides/L11/slide-03.jpg", cap:"L11 · Slide 3 — Methuselah's Zoo: extreme animal longevity"},{src:"slides/L11/slide-05.jpg", cap:"L11 · Slide 5 — A colony of embryonic stem cells under the microscope"},
         {src:"slides/L11/slide-04.jpg", cap:"L11 · Slide 4 — Pluripotent stem cells from the blastocyst inner cell mass"},
         {src:"slides/L11/slide-07.jpg", cap:"L11 · Slide 7 — The two main kinds of stem cells"}
       ], html:`
@@ -2879,7 +2885,7 @@ window.COURSE = [
         <tr><th>Pluripotent stem cells</th><th>Tissue-specific stem cells</th></tr>
         <tr><td>Embryonic stem cells (ESCs) and induced pluripotent stem cells (iPSCs). Can become <b>any</b> kind of tissue in the body. ESCs for research come from <b>leftover embryos donated by patients at fertility clinics</b>.</td><td>Also called <b>somatic</b> or <b>adult</b> stem cells. Found in all people, in tissues throughout the body; they replace cells <b>as they wear out and die</b> — but only within their own lineage.</td></tr>
        </table>`},
-     {h:"Examples, and what stem cells share with cancer", imgs:[
+     {h:"Examples, and what stem cells share with cancer", imgs:[{src:"slides/L11/slide-08.jpg", cap:"L11 · Slide 8 — Adult stem cells are found in many organs"},
         {src:"slides/L11/slide-09.jpg", cap:"L11 · Slide 9 — Examples of tissue-specific stem cells"},
         {src:"slides/L11/slide-06.jpg", cap:"L11 · Slide 6 — What is common to cancer cells and stem cells?"}
       ], html:`
@@ -2910,7 +2916,7 @@ window.COURSE = [
       ], html:`
        <p class="lead">Stem cells live in a <span class="kw">niche</span> — "a complex and dynamic structure that transmits and receives signals through cellular and acellular mediators." The niche tells the stem cell whether to stay dormant, divide, or differentiate.</p>
        <p>So stem-cell function depends not just on the cell but on its <b>environment</b> — an aged niche can impair an otherwise healthy stem cell.</p>`},
-     {h:"Stem-cell exhaustion — a cellular hallmark of aging", imgs:[
+     {h:"Stem-cell exhaustion — a cellular hallmark of aging", imgs:[{src:"slides/L11/slide-12.jpg", cap:"L11 · Slide 12 — Which mechanisms lead to stem-cell exhaustion?"},{src:"slides/L11/slide-13.jpg", cap:"L11 · Slide 13 — Stem-cell aging (Ashley Webb)"},
         {src:"slides/L11/slide-11.jpg", cap:"L11 · Slide 11 — Quiescent → activated → renew, and what is lost with aging"},
         {src:"slides/L11/slide-14.jpg", cap:"L11 · Slide 14 — Lysosome activation clears aggregates and enhances quiescent stem cells"}
       ], html:`
@@ -2935,7 +2941,7 @@ window.COURSE = [
     id:"L11T3", title:"iPSCs, reprogramming & getting to the clinic",
     sub:"Yamanaka factors, delivery, comparison of cell types, and therapy caveats (slides 15–24).",
     slides:[
-     {h:"Reprogramming a fibroblast into an iPSC", imgs:[
+     {h:"Reprogramming a fibroblast into an iPSC", imgs:[{src:"slides/L11/slide-18.jpg", cap:"L11 · Slide 18 — How can only 4 genes reprogram a fibroblast?"},{src:"slides/L11/slide-20.jpg", cap:"L11 · Slide 20 — Partial reprogramming in vivo (Macip et al, 2024)"},{src:"slides/L11/slide-21.jpg", cap:"L11 · Slide 21 — Reprogramming results"},
         {src:"slides/L11/slide-16.jpg", cap:"L11 · Slide 16 — How would scientists introduce the genes into cells?"},
         {src:"slides/L11/slide-17.jpg", cap:"L11 · Slide 17 — Tissue-specific vs embryonic vs induced pluripotent stem cells"}
       ], html:`
@@ -2943,7 +2949,7 @@ window.COURSE = [
        <div class="callout key">Why so few genes are enough: <b>they code for transcription factors</b>, and a transcription factor changes the expression of <b>many other genes</b> at once — so a few master regulators can rewire the cell's entire identity.</div>
        <p><b>Delivery:</b> the genes were introduced using <b>viral vectors</b> that insert them into the differentiated cell's nucleus.</p>
        <p><b>Key advantage of iPSCs:</b> they are derived from a patient's <b>own mature body cells, not an embryo</b> — avoiding both the embryo-source issue and immune rejection.</p>`},
-     {h:"Caveats and what a clinical therapy needs", imgs:[
+     {h:"Caveats and what a clinical therapy needs", imgs:[{src:"slides/L11/slide-22.jpg", cap:"L11 · Slide 22 — Frailty index across 28 variables"},{src:"slides/L11/slide-25.jpg", cap:"L11 · Slide 25 — Activity: the Stem Cell Therapy Review Panel"},
         {src:"slides/L11/slide-15.jpg", cap:"L11 · Slide 15 — Adult stem cells: low abundance, difficult to isolate"},
         {src:"slides/L11/slide-24.jpg", cap:"L11 · Slide 24 — What to consider for cell therapy in the clinic"},
         {src:"slides/L11/slide-23.jpg", cap:"L11 · Slide 23 — Age reversal assessed by DNA-methylation age"}
@@ -3039,7 +3045,7 @@ window.COURSE = [
     id:"L12T1", title:"Why inflammation exists — and what inflammaging is",
     sub:"Acute vs chronic sterile inflammation and where it comes from (slides 3–5).",
     slides:[
-     {h:"Normal inflammation resolves; inflammaging does not", imgs:[
+     {h:"Normal inflammation resolves; inflammaging does not", imgs:[{src:"slides/L12/slide-01.jpg", cap:"L12 · Slide 1 — Lifespan vs body mass in mammals (bats circled)"},{src:"slides/L12/slide-03.jpg", cap:"L12 · Slide 3 — Why does the immune system become chronically activated without infection?"},
         {src:"slides/L12/slide-04.jpg", cap:"L12 · Slide 4 — Injury → inflammation → repair → inflammation stops"},
         {src:"slides/L12/slide-05.jpg", cap:"L12 · Slide 5 — Inflammaging: chronic, sterile, low-grade"}
       ], html:`
@@ -3065,7 +3071,7 @@ window.COURSE = [
     id:"L12T2", title:"Senescent cells & the SASP — the engine of inflammaging",
     sub:"What senescent cells secrete, and the bright/dark sides (slides 6–9, 19).",
     slides:[
-     {h:"Senescent cells are alive — and they keep talking", imgs:[
+     {h:"Senescent cells are alive — and they keep talking", imgs:[{src:"slides/L12/slide-06.jpg", cap:"L12 · Slide 6 — The cellular senescence program and the SASP"},{src:"slides/L12/slide-19.jpg", cap:"L12 · Slide 19 — Senescence-associated β-galactosidase (Dimri 1995)"},
         {src:"slides/L12/slide-07.jpg", cap:"L12 · Slide 7 — Senescent cells continuously release SASP factors"},
         {src:"slides/L12/slide-08.jpg", cap:"L12 · Slide 8 — Bright and dark sides of cellular senescence"}
       ], html:`
@@ -3073,7 +3079,7 @@ window.COURSE = [
        <p class="formula">IL-6 · IL-1β · TNF-α · MCP-1 · MMPs (matrix metalloproteinases) · chemokines · growth factors</p>
        <div class="callout key"><b>Bright side:</b> senescence permanently removes damaged cells from the cell cycle, <b>limiting cancer risk</b>, and the SASP helps recruit immune cells for wound healing. <b>Dark side:</b> persistent senescent cells drive <b>chronic inflammation and tissue dysfunction</b> — inflammaging. Same programme, opposite consequences depending on timing.</div>
        <p>Senescent cells are detected with <b>SA-β-galactosidase</b> staining (Dimri, 1995).</p>`},
-     {h:"Two immune systems, and immunosenescence", imgs:[
+     {h:"Two immune systems, and immunosenescence", imgs:[{src:"slides/L12/slide-10.jpg", cap:"L12 · Slide 10 — Adaptive immunity resides in the lymphatic system"},{src:"slides/L12/slide-11.jpg", cap:"L12 · Slide 11 — Human immune aging (Verdin)"},{src:"slides/L12/slide-12.jpg", cap:"L12 · Slide 12 — Human immune aging, continued"},
         {src:"slides/L12/slide-09.jpg", cap:"L12 · Slide 9 — The human immune system: innate (general) and adaptive (specialized)"}
       ], html:`
        <table class="dt">
@@ -3101,7 +3107,7 @@ window.COURSE = [
     id:"L12T3", title:"Immune senescence drives systemic aging (+ microglia & bats)",
     sub:"The ERCC1/T-cell experiments, synaptic pruning, and why bats live so long (slides 2, 14–21).",
     slides:[
-     {h:"Damage the immune system → the whole body ages", imgs:[
+     {h:"Damage the immune system → the whole body ages", imgs:[{src:"slides/L12/slide-15.jpg", cap:"L12 · Slide 15 — Yousefzadeh et al, Nature 2021 (n = 13 mice)"},{src:"slides/L12/slide-16.jpg", cap:"L12 · Slide 16 — Inflammaging? Blame T cells"},{src:"slides/L12/slide-17.jpg", cap:"L12 · Slide 17 — Tfam knockout in T cells (Desdín-Micó, Science 2020)"},
         {src:"slides/L12/slide-14.jpg", cap:"L12 · Slide 14 — ERCC1 (DNA repair) knocked out in hematopoietic cells"},
         {src:"slides/L12/slide-18.jpg", cap:"L12 · Slide 18 — Inflammaging induces senescence in distal tissues"}
       ], html:`
@@ -3113,7 +3119,7 @@ window.COURSE = [
         <li>To prove causation, remove the senescent immune cells with a <b>senolytic</b> — you should see <b>reduced p21 in non-immune tissues and lower inflammatory cytokines</b>.</li>
        </ol>
        <div class="callout key">This is the strongest form of causal evidence: <b>induce</b> the damage in one compartment and aging spreads; <b>remove</b> the culprit cells and it reverses. "Inflammaging? Blame T cells."</div>`},
-     {h:"Microglia, complement & why bats are exceptional", imgs:[
+     {h:"Microglia, complement & why bats are exceptional", imgs:[{src:"slides/L12/slide-20.jpg", cap:"L12 · Slide 20 — Is senescence causing age-related disease?"},{src:"slides/L12/slide-22.jpg", cap:"L12 · Slide 22 — DNA damage cascade"},
         {src:"slides/L12/slide-02.jpg", cap:"L12 · Slide 2 — Mechanisms shaping bat longevity and virus resistance"},
         {src:"slides/L12/slide-21.jpg", cap:"L12 · Slide 21 — Can we reduce inflammaging?"}
       ], html:`
@@ -3223,8 +3229,16 @@ window.COURSE = [
     sub:"How neurons signal, the cortex and its lobes, plasticity, and why neurons are vulnerable (slides 3–24).",
     slides:[
      {h:"How neurons communicate", imgs:[
+        {src:"slides/L13/slide-05.jpg", cap:"L13 · Slide 5 — Neurons connect and form extensive networks"},
         {src:"slides/L13/slide-06.jpg", cap:"L13 · Slide 6 — How a neuron transmits information"},
-        {src:"slides/L13/slide-08.jpg", cap:"L13 · Slide 8 — Synapse, dendrites, axon"}
+        {src:"slides/L13/slide-08.jpg", cap:"L13 · Slide 8 — Synapse, dendrites, axon"},
+        {src:"slides/L13/slide-09.jpg", cap:"L13 · Slide 9 — How neurons communicate (synaptic transmission)"},
+        {src:"slides/L13/slide-12.jpg", cap:"L13 · Slide 12 — The nervous system: CNS vs PNS"},
+        {src:"slides/L13/slide-23.jpg", cap:"L13 · Slide 23 — Axon terminals on the cell body of a target neuron"}
+      ], html:`
+       <p><b>The nervous system splits into two divisions:</b> the <span class="kw-2">central nervous system (CNS)</span> — brain + spinal cord — and the <span class="kw-2">peripheral nervous system (PNS)</span> — cranial nerves, spinal nerves, and ganglia outside the CNS.</p>`},
+     {h:"Neuron structure and signaling", imgs:[
+        {src:"slides/L13/slide-24.jpg", cap:"L13 · Slide 24 — Neuronal plasticity"}
       ], html:`
        <p class="lead">The brain has around <span class="kw">86–100 billion neurons</span>, and they use <b>two kinds of signal</b>:</p>
        <ul>
@@ -3233,9 +3247,17 @@ window.COURSE = [
        </ul>
        <p>Structure: <b>dendrites</b> receive input → the <b>cell body</b> integrates → the <b>axon</b> carries the signal → <b>axon terminals</b> release neurotransmitter onto the next cell's dendrites/cell body at the <b>synapse</b>. Neurons form vast interconnected networks, and the brain works as an <b>integrated network</b>.</p>
        <div class="callout tip"><b>Neuronal plasticity</b> — the ability of connections to change with experience and genetics — shapes the brain throughout life. A defect in neural plasticity may underlie <b>autism spectrum disorder</b>.</div>`},
-     {h:"The cerebral cortex and why the aging brain is vulnerable", imgs:[
+     {h:"The cerebral cortex and why the aging brain is vulnerable", imgs:[{src:"slides/L13/slide-04.jpg", cap:"L13 · Slide 4 — Why does the aging brain become vulnerable to neurodegeneration?"},
+        {src:"slides/L13/slide-10.jpg", cap:"L13 · Slide 10 — The brain controls everything we do"},
+        {src:"slides/L13/slide-11.jpg", cap:"L13 · Slide 11 — Neurodegeneration: Alzheimer's (cortex) vs Parkinson's (motor control)"},
+        {src:"slides/L13/slide-13.jpg", cap:"L13 · Slide 13 — The brain functions as an integrated network"},
         {src:"slides/L13/slide-15.jpg", cap:"L13 · Slide 15 — The four lobes of the cerebral cortex"},
         {src:"slides/L13/slide-03.jpg", cap:"L13 · Slide 3 — 78 million projected with Alzheimer's by 2030"}
+      ], html:`
+       <div class="callout key"><b>The two diseases, by region:</b> <b>Alzheimer's → the CORTEX → learning and memory.</b> <b>Parkinson's → the MOTOR CONTROL CENTER → movement.</b> Where the neurons die determines the symptoms.</div>`},
+     {h:"Lobes, stroke and brain development", imgs:[{src:"slides/L13/slide-22.jpg", cap:"L13 · Slide 22 — Experience and genetics shape the brain"},
+        {src:"slides/L13/slide-19.jpg", cap:"L13 · Slide 19 — Stroke: clotting, lack of blood flow, or bleeding"},
+        {src:"slides/L13/slide-21.jpg", cap:"L13 · Slide 21 — The brain finishes developing at 24–25 (when myelination ends)"}
       ], html:`
        <p class="lead">The cerebral cortex has <span class="kw">four lobes</span>:</p>
        <table class="dt">
@@ -3252,7 +3274,7 @@ window.COURSE = [
     quiz:[
      {type:"mcq", q:"Neurons use which two types of signals to communicate?", opts:["Electrical for long-distance and chemical for short-distance","Chemical for long-distance and electrical for short-distance","Only electrical signals","Only hormonal signals"], a:0,
       exp:"Electrical signals travel long distances down the axon; chemical signals (neurotransmitters) act short-range across the synapse."},
-     {type:"mcq", q:"How many lobes are in the cerebral cortex?", opts:["Two","Three","Four","Six"], a:2,
+     {type:"mcq", img:"slides/L13/slide-14.jpg", q:"How many lobes are in the cerebral cortex?", opts:["Two","Three","Four","Six"], a:2,
       exp:"Four: frontal, parietal, occipital, temporal. (Her slide answer: four.)"},
      {type:"mcq", q:"Which lobe handles auditory processing, olfaction, memory and emotions?", opts:["Frontal","Parietal","Occipital","Temporal"], a:3,
       exp:"Temporal lobe. Frontal = decision making/motor; parietal = sensory integration/spatial; occipital = vision."},
@@ -3261,14 +3283,24 @@ window.COURSE = [
      {type:"mcq", q:"In Alzheimer's disease, which brain region's neurons are first to degenerate and die?", opts:["Spinal cord","Brainstem","Hippocampus","Midbrain"], a:2,
       exp:"The hippocampus (memory encoding) is hit first — which is why early AD presents as memory loss. Midbrain/substantia nigra is Parkinson's."},
      {type:"tf", q:"A defect in neuronal plasticity may underlie autism spectrum disorder.", a:true,
-      exp:"True — plasticity (experience- and genetics-shaped change in connections) is implicated; her slide makes this point directly."}
+      exp:"True — plasticity (experience- and genetics-shaped change in connections) is implicated; her slide makes this point directly."},
+     {type:"mcq", img:"slides/L13/slide-16.jpg", q:"(Brain trivia #2) Which cortical lobe is primarily responsible for controlling movement?", opts:["Occipital lobe","Parietal lobe","Temporal lobe","Frontal lobe"], a:3,
+      exp:"Frontal lobe — motor functions (along with decision making and consolidating information). Her slide answer: Frontal lobe."},
+     {type:"mcq", img:"slides/L13/slide-18.jpg", q:"(Brain trivia #3) A stroke is caused by:", opts:["A lack of blood flow to a part of the brain","Bleeding from a blood vessel in the brain","A clot lodging in a blood vessel in the brain","All of the above"], a:3,
+      exp:"All of the above — clotting, lack of blood flow, or bleeding into the brain. It can happen anywhere and affect any associated function; fast treatment can offset severe or lasting damage. Her slide answer: All of the Above."},
+     {type:"mcq", img:"slides/L13/slide-20.jpg", q:"(Brain trivia #4) At about what age does the human brain finish developing?", opts:["8–10 years","10–13 years","15–18 years","24–25 years"], a:3,
+      exp:"24–25 years — determined by when MYELINATION ends. Her slide answer: 24–25 years."},
+     {type:"mcq", q:"Which two divisions make up the nervous system?", opts:["The CNS (brain + spinal cord) and the PNS (cranial nerves, spinal nerves, ganglia outside the CNS)","The cortex and the cerebellum only","Grey matter and white matter only","Sensory and motor cortex"], a:0,
+      exp:"CNS = brain and spinal cord; PNS = cranial nerves, spinal nerves, and ganglia outside the CNS."},
+     {type:"mcq", q:"Alzheimer's and Parkinson's differ in WHERE neurons degenerate. Which pairing is correct?", opts:["Alzheimer's → cortex (learning, memory); Parkinson's → motor control center (movement)","Alzheimer's → motor control center; Parkinson's → cortex","Both affect only the spinal cord","Both affect only the occipital lobe"], a:0,
+      exp:"Alzheimer's hits the cortex → learning and memory. Parkinson's hits the motor control center (substantia nigra dopaminergic neurons) → movement."}
     ]
    },
    {
     id:"L13T2", title:"Models & diagnostics — from fruit flies to amyloid PET",
     sub:"Animal/cell models and the tools for detecting disease early (slides 25–31, 36).",
     slides:[
-     {h:"Model systems in neuroscience", imgs:[
+     {h:"Model systems in neuroscience", imgs:[{src:"slides/L13/slide-25.jpg", cap:"L13 · Slide 25 — Animal models in neuroscience"},{src:"slides/L13/slide-27.jpg", cap:"L13 · Slide 27 — Which one is a fly neuron?"},
         {src:"slides/L13/slide-26.jpg", cap:"L13 · Slide 26 — Using fruit flies to study the brain"},
         {src:"slides/L13/slide-28.jpg", cap:"L13 · Slide 28 — Models of cells in a dish (adding nerve growth factor)"}
       ], html:`
@@ -3277,7 +3309,7 @@ window.COURSE = [
         <tr><td>~100,000 neurons · 14,000 genes</td><td>~100 billion neurons · 24,000 genes</td></tr>
        </table>
        <p>Despite the gap, the fly shares <b>75% similarity with human disease genes</b> and <b>50% similarity with all human genes</b> — which is why it's such a powerful genetic model. <b>Cells in a dish</b> allow controlled manipulation (e.g., adding nerve growth factor), and <b>MRI</b> lets you look at living human brains.</p>`},
-     {h:"Diagnostics: MRI, amyloid PET and plasma p-tau217", imgs:[
+     {h:"Diagnostics: MRI, amyloid PET and plasma p-tau217", imgs:[{src:"slides/L13/slide-29.jpg", cap:"L13 · Slide 29 — Cognito Therapeutics"},
         {src:"slides/L13/slide-30.jpg", cap:"L13 · Slide 30 — Hippocampi on MRI"},
         {src:"slides/L13/slide-31.jpg", cap:"L13 · Slide 31 — Clinical utility of amyloid PET imaging (SUVR)"},
         {src:"slides/L13/slide-36.jpg", cap:"L13 · Slide 36 — Cognitive change by amyloid PET and plasma p-tau217"}
@@ -3407,7 +3439,7 @@ window.COURSE = [
     id:"L14T1", title:"Why biomarkers — and the shingles-vaccine natural experiment",
     sub:"Causal vs correlational evidence, and measuring healthspan (slides 1–4).",
     slides:[
-     {h:"A natural experiment that gives causal evidence", imgs:[
+     {h:"A natural experiment that gives causal evidence", imgs:[{src:"slides/L14/slide-03.jpg", cap:"L14 · Slide 3 — What mechanisms could explain the vaccine effect?"},
         {src:"slides/L14/slide-01.jpg", cap:"L14 · Slide 1 — Wales: zoster vaccine eligibility by exact date of birth"},
         {src:"slides/L14/slide-02.jpg", cap:"L14 · Slide 2 — Shingles vaccination reduces dementia risk by 20%"}
       ], html:`
@@ -3435,7 +3467,7 @@ window.COURSE = [
     id:"L14T2", title:"The biomarker toolkit — GrimAge, RNA-seq, miRNAs & wearables",
     sub:"What we can measure and where it comes from (slides 5–12).",
     slides:[
-     {h:"GrimAge and the sources of biomarkers", imgs:[
+     {h:"GrimAge and the sources of biomarkers", imgs:[{src:"slides/L14/slide-06.jpg", cap:"L14 · Slide 6 — Biomarkers are incredibly interesting working tools"},
         {src:"slides/L14/slide-05.jpg", cap:"L14 · Slide 5 — GrimAge: an epigenetic clock"},
         {src:"slides/L14/slide-07.jpg", cap:"L14 · Slide 7 — Sources of biomarkers"}
       ], html:`
@@ -3443,7 +3475,7 @@ window.COURSE = [
        <div class="callout key">Subtle but important: GrimAge <b>does NOT directly measure the plasma proteins</b>. It uses <b>DNA-methylation patterns that predict the circulating levels</b> of those proteins — a prediction of a prediction.</div>
        <p><b>GrimAge predicts:</b> all-cause mortality · cardiovascular disease risk · cancer incidence · physical function · risk of frailty · risk of cognitive decline — and it <b>predicts better than chronological age alone</b>.</p>
        <p><b>Sources of biomarkers:</b> blood plasma/serum · CSF · saliva · urine · skin tissue · brain tissue · exosomes. (Accessibility matters — a blood or saliva test scales in a way a brain biopsy never will.)</p>`},
-     {h:"RNA-seq, miRNAs and wearable data", imgs:[
+     {h:"RNA-seq, miRNAs and wearable data", imgs:[{src:"slides/L14/slide-09.jpg", cap:"L14 · Slide 9 — Gene-expression regulation by microRNA (RISC)"},{src:"slides/L14/slide-11.jpg", cap:"L14 · Slide 11 — Longevity pathways are regulated by miRNAs"},{src:"slides/L14/slide-13.jpg", cap:"L14 · Slide 13 — Wearable data"},
         {src:"slides/L14/slide-08.jpg", cap:"L14 · Slide 8 — Studying the transcriptome: RNA sequencing"},
         {src:"slides/L14/slide-10.jpg", cap:"L14 · Slide 10 — Small RNAs regulate mRNA stability and translation"},
         {src:"slides/L14/slide-12.jpg", cap:"L14 · Slide 12 — Wearables: step count and REM sleep vs cholesterol improvement"}
@@ -3471,7 +3503,7 @@ window.COURSE = [
     id:"L14T3", title:"Detecting apoptosis — Annexin V / PI and flow cytometry",
     sub:"The four-quadrant assay, flow cytometry parameters, and experimental controls (slides 14–20).",
     slides:[
-     {h:"The Annexin V / PI four-quadrant assay", imgs:[
+     {h:"The Annexin V / PI four-quadrant assay", imgs:[{src:"slides/L14/slide-19.jpg", cap:"L14 · Slide 19 — Apoptosis or necrosis?"},
         {src:"slides/L14/slide-14.jpg", cap:"L14 · Slide 14 — Markers for detection of apoptosis"},
         {src:"slides/L14/slide-15.jpg", cap:"L14 · Slide 15 — Live, early apoptotic, late apoptotic and necrotic cells"}
       ], html:`
@@ -3484,7 +3516,7 @@ window.COURSE = [
         <tr><td>−</td><td>+</td><td><b>Necrotic</b> (membrane ruptured without the apoptotic PS flip)</td></tr>
        </table>
        <div class="callout key">Reason it out rather than memorizing: <b>Annexin V = "has apoptosis started?"</b> and <b>PI = "is the membrane broken?"</b> Apoptosis flips PS first and breaks the membrane only late; necrosis breaks the membrane without the orderly PS flip.</div>`},
-     {h:"Flow cytometry and experimental design", imgs:[
+     {h:"Flow cytometry and experimental design", imgs:[{src:"slides/L14/slide-17.jpg", cap:"L14 · Slide 17 — Jurkat cells, untreated (flow cytometry)"},{src:"slides/L14/slide-22.jpg", cap:"L14 · Slide 22 — Let's flatten the infodemic curve"},{src:"slides/L14/slide-25.jpg", cap:"L14 · Slide 25 — Techniques of science denial"},
         {src:"slides/L14/slide-16.jpg", cap:"L14 · Slide 16 — Flow cytometry"},
         {src:"slides/L14/slide-18.jpg", cap:"L14 · Slide 18 — Jurkat cells treated with camptothecin"},
         {src:"slides/L14/slide-20.jpg", cap:"L14 · Slide 20 — What would you use as a positive and negative control?"}
