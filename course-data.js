@@ -3551,7 +3551,21 @@ window.COURSE = [
     id:"L12Q", title:"📝 Practice quiz (from class) — Inflammaging",
     sub:"The class inflammaging homework quiz (19 Q), answers keyed.",
     slides:[
-     {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">The exact inflammaging homework-quiz questions. Big theme: senescent immune cells → SASP → spreads senescence systemically; senolytic reversal = causal evidence.</div>`}
+     {h:"📝 Practice quiz", imgs:[], html:`<div class="callout tip">The exact inflammaging homework-quiz questions (verified against the graded 10/10 key). Big theme: senescent immune cells → SASP → spreads senescence systemically; senolytic reversal = causal evidence.</div>`},
+     {h:"Key concepts this quiz tests", imgs:[], html:`
+      <table class="dt">
+       <tr><th>Concept</th><th>What to know</th></tr>
+       <tr><td><b>Inflammaging</b></td><td>Chronic, <b>sterile</b>, low-grade inflammation with age — driven by endogenous signals, <b>not pathogens</b></td></tr>
+       <tr><td><b>DAMPs</b></td><td>Damage-associated molecular patterns; rise with age and drive sterile inflammation</td></tr>
+       <tr><td><b>Cellular senescence</b></td><td><b>Beneficial:</b> permanent cell-cycle arrest limits cancer. <b>Harmful:</b> persistent senescent cells accumulate</td></tr>
+       <tr><td><b>SASP</b></td><td>Senescence-associated secretory phenotype — inflammatory factors that spread dysfunction to <b>distant</b> tissues</td></tr>
+       <tr><td><b>Immunosenescence</b></td><td>Immune aging: <b>reduced T-cell receptor diversity</b>, poor vaccine response</td></tr>
+       <tr><td><b>Antagonistic pleiotropy</b></td><td>Selection favours early-life reproductive benefit even at a later-life cost</td></tr>
+       <tr><td><b>Bat longevity</b></td><td>Dampened inflammatory response <b>+</b> intact antiviral defence; flight metabolism drove DNA repair, antioxidants and inflammation control</td></tr>
+       <tr><td><b>Microglia &amp; complement</b></td><td>Tag-and-prune synapses in development; <b>reactivation</b> may drive Alzheimer's synapse loss</td></tr>
+       <tr><td><b>ERCC1 model</b></td><td>DNA-repair knockout in <b>blood cells only</b> → senescence markers (p21) appear in <b>distant non-immune</b> tissues</td></tr>
+      </table>
+      <div class="callout warn">Note on Q11: the stem rendered incorrectly in the original quiz (it repeated a leftover option from Q10). Judging by the answer choices, it was asking how chronic inflammation contributes to age-related disease — answer: it triggers release of inflammatory molecules that damage tissue and drive chronic disease.</div>`}
     ],
     quiz:[
      {type:"mcq", q:"Why has inflammation been strongly conserved throughout evolution?", opts:["It provides a rapid response to infection and tissue injury, improving survival and reproductive fitness","It protects organisms exclusively from viral infections","It evolved mainly to eliminate senescent cells during aging","It primarily evolved to increase lifespan by slowing cellular aging"], a:0,
