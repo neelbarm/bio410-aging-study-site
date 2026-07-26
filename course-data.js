@@ -3038,213 +3038,6 @@ window.COURSE = [
     ]
    },
    {
-    id:"L10I", title:"💉 Immuno-Oncology Therapies (class presentation assignment)",
-    sub:"The five therapy types everyone presented on — mechanism, one example drug each, and how to tell them apart.",
-    slides:[
-     {h:"The big idea: five ways to turn the immune system against cancer", imgs:[], html:`
-      <p class="lead">Recall from L10 that one of the changes cancer cells accumulate is <b>immunosuppression — avoiding the immune system</b>. Immuno-oncology is the counterattack: instead of poisoning dividing cells (chemo), you <b>re-arm or redirect the patient's own immune system</b>.</p>
-      <table class="dt">
-       <tr><th>Therapy</th><th>One-line mechanism</th><th>Needs MHC?</th></tr>
-       <tr><td><b>1. Treatment vaccine</b></td><td><b>Teach</b> the immune system to recognize a tumour antigen</td><td>Yes</td></tr>
-       <tr><td><b>2. Checkpoint inhibitor</b></td><td><b>Release the brakes</b> on T cells the tumour has engaged</td><td>Yes</td></tr>
-       <tr><td><b>3. ADC</b></td><td>Antibody <b>delivers</b> a toxic payload directly into the cancer cell</td><td>No</td></tr>
-       <tr><td><b>4. BMA / BiTE</b></td><td>Two-armed antibody <b>physically tethers</b> a T cell to a cancer cell</td><td>No</td></tr>
-       <tr><td><b>5. CAR-T</b></td><td><b>Genetically engineer</b> the patient's T cells to recognize the tumour</td><td>No</td></tr>
-      </table>
-      <div class="callout key"><b>The single best discriminator: MHC dependence.</b> Vaccines and checkpoint inhibitors still rely on normal T-cell recognition through <b>MHC</b> — so a tumour that downregulates MHC escapes them. ADCs, BiTEs and CAR-T use <b>antibody-based</b> recognition of a surface antigen, which <b>bypasses MHC entirely</b>. That's why they work where the others fail.</div>`},
-     {h:"1. Cancer TREATMENT vaccines — example: Sipuleucel-T (Provenge)", imgs:[], html:`
-      <div class="callout warn"><b>First, the distinction the assignment insists on:</b> a <b>PREVENTIVE</b> vaccine (HPV/Gardasil, hepatitis B) stops an <b>infection</b> that would later cause cancer — it is given to healthy people. A <b>TREATMENT (therapeutic)</b> vaccine is given to someone who <b>already has cancer</b> and trains their immune system to attack it.</div>
-      <p class="lead"><b>Sipuleucel-T (Provenge)</b> — metastatic castration-resistant prostate cancer; the <b>first FDA-approved therapeutic cancer vaccine (2010)</b>. It is <b>autologous</b> (made from the patient's own cells), so each dose is custom-manufactured.</p>
-      <ol>
-       <li><b>Leukapheresis</b> — the patient's antigen-presenting cells (APCs, mainly dendritic cells) are collected from blood.</li>
-       <li><b>Ex vivo culture</b> with <b>PA2024</b>, a fusion protein of <b>PAP</b> (prostatic acid phosphatase — the prostate-cancer antigen) fused to <b>GM-CSF</b> (an immune-activating growth factor).</li>
-       <li>The APCs <b>take up, process and present</b> the PAP antigen on MHC, and GM-CSF matures them.</li>
-       <li><b>Reinfusion</b> into the patient → the activated APCs prime <b>T cells specific for PAP</b> → those T cells hunt PAP-expressing prostate cancer cells.</li>
-      </ol>
-      <p class="muted">Other therapeutic vaccines: <b>T-VEC (talimogene laherparepvec)</b>, an oncolytic herpes virus for melanoma; and <b>BCG</b> for bladder cancer.</p>`},
-     {h:"2. Checkpoint inhibitors — example: Pembrolizumab (Keytruda)", imgs:[], html:`
-      <p class="lead">T cells carry built-in <b>checkpoints</b> — molecular brakes that normally prevent autoimmunity. <b>Tumours exploit these brakes to shut down the T cells attacking them.</b> A checkpoint inhibitor is an antibody that <b>blocks the brake</b>, releasing the T cell.</p>
-      <table class="dt">
-       <tr><th>Axis</th><th>Normal role</th><th>Example drug</th></tr>
-       <tr><td><b>PD-1 / PD-L1</b></td><td>PD-1 on the T cell binds <b>PD-L1</b> displayed by the tumour → T cell is switched off <i>in the tissue</i></td><td><b>Pembrolizumab (Keytruda)</b>, nivolumab — anti-PD-1; atezolizumab — anti-PD-L1</td></tr>
-       <tr><td><b>CTLA-4</b></td><td>Competes with CD28 for B7 on the APC → dampens T-cell <b>priming</b> in the lymph node</td><td><b>Ipilimumab (Yervoy)</b> — first approved, 2011, melanoma</td></tr>
-      </table>
-      <p><b>Pembrolizumab mechanism:</b> it is a monoclonal antibody that binds <b>PD-1 on the T cell</b>, physically preventing tumour <b>PD-L1</b> from engaging it. The inhibitory signal never fires, so the T cell stays active and kills the tumour cell.</p>
-      <div class="callout key"><b>Key insight:</b> the drug does <b>not</b> kill cancer cells and does <b>not</b> activate T cells directly — it <b>removes an inhibitory signal</b>. It only works if tumour-reactive T cells already exist. <b>2018 Nobel Prize:</b> James Allison (CTLA-4) and Tasuku Honjo (PD-1).</div>
-      <div class="callout warn"><b>Predictable side effect:</b> releasing brakes systemically causes <b>immune-related adverse events</b> — colitis, dermatitis, thyroiditis, hepatitis. The toxicity follows directly from the mechanism: less restraint everywhere, not just at the tumour.</div>`},
-     {h:"3. ADCs — example: Trastuzumab emtansine (T-DM1, Kadcyla)", imgs:[
-        {src:"slides/L10/slide-26.jpg", cap:"L10 · Slide 26 — Herceptin (trastuzumab) binding HER2 — the targeting antibody an ADC is built on"}
-      ], html:`
-      <p class="lead">An <b>antibody–drug conjugate</b> is a <b>guided missile</b>: it has <b>three parts</b> —</p>
-      <ol>
-       <li>a <b>monoclonal antibody</b> that binds a tumour surface antigen (the GPS),</li>
-       <li>a <b>linker</b> (stable in blood, cleaved inside the cell),</li>
-       <li>a <b>cytotoxic payload</b> — a chemo drug far too toxic to give systemically.</li>
-      </ol>
-      <p><b>T-DM1 mechanism:</b> <b>trastuzumab</b> (the same Herceptin antibody from L10) is chemically linked to <b>DM1 (emtansine)</b>, a <b>microtubule inhibitor</b>.</p>
-      <ol>
-       <li>Trastuzumab binds <b>HER2</b> on the breast cancer cell.</li>
-       <li>The whole complex is <b>internalized by endocytosis</b>.</li>
-       <li>In the <b>lysosome</b> the linker is cleaved, releasing <b>DM1</b> into the cytoplasm.</li>
-       <li>DM1 <b>disrupts microtubules</b> → mitotic arrest → <b>apoptosis</b>.</li>
-      </ol>
-      <div class="callout key"><b>Why this is elegant:</b> the toxin is only released <b>inside</b> a HER2-positive cell, so healthy tissue is largely spared — you get chemotherapy's killing power with an antibody's precision. Note the two cross-links: <b>HER2/Herceptin from L10</b>, and <b>microtubule disruption — the same mechanism as paclitaxel from L9</b>.</div>
-      <p class="muted">Others: brentuximab vedotin (CD30, lymphoma), trastuzumab deruxtecan (Enhertu), sacituzumab govitecan (TROP-2). Some payloads diffuse into neighbouring cells — the <b>bystander effect</b>.</p>`},
-     {h:"4. BMAs / BiTEs — example: Blinatumomab (Blincyto)", imgs:[], html:`
-      <p class="lead">A <b>bispecific monoclonal antibody</b> has <b>two different binding arms</b> instead of two identical ones. The classic design is a <b>BiTE — Bispecific T-cell Engager</b>:</p>
-      <ul>
-       <li><b>One arm grabs a T cell</b> — almost always via <b>CD3</b> (part of the T-cell receptor complex).</li>
-       <li><b>The other arm grabs a tumour antigen.</b></li>
-       <li>The antibody <b>physically tethers the two cells together</b>, forcing an immunological synapse → the T cell activates and kills the cancer cell.</li>
-      </ul>
-      <p><b>Blinatumomab mechanism:</b> one arm binds <b>CD19</b> (on B cells, including B-cell acute lymphoblastic leukemia), the other binds <b>CD3</b> on T cells. It drags any passing T cell into contact with the leukemia cell and triggers killing.</p>
-      <div class="callout key"><b>Why it's powerful:</b> the T cell does <b>not</b> need to recognize the tumour through <b>MHC</b> — the antibody supplies the connection. That bypasses MHC downregulation, a major way tumours hide. It also recruits <b>any</b> T cell, not just tumour-specific ones.</div>
-      <div class="callout warn">Because it activates T cells en masse, the signature toxicity is <b>cytokine release syndrome (CRS)</b>. Blinatumomab also has a very short half-life, so it's given by <b>continuous IV infusion</b>.</div>
-      <p class="muted">Others: teclistamab (BCMA × CD3, myeloma), amivantamab (EGFR × MET).</p>`},
-     {h:"5. CAR-T cell therapy — example: Tisagenlecleucel (Kymriah)", imgs:[], html:`
-      <p class="lead"><b>CAR = Chimeric Antigen Receptor.</b> "Chimeric" because it fuses parts from two different systems: an <b>antibody-derived antigen-binding domain (scFv)</b> on the outside, joined to <b>T-cell signalling domains</b> (CD3ζ plus a costimulatory domain such as 4-1BB or CD28) on the inside.</p>
-      <p><b>The procedure — know these steps in order:</b></p>
-      <ol>
-       <li><b>Leukapheresis</b> — collect the patient's own T cells from blood.</li>
-       <li><b>Genetic engineering</b> ex vivo — a <b>viral vector</b> (lentivirus/retrovirus) inserts the CAR gene into the T cells.</li>
-       <li><b>Expansion</b> — grow them to millions in culture (takes weeks).</li>
-       <li><b>Lymphodepleting chemotherapy</b> — prepares the patient so the infused cells can expand.</li>
-       <li><b>Infusion</b> back into the patient.</li>
-       <li>CAR-T cells bind the antigen, kill the tumour cell, then <b>proliferate and persist</b> — a <b>"living drug."</b></li>
-      </ol>
-      <p><b>Tisagenlecleucel (Kymriah):</b> an <b>anti-CD19</b> CAR-T for B-ALL and diffuse large B-cell lymphoma — the <b>first FDA-approved CAR-T (2017)</b>.</p>
-      <div class="callout key"><b>Two defining features:</b> (1) it is <b>autologous and MHC-independent</b> — antibody-based recognition bypasses MHC; (2) unlike every other therapy here, the CAR-T cells <b>replicate inside the patient</b>, so a single infusion can keep working for years.</div>
-      <div class="callout warn"><b>Toxicities:</b> <b>CRS (cytokine release syndrome)</b>, <b>ICANS (neurotoxicity)</b>, and <b>B-cell aplasia</b> — because CD19 is on normal B cells too, they get killed along with the cancer (on-target, off-tumour).</div>`},
-     {h:"Telling them apart — the comparison that gets tested", imgs:[], html:`
-      <table class="dt">
-       <tr><th></th><th>What is engineered / given</th><th>Target</th><th>Kills how?</th></tr>
-       <tr><td><b>Treatment vaccine</b><br>Sipuleucel-T</td><td>Patient's <b>APCs</b> loaded with antigen</td><td>PAP (tumour antigen)</td><td>Primes the patient's own T cells</td></tr>
-       <tr><td><b>Checkpoint inhibitor</b><br>Pembrolizumab</td><td>A plain antibody (nothing engineered into the patient)</td><td>PD-1 / PD-L1 / CTLA-4</td><td>Removes a brake so existing T cells work</td></tr>
-       <tr><td><b>ADC</b><br>T-DM1</td><td>Antibody + linker + <b>toxin</b></td><td>HER2</td><td>Delivers chemo <b>inside</b> the cell</td></tr>
-       <tr><td><b>BiTE</b><br>Blinatumomab</td><td>Antibody with <b>two different arms</b></td><td>CD19 <b>×</b> CD3</td><td>Tethers a T cell to the tumour cell</td></tr>
-       <tr><td><b>CAR-T</b><br>Tisagenlecleucel</td><td>Patient's <b>T cells, gene-modified</b></td><td>CD19</td><td>Engineered T cells kill and then multiply</td></tr>
-      </table>
-      <div class="callout tip"><b>Fast discriminators:</b> <b>two arms + CD3</b> → BiTE. <b>Antibody carrying a toxin</b> → ADC. <b>Cells removed, gene-modified, returned</b> → CAR-T. <b>Blocks PD-1/PD-L1/CTLA-4</b> → checkpoint inhibitor. <b>Loads APCs with an antigen</b> → therapeutic vaccine.</div>`}
-    ],
-    quiz:[
-     {type:"mcq", q:"What distinguishes a cancer TREATMENT vaccine from a cancer PREVENTION vaccine?", opts:["A treatment vaccine is given to someone who already has cancer to train the immune system against it; a prevention vaccine (e.g. HPV) stops an infection that would later cause cancer","They are the same thing","Treatment vaccines prevent viral infection","Prevention vaccines are given only after diagnosis"], a:0,
-      exp:"Preventive = given to healthy people to block an oncogenic infection (HPV, HBV). Therapeutic = given to a cancer patient to provoke an immune attack on existing tumour."},
-     {type:"mcq", q:"How does Sipuleucel-T (Provenge) work?", opts:["The patient's antigen-presenting cells are collected, cultured with a PAP–GM-CSF fusion protein, and reinfused to prime T cells against prostate cancer","It blocks PD-1 on T cells","It delivers a chemotherapy payload into the tumour","It genetically engineers T cells with a chimeric receptor"], a:0,
-      exp:"Autologous APCs are loaded ex vivo with PAP (the prostate tumour antigen) fused to GM-CSF, then returned to prime PAP-specific T cells. First FDA-approved therapeutic cancer vaccine."},
-     {type:"mcq", q:"In Sipuleucel-T, what are PAP and GM-CSF respectively?", opts:["PAP is the prostate-cancer antigen; GM-CSF is the immune-activating factor that matures the APCs","PAP is a chemotherapy drug; GM-CSF is a linker","Both are checkpoint proteins","PAP is an antibody; GM-CSF is a virus"], a:0,
-      exp:"PAP = prostatic acid phosphatase, the target antigen. GM-CSF activates/matures the antigen-presenting cells so they prime T cells effectively."},
-     {type:"mcq", q:"How does a checkpoint inhibitor such as pembrolizumab kill cancer?", opts:["It blocks PD-1 so the tumour's PD-L1 cannot switch off the T cell — releasing an existing T-cell response","It directly poisons the cancer cell","It inserts a new receptor into T cells","It delivers a toxin into the tumour"], a:0,
-      exp:"It removes an INHIBITORY signal. The drug itself kills nothing — it only works if tumour-reactive T cells already exist."},
-     {type:"mcq", q:"PD-1/PD-L1 and CTLA-4 checkpoints differ in WHERE they act. Which is correct?", opts:["CTLA-4 dampens T-cell PRIMING in the lymph node (competing with CD28 for B7); PD-1/PD-L1 switches off T cells in the tissue/tumour","PD-1 acts in the lymph node; CTLA-4 acts in the tumour","Both act only in bone marrow","Neither involves T cells"], a:0,
-      exp:"CTLA-4 = early, priming stage. PD-1/PD-L1 = later, effector stage in the tumour microenvironment. Ipilimumab targets CTLA-4; pembrolizumab/nivolumab target PD-1."},
-     {type:"mcq", q:"Why do checkpoint inhibitors commonly cause colitis, dermatitis or thyroiditis?", opts:["Removing T-cell brakes systemically permits autoimmune attack on healthy tissue — immune-related adverse events","They are directly toxic to the gut","They suppress the immune system","They cause cytokine release syndrome only"], a:0,
-      exp:"Checkpoints normally prevent autoimmunity. Block them and you get less restraint everywhere, not just at the tumour — the toxicity follows from the mechanism."},
-     {type:"mcq", q:"What are the THREE components of an antibody–drug conjugate?", opts:["A monoclonal antibody, a linker, and a cytotoxic payload","Two antibodies and a T cell","A virus, a gene, and a T cell","An antigen, GM-CSF, and an APC"], a:0,
-      exp:"Antibody = targeting; linker = stable in blood but cleavable inside the cell; payload = a chemo drug too toxic to give systemically."},
-     {type:"mcq", q:"Put the T-DM1 (Kadcyla) mechanism in order:", opts:["Trastuzumab binds HER2 → complex internalized by endocytosis → linker cleaved in the lysosome → DM1 released → microtubules disrupted → apoptosis","DM1 is released in the blood → diffuses into cells → blocks HER2","The antibody blocks PD-1 → T cells kill the tumour","T cells are engineered → infused → kill HER2 cells"], a:0,
-      exp:"Bind → internalize → cleave in lysosome → release payload → microtubule disruption → mitotic arrest → apoptosis. The toxin is only freed INSIDE a HER2+ cell."},
-     {type:"mcq", q:"DM1 (emtansine), the payload in T-DM1, kills cells by:", opts:["Disrupting microtubules, causing mitotic arrest and apoptosis","Blocking PD-L1","Cleaving DNA at telomeres","Inhibiting the proteasome"], a:0,
-      exp:"DM1 is a microtubule inhibitor — the same class of mechanism as paclitaxel from L9, but delivered selectively by the antibody."},
-     {type:"mcq", q:"What is the defining feature of a bispecific T-cell engager (BiTE) such as blinatumomab?", opts:["It has two different arms — one binding CD3 on a T cell, the other a tumour antigen — physically tethering the two cells together","It carries a cytotoxic payload","It is a genetically engineered T cell","It blocks CTLA-4"], a:0,
-      exp:"Two different specificities. Blinatumomab: CD19 (leukemic B cell) × CD3 (T cell). It forces an immunological synapse between them."},
-     {type:"mcq", q:"Blinatumomab binds which two targets?", opts:["CD19 on B cells and CD3 on T cells","HER2 and PD-1","PAP and GM-CSF","CD20 and CTLA-4"], a:0,
-      exp:"CD19 × CD3 — the B-cell antigen and the T-cell receptor complex. Used in B-cell acute lymphoblastic leukemia."},
-     {type:"mcq", q:"Why can BiTEs and CAR-T work against tumours that have downregulated MHC?", opts:["Both use antibody-based recognition of a surface antigen, which is MHC-independent","Both increase MHC expression","Both require MHC to function","Both kill cells with chemotherapy"], a:0,
-      exp:"Losing MHC is a classic tumour escape route from normal T cells. Antibody-based targeting (BiTE arm or CAR scFv) bypasses it entirely."},
-     {type:"mcq", q:"What does 'chimeric' mean in Chimeric Antigen Receptor?", opts:["The receptor fuses an antibody-derived antigen-binding domain (scFv) to T-cell signalling domains — parts from two different systems","It comes from two different patients","It targets two antigens","It is made in a chimera animal"], a:0,
-      exp:"Antibody outside + T-cell receptor signalling inside (CD3ζ plus a costimulatory domain like 4-1BB or CD28). Two systems fused into one receptor."},
-     {type:"mcq", q:"Put the CAR-T procedure in the correct order:", opts:["Leukapheresis → viral vector inserts the CAR gene → expansion in culture → lymphodepleting chemotherapy → infusion → CAR-T cells kill and proliferate","Infusion → leukapheresis → gene insertion → expansion","Chemotherapy → antibody infusion → T-cell collection","Gene insertion in the patient → expansion in the patient → collection"], a:0,
-      exp:"Collect → engineer ex vivo → expand → lymphodeplete the patient → infuse → the cells expand and persist in vivo as a 'living drug'."},
-     {type:"mcq", q:"Why is CAR-T described as a 'living drug'?", opts:["The engineered T cells proliferate and persist inside the patient, so one infusion can keep working for years","It is made from live viruses","It must be kept alive in the fridge","It is grown in bacteria"], a:0,
-      exp:"Unlike an antibody that is cleared, CAR-T cells replicate in vivo and can persist long-term — a fundamentally different pharmacology."},
-     {type:"mcq", q:"Why does anti-CD19 CAR-T therapy cause B-cell aplasia?", opts:["CD19 is expressed on NORMAL B cells too, so healthy B cells are killed along with the cancer — on-target, off-tumour toxicity","The CAR-T cells become cancerous","It is caused by the lymphodepleting chemotherapy alone","CD19 is on red blood cells"], a:0,
-      exp:"The antigen is not tumour-exclusive. 'On-target, off-tumour' toxicity is the fundamental limitation of picking a lineage antigen like CD19."},
-     {type:"mcq", q:"Cytokine release syndrome (CRS) is a hallmark toxicity of which therapies?", opts:["CAR-T and BiTEs — both cause massive simultaneous T-cell activation","ADCs only","Checkpoint inhibitors only","Preventive vaccines"], a:0,
-      exp:"Any therapy that activates many T cells at once can trigger a cytokine storm. Checkpoint inhibitors instead cause immune-related adverse events (autoimmunity)."},
-     {type:"mcq", q:"A therapy consists of an antibody chemically linked to a potent toxin. Which type is it?", opts:["An antibody–drug conjugate (ADC)","A bispecific antibody","A checkpoint inhibitor","CAR-T therapy"], a:0,
-      exp:"Antibody + linker + toxin = ADC. Two different binding arms = BiTE. Gene-modified patient T cells = CAR-T."},
-     {type:"mcq", q:"Which therapy requires collecting the patient's own cells, modifying them ex vivo, and returning them?", opts:["Both CAR-T (T cells, gene-modified) and Sipuleucel-T (APCs, antigen-loaded) are autologous cell therapies","Only checkpoint inhibitors","Only ADCs","Only BiTEs"], a:0,
-      exp:"Both are autologous cell products — but CAR-T is GENETICALLY engineered, while Sipuleucel-T APCs are simply loaded with antigen, not gene-modified."},
-     {type:"short", q:"Compare all five immuno-oncology approaches: how each works, one example, and the key advantage or limitation of each.", model:"(1) Treatment vaccine — Sipuleucel-T: the patient's APCs are collected, cultured with PAP (prostate tumour antigen) fused to GM-CSF, and reinfused to prime PAP-specific T cells. Advantage: highly specific and autologous; limitation: MHC-dependent, custom-manufactured, modest survival benefit. (2) Checkpoint inhibitor — pembrolizumab: an antibody blocks PD-1 so tumour PD-L1 cannot switch off the T cell, releasing an existing response (ipilimumab does the same at CTLA-4 during priming). Advantage: durable responses across many tumour types; limitation: only works if tumour-reactive T cells already exist, and removing brakes systemically causes immune-related adverse events. (3) ADC — T-DM1: trastuzumab binds HER2, the complex is internalized, the linker is cleaved in the lysosome and DM1 is released to disrupt microtubules and trigger apoptosis. Advantage: delivers chemotherapy selectively so healthy tissue is spared; limitation: requires a good surface target and payload can leak. (4) BiTE — blinatumomab: two arms, CD19 on the leukemic B cell and CD3 on a T cell, physically tethering them so the T cell kills. Advantage: MHC-independent and recruits any T cell; limitation: cytokine release syndrome and a very short half-life requiring continuous infusion. (5) CAR-T — tisagenlecleucel: the patient's T cells are collected by leukapheresis, a viral vector inserts a chimeric receptor (antibody scFv + CD3ζ and a costimulatory domain), the cells are expanded, the patient is lymphodepleted, and the cells are infused, where they kill and then proliferate as a living drug. Advantage: MHC-independent with long persistence from one dose; limitations: CRS, ICANS neurotoxicity, B-cell aplasia from on-target off-tumour CD19 killing, plus weeks of manufacturing and very high cost. Unifying theme: vaccines and checkpoint inhibitors still depend on MHC-restricted recognition, whereas ADCs, BiTEs and CAR-T use antibody-based targeting that bypasses MHC — which is why they succeed against tumours that hide by downregulating MHC.", pts:["Vaccine = teach (Sipuleucel-T, PAP+GM-CSF on autologous APCs)","Checkpoint inhibitor = release the brakes (pembrolizumab anti-PD-1; ipilimumab anti-CTLA-4), irAEs","ADC = deliver toxin inside (T-DM1: bind HER2 → internalize → lysosome → DM1 → microtubules)","BiTE = tether T cell to tumour (blinatumomab CD19 × CD3), CRS","CAR-T = engineer patient T cells (tisagenlecleucel anti-CD19), living drug, CRS/ICANS/B-cell aplasia","Unifying: ADC/BiTE/CAR-T are MHC-independent; vaccines and checkpoint inhibitors are not"]}
-    ]
-   },
-   {
-    id:"L10P", title:"🎤 The class presentations — every drug your classmates covered",
-    sub:"Each specific product presented, its class, target and payload. These are the ones you are expected to know.",
-    slides:[
-     {h:"Master table — every drug presented in class", imgs:[], html:`
-      <table class="dt">
-       <tr><th>Drug (brand)</th><th>Class</th><th>Target</th><th>Cancer</th></tr>
-       <tr><td><b>Pembrolizumab (Keytruda)</b></td><td>Checkpoint inhibitor</td><td><b>PD-1</b></td><td>Many (melanoma, NSCLC…)</td></tr>
-       <tr><td><b>Cemiplimab (Libtayo)</b></td><td>Checkpoint inhibitor</td><td><b>PD-1</b></td><td>Advanced <b>cutaneous squamous cell carcinoma</b></td></tr>
-       <tr><td><b>Sipuleucel-T (Provenge)</b></td><td>Therapeutic vaccine</td><td><b>PAP</b> antigen</td><td>Prostate</td></tr>
-       <tr><td><b>T-VEC (Imlygic)</b></td><td>Oncolytic virus / vaccine</td><td>Tumour lysis + GM-CSF</td><td>Melanoma</td></tr>
-       <tr><td><b>Trastuzumab deruxtecan (Enhertu)</b></td><td><b>ADC</b></td><td><b>HER2</b></td><td>Breast, gastric, lung</td></tr>
-       <tr><td><b>Mirvetuximab soravtansine (Elahere)</b></td><td><b>ADC</b></td><td><b>Folate receptor α (FRα)</b></td><td>Ovarian</td></tr>
-       <tr><td><b>Blinatumomab (Blincyto)</b></td><td><b>BiTE</b> (bispecific)</td><td><b>CD19 × CD3</b></td><td>B-ALL</td></tr>
-       <tr><td><b>Tisagenlecleucel (Kymriah)</b></td><td><b>CAR-T</b></td><td><b>CD19</b></td><td>B-ALL, DLBCL</td></tr>
-       <tr><td><b>Axicabtagene ciloleucel (Yescarta)</b></td><td><b>CAR-T</b></td><td><b>CD19</b></td><td>B-cell lymphoma</td></tr>
-       <tr><td><b>Ciltacabtagene autoleucel (Carvykti)</b></td><td><b>CAR-T</b></td><td><b>BCMA</b></td><td>Multiple myeloma</td></tr>
-      </table>
-      <div class="callout key"><b>Fastest way to memorize:</b> group by target. <b>CD19</b> → Kymriah, Yescarta (CAR-T) and Blinatumomab (BiTE) — all B-cell cancers. <b>HER2</b> → Enhertu (ADC). <b>PD-1</b> → Keytruda, Libtayo. <b>BCMA</b> → Carvykti (myeloma). <b>FRα</b> → Elahere (ovarian). <b>PAP</b> → Provenge (prostate).</div>`},
-     {h:"The two ADCs presented — Enhertu and Elahere", imgs:[], html:`
-      <p class="lead">Both are <b>antibody–drug conjugates</b>: antibody + linker + cytotoxic payload. What differs is the <b>target</b> and the <b>payload's mechanism</b>.</p>
-      <table class="dt">
-       <tr><th></th><th><b>Enhertu</b> (trastuzumab deruxtecan)</th><th><b>Elahere</b> (mirvetuximab soravtansine)</th></tr>
-       <tr><td><b>Antibody targets</b></td><td><b>HER2</b> (same target as Herceptin)</td><td><b>Folate receptor α (FRα)</b> — overexpressed on ovarian cancer</td></tr>
-       <tr><td><b>Payload</b></td><td><b>Deruxtecan (DXd)</b> — a <b>topoisomerase I inhibitor</b> → DNA damage</td><td><b>DM4</b> (a maytansinoid) — a <b>microtubule inhibitor</b> → mitotic arrest</td></tr>
-       <tr><td><b>Cancer</b></td><td>HER2+ breast, gastric, lung</td><td>FRα+ platinum-resistant ovarian</td></tr>
-      </table>
-      <p><b>Shared mechanism:</b> antibody binds its surface antigen → <b>internalized by endocytosis</b> → <b>linker cleaved in the lysosome</b> → payload released → cell killed → apoptosis.</p>
-      <div class="callout tip"><b>Enhertu's notable feature:</b> a high drug-to-antibody ratio (~8) and a membrane-permeable payload give it a strong <b>bystander effect</b> — released DXd diffuses into neighbouring tumour cells, so it works even where HER2 expression is <b>low</b> ("HER2-low"), not just HER2-positive. That's why it expanded the treatable population.</div>
-      <div class="callout key"><b>Cross-links to know:</b> Enhertu's payload is a <b>topoisomerase I inhibitor — the same class as camptothecin from L14's apoptosis assay</b>. Elahere's payload is a <b>microtubule inhibitor — the same mechanism as paclitaxel from L9</b>. And both antibodies exploit the oncogene-targeting logic from L10 (you can drug an overexpressed surface protein).</div>`},
-     {h:"The CAR-T products presented — Kymriah, Yescarta, Carvykti", imgs:[], html:`
-      <p class="lead">All three follow the same <b>procedure</b> (leukapheresis → viral-vector gene insertion → expansion → lymphodepletion → infusion). They differ in <b>target antigen</b> and <b>costimulatory domain</b>.</p>
-      <table class="dt">
-       <tr><th>Product</th><th>Target</th><th>Costimulatory domain</th><th>Cancer</th></tr>
-       <tr><td><b>Kymriah</b> (tisagenlecleucel)</td><td><b>CD19</b></td><td><b>4-1BB</b></td><td>B-ALL, DLBCL — <b>first FDA-approved CAR-T (2017)</b></td></tr>
-       <tr><td><b>Yescarta</b> (axicabtagene ciloleucel)</td><td><b>CD19</b></td><td><b>CD28</b></td><td>B-cell lymphoma (incl. relapsed/refractory)</td></tr>
-       <tr><td><b>Carvykti</b> (ciltacabtagene autoleucel)</td><td><b>BCMA</b></td><td>4-1BB (dual-epitope binder)</td><td><b>Multiple myeloma</b></td></tr>
-      </table>
-      <div class="callout key"><b>Why BCMA for myeloma?</b> Multiple myeloma is a cancer of <b>plasma cells</b>, and <b>BCMA (B-cell maturation antigen)</b> is expressed on plasma cells — not on the earlier B cells that carry CD19. Pick the antigen that matches the cell of origin.</div>
-      <p><b>CD28 vs 4-1BB:</b> CD28-based CARs (Yescarta) expand <b>faster and more intensely</b> — quicker responses but generally more CRS. 4-1BB-based CARs (Kymriah) expand more slowly but <b>persist longer</b>. Same target, different kinetics.</p>
-      <p class="muted">Shared toxicities: <b>CRS</b>, <b>ICANS</b> (neurotoxicity), and <b>B-cell aplasia</b> for the CD19 products (on-target, off-tumour).</p>`},
-     {h:"The rest: Libtayo, T-VEC, and the iMiD/degrader angle", imgs:[], html:`
-      <p><b>Cemiplimab (Libtayo)</b> — an <b>anti-PD-1</b> checkpoint inhibitor, same mechanism as pembrolizumab, approved for <b>advanced cutaneous squamous cell carcinoma</b>. Why CSCC responds well: it is a <b>very high mutational burden</b> tumour (UV-driven), so it displays many neoantigens for the released T cells to recognize. <b>High mutation burden generally predicts better checkpoint-inhibitor response.</b></p>
-      <p><b>T-VEC (talimogene laherparepvec, Imlygic)</b> — an <b>oncolytic virus</b>: a modified herpes simplex virus injected directly into melanoma lesions. It (1) <b>replicates inside and lyses tumour cells</b>, and (2) is engineered to express <b>GM-CSF</b>, which recruits and matures dendritic cells so the debris from lysed tumour cells is presented as antigen — turning the tumour into its own vaccine.</p>
-      <div class="callout tip"><b>iMiDs / targeted protein degradation</b> (thalidomide derivatives such as lenalidomide) — these are <b>molecular glues</b>: they bind the <b>cereblon E3 ubiquitin ligase</b> and redirect it to ubiquitinate proteins it would not normally touch, sending them to the proteasome. <b>This is the same logic as PROTACs from L5</b> — hijack the ubiquitin–proteasome system to destroy a chosen protein, rather than inhibit it.</div>`}
-    ],
-    quiz:[
-     {type:"mcq", q:"Enhertu (trastuzumab deruxtecan) — what is its target and payload?", opts:["Targets HER2; payload deruxtecan (DXd), a topoisomerase I inhibitor","Targets CD19; payload a microtubule inhibitor","Targets PD-1; no payload","Targets folate receptor α; payload DM4"], a:0,
-      exp:"HER2 antibody (trastuzumab) + DXd, a topoisomerase I inhibitor that causes DNA damage. Same drug class of payload as camptothecin from L14."},
-     {type:"mcq", q:"Elahere (mirvetuximab soravtansine) — target and payload?", opts:["Targets folate receptor α (FRα); payload DM4, a microtubule inhibitor","Targets HER2; payload deruxtecan","Targets CD19; payload DM1","Targets BCMA; no payload"], a:0,
-      exp:"FRα is overexpressed on ovarian cancer. DM4 is a maytansinoid microtubule inhibitor — same mechanism class as paclitaxel from L9."},
-     {type:"mcq", q:"Why can Enhertu treat 'HER2-LOW' tumours, not just HER2-positive ones?", opts:["Its high drug-to-antibody ratio and membrane-permeable payload create a strong bystander effect — released DXd diffuses into neighbouring cells","It binds HER2 more weakly","It does not need HER2 at all","It is a checkpoint inhibitor"], a:0,
-      exp:"The bystander effect means the payload kills nearby cells too, so even sparse HER2 expression is enough to seed lethal drug delivery."},
-     {type:"mcq", q:"Cemiplimab (Libtayo) works by which mechanism?", opts:["Blocking PD-1 on T cells — a checkpoint inhibitor, same mechanism as pembrolizumab","Delivering a toxin into the cancer cell","Engineering the patient's T cells","Lysing tumour cells directly"], a:0,
-      exp:"Anti-PD-1 antibody, approved for advanced cutaneous squamous cell carcinoma."},
-     {type:"mcq", q:"Why does cutaneous squamous cell carcinoma respond well to a PD-1 inhibitor like cemiplimab?", opts:["It is a UV-driven, very high mutational-burden tumour, so it displays many neoantigens for released T cells to recognize","It has no mutations","It lacks PD-L1 entirely","It is not a real cancer"], a:0,
-      exp:"High mutational burden → more neoantigens → more tumour-reactive T cells → more benefit once you release the brakes. TMB generally predicts checkpoint response."},
-     {type:"mcq", q:"T-VEC (talimogene laherparepvec) works by:", opts:["A modified herpes virus that replicates in and lyses tumour cells AND expresses GM-CSF to recruit dendritic cells, turning the tumour into its own vaccine","Blocking CTLA-4","Delivering DM1 into melanoma cells","Engineering T cells with a chimeric receptor"], a:0,
-      exp:"Oncolytic virus with two actions: direct tumour lysis, plus GM-CSF-driven antigen presentation of the released tumour debris."},
-     {type:"mcq", q:"Carvykti (ciltacabtagene autoleucel) targets BCMA rather than CD19. Why?", opts:["Multiple myeloma is a cancer of PLASMA cells, which express BCMA; CD19 is on earlier B cells","BCMA is easier to manufacture","CD19 does not exist in humans","BCMA is a checkpoint protein"], a:0,
-      exp:"Match the antigen to the cell of origin: plasma-cell malignancy → BCMA. B-cell malignancies (ALL, lymphoma) → CD19."},
-     {type:"mcq", q:"Kymriah and Yescarta both target CD19. What differs between them?", opts:["Their costimulatory domain — Kymriah uses 4-1BB (slower expansion, longer persistence), Yescarta uses CD28 (faster, more intense expansion)","Their target antigen","One is an ADC","One is a checkpoint inhibitor"], a:0,
-      exp:"Same target, different second-generation CAR design. CD28 = faster and more intense (more CRS); 4-1BB = more durable persistence."},
-     {type:"mcq", q:"Blinatumomab and Kymriah both target CD19. How do they fundamentally differ?", opts:["Blinatumomab is a BiTE antibody that tethers existing T cells; Kymriah is the patient's own T cells genetically engineered with a CAR","They are the same drug","Blinatumomab is an ADC","Kymriah is a checkpoint inhibitor"], a:0,
-      exp:"Same antigen, completely different modality: an off-the-shelf antibody drug vs an autologous gene-modified cell product that persists and proliferates."},
-     {type:"mcq", q:"Which of these presented drugs is NOT a monoclonal antibody-based product?", opts:["Sipuleucel-T (Provenge)","Pembrolizumab (Keytruda)","Enhertu","Blinatumomab"], a:0,
-      exp:"Sipuleucel-T is an autologous CELL therapy — the patient's antigen-presenting cells loaded with PAP–GM-CSF. The other three are antibody-based."},
-     {type:"mcq", q:"Group these by target: which drugs all hit CD19?", opts:["Kymriah, Yescarta and Blinatumomab","Enhertu, Elahere and Keytruda","Provenge, T-VEC and Libtayo","Carvykti, Enhertu and Keytruda"], a:0,
-      exp:"CD19 = the B-cell antigen. Kymriah and Yescarta are CAR-T; blinatumomab is a BiTE. All treat B-cell malignancies."},
-     {type:"mcq", q:"iMiDs (thalidomide derivatives such as lenalidomide) act as 'molecular glues'. What does that mean?", opts:["They bind the cereblon E3 ubiquitin ligase and redirect it to ubiquitinate proteins it would not normally target, sending them to the proteasome","They block PD-1","They deliver a toxin into cells","They engineer T cells"], a:0,
-      exp:"Redirected ubiquitination — conceptually the same as PROTACs from L5: hijack the UPS to DESTROY a protein rather than merely inhibit it."},
-     {type:"tf", q:"Enhertu's payload (a topoisomerase I inhibitor) and Elahere's payload (a microtubule inhibitor) kill cells by the same mechanism.", a:false,
-      exp:"False — different mechanisms. DXd causes DNA damage via topoisomerase I inhibition; DM4 disrupts microtubules causing mitotic arrest."},
-     {type:"short", q:"Your classmates presented Enhertu, Elahere, Keytruda, Libtayo, Provenge, T-VEC, Blinatumomab, Kymriah, Yescarta and Carvykti. Sort them by therapy class and give each one's target.", model:"Checkpoint inhibitors (block a T-cell brake): Pembrolizumab/Keytruda — anti-PD-1, many cancers; Cemiplimab/Libtayo — anti-PD-1, advanced cutaneous squamous cell carcinoma. Therapeutic vaccines (teach the immune system): Sipuleucel-T/Provenge — autologous APCs loaded with PAP fused to GM-CSF, prostate cancer; T-VEC/Imlygic — oncolytic herpes virus that lyses melanoma cells and expresses GM-CSF to drive antigen presentation. ADCs (antibody delivers a toxin): Trastuzumab deruxtecan/Enhertu — targets HER2, payload deruxtecan, a topoisomerase I inhibitor, with a strong bystander effect that lets it treat HER2-low tumours; Mirvetuximab soravtansine/Elahere — targets folate receptor alpha, payload DM4, a microtubule inhibitor, ovarian cancer. Bispecific antibody/BiTE (tethers a T cell to the tumour): Blinatumomab/Blincyto — CD19 on the B cell by CD3 on the T cell, B-ALL. CAR-T (gene-modified patient T cells): Kymriah/tisagenlecleucel — CD19, 4-1BB costimulation, first approved 2017; Yescarta/axicabtagene ciloleucel — CD19, CD28 costimulation, B-cell lymphoma; Carvykti/ciltacabtagene autoleucel — BCMA, multiple myeloma, because myeloma is a plasma-cell cancer and plasma cells carry BCMA rather than CD19. Grouping by target is the fastest recall route: CD19 covers Kymriah, Yescarta and blinatumomab; HER2 is Enhertu; PD-1 is Keytruda and Libtayo; BCMA is Carvykti; FRalpha is Elahere; PAP is Provenge.", pts:["Checkpoint: Keytruda and Libtayo, both anti-PD-1","Vaccines: Provenge (PAP+GM-CSF on APCs) and T-VEC (oncolytic virus + GM-CSF)","ADCs: Enhertu (HER2, topo I payload, bystander effect) and Elahere (FRα, DM4 microtubule payload)","BiTE: Blinatumomab CD19 × CD3","CAR-T: Kymriah and Yescarta (CD19; 4-1BB vs CD28) and Carvykti (BCMA for myeloma)"]}
-    ]
-   },
-   {
     id:"L10Q", title:"📝 Practice quiz (from class) — Cancer",
     sub:"The multiple-choice questions printed on her Cancer slides, with the answers she revealed.",
     slides:[
@@ -4373,6 +4166,231 @@ window.COURSE = [
   ]
  },
 
+
+ /* ============================ IMMUNO-ONCOLOGY (presentation assignment) ============================ */
+ {
+  id:"IO", icon:"💉", short:"IO · Immuno-Oncology",
+  title:"Immuno-Oncology Therapies — the class presentation assignment",
+  blurb:"The five immunotherapy classes everyone presented on: cancer treatment vaccines, checkpoint inhibitors, antibody–drug conjugates, bispecific antibodies/BiTEs, and CAR-T — plus every specific drug your classmates covered.",
+  objectives:[
+    "Distinguish a cancer TREATMENT (therapeutic) vaccine from a PREVENTION vaccine, and explain how Sipuleucel-T works",
+    "Explain how checkpoint inhibitors release T-cell brakes, and contrast the PD-1/PD-L1 and CTLA-4 axes",
+    "Describe the three components of an ADC and trace the bind → internalize → lysosome → payload mechanism",
+    "Explain how a bispecific T-cell engager physically tethers a T cell to a tumour cell",
+    "List the CAR-T procedure in order and explain why CAR-T is a 'living drug'",
+    "Use MHC-dependence to tell the five therapy classes apart",
+    "Match each drug presented in class to its class, target and payload"
+  ],
+  topics:[
+   {
+    id:"IOT1", title:"The five therapy types — how each one works",
+    sub:"The five therapy types everyone presented on — mechanism, one example drug each, and how to tell them apart.",
+    slides:[
+     {h:"The big idea: five ways to turn the immune system against cancer", imgs:[], html:`
+      <p class="lead">Recall from L10 that one of the changes cancer cells accumulate is <b>immunosuppression — avoiding the immune system</b>. Immuno-oncology is the counterattack: instead of poisoning dividing cells (chemo), you <b>re-arm or redirect the patient's own immune system</b>.</p>
+      <table class="dt">
+       <tr><th>Therapy</th><th>One-line mechanism</th><th>Needs MHC?</th></tr>
+       <tr><td><b>1. Treatment vaccine</b></td><td><b>Teach</b> the immune system to recognize a tumour antigen</td><td>Yes</td></tr>
+       <tr><td><b>2. Checkpoint inhibitor</b></td><td><b>Release the brakes</b> on T cells the tumour has engaged</td><td>Yes</td></tr>
+       <tr><td><b>3. ADC</b></td><td>Antibody <b>delivers</b> a toxic payload directly into the cancer cell</td><td>No</td></tr>
+       <tr><td><b>4. BMA / BiTE</b></td><td>Two-armed antibody <b>physically tethers</b> a T cell to a cancer cell</td><td>No</td></tr>
+       <tr><td><b>5. CAR-T</b></td><td><b>Genetically engineer</b> the patient's T cells to recognize the tumour</td><td>No</td></tr>
+      </table>
+      <div class="callout key"><b>The single best discriminator: MHC dependence.</b> Vaccines and checkpoint inhibitors still rely on normal T-cell recognition through <b>MHC</b> — so a tumour that downregulates MHC escapes them. ADCs, BiTEs and CAR-T use <b>antibody-based</b> recognition of a surface antigen, which <b>bypasses MHC entirely</b>. That's why they work where the others fail.</div>`},
+     {h:"1. Cancer TREATMENT vaccines — example: Sipuleucel-T (Provenge)", imgs:[], html:`
+      <div class="callout warn"><b>First, the distinction the assignment insists on:</b> a <b>PREVENTIVE</b> vaccine (HPV/Gardasil, hepatitis B) stops an <b>infection</b> that would later cause cancer — it is given to healthy people. A <b>TREATMENT (therapeutic)</b> vaccine is given to someone who <b>already has cancer</b> and trains their immune system to attack it.</div>
+      <p class="lead"><b>Sipuleucel-T (Provenge)</b> — metastatic castration-resistant prostate cancer; the <b>first FDA-approved therapeutic cancer vaccine (2010)</b>. It is <b>autologous</b> (made from the patient's own cells), so each dose is custom-manufactured.</p>
+      <ol>
+       <li><b>Leukapheresis</b> — the patient's antigen-presenting cells (APCs, mainly dendritic cells) are collected from blood.</li>
+       <li><b>Ex vivo culture</b> with <b>PA2024</b>, a fusion protein of <b>PAP</b> (prostatic acid phosphatase — the prostate-cancer antigen) fused to <b>GM-CSF</b> (an immune-activating growth factor).</li>
+       <li>The APCs <b>take up, process and present</b> the PAP antigen on MHC, and GM-CSF matures them.</li>
+       <li><b>Reinfusion</b> into the patient → the activated APCs prime <b>T cells specific for PAP</b> → those T cells hunt PAP-expressing prostate cancer cells.</li>
+      </ol>
+      <p class="muted">Other therapeutic vaccines: <b>T-VEC (talimogene laherparepvec)</b>, an oncolytic herpes virus for melanoma; and <b>BCG</b> for bladder cancer.</p>`},
+     {h:"2. Checkpoint inhibitors — example: Pembrolizumab (Keytruda)", imgs:[], html:`
+      <p class="lead">T cells carry built-in <b>checkpoints</b> — molecular brakes that normally prevent autoimmunity. <b>Tumours exploit these brakes to shut down the T cells attacking them.</b> A checkpoint inhibitor is an antibody that <b>blocks the brake</b>, releasing the T cell.</p>
+      <table class="dt">
+       <tr><th>Axis</th><th>Normal role</th><th>Example drug</th></tr>
+       <tr><td><b>PD-1 / PD-L1</b></td><td>PD-1 on the T cell binds <b>PD-L1</b> displayed by the tumour → T cell is switched off <i>in the tissue</i></td><td><b>Pembrolizumab (Keytruda)</b>, nivolumab — anti-PD-1; atezolizumab — anti-PD-L1</td></tr>
+       <tr><td><b>CTLA-4</b></td><td>Competes with CD28 for B7 on the APC → dampens T-cell <b>priming</b> in the lymph node</td><td><b>Ipilimumab (Yervoy)</b> — first approved, 2011, melanoma</td></tr>
+      </table>
+      <p><b>Pembrolizumab mechanism:</b> it is a monoclonal antibody that binds <b>PD-1 on the T cell</b>, physically preventing tumour <b>PD-L1</b> from engaging it. The inhibitory signal never fires, so the T cell stays active and kills the tumour cell.</p>
+      <div class="callout key"><b>Key insight:</b> the drug does <b>not</b> kill cancer cells and does <b>not</b> activate T cells directly — it <b>removes an inhibitory signal</b>. It only works if tumour-reactive T cells already exist. <b>2018 Nobel Prize:</b> James Allison (CTLA-4) and Tasuku Honjo (PD-1).</div>
+      <div class="callout warn"><b>Predictable side effect:</b> releasing brakes systemically causes <b>immune-related adverse events</b> — colitis, dermatitis, thyroiditis, hepatitis. The toxicity follows directly from the mechanism: less restraint everywhere, not just at the tumour.</div>`},
+     {h:"3. ADCs — example: Trastuzumab emtansine (T-DM1, Kadcyla)", imgs:[
+        {src:"slides/L10/slide-26.jpg", cap:"L10 · Slide 26 — Herceptin (trastuzumab) binding HER2 — the targeting antibody an ADC is built on"}
+      ], html:`
+      <p class="lead">An <b>antibody–drug conjugate</b> is a <b>guided missile</b>: it has <b>three parts</b> —</p>
+      <ol>
+       <li>a <b>monoclonal antibody</b> that binds a tumour surface antigen (the GPS),</li>
+       <li>a <b>linker</b> (stable in blood, cleaved inside the cell),</li>
+       <li>a <b>cytotoxic payload</b> — a chemo drug far too toxic to give systemically.</li>
+      </ol>
+      <p><b>T-DM1 mechanism:</b> <b>trastuzumab</b> (the same Herceptin antibody from L10) is chemically linked to <b>DM1 (emtansine)</b>, a <b>microtubule inhibitor</b>.</p>
+      <ol>
+       <li>Trastuzumab binds <b>HER2</b> on the breast cancer cell.</li>
+       <li>The whole complex is <b>internalized by endocytosis</b>.</li>
+       <li>In the <b>lysosome</b> the linker is cleaved, releasing <b>DM1</b> into the cytoplasm.</li>
+       <li>DM1 <b>disrupts microtubules</b> → mitotic arrest → <b>apoptosis</b>.</li>
+      </ol>
+      <div class="callout key"><b>Why this is elegant:</b> the toxin is only released <b>inside</b> a HER2-positive cell, so healthy tissue is largely spared — you get chemotherapy's killing power with an antibody's precision. Note the two cross-links: <b>HER2/Herceptin from L10</b>, and <b>microtubule disruption — the same mechanism as paclitaxel from L9</b>.</div>
+      <p class="muted">Others: brentuximab vedotin (CD30, lymphoma), trastuzumab deruxtecan (Enhertu), sacituzumab govitecan (TROP-2). Some payloads diffuse into neighbouring cells — the <b>bystander effect</b>.</p>`},
+     {h:"4. BMAs / BiTEs — example: Blinatumomab (Blincyto)", imgs:[], html:`
+      <p class="lead">A <b>bispecific monoclonal antibody</b> has <b>two different binding arms</b> instead of two identical ones. The classic design is a <b>BiTE — Bispecific T-cell Engager</b>:</p>
+      <ul>
+       <li><b>One arm grabs a T cell</b> — almost always via <b>CD3</b> (part of the T-cell receptor complex).</li>
+       <li><b>The other arm grabs a tumour antigen.</b></li>
+       <li>The antibody <b>physically tethers the two cells together</b>, forcing an immunological synapse → the T cell activates and kills the cancer cell.</li>
+      </ul>
+      <p><b>Blinatumomab mechanism:</b> one arm binds <b>CD19</b> (on B cells, including B-cell acute lymphoblastic leukemia), the other binds <b>CD3</b> on T cells. It drags any passing T cell into contact with the leukemia cell and triggers killing.</p>
+      <div class="callout key"><b>Why it's powerful:</b> the T cell does <b>not</b> need to recognize the tumour through <b>MHC</b> — the antibody supplies the connection. That bypasses MHC downregulation, a major way tumours hide. It also recruits <b>any</b> T cell, not just tumour-specific ones.</div>
+      <div class="callout warn">Because it activates T cells en masse, the signature toxicity is <b>cytokine release syndrome (CRS)</b>. Blinatumomab also has a very short half-life, so it's given by <b>continuous IV infusion</b>.</div>
+      <p class="muted">Others: teclistamab (BCMA × CD3, myeloma), amivantamab (EGFR × MET).</p>`},
+     {h:"5. CAR-T cell therapy — example: Tisagenlecleucel (Kymriah)", imgs:[], html:`
+      <p class="lead"><b>CAR = Chimeric Antigen Receptor.</b> "Chimeric" because it fuses parts from two different systems: an <b>antibody-derived antigen-binding domain (scFv)</b> on the outside, joined to <b>T-cell signalling domains</b> (CD3ζ plus a costimulatory domain such as 4-1BB or CD28) on the inside.</p>
+      <p><b>The procedure — know these steps in order:</b></p>
+      <ol>
+       <li><b>Leukapheresis</b> — collect the patient's own T cells from blood.</li>
+       <li><b>Genetic engineering</b> ex vivo — a <b>viral vector</b> (lentivirus/retrovirus) inserts the CAR gene into the T cells.</li>
+       <li><b>Expansion</b> — grow them to millions in culture (takes weeks).</li>
+       <li><b>Lymphodepleting chemotherapy</b> — prepares the patient so the infused cells can expand.</li>
+       <li><b>Infusion</b> back into the patient.</li>
+       <li>CAR-T cells bind the antigen, kill the tumour cell, then <b>proliferate and persist</b> — a <b>"living drug."</b></li>
+      </ol>
+      <p><b>Tisagenlecleucel (Kymriah):</b> an <b>anti-CD19</b> CAR-T for B-ALL and diffuse large B-cell lymphoma — the <b>first FDA-approved CAR-T (2017)</b>.</p>
+      <div class="callout key"><b>Two defining features:</b> (1) it is <b>autologous and MHC-independent</b> — antibody-based recognition bypasses MHC; (2) unlike every other therapy here, the CAR-T cells <b>replicate inside the patient</b>, so a single infusion can keep working for years.</div>
+      <div class="callout warn"><b>Toxicities:</b> <b>CRS (cytokine release syndrome)</b>, <b>ICANS (neurotoxicity)</b>, and <b>B-cell aplasia</b> — because CD19 is on normal B cells too, they get killed along with the cancer (on-target, off-tumour).</div>`},
+     {h:"Telling them apart — the comparison that gets tested", imgs:[], html:`
+      <table class="dt">
+       <tr><th></th><th>What is engineered / given</th><th>Target</th><th>Kills how?</th></tr>
+       <tr><td><b>Treatment vaccine</b><br>Sipuleucel-T</td><td>Patient's <b>APCs</b> loaded with antigen</td><td>PAP (tumour antigen)</td><td>Primes the patient's own T cells</td></tr>
+       <tr><td><b>Checkpoint inhibitor</b><br>Pembrolizumab</td><td>A plain antibody (nothing engineered into the patient)</td><td>PD-1 / PD-L1 / CTLA-4</td><td>Removes a brake so existing T cells work</td></tr>
+       <tr><td><b>ADC</b><br>T-DM1</td><td>Antibody + linker + <b>toxin</b></td><td>HER2</td><td>Delivers chemo <b>inside</b> the cell</td></tr>
+       <tr><td><b>BiTE</b><br>Blinatumomab</td><td>Antibody with <b>two different arms</b></td><td>CD19 <b>×</b> CD3</td><td>Tethers a T cell to the tumour cell</td></tr>
+       <tr><td><b>CAR-T</b><br>Tisagenlecleucel</td><td>Patient's <b>T cells, gene-modified</b></td><td>CD19</td><td>Engineered T cells kill and then multiply</td></tr>
+      </table>
+      <div class="callout tip"><b>Fast discriminators:</b> <b>two arms + CD3</b> → BiTE. <b>Antibody carrying a toxin</b> → ADC. <b>Cells removed, gene-modified, returned</b> → CAR-T. <b>Blocks PD-1/PD-L1/CTLA-4</b> → checkpoint inhibitor. <b>Loads APCs with an antigen</b> → therapeutic vaccine.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"What distinguishes a cancer TREATMENT vaccine from a cancer PREVENTION vaccine?", opts:["A treatment vaccine is given to someone who already has cancer to train the immune system against it; a prevention vaccine (e.g. HPV) stops an infection that would later cause cancer","They are the same thing","Treatment vaccines prevent viral infection","Prevention vaccines are given only after diagnosis"], a:0,
+      exp:"Preventive = given to healthy people to block an oncogenic infection (HPV, HBV). Therapeutic = given to a cancer patient to provoke an immune attack on existing tumour."},
+     {type:"mcq", q:"How does Sipuleucel-T (Provenge) work?", opts:["The patient's antigen-presenting cells are collected, cultured with a PAP–GM-CSF fusion protein, and reinfused to prime T cells against prostate cancer","It blocks PD-1 on T cells","It delivers a chemotherapy payload into the tumour","It genetically engineers T cells with a chimeric receptor"], a:0,
+      exp:"Autologous APCs are loaded ex vivo with PAP (the prostate tumour antigen) fused to GM-CSF, then returned to prime PAP-specific T cells. First FDA-approved therapeutic cancer vaccine."},
+     {type:"mcq", q:"In Sipuleucel-T, what are PAP and GM-CSF respectively?", opts:["PAP is the prostate-cancer antigen; GM-CSF is the immune-activating factor that matures the APCs","PAP is a chemotherapy drug; GM-CSF is a linker","Both are checkpoint proteins","PAP is an antibody; GM-CSF is a virus"], a:0,
+      exp:"PAP = prostatic acid phosphatase, the target antigen. GM-CSF activates/matures the antigen-presenting cells so they prime T cells effectively."},
+     {type:"mcq", q:"How does a checkpoint inhibitor such as pembrolizumab kill cancer?", opts:["It blocks PD-1 so the tumour's PD-L1 cannot switch off the T cell — releasing an existing T-cell response","It directly poisons the cancer cell","It inserts a new receptor into T cells","It delivers a toxin into the tumour"], a:0,
+      exp:"It removes an INHIBITORY signal. The drug itself kills nothing — it only works if tumour-reactive T cells already exist."},
+     {type:"mcq", q:"PD-1/PD-L1 and CTLA-4 checkpoints differ in WHERE they act. Which is correct?", opts:["CTLA-4 dampens T-cell PRIMING in the lymph node (competing with CD28 for B7); PD-1/PD-L1 switches off T cells in the tissue/tumour","PD-1 acts in the lymph node; CTLA-4 acts in the tumour","Both act only in bone marrow","Neither involves T cells"], a:0,
+      exp:"CTLA-4 = early, priming stage. PD-1/PD-L1 = later, effector stage in the tumour microenvironment. Ipilimumab targets CTLA-4; pembrolizumab/nivolumab target PD-1."},
+     {type:"mcq", q:"Why do checkpoint inhibitors commonly cause colitis, dermatitis or thyroiditis?", opts:["Removing T-cell brakes systemically permits autoimmune attack on healthy tissue — immune-related adverse events","They are directly toxic to the gut","They suppress the immune system","They cause cytokine release syndrome only"], a:0,
+      exp:"Checkpoints normally prevent autoimmunity. Block them and you get less restraint everywhere, not just at the tumour — the toxicity follows from the mechanism."},
+     {type:"mcq", q:"What are the THREE components of an antibody–drug conjugate?", opts:["A monoclonal antibody, a linker, and a cytotoxic payload","Two antibodies and a T cell","A virus, a gene, and a T cell","An antigen, GM-CSF, and an APC"], a:0,
+      exp:"Antibody = targeting; linker = stable in blood but cleavable inside the cell; payload = a chemo drug too toxic to give systemically."},
+     {type:"mcq", q:"Put the T-DM1 (Kadcyla) mechanism in order:", opts:["Trastuzumab binds HER2 → complex internalized by endocytosis → linker cleaved in the lysosome → DM1 released → microtubules disrupted → apoptosis","DM1 is released in the blood → diffuses into cells → blocks HER2","The antibody blocks PD-1 → T cells kill the tumour","T cells are engineered → infused → kill HER2 cells"], a:0,
+      exp:"Bind → internalize → cleave in lysosome → release payload → microtubule disruption → mitotic arrest → apoptosis. The toxin is only freed INSIDE a HER2+ cell."},
+     {type:"mcq", q:"DM1 (emtansine), the payload in T-DM1, kills cells by:", opts:["Disrupting microtubules, causing mitotic arrest and apoptosis","Blocking PD-L1","Cleaving DNA at telomeres","Inhibiting the proteasome"], a:0,
+      exp:"DM1 is a microtubule inhibitor — the same class of mechanism as paclitaxel from L9, but delivered selectively by the antibody."},
+     {type:"mcq", q:"What is the defining feature of a bispecific T-cell engager (BiTE) such as blinatumomab?", opts:["It has two different arms — one binding CD3 on a T cell, the other a tumour antigen — physically tethering the two cells together","It carries a cytotoxic payload","It is a genetically engineered T cell","It blocks CTLA-4"], a:0,
+      exp:"Two different specificities. Blinatumomab: CD19 (leukemic B cell) × CD3 (T cell). It forces an immunological synapse between them."},
+     {type:"mcq", q:"Blinatumomab binds which two targets?", opts:["CD19 on B cells and CD3 on T cells","HER2 and PD-1","PAP and GM-CSF","CD20 and CTLA-4"], a:0,
+      exp:"CD19 × CD3 — the B-cell antigen and the T-cell receptor complex. Used in B-cell acute lymphoblastic leukemia."},
+     {type:"mcq", q:"Why can BiTEs and CAR-T work against tumours that have downregulated MHC?", opts:["Both use antibody-based recognition of a surface antigen, which is MHC-independent","Both increase MHC expression","Both require MHC to function","Both kill cells with chemotherapy"], a:0,
+      exp:"Losing MHC is a classic tumour escape route from normal T cells. Antibody-based targeting (BiTE arm or CAR scFv) bypasses it entirely."},
+     {type:"mcq", q:"What does 'chimeric' mean in Chimeric Antigen Receptor?", opts:["The receptor fuses an antibody-derived antigen-binding domain (scFv) to T-cell signalling domains — parts from two different systems","It comes from two different patients","It targets two antigens","It is made in a chimera animal"], a:0,
+      exp:"Antibody outside + T-cell receptor signalling inside (CD3ζ plus a costimulatory domain like 4-1BB or CD28). Two systems fused into one receptor."},
+     {type:"mcq", q:"Put the CAR-T procedure in the correct order:", opts:["Leukapheresis → viral vector inserts the CAR gene → expansion in culture → lymphodepleting chemotherapy → infusion → CAR-T cells kill and proliferate","Infusion → leukapheresis → gene insertion → expansion","Chemotherapy → antibody infusion → T-cell collection","Gene insertion in the patient → expansion in the patient → collection"], a:0,
+      exp:"Collect → engineer ex vivo → expand → lymphodeplete the patient → infuse → the cells expand and persist in vivo as a 'living drug'."},
+     {type:"mcq", q:"Why is CAR-T described as a 'living drug'?", opts:["The engineered T cells proliferate and persist inside the patient, so one infusion can keep working for years","It is made from live viruses","It must be kept alive in the fridge","It is grown in bacteria"], a:0,
+      exp:"Unlike an antibody that is cleared, CAR-T cells replicate in vivo and can persist long-term — a fundamentally different pharmacology."},
+     {type:"mcq", q:"Why does anti-CD19 CAR-T therapy cause B-cell aplasia?", opts:["CD19 is expressed on NORMAL B cells too, so healthy B cells are killed along with the cancer — on-target, off-tumour toxicity","The CAR-T cells become cancerous","It is caused by the lymphodepleting chemotherapy alone","CD19 is on red blood cells"], a:0,
+      exp:"The antigen is not tumour-exclusive. 'On-target, off-tumour' toxicity is the fundamental limitation of picking a lineage antigen like CD19."},
+     {type:"mcq", q:"Cytokine release syndrome (CRS) is a hallmark toxicity of which therapies?", opts:["CAR-T and BiTEs — both cause massive simultaneous T-cell activation","ADCs only","Checkpoint inhibitors only","Preventive vaccines"], a:0,
+      exp:"Any therapy that activates many T cells at once can trigger a cytokine storm. Checkpoint inhibitors instead cause immune-related adverse events (autoimmunity)."},
+     {type:"mcq", q:"A therapy consists of an antibody chemically linked to a potent toxin. Which type is it?", opts:["An antibody–drug conjugate (ADC)","A bispecific antibody","A checkpoint inhibitor","CAR-T therapy"], a:0,
+      exp:"Antibody + linker + toxin = ADC. Two different binding arms = BiTE. Gene-modified patient T cells = CAR-T."},
+     {type:"mcq", q:"Which therapy requires collecting the patient's own cells, modifying them ex vivo, and returning them?", opts:["Both CAR-T (T cells, gene-modified) and Sipuleucel-T (APCs, antigen-loaded) are autologous cell therapies","Only checkpoint inhibitors","Only ADCs","Only BiTEs"], a:0,
+      exp:"Both are autologous cell products — but CAR-T is GENETICALLY engineered, while Sipuleucel-T APCs are simply loaded with antigen, not gene-modified."},
+     {type:"short", q:"Compare all five immuno-oncology approaches: how each works, one example, and the key advantage or limitation of each.", model:"(1) Treatment vaccine — Sipuleucel-T: the patient's APCs are collected, cultured with PAP (prostate tumour antigen) fused to GM-CSF, and reinfused to prime PAP-specific T cells. Advantage: highly specific and autologous; limitation: MHC-dependent, custom-manufactured, modest survival benefit. (2) Checkpoint inhibitor — pembrolizumab: an antibody blocks PD-1 so tumour PD-L1 cannot switch off the T cell, releasing an existing response (ipilimumab does the same at CTLA-4 during priming). Advantage: durable responses across many tumour types; limitation: only works if tumour-reactive T cells already exist, and removing brakes systemically causes immune-related adverse events. (3) ADC — T-DM1: trastuzumab binds HER2, the complex is internalized, the linker is cleaved in the lysosome and DM1 is released to disrupt microtubules and trigger apoptosis. Advantage: delivers chemotherapy selectively so healthy tissue is spared; limitation: requires a good surface target and payload can leak. (4) BiTE — blinatumomab: two arms, CD19 on the leukemic B cell and CD3 on a T cell, physically tethering them so the T cell kills. Advantage: MHC-independent and recruits any T cell; limitation: cytokine release syndrome and a very short half-life requiring continuous infusion. (5) CAR-T — tisagenlecleucel: the patient's T cells are collected by leukapheresis, a viral vector inserts a chimeric receptor (antibody scFv + CD3ζ and a costimulatory domain), the cells are expanded, the patient is lymphodepleted, and the cells are infused, where they kill and then proliferate as a living drug. Advantage: MHC-independent with long persistence from one dose; limitations: CRS, ICANS neurotoxicity, B-cell aplasia from on-target off-tumour CD19 killing, plus weeks of manufacturing and very high cost. Unifying theme: vaccines and checkpoint inhibitors still depend on MHC-restricted recognition, whereas ADCs, BiTEs and CAR-T use antibody-based targeting that bypasses MHC — which is why they succeed against tumours that hide by downregulating MHC.", pts:["Vaccine = teach (Sipuleucel-T, PAP+GM-CSF on autologous APCs)","Checkpoint inhibitor = release the brakes (pembrolizumab anti-PD-1; ipilimumab anti-CTLA-4), irAEs","ADC = deliver toxin inside (T-DM1: bind HER2 → internalize → lysosome → DM1 → microtubules)","BiTE = tether T cell to tumour (blinatumomab CD19 × CD3), CRS","CAR-T = engineer patient T cells (tisagenlecleucel anti-CD19), living drug, CRS/ICANS/B-cell aplasia","Unifying: ADC/BiTE/CAR-T are MHC-independent; vaccines and checkpoint inhibitors are not"]}
+    ]
+   },
+   {
+    id:"IOT2", title:"🎤 The class presentations — every drug covered",
+    sub:"Each specific product presented, its class, target and payload. These are the ones you are expected to know.",
+    slides:[
+     {h:"Master table — every drug presented in class", imgs:[], html:`
+      <table class="dt">
+       <tr><th>Drug (brand)</th><th>Class</th><th>Target</th><th>Cancer</th></tr>
+       <tr><td><b>Pembrolizumab (Keytruda)</b></td><td>Checkpoint inhibitor</td><td><b>PD-1</b></td><td>Many (melanoma, NSCLC…)</td></tr>
+       <tr><td><b>Cemiplimab (Libtayo)</b></td><td>Checkpoint inhibitor</td><td><b>PD-1</b></td><td>Advanced <b>cutaneous squamous cell carcinoma</b></td></tr>
+       <tr><td><b>Sipuleucel-T (Provenge)</b></td><td>Therapeutic vaccine</td><td><b>PAP</b> antigen</td><td>Prostate</td></tr>
+       <tr><td><b>T-VEC (Imlygic)</b></td><td>Oncolytic virus / vaccine</td><td>Tumour lysis + GM-CSF</td><td>Melanoma</td></tr>
+       <tr><td><b>Trastuzumab deruxtecan (Enhertu)</b></td><td><b>ADC</b></td><td><b>HER2</b></td><td>Breast, gastric, lung</td></tr>
+       <tr><td><b>Mirvetuximab soravtansine (Elahere)</b></td><td><b>ADC</b></td><td><b>Folate receptor α (FRα)</b></td><td>Ovarian</td></tr>
+       <tr><td><b>Blinatumomab (Blincyto)</b></td><td><b>BiTE</b> (bispecific)</td><td><b>CD19 × CD3</b></td><td>B-ALL</td></tr>
+       <tr><td><b>Tisagenlecleucel (Kymriah)</b></td><td><b>CAR-T</b></td><td><b>CD19</b></td><td>B-ALL, DLBCL</td></tr>
+       <tr><td><b>Axicabtagene ciloleucel (Yescarta)</b></td><td><b>CAR-T</b></td><td><b>CD19</b></td><td>B-cell lymphoma</td></tr>
+       <tr><td><b>Ciltacabtagene autoleucel (Carvykti)</b></td><td><b>CAR-T</b></td><td><b>BCMA</b></td><td>Multiple myeloma</td></tr>
+      </table>
+      <div class="callout key"><b>Fastest way to memorize:</b> group by target. <b>CD19</b> → Kymriah, Yescarta (CAR-T) and Blinatumomab (BiTE) — all B-cell cancers. <b>HER2</b> → Enhertu (ADC). <b>PD-1</b> → Keytruda, Libtayo. <b>BCMA</b> → Carvykti (myeloma). <b>FRα</b> → Elahere (ovarian). <b>PAP</b> → Provenge (prostate).</div>`},
+     {h:"The two ADCs presented — Enhertu and Elahere", imgs:[], html:`
+      <p class="lead">Both are <b>antibody–drug conjugates</b>: antibody + linker + cytotoxic payload. What differs is the <b>target</b> and the <b>payload's mechanism</b>.</p>
+      <table class="dt">
+       <tr><th></th><th><b>Enhertu</b> (trastuzumab deruxtecan)</th><th><b>Elahere</b> (mirvetuximab soravtansine)</th></tr>
+       <tr><td><b>Antibody targets</b></td><td><b>HER2</b> (same target as Herceptin)</td><td><b>Folate receptor α (FRα)</b> — overexpressed on ovarian cancer</td></tr>
+       <tr><td><b>Payload</b></td><td><b>Deruxtecan (DXd)</b> — a <b>topoisomerase I inhibitor</b> → DNA damage</td><td><b>DM4</b> (a maytansinoid) — a <b>microtubule inhibitor</b> → mitotic arrest</td></tr>
+       <tr><td><b>Cancer</b></td><td>HER2+ breast, gastric, lung</td><td>FRα+ platinum-resistant ovarian</td></tr>
+      </table>
+      <p><b>Shared mechanism:</b> antibody binds its surface antigen → <b>internalized by endocytosis</b> → <b>linker cleaved in the lysosome</b> → payload released → cell killed → apoptosis.</p>
+      <div class="callout tip"><b>Enhertu's notable feature:</b> a high drug-to-antibody ratio (~8) and a membrane-permeable payload give it a strong <b>bystander effect</b> — released DXd diffuses into neighbouring tumour cells, so it works even where HER2 expression is <b>low</b> ("HER2-low"), not just HER2-positive. That's why it expanded the treatable population.</div>
+      <div class="callout key"><b>Cross-links to know:</b> Enhertu's payload is a <b>topoisomerase I inhibitor — the same class as camptothecin from L14's apoptosis assay</b>. Elahere's payload is a <b>microtubule inhibitor — the same mechanism as paclitaxel from L9</b>. And both antibodies exploit the oncogene-targeting logic from L10 (you can drug an overexpressed surface protein).</div>`},
+     {h:"The CAR-T products presented — Kymriah, Yescarta, Carvykti", imgs:[], html:`
+      <p class="lead">All three follow the same <b>procedure</b> (leukapheresis → viral-vector gene insertion → expansion → lymphodepletion → infusion). They differ in <b>target antigen</b> and <b>costimulatory domain</b>.</p>
+      <table class="dt">
+       <tr><th>Product</th><th>Target</th><th>Costimulatory domain</th><th>Cancer</th></tr>
+       <tr><td><b>Kymriah</b> (tisagenlecleucel)</td><td><b>CD19</b></td><td><b>4-1BB</b></td><td>B-ALL, DLBCL — <b>first FDA-approved CAR-T (2017)</b></td></tr>
+       <tr><td><b>Yescarta</b> (axicabtagene ciloleucel)</td><td><b>CD19</b></td><td><b>CD28</b></td><td>B-cell lymphoma (incl. relapsed/refractory)</td></tr>
+       <tr><td><b>Carvykti</b> (ciltacabtagene autoleucel)</td><td><b>BCMA</b></td><td>4-1BB (dual-epitope binder)</td><td><b>Multiple myeloma</b></td></tr>
+      </table>
+      <div class="callout key"><b>Why BCMA for myeloma?</b> Multiple myeloma is a cancer of <b>plasma cells</b>, and <b>BCMA (B-cell maturation antigen)</b> is expressed on plasma cells — not on the earlier B cells that carry CD19. Pick the antigen that matches the cell of origin.</div>
+      <p><b>CD28 vs 4-1BB:</b> CD28-based CARs (Yescarta) expand <b>faster and more intensely</b> — quicker responses but generally more CRS. 4-1BB-based CARs (Kymriah) expand more slowly but <b>persist longer</b>. Same target, different kinetics.</p>
+      <p class="muted">Shared toxicities: <b>CRS</b>, <b>ICANS</b> (neurotoxicity), and <b>B-cell aplasia</b> for the CD19 products (on-target, off-tumour).</p>`},
+     {h:"The rest: Libtayo, T-VEC, and the iMiD/degrader angle", imgs:[], html:`
+      <p><b>Cemiplimab (Libtayo)</b> — an <b>anti-PD-1</b> checkpoint inhibitor, same mechanism as pembrolizumab, approved for <b>advanced cutaneous squamous cell carcinoma</b>. Why CSCC responds well: it is a <b>very high mutational burden</b> tumour (UV-driven), so it displays many neoantigens for the released T cells to recognize. <b>High mutation burden generally predicts better checkpoint-inhibitor response.</b></p>
+      <p><b>T-VEC (talimogene laherparepvec, Imlygic)</b> — an <b>oncolytic virus</b>: a modified herpes simplex virus injected directly into melanoma lesions. It (1) <b>replicates inside and lyses tumour cells</b>, and (2) is engineered to express <b>GM-CSF</b>, which recruits and matures dendritic cells so the debris from lysed tumour cells is presented as antigen — turning the tumour into its own vaccine.</p>
+      <div class="callout tip"><b>iMiDs / targeted protein degradation</b> (thalidomide derivatives such as lenalidomide) — these are <b>molecular glues</b>: they bind the <b>cereblon E3 ubiquitin ligase</b> and redirect it to ubiquitinate proteins it would not normally touch, sending them to the proteasome. <b>This is the same logic as PROTACs from L5</b> — hijack the ubiquitin–proteasome system to destroy a chosen protein, rather than inhibit it.</div>`}
+    ],
+    quiz:[
+     {type:"mcq", q:"Enhertu (trastuzumab deruxtecan) — what is its target and payload?", opts:["Targets HER2; payload deruxtecan (DXd), a topoisomerase I inhibitor","Targets CD19; payload a microtubule inhibitor","Targets PD-1; no payload","Targets folate receptor α; payload DM4"], a:0,
+      exp:"HER2 antibody (trastuzumab) + DXd, a topoisomerase I inhibitor that causes DNA damage. Same drug class of payload as camptothecin from L14."},
+     {type:"mcq", q:"Elahere (mirvetuximab soravtansine) — target and payload?", opts:["Targets folate receptor α (FRα); payload DM4, a microtubule inhibitor","Targets HER2; payload deruxtecan","Targets CD19; payload DM1","Targets BCMA; no payload"], a:0,
+      exp:"FRα is overexpressed on ovarian cancer. DM4 is a maytansinoid microtubule inhibitor — same mechanism class as paclitaxel from L9."},
+     {type:"mcq", q:"Why can Enhertu treat 'HER2-LOW' tumours, not just HER2-positive ones?", opts:["Its high drug-to-antibody ratio and membrane-permeable payload create a strong bystander effect — released DXd diffuses into neighbouring cells","It binds HER2 more weakly","It does not need HER2 at all","It is a checkpoint inhibitor"], a:0,
+      exp:"The bystander effect means the payload kills nearby cells too, so even sparse HER2 expression is enough to seed lethal drug delivery."},
+     {type:"mcq", q:"Cemiplimab (Libtayo) works by which mechanism?", opts:["Blocking PD-1 on T cells — a checkpoint inhibitor, same mechanism as pembrolizumab","Delivering a toxin into the cancer cell","Engineering the patient's T cells","Lysing tumour cells directly"], a:0,
+      exp:"Anti-PD-1 antibody, approved for advanced cutaneous squamous cell carcinoma."},
+     {type:"mcq", q:"Why does cutaneous squamous cell carcinoma respond well to a PD-1 inhibitor like cemiplimab?", opts:["It is a UV-driven, very high mutational-burden tumour, so it displays many neoantigens for released T cells to recognize","It has no mutations","It lacks PD-L1 entirely","It is not a real cancer"], a:0,
+      exp:"High mutational burden → more neoantigens → more tumour-reactive T cells → more benefit once you release the brakes. TMB generally predicts checkpoint response."},
+     {type:"mcq", q:"T-VEC (talimogene laherparepvec) works by:", opts:["A modified herpes virus that replicates in and lyses tumour cells AND expresses GM-CSF to recruit dendritic cells, turning the tumour into its own vaccine","Blocking CTLA-4","Delivering DM1 into melanoma cells","Engineering T cells with a chimeric receptor"], a:0,
+      exp:"Oncolytic virus with two actions: direct tumour lysis, plus GM-CSF-driven antigen presentation of the released tumour debris."},
+     {type:"mcq", q:"Carvykti (ciltacabtagene autoleucel) targets BCMA rather than CD19. Why?", opts:["Multiple myeloma is a cancer of PLASMA cells, which express BCMA; CD19 is on earlier B cells","BCMA is easier to manufacture","CD19 does not exist in humans","BCMA is a checkpoint protein"], a:0,
+      exp:"Match the antigen to the cell of origin: plasma-cell malignancy → BCMA. B-cell malignancies (ALL, lymphoma) → CD19."},
+     {type:"mcq", q:"Kymriah and Yescarta both target CD19. What differs between them?", opts:["Their costimulatory domain — Kymriah uses 4-1BB (slower expansion, longer persistence), Yescarta uses CD28 (faster, more intense expansion)","Their target antigen","One is an ADC","One is a checkpoint inhibitor"], a:0,
+      exp:"Same target, different second-generation CAR design. CD28 = faster and more intense (more CRS); 4-1BB = more durable persistence."},
+     {type:"mcq", q:"Blinatumomab and Kymriah both target CD19. How do they fundamentally differ?", opts:["Blinatumomab is a BiTE antibody that tethers existing T cells; Kymriah is the patient's own T cells genetically engineered with a CAR","They are the same drug","Blinatumomab is an ADC","Kymriah is a checkpoint inhibitor"], a:0,
+      exp:"Same antigen, completely different modality: an off-the-shelf antibody drug vs an autologous gene-modified cell product that persists and proliferates."},
+     {type:"mcq", q:"Which of these presented drugs is NOT a monoclonal antibody-based product?", opts:["Sipuleucel-T (Provenge)","Pembrolizumab (Keytruda)","Enhertu","Blinatumomab"], a:0,
+      exp:"Sipuleucel-T is an autologous CELL therapy — the patient's antigen-presenting cells loaded with PAP–GM-CSF. The other three are antibody-based."},
+     {type:"mcq", q:"Group these by target: which drugs all hit CD19?", opts:["Kymriah, Yescarta and Blinatumomab","Enhertu, Elahere and Keytruda","Provenge, T-VEC and Libtayo","Carvykti, Enhertu and Keytruda"], a:0,
+      exp:"CD19 = the B-cell antigen. Kymriah and Yescarta are CAR-T; blinatumomab is a BiTE. All treat B-cell malignancies."},
+     {type:"mcq", q:"iMiDs (thalidomide derivatives such as lenalidomide) act as 'molecular glues'. What does that mean?", opts:["They bind the cereblon E3 ubiquitin ligase and redirect it to ubiquitinate proteins it would not normally target, sending them to the proteasome","They block PD-1","They deliver a toxin into cells","They engineer T cells"], a:0,
+      exp:"Redirected ubiquitination — conceptually the same as PROTACs from L5: hijack the UPS to DESTROY a protein rather than merely inhibit it."},
+     {type:"tf", q:"Enhertu's payload (a topoisomerase I inhibitor) and Elahere's payload (a microtubule inhibitor) kill cells by the same mechanism.", a:false,
+      exp:"False — different mechanisms. DXd causes DNA damage via topoisomerase I inhibition; DM4 disrupts microtubules causing mitotic arrest."},
+     {type:"short", q:"Your classmates presented Enhertu, Elahere, Keytruda, Libtayo, Provenge, T-VEC, Blinatumomab, Kymriah, Yescarta and Carvykti. Sort them by therapy class and give each one's target.", model:"Checkpoint inhibitors (block a T-cell brake): Pembrolizumab/Keytruda — anti-PD-1, many cancers; Cemiplimab/Libtayo — anti-PD-1, advanced cutaneous squamous cell carcinoma. Therapeutic vaccines (teach the immune system): Sipuleucel-T/Provenge — autologous APCs loaded with PAP fused to GM-CSF, prostate cancer; T-VEC/Imlygic — oncolytic herpes virus that lyses melanoma cells and expresses GM-CSF to drive antigen presentation. ADCs (antibody delivers a toxin): Trastuzumab deruxtecan/Enhertu — targets HER2, payload deruxtecan, a topoisomerase I inhibitor, with a strong bystander effect that lets it treat HER2-low tumours; Mirvetuximab soravtansine/Elahere — targets folate receptor alpha, payload DM4, a microtubule inhibitor, ovarian cancer. Bispecific antibody/BiTE (tethers a T cell to the tumour): Blinatumomab/Blincyto — CD19 on the B cell by CD3 on the T cell, B-ALL. CAR-T (gene-modified patient T cells): Kymriah/tisagenlecleucel — CD19, 4-1BB costimulation, first approved 2017; Yescarta/axicabtagene ciloleucel — CD19, CD28 costimulation, B-cell lymphoma; Carvykti/ciltacabtagene autoleucel — BCMA, multiple myeloma, because myeloma is a plasma-cell cancer and plasma cells carry BCMA rather than CD19. Grouping by target is the fastest recall route: CD19 covers Kymriah, Yescarta and blinatumomab; HER2 is Enhertu; PD-1 is Keytruda and Libtayo; BCMA is Carvykti; FRalpha is Elahere; PAP is Provenge.", pts:["Checkpoint: Keytruda and Libtayo, both anti-PD-1","Vaccines: Provenge (PAP+GM-CSF on APCs) and T-VEC (oncolytic virus + GM-CSF)","ADCs: Enhertu (HER2, topo I payload, bystander effect) and Elahere (FRα, DM4 microtubule payload)","BiTE: Blinatumomab CD19 × CD3","CAR-T: Kymriah and Yescarta (CD19; 4-1BB vs CD28) and Carvykti (BCMA for myeloma)"]}
+    ]
+   }
+  ]
+ },
 
  /* ============================ FACTS ON AGING (quiz handout) ============================ */
  {
