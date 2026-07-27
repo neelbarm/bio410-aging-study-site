@@ -4184,19 +4184,20 @@ window.COURSE = [
   topics:[
    {
     id:"IOT1", title:"The five therapy types — how each one works",
-    sub:"The five therapy types everyone presented on — mechanism, one example drug each, and how to tell them apart.",
+    sub:"The five therapy types everyone presented on. ⭐ The FIRST slide below is the whole exam-level answer — therapy + how it works + one drug each. Everything after it is optional depth.",
     slides:[
-     {h:"The big idea: five ways to turn the immune system against cancer", imgs:[], html:`
-      <p class="lead">Recall from L10 that one of the changes cancer cells accumulate is <b>immunosuppression — avoiding the immune system</b>. Immuno-oncology is the counterattack: instead of poisoning dividing cells (chemo), you <b>re-arm or redirect the patient's own immune system</b>.</p>
+     {h:"⭐ THE ONE SLIDE — five therapies, how each works, one drug each", imgs:[], html:`
+      <p class="lead"><b>If you learn only one thing from this section, learn this table.</b> The presentations were simple: know the therapy and how it works. That's this:</p>
       <table class="dt">
-       <tr><th>Therapy</th><th>One-line mechanism</th><th>Needs MHC?</th></tr>
-       <tr><td><b>1. Treatment vaccine</b></td><td><b>Teach</b> the immune system to recognize a tumour antigen</td><td>Yes</td></tr>
-       <tr><td><b>2. Checkpoint inhibitor</b></td><td><b>Release the brakes</b> on T cells the tumour has engaged</td><td>Yes</td></tr>
-       <tr><td><b>3. ADC</b></td><td>Antibody <b>delivers</b> a toxic payload directly into the cancer cell</td><td>No</td></tr>
-       <tr><td><b>4. BMA / BiTE</b></td><td>Two-armed antibody <b>physically tethers</b> a T cell to a cancer cell</td><td>No</td></tr>
-       <tr><td><b>5. CAR-T</b></td><td><b>Genetically engineer</b> the patient's T cells to recognize the tumour</td><td>No</td></tr>
+       <tr><th>Therapy</th><th>How it works (one line)</th><th>Example drug</th></tr>
+       <tr><td><b>1. Treatment vaccine</b></td><td><b>Teach</b> the immune system to recognize a tumour antigen</td><td><b>Sipuleucel-T</b> (Provenge)</td></tr>
+       <tr><td><b>2. Checkpoint inhibitor</b></td><td><b>Release the brakes</b> on T cells the tumour switched off</td><td><b>Pembrolizumab</b> (Keytruda)</td></tr>
+       <tr><td><b>3. ADC</b></td><td>Antibody <b>delivers a toxic payload</b> inside the cancer cell</td><td><b>T-DM1</b> (Kadcyla) / Enhertu</td></tr>
+       <tr><td><b>4. BMA / BiTE</b></td><td>Two-armed antibody <b>tethers a T cell</b> to a cancer cell</td><td><b>Blinatumomab</b> (Blincyto)</td></tr>
+       <tr><td><b>5. CAR-T</b></td><td><b>Engineer the patient's own T cells</b> to attack the tumour</td><td><b>Tisagenlecleucel</b> (Kymriah)</td></tr>
       </table>
-      <div class="callout key"><b>The single best discriminator: MHC dependence.</b> Vaccines and checkpoint inhibitors still rely on normal T-cell recognition through <b>MHC</b> — so a tumour that downregulates MHC escapes them. ADCs, BiTEs and CAR-T use <b>antibody-based</b> recognition of a surface antigen, which <b>bypasses MHC entirely</b>. That's why they work where the others fail.</div>`},
+      <div class="callout key"><b>The single best discriminator: MHC dependence.</b> Vaccines and checkpoint inhibitors still rely on normal T-cell recognition through <b>MHC</b> — so a tumour that downregulates MHC escapes them. ADCs, BiTEs and CAR-T use <b>antibody-based</b> recognition of a surface antigen, which <b>bypasses MHC entirely</b>. That's why they work where the others fail.</div>
+      <p class="muted"><b>Everything below this slide is optional detail</b> (exact mechanisms, side effects, extra drugs). If you know the table above, you can answer the "how does each therapy work?" question. Read on only if you want the deeper version.</p>`},
      {h:"1. Cancer TREATMENT vaccines — example: Sipuleucel-T (Provenge)", imgs:[], html:`
       <div class="callout warn"><b>First, the distinction the assignment insists on:</b> a <b>PREVENTIVE</b> vaccine (HPV/Gardasil, hepatitis B) stops an <b>infection</b> that would later cause cancer — it is given to healthy people. A <b>TREATMENT (therapeutic)</b> vaccine is given to someone who <b>already has cancer</b> and trains their immune system to attack it.</div>
       <p class="lead"><b>Sipuleucel-T (Provenge)</b> — metastatic castration-resistant prostate cancer; the <b>first FDA-approved therapeutic cancer vaccine (2010)</b>. It is <b>autologous</b> (made from the patient's own cells), so each dose is custom-manufactured.</p>
